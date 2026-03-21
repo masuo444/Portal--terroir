@@ -179,7 +179,7 @@ body{-webkit-font-smoothing:antialiased}
   <p class="text-xs tracking-[0.25em] text-primary-500 uppercase mb-4">Why Terroir HUB</p>
   <h2 class="font-display text-3xl md:text-4xl font-bold mb-16 leading-snug">他にはない強み。</h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     <div class="space-y-4">
       <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center">
         <svg class="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/></svg>
@@ -202,22 +202,6 @@ body{-webkit-font-smoothing:antialiased}
       </div>
       <h3 class="text-lg font-bold">ジャンルを横断</h3>
       <p class="text-sm text-ink-light leading-loose">日本酒、ウイスキー、焼酎、日本茶、伝統工芸まで。縦割りではなく、日本の文化をひとつの場所で。</p>
-    </div>
-
-    <div class="space-y-4">
-      <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center">
-        <svg class="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/></svg>
-      </div>
-      <h3 class="text-lg font-bold">作り手と直接つながる</h3>
-      <p class="text-sm text-ink-light leading-loose">蔵元や職人が自ら情報を更新し、お知らせを発信できる管理画面を完備。双方向の架け橋。</p>
-    </div>
-
-    <div class="space-y-4">
-      <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center">
-        <svg class="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
-      </div>
-      <h3 class="text-lg font-bold">知って、学んで、行ける</h3>
-      <p class="text-sm text-ink-light leading-loose">蔵見学、工房体験、茶園訪問。GPSマップで現地で本物に触れる体験を設計。</p>
     </div>
 
     <div class="space-y-4">
@@ -351,5 +335,88 @@ body{-webkit-font-smoothing:antialiased}
 const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.style.opacity='1';x.target.style.transform='none';ro.unobserve(x.target)}})},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('section > div, section > .grid, .space-y-4').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity 0.8s ease,transform 0.8s ease';ro.observe(el)});
 </script>
+<!-- SAKURA FAB -->
+<style>
+.skr-fab{position:fixed;bottom:24px;right:20px;z-index:200;display:flex;align-items:center;gap:8px;background:#C4727E;border:none;border-radius:26px;padding:12px 20px;cursor:pointer;box-shadow:0 8px 32px rgba(196,114,126,0.3);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:500;color:#fff;transition:all 0.3s;animation:skrIn 0.8s 0.5s ease both;}
+@keyframes skrIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.skr-fab:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(196,114,126,0.4);}
+.skr-pulse{position:absolute;top:0;right:0;width:9px;height:9px;background:#4caf7d;border-radius:50%;border:2px solid #fff;animation:skrP 2s infinite;}
+@keyframes skrP{0%,100%{opacity:1}50%{opacity:0.3}}
+.skr-ov{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.4);backdrop-filter:blur(8px);display:none;align-items:flex-end;justify-content:center;}
+.skr-ov.open{display:flex;}
+.skr-panel{width:100%;max-width:480px;height:85vh;background:#fff;border-radius:16px 16px 0 0;display:flex;flex-direction:column;transform:translateY(100%);transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);overflow:hidden;box-shadow:0 -20px 60px rgba(0,0,0,0.15);}
+.skr-ov.open .skr-panel{transform:translateY(0);}
+@media(min-width:701px){.skr-ov{align-items:center;}.skr-panel{border-radius:12px;height:75vh;}}
+.skr-hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid #eee;flex-shrink:0;}
+.skr-hdr-l{display:flex;align-items:center;gap:10px;}
+.skr-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#E8849A,#C4727E);display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff;}
+.skr-name{font-size:15px;font-weight:600;color:#1a1816;}
+.skr-status{font-size:10px;color:#4caf7d;display:flex;align-items:center;gap:4px;}
+.skr-dot{width:5px;height:5px;background:#4caf7d;border-radius:50%;animation:skrP 2s infinite;}
+.skr-close{background:none;border:1px solid #eee;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:14px;color:#999;display:flex;align-items:center;justify-content:center;}
+.skr-chat{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;}
+.skr-msg{display:flex;gap:8px;animation:skrFu 0.35s ease both;}
+@keyframes skrFu{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.skr-msg.user{flex-direction:row-reverse;}
+.skr-mav{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;}
+.skr-msg.bot .skr-mav{background:#fdf5f6;color:#C4727E;}
+.skr-msg.user .skr-mav{background:#f5f2ec;color:#999;}
+.skr-bubble{max-width:82%;padding:10px 14px;border-radius:12px;font-size:14px;line-height:1.8;color:#3a3028;}
+.skr-msg.bot .skr-bubble{background:#fdf5f6;border:1px solid rgba(196,114,126,0.12);}
+.skr-msg.user .skr-bubble{background:#f5f2ec;}
+.skr-typing{display:flex;gap:4px;align-items:center;}
+.skr-td{width:5px;height:5px;background:rgba(196,114,126,0.3);border-radius:50%;animation:skrTp 1.2s infinite;}
+.skr-td:nth-child(2){animation-delay:.2s}.skr-td:nth-child(3){animation-delay:.4s}
+@keyframes skrTp{0%,80%,100%{opacity:.3;transform:scale(.8)}40%{opacity:1;transform:scale(1)}}
+.skr-sugs{padding:4px 16px 8px;display:flex;gap:6px;flex-wrap:wrap;flex-shrink:0;}
+.skr-sug{background:none;border:1px solid #eee;color:#5a5248;font-size:12px;padding:6px 12px;border-radius:8px;cursor:pointer;font-family:'Noto Sans JP',sans-serif;transition:all 0.2s;}
+.skr-sug:hover{border-color:#C4727E;color:#C4727E;background:#fdf5f6;}
+.skr-inp{padding:10px 16px 16px;border-top:1px solid #eee;display:flex;gap:8px;flex-shrink:0;}
+.skr-inp textarea{flex:1;background:#f5f2ec;border:1px solid #eee;border-radius:8px;color:#1a1816;font-family:'Noto Sans JP',sans-serif;font-size:14px;padding:10px 12px;outline:none;resize:none;line-height:1.5;}
+.skr-inp textarea:focus{border-color:#C4727E;}
+.skr-inp button{background:#C4727E;border:none;color:#fff;width:40px;height:40px;border-radius:8px;cursor:pointer;font-size:16px;font-weight:700;transition:opacity 0.2s;flex-shrink:0;}
+.skr-inp button:hover{opacity:0.85;}
+</style>
+
+<button class="skr-fab" onclick="skrOpen()" id="skr-fab">
+  <span class="skr-pulse"></span>
+  <span>🌸</span>
+  <span>サクラに聞く</span>
+</button>
+
+<div class="skr-ov" id="skr-ov" onclick="if(event.target===this)skrClose()">
+  <div class="skr-panel">
+    <div class="skr-hdr">
+      <div class="skr-hdr-l">
+        <div class="skr-av">🌸</div>
+        <div>
+          <div class="skr-name">サクラ — AIコンシェルジュ</div>
+          <div class="skr-status"><div class="skr-dot"></div>オンライン</div>
+        </div>
+      </div>
+      <button class="skr-close" onclick="skrClose()">✕</button>
+    </div>
+    <div class="skr-chat" id="skr-chat"></div>
+    <div class="skr-sugs" id="skr-sugs"></div>
+    <div class="skr-inp">
+      <textarea id="skr-input" rows="1" placeholder="日本酒について何でもどうぞ…" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();skrSend();}"></textarea>
+      <button onclick="skrSend()">↑</button>
+    </div>
+  </div>
+</div>
+
+<script>
+var skrInit=false;
+var SKR_SUGS=['おすすめの日本酒は？','初心者向けの蔵はある？','日本酒の種類を教えて','蔵見学がしたい'];
+function skrOpen(){document.getElementById('skr-ov').classList.add('open');document.getElementById('skr-fab').style.display='none';if(!skrInit){skrInit=true;skrAddMsg('bot','こんにちは！サクラです。🌸\n\n日本の文化と伝統について、何でもお気軽にお聞きください。日本酒のこと、蔵のこと、旅行の相談も大歓迎です。');skrRenderSugs();}}
+function skrClose(){document.getElementById('skr-ov').classList.remove('open');document.getElementById('skr-fab').style.display='flex';}
+function skrAddMsg(r,t){var c=document.getElementById('skr-chat'),d=document.createElement('div');d.className='skr-msg '+r;d.innerHTML='<div class="skr-mav">'+(r==='bot'?'🌸':'👤')+'</div><div class="skr-bubble">'+t.replace(/\n/g,'<br>')+'</div>';c.appendChild(d);c.scrollTop=c.scrollHeight;}
+function skrRenderSugs(){document.getElementById('skr-sugs').innerHTML=SKR_SUGS.map(function(s){return '<button class="skr-sug" onclick="skrAsk(this.textContent)">'+s+'</button>';}).join('');}
+function skrAsk(q){document.getElementById('skr-sugs').innerHTML='';skrAddMsg('user',q);skrShowTyping();setTimeout(function(){skrRemoveTyping();skrAddMsg('bot','ご質問ありがとうございます。\n\n※ サクラAIはAPI接続後に実際の回答を返します。現在はデモ表示です。');skrRenderSugs();},1200);}
+function skrSend(){var i=document.getElementById('skr-input'),q=i.value.trim();if(!q)return;i.value='';document.getElementById('skr-sugs').innerHTML='';skrAddMsg('user',q);skrShowTyping();setTimeout(function(){skrRemoveTyping();skrAddMsg('bot','ご質問ありがとうございます。\n\n※ サクラAIはAPI接続後に実際の回答を返します。');skrRenderSugs();},1500);}
+function skrShowTyping(){var c=document.getElementById('skr-chat'),d=document.createElement('div');d.className='skr-msg bot';d.id='skr-tp';d.innerHTML='<div class="skr-mav">🌸</div><div class="skr-bubble"><div class="skr-typing"><div class="skr-td"></div><div class="skr-td"></div><div class="skr-td"></div></div></div>';c.appendChild(d);c.scrollTop=c.scrollHeight;}
+function skrRemoveTyping(){var e=document.getElementById('skr-tp');if(e)e.remove();}
+</script>
+
 </body>
 </html>
