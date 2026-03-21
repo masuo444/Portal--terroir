@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蔵元管理画面のご案内 — Terroir HUB</title>
+<meta name="description" content="Terroir HUBの蔵元専用管理画面。自蔵の情報を自分で更新、お知らせ配信、アクセスデータの確認まで。月額5,000円から。">
+<link rel="canonical" href="https://terroirhub.com/brewery-dashboard.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50:'#fdf8f0',100:'#f7ead4',200:'#efd5a8',300:'#dfb46c',
+          400:'#c99a3c',500:'#8B6914',600:'#745810',700:'#5c460d',
+          800:'#44340a',900:'#2c2207',950:'#1a1504'
+        },
+        surface: { primary:'#F5F2EC', secondary:'#EDE8DF', tertiary:'#E5DED3' },
+        ink: { DEFAULT:'#1a1816', light:'#5a5248', faint:'#9a8e80' },
+        sakura: { DEFAULT:'#C4727E', light:'#E8A0AA' }
+      },
+      fontFamily: {
+        display: ['Zen Old Mincho','serif'],
+        sans: ['Noto Sans JP','Hiragino Sans','sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+html{scroll-behavior:smooth}
+body{-webkit-font-smoothing:antialiased}
+::selection{background:#C4A44A;color:#fff}
+</style>
+</head>
+<body class="bg-surface-primary text-ink font-sans text-base leading-relaxed">
+
+<!-- ===== NAV ===== -->
+<nav class="fixed top-0 inset-x-0 z-50 bg-surface-primary/90 backdrop-blur-md border-b border-black/5">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
+    <a href="/" class="font-display text-xl font-bold tracking-wide text-ink">Terroir HUB</a>
+    <div class="flex items-center gap-6">
+      <a href="/" class="text-sm text-ink-faint hover:text-ink transition-colors">トップ</a>
+      <a href="https://sake.terroirhub.com" class="text-sm text-ink-faint hover:text-ink transition-colors">日本酒</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="pt-32 pb-16 md:pt-44 md:pb-24">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div>
+        <p class="text-xs tracking-[0.3em] text-primary-500 uppercase mb-6">For Breweries</p>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-ink leading-tight mb-8">
+          自蔵の情報は、<br>自分で届ける時代です。
+        </h1>
+        <p class="text-lg text-ink-light leading-loose mb-10">
+          Terroir HUBの蔵元専用管理画面。自蔵のページを自分で更新し、AIコンシェルジュ「サクラ」を通じて、日本酒を探しているお客様に直接情報を届けます。
+        </p>
+        <div class="flex flex-wrap gap-4 items-center">
+          <a href="#plans" class="inline-flex items-center h-12 px-8 text-base font-medium bg-ink text-surface-primary rounded-lg hover:opacity-80 transition-opacity">プランを見る</a>
+          <a href="mailto:info@terroirhub.com?subject=蔵元管理画面について" class="inline-flex items-center h-12 px-8 text-base font-medium bg-white text-ink border border-black/10 rounded-lg hover:bg-surface-secondary transition-colors">お問い合わせ</a>
+        </div>
+      </div>
+      <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface-tertiary">
+        <img src="https://images.unsplash.com/photo-1553514029-1318c9127859?w=900&q=80" alt="酒蔵" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 課題提起 ===== -->
+<section class="bg-ink text-white">
+  <div class="max-w-4xl mx-auto px-6 md:px-10 py-20 md:py-28 text-center">
+    <h2 class="font-display text-2xl md:text-3xl font-bold mb-10 leading-relaxed">
+      こんなお悩みはありませんか？
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-left">
+      <div class="border border-white/10 rounded-xl p-6">
+        <p class="text-base text-white/70 leading-loose">ネット上の自蔵の情報が古いまま。修正したいが手段がない</p>
+      </div>
+      <div class="border border-white/10 rounded-xl p-6">
+        <p class="text-base text-white/70 leading-loose">口コミサイトに不正確な情報が載っているが、訂正できない</p>
+      </div>
+      <div class="border border-white/10 rounded-xl p-6">
+        <p class="text-base text-white/70 leading-loose">新商品やイベントの情報を出したいが、発信手段が限られている</p>
+      </div>
+      <div class="border border-white/10 rounded-xl p-6">
+        <p class="text-base text-white/70 leading-loose">蔵見学の問い合わせが電話ばかりで、対応に時間が取られる</p>
+      </div>
+    </div>
+    <p class="text-lg text-white/50 mt-10 leading-loose">Terroir HUBの管理画面なら、すべて解決できます。</p>
+  </div>
+</section>
+
+<!-- ===== できること ===== -->
+<section class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28">
+  <p class="text-xs tracking-[0.25em] text-primary-500 uppercase mb-4">Features</p>
+  <h2 class="font-display text-3xl md:text-4xl font-bold mb-6 leading-snug">管理画面でできること。</h2>
+  <p class="text-lg text-ink-light leading-loose mb-14 max-w-2xl">ログインするだけで、自蔵の掲載情報をいつでも更新。専門知識は不要。スマホからでも操作できます。</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-white rounded-2xl border border-black/5 p-8">
+      <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-5">
+        <svg class="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/></svg>
+      </div>
+      <h3 class="text-lg font-bold mb-3">基本情報の編集</h3>
+      <p class="text-base text-ink-light leading-loose">蔵名、住所、電話番号、公式URL、創業年など。間違いがあればすぐに自分で修正できます。</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-black/5 p-8">
+      <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-5">
+        <svg class="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z"/></svg>
+      </div>
+      <h3 class="text-lg font-bold mb-3">銘柄・商品情報</h3>
+      <p class="text-base text-ink-light leading-loose">代表銘柄のスペック、特徴、新商品をすぐに掲載。お客様が蔵を選ぶ際の決め手になります。</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-black/5 p-8">
+      <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-5">
+        <svg class="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/></svg>
+      </div>
+      <h3 class="text-lg font-bold mb-3">写真アップロード</h3>
+      <p class="text-base text-ink-light leading-loose">蔵の外観、酒造り、商品の写真を掲載。視覚的に蔵の魅力を伝え、来訪や購入の動機を作ります。</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-black/5 p-8">
+      <div class="w-12 h-12 rounded-xl bg-sakura/10 flex items-center justify-center mb-5">
+        <svg class="w-6 h-6 text-sakura" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 001.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 010 3.46"/></svg>
+      </div>
+      <h3 class="text-lg font-bold mb-3">お知らせ配信</h3>
+      <p class="text-base text-ink-light leading-loose">新商品、蔵開き、イベント、メディア掲載などの最新情報を自蔵ページに掲載し、お客様に直接届けます。</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-black/5 p-8">
+      <div class="w-12 h-12 rounded-xl bg-sakura/10 flex items-center justify-center mb-5">
+        <svg class="w-6 h-6 text-sakura" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
+      </div>
+      <h3 class="text-lg font-bold mb-3">アクセスデータ</h3>
+      <p class="text-base text-ink-light leading-loose">自蔵ページの閲覧数、地域別アクセス、AIサクラでのレコメンド回数。どんなお客様が興味を持っているか把握できます。</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-black/5 p-8">
+      <div class="w-12 h-12 rounded-xl bg-sakura/10 flex items-center justify-center mb-5">
+        <svg class="w-6 h-6 text-sakura" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/></svg>
+      </div>
+      <h3 class="text-lg font-bold mb-3">AIサクラが蔵を紹介</h3>
+      <p class="text-base text-ink-light leading-loose">更新した情報はAIサクラのナレッジベースに即反映。ユーザーの質問に合わせて、あなたの蔵を自然にレコメンドします。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 料金プラン ===== -->
+<section id="plans" class="bg-white border-y border-black/5">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28">
+    <p class="text-xs tracking-[0.25em] text-primary-500 uppercase mb-4">Plans</p>
+    <h2 class="font-display text-3xl md:text-4xl font-bold mb-6 leading-snug">料金プラン</h2>
+    <p class="text-lg text-ink-light leading-loose mb-14 max-w-2xl">蔵の規模やニーズに合わせて、3つのプランをご用意しています。年間プランなら2ヶ月分お得です。</p>
+
+    <!-- Toggle -->
+    <div class="flex items-center justify-center gap-4 mb-12">
+      <span id="label-monthly" class="text-base font-medium text-ink">月額</span>
+      <button id="toggle" onclick="togglePlan()" class="relative w-14 h-8 rounded-full bg-surface-tertiary transition-colors cursor-pointer">
+        <span id="toggle-dot" class="absolute top-1 left-1 w-6 h-6 rounded-full bg-ink transition-transform"></span>
+      </button>
+      <span id="label-annual" class="text-base text-ink-faint">年額<span class="text-sakura text-sm ml-1">2ヶ月分お得</span></span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- ライト -->
+      <div class="bg-surface-primary rounded-2xl p-8 md:p-10 border border-black/5">
+        <h3 class="text-lg font-bold mb-2">ライト</h3>
+        <p class="text-sm text-ink-faint mb-6">まずは自蔵の情報を正しく管理したい蔵元向け</p>
+        <div class="mb-8">
+          <span class="plan-price text-4xl font-bold" data-monthly="5,000" data-annual="50,000">5,000</span>
+          <span class="text-base text-ink-light plan-unit" data-monthly="円/月" data-annual="円/年">円/月</span>
+          <span class="text-sm text-ink-faint">(税別)</span>
+          <p class="plan-sub text-sm text-ink-faint mt-1 hidden" data-annual="月あたり約4,167円"></p>
+        </div>
+        <a href="mailto:info@terroirhub.com?subject=ライトプランの申込" class="block text-center h-12 leading-[48px] text-base font-medium bg-white text-ink border border-black/10 rounded-lg hover:bg-surface-secondary transition-colors mb-8">申し込む</a>
+        <ul class="space-y-3 text-sm text-ink-light">
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>基本情報の編集</li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>銘柄・商品情報の編集</li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>見学情報の編集</li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>写真 3枚まで</li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>お知らせ投稿 月1回</li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>アクセスデータ（PV数）</li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>メールサポート</li>
+        </ul>
+      </div>
+
+      <!-- スタンダード -->
+      <div class="bg-ink text-white rounded-2xl p-8 md:p-10 relative">
+        <span class="absolute top-5 right-5 inline-flex items-center bg-primary-400 text-white text-xs font-semibold px-3 py-1 rounded-full">人気</span>
+        <h3 class="text-lg font-bold mb-2">スタンダード</h3>
+        <p class="text-sm text-white/50 mb-6">AIサクラの推薦強化で、集客につなげたい蔵元向け</p>
+        <div class="mb-8">
+          <span class="plan-price text-4xl font-bold" data-monthly="15,000" data-annual="150,000">15,000</span>
+          <span class="text-base text-white/60 plan-unit" data-monthly="円/月" data-annual="円/年">円/月</span>
+          <span class="text-sm text-white/40">(税別)</span>
+          <p class="plan-sub text-sm text-white/40 mt-1 hidden" data-annual="月あたり12,500円"></p>
+        </div>
+        <a href="mailto:info@terroirhub.com?subject=スタンダードプランの申込" class="block text-center h-12 leading-[48px] text-base font-medium bg-white text-ink rounded-lg hover:bg-white/90 transition-colors mb-8">申し込む</a>
+        <ul class="space-y-3 text-sm text-white/70">
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>ライトの全機能</li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>写真 10枚まで</li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>お知らせ投稿 無制限</li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>詳細アクセスデータ（地域・流入元）</li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-sakura flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><strong class="text-white">AIサクラの推薦強化</strong></li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>メールサポート</li>
+        </ul>
+      </div>
+
+      <!-- プレミアム -->
+      <div class="bg-surface-primary rounded-2xl p-8 md:p-10 border border-black/5">
+        <h3 class="text-lg font-bold mb-2">プレミアム</h3>
+        <p class="text-sm text-ink-faint mb-6">インバウンド対応・優先露出で最大限の効果を得たい蔵元向け</p>
+        <div class="mb-8">
+          <span class="plan-price text-4xl font-bold" data-monthly="30,000" data-annual="300,000">30,000</span>
+          <span class="text-base text-ink-light plan-unit" data-monthly="円/月" data-annual="円/年">円/月</span>
+          <span class="text-sm text-ink-faint">(税別)</span>
+          <p class="plan-sub text-sm text-ink-faint mt-1 hidden" data-annual="月あたり25,000円"></p>
+        </div>
+        <a href="mailto:info@terroirhub.com?subject=プレミアムプランの申込" class="block text-center h-12 leading-[48px] text-base font-medium bg-ink text-surface-primary rounded-lg hover:opacity-80 transition-opacity mb-8">申し込む</a>
+        <ul class="space-y-3 text-sm text-ink-light">
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>スタンダードの全機能</li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>写真 無制限</li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><strong>AIサクラ重点レコメンド</strong></li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>英語ページ自動生成</li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>地域ページでの優先表示</li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>季節特集への優先掲載</li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>AIサクラ推薦レポート</li>
+          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>専任担当サポート</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== オプション ===== -->
+<section class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28">
+  <p class="text-xs tracking-[0.25em] text-primary-500 uppercase mb-4">Options</p>
+  <h2 class="font-display text-3xl md:text-4xl font-bold mb-6 leading-snug">オプション</h2>
+  <p class="text-lg text-ink-light leading-loose mb-14 max-w-2xl">どのプランにも追加できるオプションです。必要なものだけ選んで組み合わせられます。</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-white rounded-2xl border border-black/5 p-8">
+      <div class="flex items-baseline justify-between mb-4">
+        <h3 class="text-lg font-bold">蔵見学予約ツール</h3>
+        <span class="text-base font-bold text-primary-600">+3,000円<span class="text-sm text-ink-faint font-normal">/月</span></span>
+      </div>
+      <p class="text-base text-ink-light leading-loose">オンライン予約フォーム、カレンダー管理、自動確認メール、キャンセル管理。電話対応の手間を大幅に削減します。</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-black/5 p-8">
+      <div class="flex items-baseline justify-between mb-4">
+        <h3 class="text-lg font-bold">動画掲載</h3>
+        <span class="text-base font-bold text-primary-600">+2,000円<span class="text-sm text-ink-faint font-normal">/月</span></span>
+      </div>
+      <p class="text-base text-ink-light leading-loose">蔵ページにYouTubeや自社動画を埋め込み。酒造りの工程や蔵の紹介動画で、写真以上の臨場感を伝えます。</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-black/5 p-8">
+      <div class="flex items-baseline justify-between mb-4">
+        <h3 class="text-lg font-bold">SNS自動連携</h3>
+        <span class="text-base font-bold text-primary-600">+1,000円<span class="text-sm text-ink-faint font-normal">/月</span></span>
+      </div>
+      <p class="text-base text-ink-light leading-loose">管理画面でお知らせを投稿すると、Instagram・X（Twitter）にも自動投稿。1回の操作で複数チャネルに発信。</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-black/5 p-8">
+      <div class="flex items-baseline justify-between mb-4">
+        <h3 class="text-lg font-bold">クーポン発行</h3>
+        <span class="text-base font-bold text-primary-600">+2,000円<span class="text-sm text-ink-faint font-normal">/月</span></span>
+      </div>
+      <p class="text-base text-ink-light leading-loose">来蔵者向けのデジタルクーポンを発行・管理。「このクーポンを見せると試飲1杯サービス」など来訪促進に。</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-black/5 p-8">
+      <div class="flex items-baseline justify-between mb-4">
+        <h3 class="text-lg font-bold">多言語ページ追加</h3>
+        <span class="text-base font-bold text-primary-600">+3,000円<span class="text-sm text-ink-faint font-normal">/月</span></span>
+      </div>
+      <p class="text-base text-ink-light leading-loose">英語に加え、中国語（繁体/簡体）・韓国語ページをAIが自動生成。インバウンド観光客にもっとリーチできます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 利用の流れ ===== -->
+<section class="bg-white border-y border-black/5">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28">
+    <p class="text-xs tracking-[0.25em] text-primary-500 uppercase mb-4">How to Start</p>
+    <h2 class="font-display text-3xl md:text-4xl font-bold mb-14 leading-snug">ご利用開始までの流れ</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div>
+        <div class="w-14 h-14 rounded-2xl bg-ink text-surface-primary flex items-center justify-center text-xl font-bold mb-6">1</div>
+        <h3 class="text-lg font-bold mb-3">お問い合わせ</h3>
+        <p class="text-base text-ink-light leading-loose">メールで蔵名とご希望のプランをお知らせください。</p>
+      </div>
+      <div>
+        <div class="w-14 h-14 rounded-2xl bg-ink text-surface-primary flex items-center justify-center text-xl font-bold mb-6">2</div>
+        <h3 class="text-lg font-bold mb-3">本人確認</h3>
+        <p class="text-base text-ink-light leading-loose">蔵元ご本人であることを確認させていただきます。</p>
+      </div>
+      <div>
+        <div class="w-14 h-14 rounded-2xl bg-ink text-surface-primary flex items-center justify-center text-xl font-bold mb-6">3</div>
+        <h3 class="text-lg font-bold mb-3">アカウント発行</h3>
+        <p class="text-base text-ink-light leading-loose">管理画面のログイン情報をお送りします。通常1〜3営業日。</p>
+      </div>
+      <div>
+        <div class="w-14 h-14 rounded-2xl bg-ink text-surface-primary flex items-center justify-center text-xl font-bold mb-6">4</div>
+        <h3 class="text-lg font-bold mb-3">情報を更新</h3>
+        <p class="text-base text-ink-light leading-loose">ログインして自蔵の情報を編集。保存した瞬間にページへ反映。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="max-w-3xl mx-auto px-6 md:px-10 py-20 md:py-28">
+  <p class="text-xs tracking-[0.25em] text-primary-500 uppercase mb-4">FAQ</p>
+  <h2 class="font-display text-3xl md:text-4xl font-bold mb-12 leading-snug">よくあるご質問</h2>
+
+  <div class="divide-y divide-black/5">
+    <div class="py-7">
+      <h3 class="text-lg font-bold mb-3">管理画面を使わなくても蔵は掲載されていますか？</h3>
+      <p class="text-base text-ink-light leading-loose">はい。Terroir HUBでは公開情報をもとに全国の蔵元を掲載しています。管理画面を使うことで、ご自身で情報を編集・充実させ、AIサクラの推薦強化などの効果を得られます。</p>
+    </div>
+    <div class="py-7">
+      <h3 class="text-lg font-bold mb-3">契約期間の縛りはありますか？</h3>
+      <p class="text-base text-ink-light leading-loose">月額プランはいつでも解約可能です。年間プランは1年単位の契約となり、2ヶ月分お得にご利用いただけます。</p>
+    </div>
+    <div class="py-7">
+      <h3 class="text-lg font-bold mb-3">掲載されている情報が間違っている場合は？</h3>
+      <p class="text-base text-ink-light leading-loose">管理画面をご契約いただければ、ご自身で直接修正できます。契約前でも、メールでご連絡いただければ弊社で修正対応いたします。</p>
+    </div>
+    <div class="py-7">
+      <h3 class="text-lg font-bold mb-3">パソコンが苦手でも使えますか？</h3>
+      <p class="text-base text-ink-light leading-loose">はい。フォームに入力して保存するだけのシンプルな操作です。スマートフォンからも操作でき、ご不明点はサポートいたします。</p>
+    </div>
+    <div class="py-7">
+      <h3 class="text-lg font-bold mb-3">プランの変更やオプションの追加はいつでもできますか？</h3>
+      <p class="text-base text-ink-light leading-loose">はい。プランのアップグレード・ダウングレード、オプションの追加・解除はいつでも可能です。翌月から反映されます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="max-w-7xl mx-auto px-6 md:px-10 pb-20 md:pb-28">
+  <div class="bg-ink rounded-3xl px-8 py-16 md:px-16 md:py-20 text-center">
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4">自蔵の情報を、自分で届けませんか。</h2>
+    <p class="text-lg text-white/50 mb-10 max-w-lg mx-auto leading-loose">まずはお気軽にお問い合わせください。蔵の規模やニーズに合ったプランをご提案します。</p>
+    <a href="mailto:info@terroirhub.com?subject=蔵元管理画面について" class="inline-flex items-center h-14 px-10 text-lg font-medium bg-white text-ink rounded-xl hover:bg-white/90 transition-colors">お問い合わせ</a>
+    <p class="text-sm text-white/30 mt-6">info@terroirhub.com / 通常1営業日以内にご返信</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-ink text-white/40">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-10 mb-12">
+      <div>
+        <p class="font-display text-lg text-white tracking-wide mb-3">Terroir HUB</p>
+        <p class="text-sm leading-loose">日本の文化と伝統の公式情報をベースにした<br>総合プラットフォーム。合同会社FOMUS が運営。</p>
+      </div>
+      <div>
+        <p class="text-xs text-white/25 tracking-widest uppercase mb-4">Site</p>
+        <div class="space-y-2">
+          <a href="/" class="block text-sm text-white/30 hover:text-white/70 transition-colors">トップ</a>
+          <a href="https://sake.terroirhub.com" class="block text-sm text-white/30 hover:text-white/70 transition-colors">日本酒 — Sake</a>
+          <a href="/advertise.html" class="block text-sm text-white/30 hover:text-white/70 transition-colors">広告掲載について</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-xs text-white/25 tracking-widest uppercase mb-4">Legal</p>
+        <div class="space-y-2">
+          <a href="https://sake.terroirhub.com/privacy.html" class="block text-sm text-white/30 hover:text-white/70 transition-colors">プライバシーポリシー</a>
+          <a href="https://sake.terroirhub.com/terms.html" class="block text-sm text-white/30 hover:text-white/70 transition-colors">利用規約</a>
+          <a href="mailto:info@terroirhub.com" class="block text-sm text-white/30 hover:text-white/70 transition-colors">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/5 pt-6 text-xs text-white/15">&copy; 2026 Terroir HUB &mdash; 合同会社FOMUS</div>
+  </div>
+</footer>
+
+<script>
+let isAnnual=false;
+function togglePlan(){
+  isAnnual=!isAnnual;
+  document.getElementById('toggle-dot').style.transform=isAnnual?'translateX(24px)':'translateX(0)';
+  document.getElementById('toggle').style.backgroundColor=isAnnual?'#1a1816':'#E5DED3';
+  document.getElementById('label-monthly').className=isAnnual?'text-base text-ink-faint':'text-base font-medium text-ink';
+  document.getElementById('label-annual').className=isAnnual?'text-base font-medium text-ink':'text-base text-ink-faint';
+  document.querySelectorAll('.plan-price').forEach(el=>{el.textContent=isAnnual?el.dataset.annual:el.dataset.monthly});
+  document.querySelectorAll('.plan-unit').forEach(el=>{el.textContent=isAnnual?el.dataset.annual:el.dataset.monthly});
+  document.querySelectorAll('.plan-sub').forEach(el=>{if(isAnnual){el.textContent=el.dataset.annual;el.classList.remove('hidden')}else{el.classList.add('hidden')}});
+}
+</script>
+</body>
+</html>

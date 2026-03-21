@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>コミュニティ — Terroir HUB</title>
+<meta name="description" content="Terroir HUBコミュニティ。蔵を巡り、体験を共有し、日本の文化を深く知る。スタンプラリー、体験レポート、会員ランク制度。">
+<link rel="canonical" href="https://terroirhub.com/community.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50:'#fdf8f0',100:'#f7ead4',200:'#efd5a8',300:'#dfb46c',
+          400:'#c99a3c',500:'#8B6914',600:'#745810',700:'#5c460d',
+          800:'#44340a',900:'#2c2207',950:'#1a1504'
+        },
+        surface: { primary:'#F5F2EC', secondary:'#EDE8DF', tertiary:'#E5DED3' },
+        ink: { DEFAULT:'#1a1816', light:'#5a5248', faint:'#9a8e80' },
+        sakura: { DEFAULT:'#C4727E', light:'#E8A0AA' }
+      },
+      fontFamily: {
+        display: ['Zen Old Mincho','serif'],
+        sans: ['Noto Sans JP','Hiragino Sans','sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+html{scroll-behavior:smooth}
+body{-webkit-font-smoothing:antialiased}
+::selection{background:#C4A44A;color:#fff}
+</style>
+</head>
+<body class="bg-surface-primary text-ink font-sans text-base leading-relaxed">
+
+<!-- ===== NAV ===== -->
+<nav class="fixed top-0 inset-x-0 z-50 bg-surface-primary/90 backdrop-blur-md border-b border-black/5">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
+    <a href="/" class="font-display text-xl font-bold tracking-wide text-ink">Terroir HUB</a>
+    <div class="flex items-center gap-6">
+      <a href="/" class="text-sm text-ink-faint hover:text-ink transition-colors">トップ</a>
+      <a href="https://sake.terroirhub.com" class="text-sm text-ink-faint hover:text-ink transition-colors">日本酒</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="pt-32 pb-16 md:pt-44 md:pb-24">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div>
+        <p class="text-xs tracking-[0.3em] text-primary-500 uppercase mb-6">Community</p>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-ink leading-tight mb-8">
+          巡る。味わう。<br>つながる。
+        </h1>
+        <p class="text-lg text-ink-light leading-loose mb-10">
+          AI時代だからこそ、体験とつながりに価値がある。Terroir HUBコミュニティは、蔵を巡り、体験を共有し、作り手とつながる場所です。
+        </p>
+        <a href="https://sake.terroirhub.com" class="inline-flex items-center h-12 px-8 text-base font-medium bg-ink text-surface-primary rounded-lg hover:opacity-80 transition-opacity">無料で始める</a>
+      </div>
+      <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface-tertiary">
+        <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=900&q=80" alt="日本の蔵元を巡る" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== コミュニティでできること ===== -->
+<section class="bg-white border-y border-black/5">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28">
+    <p class="text-xs tracking-[0.25em] text-primary-500 uppercase mb-4">What You Can Do</p>
+    <h2 class="font-display text-3xl md:text-4xl font-bold mb-14 leading-snug">コミュニティでできること。</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <!-- スタンプラリー -->
+      <div class="flex gap-6">
+        <div class="w-14 h-14 rounded-2xl bg-primary-50 flex items-center justify-center flex-shrink-0">
+          <svg class="w-7 h-7 text-primary-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-3">スタンプラリー</h3>
+          <p class="text-base text-ink-light leading-loose">蔵を訪れてGPSチェックイン。全国47都道府県の蔵を巡り、自分だけの日本酒マップを作りましょう。訪問数に応じてランクが上がります。</p>
+          <p class="text-sm text-ink-faint mt-3">無料で利用可能</p>
+        </div>
+      </div>
+
+      <!-- 体験レポート -->
+      <div class="flex gap-6">
+        <div class="w-14 h-14 rounded-2xl bg-primary-50 flex items-center justify-center flex-shrink-0">
+          <svg class="w-7 h-7 text-primary-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/></svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-3">体験レポート</h3>
+          <p class="text-base text-ink-light leading-loose">蔵見学の感想、飲んだお酒の記録、おすすめのペアリング。あなたの体験が、誰かの「次の一本」や「次の旅先」になります。</p>
+          <p class="text-sm text-ink-faint mt-3">無料で投稿・閲覧可能</p>
+        </div>
+      </div>
+
+      <!-- 蔵元の限定投稿 -->
+      <div class="flex gap-6">
+        <div class="w-14 h-14 rounded-2xl bg-sakura/10 flex items-center justify-center flex-shrink-0">
+          <svg class="w-7 h-7 text-sakura" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-3">蔵元の限定投稿</h3>
+          <p class="text-base text-ink-light leading-loose">酒造りの裏側、今年の米の出来、杜氏のこだわり、限定酒の先行情報。蔵元が直接発信する、ここでしか読めないコンテンツ。</p>
+          <p class="text-sm text-sakura mt-3">Pro / Premium 会員限定</p>
+        </div>
+      </div>
+
+      <!-- 味覚プロフィール -->
+      <div class="flex gap-6">
+        <div class="w-14 h-14 rounded-2xl bg-sakura/10 flex items-center justify-center flex-shrink-0">
+          <svg class="w-7 h-7 text-sakura" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-3">味覚プロフィール</h3>
+          <p class="text-base text-ink-light leading-loose">飲んだお酒の記録からAIがあなたの好みを分析。「辛口好き」「フルーティー派」など、自分の味覚を可視化。サクラのレコメンド精度も上がります。</p>
+          <p class="text-sm text-sakura mt-3">Pro / Premium 会員限定</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 会員ランク ===== -->
+<section class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28">
+  <p class="text-xs tracking-[0.25em] text-primary-500 uppercase mb-4">Member Rank</p>
+  <h2 class="font-display text-3xl md:text-4xl font-bold mb-6 leading-snug">巡るほど、深くなる。</h2>
+  <p class="text-lg text-ink-light leading-loose mb-14 max-w-2xl">蔵を訪れ、体験を共有するほど、あなたのランクが上がります。ランクに応じた特典で、日本文化の旅がもっと豊かに。</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- Explorer -->
+    <div class="bg-white rounded-2xl border border-black/5 p-8 relative">
+      <div class="text-3xl mb-4">🌱</div>
+      <h3 class="text-xl font-bold mb-1">Explorer</h3>
+      <p class="text-sm text-ink-faint mb-5">はじめの一歩</p>
+      <p class="text-sm text-ink-light leading-loose mb-6">アカウント登録で到達。まずは気になる蔵を見つけて、スタンプラリーを始めましょう。</p>
+      <ul class="space-y-2 text-sm text-ink-light">
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-400"></span>プロフィールバッジ</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-400"></span>スタンプラリー参加</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-400"></span>体験レポート投稿</li>
+      </ul>
+    </div>
+
+    <!-- Enthusiast -->
+    <div class="bg-white rounded-2xl border border-black/5 p-8 relative">
+      <div class="text-3xl mb-4">🍶</div>
+      <h3 class="text-xl font-bold mb-1">Enthusiast</h3>
+      <p class="text-sm text-ink-faint mb-5">好きが深まる</p>
+      <p class="text-sm text-ink-light leading-loose mb-6">5蔵訪問 または 10レポート投稿で到達。日本酒の世界に足を踏み入れた証。</p>
+      <ul class="space-y-2 text-sm text-ink-light">
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-400"></span>Explorerの全特典</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-400"></span>レポートに信頼マーク付与</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-400"></span>蔵元の限定投稿が見える*</li>
+      </ul>
+    </div>
+
+    <!-- Connoisseur -->
+    <div class="bg-white rounded-2xl border border-primary-200 p-8 relative shadow-sm">
+      <span class="absolute -top-3 left-6 inline-flex items-center bg-primary-500 text-white text-xs font-semibold px-3 py-1 rounded-full">目標</span>
+      <div class="text-3xl mb-4">👁</div>
+      <h3 class="text-xl font-bold mb-1">Connoisseur</h3>
+      <p class="text-sm text-ink-faint mb-5">本物が分かる</p>
+      <p class="text-sm text-ink-light leading-loose mb-6">20蔵訪問 または 30レポート投稿で到達。自分の好みを語れるレベル。</p>
+      <ul class="space-y-2 text-sm text-ink-light">
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-400"></span>Enthusiastの全特典</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-400"></span>季節特集に「おすすめ」掲載</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-400"></span>オンラインイベント優先枠*</li>
+      </ul>
+    </div>
+
+    <!-- Ambassador -->
+    <div class="bg-ink text-white rounded-2xl p-8 relative">
+      <div class="text-3xl mb-4">🏯</div>
+      <h3 class="text-xl font-bold mb-1">Ambassador</h3>
+      <p class="text-sm text-white/50 mb-5">文化を伝える人</p>
+      <p class="text-sm text-white/60 leading-loose mb-6">50蔵訪問＋全地域制覇で到達。日本酒文化の伝道者として認定。</p>
+      <ul class="space-y-2 text-sm text-white/60">
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-400"></span>Connoisseurの全特典</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-400"></span>会員限定蔵ツアー応募*</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-400"></span>公式アンバサダー認定</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-400"></span>Terroir HUBでの特別掲載</li>
+      </ul>
+    </div>
+  </div>
+  <p class="text-sm text-ink-faint mt-6">* 一部の特典はPro / Premium プランへの加入が必要です</p>
+</section>
+
+<!-- ===== ポイント獲得 ===== -->
+<section class="bg-white border-y border-black/5">
+  <div class="max-w-4xl mx-auto px-6 md:px-10 py-20 md:py-28">
+    <p class="text-xs tracking-[0.25em] text-primary-500 uppercase mb-4">How to Earn</p>
+    <h2 class="font-display text-3xl md:text-4xl font-bold mb-14 leading-snug">ポイントの貯め方</h2>
+
+    <div class="space-y-0 divide-y divide-black/5">
+      <div class="grid grid-cols-[1fr_auto] items-center gap-4 py-5">
+        <div>
+          <p class="text-lg font-bold">蔵を訪問してチェックイン</p>
+          <p class="text-sm text-ink-faint">GPSでスタンプラリーにチェックイン</p>
+        </div>
+        <span class="text-2xl font-bold text-primary-500">+50pt</span>
+      </div>
+      <div class="grid grid-cols-[1fr_auto] items-center gap-4 py-5">
+        <div>
+          <p class="text-lg font-bold">初めての県に訪問</p>
+          <p class="text-sm text-ink-faint">新しい都道府県の蔵を初めて訪問</p>
+        </div>
+        <span class="text-2xl font-bold text-primary-500">+100pt</span>
+      </div>
+      <div class="grid grid-cols-[1fr_auto] items-center gap-4 py-5">
+        <div>
+          <p class="text-lg font-bold">体験レポートを投稿</p>
+          <p class="text-sm text-ink-faint">蔵見学やテイスティングの感想を共有</p>
+        </div>
+        <span class="text-2xl font-bold text-primary-500">+30pt</span>
+      </div>
+      <div class="grid grid-cols-[1fr_auto] items-center gap-4 py-5">
+        <div>
+          <p class="text-lg font-bold">写真付きレポート</p>
+          <p class="text-sm text-ink-faint">写真を添えて体験をより豊かに伝える</p>
+        </div>
+        <span class="text-2xl font-bold text-primary-500">+20pt</span>
+      </div>
+      <div class="grid grid-cols-[1fr_auto] items-center gap-4 py-5">
+        <div>
+          <p class="text-lg font-bold">教科書の章を読了</p>
+          <p class="text-sm text-ink-faint">日本酒の知識を深める</p>
+        </div>
+        <span class="text-2xl font-bold text-primary-500">+10pt</span>
+      </div>
+      <div class="grid grid-cols-[1fr_auto] items-center gap-4 py-5">
+        <div>
+          <p class="text-lg font-bold">AIサクラに相談</p>
+          <p class="text-sm text-ink-faint">サクラとの会話で新しい発見を</p>
+        </div>
+        <span class="text-2xl font-bold text-primary-500">+5pt</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== プランとの関係 ===== -->
+<section class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28">
+  <p class="text-xs tracking-[0.25em] text-primary-500 uppercase mb-4">Plans</p>
+  <h2 class="font-display text-3xl md:text-4xl font-bold mb-6 leading-snug">あなたに合ったプランで</h2>
+  <p class="text-lg text-ink-light leading-loose mb-14 max-w-2xl">無料から始めて、必要に応じてアップグレード。ランクは無料でも上がります。Pro/Premiumで、体験をもっと深く。</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- 無料 -->
+    <div class="bg-white rounded-2xl border border-black/5 p-8 md:p-10">
+      <h3 class="text-lg font-bold mb-1">無料プラン</h3>
+      <div class="mb-6">
+        <span class="text-4xl font-bold">¥0</span>
+        <span class="text-base text-ink-light">/月</span>
+      </div>
+      <p class="text-sm text-ink-faint mb-8">まずTerroir HUBを体験する</p>
+      <a href="https://sake.terroirhub.com" class="block text-center h-12 leading-[48px] text-base font-medium bg-white text-ink border border-black/10 rounded-lg hover:bg-surface-secondary transition-colors mb-8">無料で始める</a>
+      <ul class="space-y-3 text-sm text-ink-light">
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>蔵元の基本情報閲覧</li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>教科書の前半</li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>AIサクラ お試し利用</li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>地域・銘柄検索</li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>スタンプラリー</li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>体験レポート投稿・閲覧</li>
+      </ul>
+    </div>
+
+    <!-- Pro -->
+    <div class="bg-ink text-white rounded-2xl p-8 md:p-10 relative">
+      <span class="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center bg-primary-400 text-white text-xs font-semibold px-4 py-1 rounded-full">おすすめ</span>
+      <h3 class="text-lg font-bold mb-1">Terroir HUB Pro</h3>
+      <div class="mb-6">
+        <span class="text-4xl font-bold">¥500</span>
+        <span class="text-base text-white/60">/月</span>
+      </div>
+      <p class="text-sm text-white/50 mb-8">学び、比べ、広げる標準プラン</p>
+      <a href="https://sake.terroirhub.com" class="block text-center h-12 leading-[48px] text-base font-medium bg-white text-ink rounded-lg hover:bg-white/90 transition-colors mb-8">Proを始める</a>
+      <ul class="space-y-3 text-sm text-white/70">
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>教科書の全文閲覧</li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>AIサクラ — 出典付き回答</li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>カテゴリ内比較</li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>好みからのおすすめ</li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>お気に入り・履歴・学習記録</li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-sakura flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><strong class="text-white">蔵元の限定投稿</strong></li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-sakura flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><strong class="text-white">味覚プロフィール</strong></li>
+      </ul>
+    </div>
+
+    <!-- Premium -->
+    <div class="bg-white rounded-2xl border border-black/5 p-8 md:p-10">
+      <h3 class="text-lg font-bold mb-1">Terroir HUB Premium</h3>
+      <div class="mb-6">
+        <span class="text-4xl font-bold">¥1,500</span>
+        <span class="text-base text-ink-light">/月</span>
+      </div>
+      <p class="text-sm text-ink-faint mb-8">AIを深く使い倒す上位プラン</p>
+      <a href="https://sake.terroirhub.com" class="block text-center h-12 leading-[48px] text-base font-medium bg-white text-ink border border-black/10 rounded-lg hover:bg-surface-secondary transition-colors mb-8">Premiumを始める</a>
+      <ul class="space-y-3 text-sm text-ink-light">
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Proの全機能</li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>長文レポート生成</li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>カテゴリ横断比較</li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>英語での深い解説</li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>プレミアム特集</li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><strong>オンラインイベント参加</strong></li>
+        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><strong>会員限定蔵ツアー（年2回）</strong></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="max-w-7xl mx-auto px-6 md:px-10 pb-20 md:pb-28">
+  <div class="bg-ink rounded-3xl px-8 py-16 md:px-16 md:py-20 text-center">
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4">本物の日本に、会いに行こう。</h2>
+    <p class="text-lg text-white/50 mb-10 max-w-lg mx-auto leading-loose">まずは無料で始めて、気になる蔵を見つけるところから。</p>
+    <a href="https://sake.terroirhub.com" class="inline-flex items-center h-14 px-10 text-lg font-medium bg-white text-ink rounded-xl hover:bg-white/90 transition-colors">無料で始める</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-ink text-white/40">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-10 mb-12">
+      <div>
+        <p class="font-display text-lg text-white tracking-wide mb-3">Terroir HUB</p>
+        <p class="text-sm leading-loose">日本の文化と伝統の公式情報をベースにした<br>総合プラットフォーム。合同会社FOMUS が運営。</p>
+      </div>
+      <div>
+        <p class="text-xs text-white/25 tracking-widest uppercase mb-4">Site</p>
+        <div class="space-y-2">
+          <a href="/" class="block text-sm text-white/30 hover:text-white/70 transition-colors">トップ</a>
+          <a href="https://sake.terroirhub.com" class="block text-sm text-white/30 hover:text-white/70 transition-colors">日本酒 — Sake</a>
+          <a href="/advertise.html" class="block text-sm text-white/30 hover:text-white/70 transition-colors">広告掲載について</a>
+          <a href="/brewery-dashboard.html" class="block text-sm text-white/30 hover:text-white/70 transition-colors">蔵元管理画面</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-xs text-white/25 tracking-widest uppercase mb-4">Legal</p>
+        <div class="space-y-2">
+          <a href="https://sake.terroirhub.com/privacy.html" class="block text-sm text-white/30 hover:text-white/70 transition-colors">プライバシーポリシー</a>
+          <a href="https://sake.terroirhub.com/terms.html" class="block text-sm text-white/30 hover:text-white/70 transition-colors">利用規約</a>
+          <a href="mailto:info@terroirhub.com" class="block text-sm text-white/30 hover:text-white/70 transition-colors">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/5 pt-6 text-xs text-white/15">&copy; 2026 Terroir HUB &mdash; 合同会社FOMUS</div>
+  </div>
+</footer>
+
+</body>
+</html>
