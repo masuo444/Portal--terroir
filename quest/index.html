@@ -380,6 +380,9 @@ textarea.record-input{resize:none;min-height:80px;}
 
   function showApp(){
     document.getElementById('login-wall').style.display = 'none';
+    // 認証モーダルが開いていたら閉じる
+    var authModal = document.getElementById('q-auth');
+    if(authModal) authModal.classList.remove('open');
 
     loadSearchIndex();
     loadFeed();

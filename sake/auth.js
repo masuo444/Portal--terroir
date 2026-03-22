@@ -196,12 +196,12 @@
     }
 
     function showAuthError(msg) {
-      let el = document.getElementById('auth-error');
+      let el = document.getElementById('auth-error') || document.getElementById('q-auth-error');
       if (!el) {
         el = document.createElement('div');
         el.id = 'auth-error';
         el.style.cssText = 'color:#e05c5c;font-size:13px;text-align:center;margin-bottom:12px;';
-        const btn = document.getElementById('auth-btn');
+        const btn = document.getElementById('auth-btn') || document.getElementById('q-auth-btn');
         if (btn) btn.parentNode.insertBefore(el, btn);
       }
       el.textContent = msg;
