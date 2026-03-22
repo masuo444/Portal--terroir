@@ -145,6 +145,25 @@ textarea.record-input{resize:none;min-height:80px;}
 /* Scrollbar */
 ::-webkit-scrollbar{width:4px;}
 ::-webkit-scrollbar-thumb{background:#ddd;border-radius:4px;}
+
+/* Auth Modal */
+.q-auth-overlay{display:none;position:fixed;inset:0;z-index:900;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);align-items:center;justify-content:center;}
+.q-auth-overlay.open{display:flex;}
+.q-auth-modal{background:#fff;border-radius:16px;max-width:380px;width:calc(100% - 32px);padding:28px;box-shadow:0 16px 48px rgba(0,0,0,0.15);}
+.q-auth-title{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:600;color:#333;margin-bottom:6px;}
+.q-auth-desc{font-size:13px;color:#888;margin-bottom:16px;}
+.q-auth-input{width:100%;padding:12px 14px;border:1.5px solid #e0ddd8;border-radius:8px;font-size:14px;outline:none;margin-bottom:10px;font-family:'Noto Sans JP',sans-serif;background:#fafaf8;}
+.q-auth-input:focus{border-color:#B8452A;}
+.q-auth-btn{width:100%;padding:12px;background:#B8452A;border:none;color:#fff;font-size:14px;font-weight:500;border-radius:8px;cursor:pointer;margin-bottom:10px;font-family:'Noto Sans JP',sans-serif;}
+.q-auth-btn:hover{background:#9A3A23;}
+.q-auth-switch{font-size:12px;color:#888;text-align:center;}
+.q-auth-switch a{color:#B8452A;cursor:pointer;text-decoration:underline;}
+.q-auth-error{color:#e05c5c;font-size:13px;text-align:center;margin-bottom:10px;min-height:18px;}
+.q-auth-google{width:100%;height:44px;display:flex;align-items:center;justify-content:center;gap:10px;background:#fff;border:1px solid #ddd;border-radius:8px;font-size:14px;font-weight:500;color:#333;cursor:pointer;margin-bottom:12px;font-family:'Noto Sans JP',sans-serif;}
+.q-auth-google:hover{border-color:#B8452A;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+.q-auth-divider{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.q-auth-divider span{font-size:11px;color:#ccc;}
+.q-auth-divider div{flex:1;height:1px;background:#eee;}
 </style>
 </head>
 <body>
@@ -802,6 +821,61 @@ textarea.record-input{resize:none;min-height:80px;}
   waitForSupabase();
 
 })();
+</script>
+
+<!-- Auth Modal -->
+<div class="q-auth-overlay" id="q-auth" onclick="if(event.target===this)closeAuth()">
+  <div class="q-auth-modal">
+    <button onclick="closeAuth()" style="float:right;background:none;border:none;font-size:18px;color:#999;cursor:pointer;">&#10005;</button>
+    <div class="q-auth-title" id="q-auth-title">アカウント作成</div>
+    <div class="q-auth-desc" id="q-auth-desc">無料で始めよう</div>
+    <button class="q-auth-google" onclick="thubSignInWithGoogle()">
+      <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+      Googleで始める
+    </button>
+    <div class="q-auth-divider"><div></div><span>または</span><div></div></div>
+    <div class="q-auth-error" id="q-auth-error"></div>
+    <input class="q-auth-input" type="email" placeholder="メールアドレス" id="q-auth-email" onkeydown="if(event.key==='Enter')qAuthSubmit()">
+    <input class="q-auth-input" type="password" placeholder="パスワード" id="q-auth-pass" onkeydown="if(event.key==='Enter')qAuthSubmit()">
+    <button class="q-auth-btn" id="q-auth-btn" type="button" onclick="qAuthSubmit()">無料で登録</button>
+    <div class="q-auth-switch" id="q-auth-sw">すでにアカウントをお持ちですか？ <a onclick="toggleQAuth()">ログイン</a></div>
+  </div>
+</div>
+
+<script>
+var qAuthMode='signup';
+function showAuth(mode){
+  qAuthMode=mode||'signup';
+  updateQAuthUI();
+  document.getElementById('q-auth').classList.add('open');
+}
+function closeAuth(){document.getElementById('q-auth').classList.remove('open');}
+function toggleQAuth(){qAuthMode=qAuthMode==='signup'?'login':'signup';updateQAuthUI();}
+function updateQAuthUI(){
+  if(qAuthMode==='signup'){
+    document.getElementById('q-auth-title').textContent='アカウント作成';
+    document.getElementById('q-auth-desc').textContent='無料で始めよう';
+    document.getElementById('q-auth-btn').textContent='無料で登録';
+    document.getElementById('q-auth-sw').innerHTML='すでにアカウントをお持ちですか？ <a onclick="toggleQAuth()">ログイン</a>';
+  } else {
+    document.getElementById('q-auth-title').textContent='ログイン';
+    document.getElementById('q-auth-desc').textContent='アカウントにログインして続ける';
+    document.getElementById('q-auth-btn').textContent='ログイン';
+    document.getElementById('q-auth-sw').innerHTML='アカウントをお持ちでないですか？ <a onclick="toggleQAuth()">無料登録</a>';
+  }
+  document.getElementById('q-auth-error').textContent='';
+}
+function qAuthSubmit(){
+  var email=document.getElementById('q-auth-email').value.trim();
+  var pass=document.getElementById('q-auth-pass').value;
+  if(!email||!pass){document.getElementById('q-auth-error').textContent='メールアドレスとパスワードを入力してください';return;}
+  if(pass.length<6){document.getElementById('q-auth-error').textContent='パスワードは6文字以上で入力してください';return;}
+  if(qAuthMode==='signup'){
+    if(window.thubSignUp)thubSignUp(email,pass);
+  } else {
+    if(window.thubSignIn)thubSignIn(email,pass);
+  }
+}
 </script>
 
 <!-- Service Worker registration -->
