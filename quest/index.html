@@ -293,7 +293,7 @@ textarea.record-input{resize:none;min-height:80px;}
 <!-- Toast -->
 <div class="quest-toast" id="quest-toast"></div>
 
-<script src="/sake/auth.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script>
 (function(){
   'use strict';
@@ -885,13 +885,40 @@ function updateQAuthUI(){
 function qAuthSubmit(){
   var email=document.getElementById('q-auth-email').value.trim();
   var pass=document.getElementById('q-auth-pass').value;
-  if(!email||!pass){document.getElementById('q-auth-error').textContent='メールアドレスとパスワードを入力してください';return;}
-  if(pass.length<6){document.getElementById('q-auth-error').textContent='パスワードは6文字以上で入力してください';return;}
+  var errEl=document.getElementById('q-auth-error');
+  if(!email||!pass){errEl.textContent='メールアドレスとパスワードを入力してください';return;}
+  if(pass.length<6){errEl.textContent='パスワードは6文字以上で入力してください';return;}
+  errEl.textContent='';
+
+  // Supabaseクライアントを直接使う（auth.jsに依存しない）
+  var SB_URL='https://hhwavxavuqqfiehrogwv.supabase.co';
+  var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhod2F2eGF2dXFxZmllaHJvZ3d2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM5Njk3MzAsImV4cCI6MjA4OTU0NTczMH0.tHMQ_u51jp69AMUKKtTvxL09Sr11JFPKGRhKMmUzEjg';
+  var client;
+  try{ client=supabase.createClient(SB_URL,SB_KEY); }catch(e){ errEl.textContent='認証システムの初期化に失敗しました';return; }
+
   if(qAuthMode==='signup'){
-    if(window.thubSignUp)thubSignUp(email,pass);
+    client.auth.signUp({email:email,password:pass}).then(function(res){
+      if(res.error){errEl.textContent=res.error.message;return;}
+      errEl.style.color='#3D9970';
+      errEl.textContent='確認メールを送信しました。メールのリンクをクリックしてください。';
+    });
   } else {
-    if(window.thubSignIn)thubSignIn(email,pass);
+    client.auth.signInWithPassword({email:email,password:pass}).then(function(res){
+      if(res.error){errEl.textContent=res.error.message==='Invalid login credentials'?'メールアドレスまたはパスワードが違います':res.error.message;return;}
+      closeAuth();
+      location.reload();
+    });
   }
+}
+
+// Googleログインも自前で
+function thubSignInWithGoogle(){
+  var SB_URL='https://hhwavxavuqqfiehrogwv.supabase.co';
+  var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhod2F2eGF2dXFxZmllaHJvZ3d2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM5Njk3MzAsImV4cCI6MjA4OTU0NTczMH0.tHMQ_u51jp69AMUKKtTvxL09Sr11JFPKGRhKMmUzEjg';
+  try{
+    var client=supabase.createClient(SB_URL,SB_KEY);
+    client.auth.signInWithOAuth({provider:'google',options:{redirectTo:window.location.href}});
+  }catch(e){alert('Googleログインに失敗しました');}
 }
 </script>
 
