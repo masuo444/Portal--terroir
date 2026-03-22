@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>テロワールクエスト — 日本酒の冒険 | Terroir HUB SAKE</title>
+<meta name="description" content="日本酒を飲んで記録して、バッジを集めよう。全国1,295蔵の銘柄写真を撮って投稿するクエスト機能も。">
+<meta name="robots" content="noindex">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#B8452A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="テロワールクエスト">
+<link rel="apple-touch-icon" href="/img/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;font-family:'Noto Sans JP',sans-serif;background:#FAFAF8;color:#333;}
+body{min-height:100dvh;padding-bottom:72px;padding-top:52px;overscroll-behavior:none;}
+h1,h2,h3{font-family:'Shippori Mincho',serif;}
+.num{font-family:'Inter',sans-serif;}
+
+/* Unified Nav */
+.thub-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.06);}
+.thub-nav-inner{display:flex;align-items:center;justify-content:space-between;height:52px;padding:0 20px;max-width:1200px;margin:0 auto;}
+.thub-nav-logo{font-family:'Shippori Mincho',serif;font-size:17px;font-weight:600;color:#333;text-decoration:none;white-space:nowrap;}
+.thub-nav-logo span{color:#D4728A;}
+.thub-nav-links{display:flex;align-items:center;gap:20px;}
+.thub-nav-links a{font-size:13px;color:#555;text-decoration:none;font-weight:500;transition:color 0.15s;white-space:nowrap;}
+.thub-nav-links a:hover{color:#B8452A;}
+.thub-nav-menu{display:none;background:none;border:none;font-size:22px;cursor:pointer;color:#333;padding:4px 8px;}
+@media(max-width:640px){.thub-nav-links{display:none;}.thub-nav-menu{display:block;}}
+.thub-mm-overlay{display:none;position:fixed;inset:0;z-index:998;background:rgba(0,0,0,0.3);backdrop-filter:blur(4px);}
+.thub-mm-overlay.open{display:block;}
+.thub-mm{position:fixed;top:0;right:0;bottom:0;width:280px;z-index:999;background:#fff;box-shadow:-8px 0 40px rgba(0,0,0,0.1);transform:translateX(100%);transition:transform 0.35s cubic-bezier(0.16,1,0.3,1);display:flex;flex-direction:column;}
+.thub-mm.open{transform:translateX(0);}
+.thub-mm-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #f0f0f0;}
+.thub-mm-logo{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:600;color:#333;}
+.thub-mm-logo span{color:#D4728A;}
+.thub-mm-close{background:none;border:none;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;color:#999;cursor:pointer;}
+.thub-mm-body{flex:1;padding:12px 0;}
+.thub-mm-body a{display:block;font-size:14px;color:#333;text-decoration:none;padding:12px 24px;font-family:'Noto Sans JP',sans-serif;transition:background 0.15s;}
+.thub-mm-body a:hover{background:#fafaf8;color:#B8452A;}
+
+/* Tab bar */
+.tab-bar{position:fixed;bottom:0;left:0;right:0;height:64px;background:#fff;border-top:1px solid #eee;display:flex;z-index:100;padding-bottom:env(safe-area-inset-bottom);}
+.tab-bar button{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;background:none;border:none;font-size:10px;color:#aaa;cursor:pointer;font-family:'Noto Sans JP',sans-serif;transition:color 0.15s;}
+.tab-bar button.active{color:#B8452A;}
+.tab-bar button .tab-icon{font-size:22px;line-height:1;}
+
+/* Tab panels */
+.tab-panel{display:none;padding:16px;max-width:560px;margin:0 auto;}
+.tab-panel.active{display:block;}
+
+/* Login wall */
+
+/* Feed card */
+.feed-card{background:#fff;border-radius:16px;padding:16px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.feed-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.feed-card-user{display:flex;align-items:center;gap:8px;}
+.feed-card-avatar{width:32px;height:32px;background:#f0e8e5;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;}
+.feed-card-name{font-size:13px;font-weight:600;color:#333;}
+.feed-card-time{font-size:11px;color:#bbb;}
+.feed-card-rating{font-size:14px;color:#D4728A;margin-bottom:6px;display:flex;align-items:center;gap:6px;}
+.feed-card-rating .num{font-size:13px;color:#888;font-weight:600;}
+.feed-card-brewery{font-size:15px;font-weight:600;color:#333;margin-bottom:2px;}
+.feed-card-area{font-size:11px;color:#aaa;margin-bottom:10px;}
+.feed-card-photo{width:100%;border-radius:10px;margin-bottom:10px;max-height:300px;object-fit:cover;}
+.feed-card-comment{font-size:13px;color:#555;line-height:1.7;margin-bottom:10px;}
+.feed-card-actions{display:flex;gap:16px;font-size:12px;color:#bbb;}
+.feed-card-actions span{cursor:pointer;display:flex;align-items:center;gap:4px;}
+
+/* Feed empty */
+.feed-empty{text-align:center;padding:48px 16px;color:#ccc;}
+.feed-empty .icon{font-size:48px;margin-bottom:16px;}
+.feed-empty p{font-size:14px;line-height:1.8;}
+
+/* Record form */
+.record-section{margin-bottom:20px;}
+.record-label{font-size:12px;font-weight:600;color:#888;margin-bottom:6px;display:block;}
+.record-input{width:100%;padding:12px 14px;border:1px solid #e5e5e5;border-radius:10px;font-size:14px;font-family:'Noto Sans JP',sans-serif;outline:none;background:#fff;transition:border-color 0.15s;}
+.record-input:focus{border-color:#D4728A;}
+.record-input::placeholder{color:#ccc;}
+textarea.record-input{resize:none;min-height:80px;}
+.record-search-results{background:#fff;border:1px solid #eee;border-radius:10px;margin-top:4px;max-height:200px;overflow-y:auto;display:none;box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+.record-search-results .item{padding:10px 14px;cursor:pointer;font-size:13px;border-bottom:1px solid #f5f5f5;transition:background 0.1s;}
+.record-search-results .item:hover,.record-search-results .item:active{background:#fdf5f6;}
+.record-search-results .item .sub{font-size:11px;color:#aaa;margin-top:2px;}
+
+/* Brand select */
+.brand-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+.brand-chip{padding:8px 14px;border:1px solid #e5e5e5;border-radius:20px;font-size:13px;cursor:pointer;background:#fff;transition:all 0.15s;font-family:'Noto Sans JP',sans-serif;}
+.brand-chip.selected{background:#B8452A;color:#fff;border-color:#B8452A;}
+
+/* Star rating */
+.star-rating{display:flex;gap:6px;font-size:32px;cursor:pointer;}
+.star-rating .star{color:#e5e5e5;transition:color 0.15s,transform 0.2s;}
+.star-rating .star.filled{color:#D4728A;}
+.star-rating .star.animate{animation:starPop 0.3s ease;}
+@keyframes starPop{0%{transform:scale(1);}50%{transform:scale(1.3);}100%{transform:scale(1);}}
+
+/* Photo upload */
+.photo-upload{border:2px dashed #e5e5e5;border-radius:12px;padding:24px;text-align:center;cursor:pointer;transition:border-color 0.15s;background:#fff;}
+.photo-upload:active,.photo-upload.dragover{border-color:#D4728A;}
+.photo-upload .icon{font-size:28px;margin-bottom:6px;}
+.photo-upload p{font-size:13px;color:#999;}
+.photo-preview{position:relative;margin-top:10px;display:none;}
+.photo-preview img{width:100%;border-radius:10px;max-height:240px;object-fit:cover;}
+.photo-preview .remove{position:absolute;top:8px;right:8px;width:28px;height:28px;background:rgba(0,0,0,0.6);color:#fff;border:none;border-radius:50%;cursor:pointer;font-size:14px;}
+
+.btn-record{width:100%;padding:14px;background:linear-gradient(135deg,#B8452A,#D4728A);color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;font-family:'Noto Sans JP',sans-serif;transition:opacity 0.15s;}
+.btn-record:disabled{opacity:0.5;cursor:not-allowed;}
+.btn-record:active:not(:disabled){opacity:0.8;}
+
+/* Quest tab */
+.quest-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px;}
+.quest-stat{background:#fff;border-radius:12px;padding:14px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.quest-stat .value{font-family:'Inter',sans-serif;font-size:24px;font-weight:700;color:#B8452A;}
+.quest-stat .label{font-size:10px;color:#aaa;margin-top:2px;}
+.quest-section-title{font-size:14px;font-weight:700;color:#333;margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.quest-brewery-item{display:flex;align-items:center;justify-content:space-between;background:#fff;border-radius:12px;padding:12px 14px;margin-bottom:8px;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.quest-brewery-item .info{font-size:13px;font-weight:500;color:#333;}
+.quest-brewery-item .sub{font-size:11px;color:#aaa;margin-top:2px;}
+.quest-brewery-item .go{font-size:12px;color:#B8452A;font-weight:600;white-space:nowrap;text-decoration:none;}
+
+/* Badge tab */
+.badge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.badge-card{background:#fff;border-radius:14px;padding:16px 10px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04);transition:transform 0.15s;}
+.badge-card.earned{transform:scale(1);}
+.badge-card.locked{opacity:0.45;filter:grayscale(1);}
+.badge-card .badge-icon{font-size:36px;margin-bottom:6px;}
+.badge-card .badge-name{font-size:11px;font-weight:600;color:#333;}
+.badge-card .badge-desc{font-size:10px;color:#aaa;margin-top:2px;}
+.badge-card.earned .badge-name{color:#B8452A;}
+
+/* More button */
+.btn-more{display:block;width:100%;padding:12px;background:#fff;border:1px solid #eee;border-radius:10px;font-size:13px;color:#888;cursor:pointer;text-align:center;font-family:'Noto Sans JP',sans-serif;margin-top:8px;}
+
+/* Toast */
+.quest-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#333;color:#fff;padding:12px 24px;border-radius:12px;font-size:13px;z-index:200;opacity:0;transition:opacity 0.3s;pointer-events:none;}
+.quest-toast.show{opacity:1;}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:#ddd;border-radius:4px;}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<nav class="thub-nav">
+  <div class="thub-nav-inner">
+    <a class="thub-nav-logo" href="/">Terroir HUB <span>SAKE</span></a>
+    <div class="thub-nav-links">
+      <a href="/quest/" style="color:#B8452A;font-weight:600;">クエスト</a>
+      <a href="/sake/search/">酒蔵検索</a>
+      <a href="/sake/guide/">日本酒ガイド</a>
+    </div>
+    <button class="thub-nav-menu" onclick="document.getElementById('thub-mm').classList.add('open');document.getElementById('thub-mm-ov').classList.add('open')">&#9776;</button>
+  </div>
+</nav>
+<div class="thub-mm-overlay" id="thub-mm-ov" onclick="this.classList.remove('open');document.getElementById('thub-mm').classList.remove('open')"></div>
+<div class="thub-mm" id="thub-mm">
+  <div class="thub-mm-header">
+    <span class="thub-mm-logo">Terroir HUB <span>SAKE</span></span>
+    <button onclick="document.getElementById('thub-mm').classList.remove('open');document.getElementById('thub-mm-ov').classList.remove('open')" class="thub-mm-close">&#10005;</button>
+  </div>
+  <div class="thub-mm-body">
+    <a href="/quest/">テロワールクエスト</a>
+    <a href="/sake/search/">酒蔵検索</a>
+    <a href="/sake/guide/">日本酒ガイド</a>
+    <a href="/sake/plans/">プラン</a>
+    <a href="/">トップページ</a>
+  </div>
+</div>
+
+<!-- Login banner (shown when not logged in, non-blocking) -->
+<div id="login-wall" style="display:none;background:linear-gradient(135deg,#D4728A,#B8452A);color:#fff;padding:16px 20px;text-align:center;">
+  <div style="font-size:14px;font-weight:500;margin-bottom:8px;">ログインすると記録・写真投稿ができます</div>
+  <div style="display:flex;gap:8px;justify-content:center;">
+    <button onclick="if(typeof showAuth==='function')showAuth('login')" style="background:#fff;color:#B8452A;border:none;padding:8px 20px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;">ログイン</button>
+    <button onclick="if(typeof showAuth==='function')showAuth('signup')" style="background:rgba(255,255,255,0.2);color:#fff;border:1px solid rgba(255,255,255,0.4);padding:8px 20px;border-radius:8px;font-size:13px;cursor:pointer;">無料登録</button>
+  </div>
+</div>
+
+<!-- Main content (always visible) -->
+<main id="quest-main">
+
+  <!-- Tab 1: Feed -->
+  <div id="panel-feed" class="tab-panel active">
+    <h2 style="font-size:18px;margin-bottom:14px;color:#333;">みんなの体験</h2>
+    <div id="feed-list"></div>
+    <button id="feed-more-btn" class="btn-more" style="display:none;" onclick="loadMoreFeed()">もっと見る</button>
+  </div>
+
+  <!-- Tab 2: Record -->
+  <div id="panel-record" class="tab-panel">
+    <h2 style="font-size:18px;margin-bottom:14px;color:#333;">お酒を記録する</h2>
+
+    <div class="record-section">
+      <label class="record-label">蔵元を検索</label>
+      <input type="text" id="rec-brewery-input" class="record-input" placeholder="蔵名を入力（例: 八海醸造）" autocomplete="off">
+      <div id="rec-brewery-results" class="record-search-results"></div>
+      <div id="rec-brewery-selected" style="display:none;margin-top:8px;padding:10px 14px;background:#fdf5f6;border-radius:10px;font-size:13px;color:#333;display:none;">
+        <span id="rec-brewery-name-display"></span>
+        <button onclick="clearBrewerySelection()" style="float:right;background:none;border:none;color:#aaa;cursor:pointer;font-size:14px;">✕</button>
+      </div>
+    </div>
+
+    <div class="record-section" id="rec-brand-section" style="display:none;">
+      <label class="record-label">銘柄を選択</label>
+      <div id="rec-brand-list" class="brand-list"></div>
+      <input type="text" id="rec-brand-custom" class="record-input" placeholder="または銘柄名を入力" style="margin-top:8px;">
+    </div>
+
+    <div class="record-section">
+      <label class="record-label">評価</label>
+      <div class="star-rating" id="rec-stars">
+        <span class="star" data-v="1">★</span>
+        <span class="star" data-v="2">★</span>
+        <span class="star" data-v="3">★</span>
+        <span class="star" data-v="4">★</span>
+        <span class="star" data-v="5">★</span>
+      </div>
+    </div>
+
+    <div class="record-section">
+      <label class="record-label">写真（任意）</label>
+      <div class="photo-upload" id="rec-photo-drop" onclick="document.getElementById('rec-photo-file').click()">
+        <input type="file" id="rec-photo-file" accept="image/*" capture="environment" style="display:none;">
+        <div class="icon">📸</div>
+        <p>タップして撮影 or 写真を選択</p>
+      </div>
+      <div class="photo-preview" id="rec-photo-preview">
+        <img id="rec-photo-img" alt="プレビュー">
+        <button class="remove" onclick="removeRecordPhoto()">✕</button>
+      </div>
+    </div>
+
+    <div class="record-section">
+      <label class="record-label">コメント（任意）</label>
+      <textarea id="rec-comment" class="record-input" placeholder="感想を書いてみよう"></textarea>
+    </div>
+
+    <button class="btn-record" id="btn-submit-record" disabled onclick="submitRecord()">記録する</button>
+  </div>
+
+  <!-- Tab 3: Quest -->
+  <div id="panel-quest" class="tab-panel">
+    <h2 style="font-size:18px;margin-bottom:14px;color:#333;">クエスト</h2>
+    <div class="quest-stats" id="quest-stats"></div>
+    <div id="quest-unvisited"></div>
+    <div id="quest-history" style="margin-top:20px;"></div>
+  </div>
+
+  <!-- Tab 4: Badge -->
+  <div id="panel-badge" class="tab-panel">
+    <h2 style="font-size:18px;margin-bottom:14px;color:#333;">バッジコレクション</h2>
+    <div class="badge-grid" id="badge-grid"></div>
+  </div>
+
+</main>
+
+<!-- Tab bar -->
+<nav class="tab-bar" id="tab-bar" style="display:none;">
+  <button class="active" data-tab="feed"><span class="tab-icon">🏠</span>フィード</button>
+  <button data-tab="record"><span class="tab-icon">📝</span>記録</button>
+  <button data-tab="quest"><span class="tab-icon">🗺️</span>クエスト</button>
+  <button data-tab="badge"><span class="tab-icon">🏆</span>バッジ</button>
+</nav>
+
+<!-- Toast -->
+<div class="quest-toast" id="quest-toast"></div>
+
+<script src="/sake/auth.js"></script>
+<script>
+(function(){
+  'use strict';
+
+  // ── Config ──
+  var SUPABASE_URL = 'https://hhwavxavuqqfiehrogwv.supabase.co';
+  var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhod2F2eGF2dXFxZmllaHJvZ3d2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM5Njk3MzAsImV4cCI6MjA4OTU0NTczMH0.tHMQ_u51jp69AMUKKtTvxL09Sr11JFPKGRhKMmUzEjg';
+  var PAGE_SIZE = 10;
+
+  // ── State ──
+  var sb = null;
+  var currentUser = null;
+  var searchIndex = null;
+  var selectedBrewery = null;
+  var selectedBrand = '';
+  var selectedRating = 0;
+  var photoDataUrl = null;
+  var feedOffset = 0;
+  var feedDone = false;
+
+  // ── Util ──
+  function escHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+  function timeAgo(d){
+    var sec = Math.floor((Date.now() - new Date(d).getTime()) / 1000);
+    if(sec < 60) return sec + '秒前';
+    var min = Math.floor(sec/60);
+    if(min < 60) return min + '分前';
+    var hr = Math.floor(min/60);
+    if(hr < 24) return hr + '時間前';
+    var day = Math.floor(hr/24);
+    if(day < 30) return day + '日前';
+    return Math.floor(day/30) + 'ヶ月前';
+  }
+
+  function starsHtml(n){
+    var s = '';
+    for(var i=1;i<=5;i++) s += '<span style="color:' + (i<=n ? '#D4728A' : '#e5e5e5') + ';">★</span>';
+    return s;
+  }
+
+  function showToast(msg){
+    var t = document.getElementById('quest-toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(function(){ t.classList.remove('show'); }, 2500);
+  }
+
+  // ── Init ──
+  function waitForSupabase(){
+    if(typeof supabase !== 'undefined' && supabase.createClient){
+      sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+      checkAuth();
+    } else {
+      setTimeout(waitForSupabase, 100);
+    }
+  }
+
+  function checkAuth(){
+    sb.auth.getSession().then(function(res){
+      var session = res.data.session;
+      if(session && session.user){
+        currentUser = session.user;
+        showApp();
+      } else {
+        showLoginWall();
+      }
+    });
+
+    sb.auth.onAuthStateChange(function(event, session){
+      if(event === 'SIGNED_IN' && session){
+        currentUser = session.user;
+        showApp();
+      } else if(event === 'SIGNED_OUT'){
+        currentUser = null;
+        showLoginWall();
+      }
+    });
+  }
+
+  function showLoginWall(){
+    document.getElementById('login-wall').style.display = 'block';
+  }
+
+  function showApp(){
+    document.getElementById('login-wall').style.display = 'none';
+
+    loadSearchIndex();
+    loadFeed();
+    renderBadges();
+    renderQuest();
+  }
+
+  // ── Tabs ──
+  var tabBtns = document.querySelectorAll('.tab-bar button');
+  tabBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var tab = btn.getAttribute('data-tab');
+      tabBtns.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+      document.getElementById('panel-' + tab).classList.add('active');
+      if(tab === 'badge') renderBadges();
+      if(tab === 'quest') renderQuest();
+    });
+  });
+
+  // ── Feed ──
+  function loadFeed(){
+    if(feedDone || !sb) return;
+    sb.from('sake_logs').select('*').order('created_at', {ascending:false}).range(feedOffset, feedOffset + PAGE_SIZE - 1).then(function(res){
+      if(res.error){ console.error('[FEED]', res.error); return; }
+      var data = res.data || [];
+      if(data.length < PAGE_SIZE) feedDone = true;
+      feedOffset += data.length;
+
+      var list = document.getElementById('feed-list');
+      if(feedOffset === data.length && data.length === 0){
+        list.innerHTML = '<div class="feed-empty"><div class="icon">🍶</div><p>まだ記録がありません。<br>最初の一杯を記録してみよう！</p></div>';
+        return;
+      }
+
+      data.forEach(function(log){
+        list.insertAdjacentHTML('beforeend', buildFeedCard(log));
+      });
+
+      document.getElementById('feed-more-btn').style.display = feedDone ? 'none' : 'block';
+    });
+  }
+  window.loadMoreFeed = loadFeed;
+
+  function buildFeedCard(log){
+    var userName = escHtml(log.user_nickname || '匿名ユーザー');
+    var photoHtml = '';
+    if(log.image_url){
+      photoHtml = '<img class="feed-card-photo" src="' + escHtml(log.image_url) + '" alt="投稿写真" loading="lazy">';
+    }
+    var commentHtml = '';
+    if(log.comment){
+      commentHtml = '<div class="feed-card-comment">' + escHtml(log.comment) + '</div>';
+    }
+    var likes = log.likes || Math.floor(Math.random()*15);
+    var comments = log.comments_count || Math.floor(Math.random()*5);
+
+    return '<div class="feed-card">' +
+      '<div class="feed-card-header">' +
+        '<div class="feed-card-user">' +
+          '<div class="feed-card-avatar">🍶</div>' +
+          '<div class="feed-card-name">' + userName + '</div>' +
+        '</div>' +
+        '<div class="feed-card-time">' + timeAgo(log.created_at) + '</div>' +
+      '</div>' +
+      '<div class="feed-card-rating">' + starsHtml(log.rating || 0) + ' <span class="num">' + (log.rating || 0) + '.0</span></div>' +
+      '<div class="feed-card-brewery">' + escHtml(log.brewery_name || '') + '「' + escHtml(log.brand_name || '') + '」</div>' +
+      '<div class="feed-card-area">' + escHtml(log.area || '') + '</div>' +
+      photoHtml +
+      commentHtml +
+      '<div class="feed-card-actions">' +
+        '<span>❤ ' + likes + '</span>' +
+        '<span>💬 ' + comments + '</span>' +
+      '</div>' +
+    '</div>';
+  }
+
+  // ── Search Index ──
+  function loadSearchIndex(){
+    if(searchIndex) return;
+    fetch('/sake/search_index.json').then(function(r){ return r.json(); }).then(function(data){
+      searchIndex = data;
+    }).catch(function(e){ console.error('[SEARCH]', e); });
+  }
+
+  // ── Record: Brewery search ──
+  var brewInput = document.getElementById('rec-brewery-input');
+  var brewResults = document.getElementById('rec-brewery-results');
+  var searchTimer = null;
+
+  brewInput.addEventListener('input', function(){
+    clearTimeout(searchTimer);
+    var q = brewInput.value.trim();
+    if(q.length < 1){ brewResults.style.display='none'; return; }
+    searchTimer = setTimeout(function(){ searchBreweries(q); }, 200);
+  });
+
+  function searchBreweries(q){
+    if(!searchIndex || !searchIndex.length){ brewResults.style.display='none'; return; }
+    var ql = q.toLowerCase();
+    var results = searchIndex.filter(function(b){
+      return (b.name && b.name.toLowerCase().indexOf(ql) >= 0) ||
+             (b.brand && b.brand.toLowerCase().indexOf(ql) >= 0) ||
+             (b.kana && b.kana.toLowerCase().indexOf(ql) >= 0);
+    }).slice(0, 8);
+
+    if(results.length === 0){ brewResults.style.display='none'; return; }
+    brewResults.innerHTML = results.map(function(b){
+      return '<div class="item" data-id="' + escHtml(b.id) + '" data-name="' + escHtml(b.name) + '" data-pref="' + escHtml(b.pref || '') + '" data-brand="' + escHtml(b.brand || '') + '">' +
+        escHtml(b.name) + (b.brand ? '「' + escHtml(b.brand) + '」' : '') +
+        '<div class="sub">' + escHtml(b.area || b.pref || '') + '</div>' +
+      '</div>';
+    }).join('');
+    brewResults.style.display = 'block';
+
+    brewResults.querySelectorAll('.item').forEach(function(el){
+      el.addEventListener('click', function(){
+        selectBrewery({
+          id: el.getAttribute('data-id'),
+          name: el.getAttribute('data-name'),
+          pref: el.getAttribute('data-pref'),
+          brand: el.getAttribute('data-brand')
+        });
+      });
+    });
+  }
+
+  function selectBrewery(b){
+    selectedBrewery = b;
+    brewInput.style.display = 'none';
+    brewResults.style.display = 'none';
+    var sel = document.getElementById('rec-brewery-selected');
+    sel.style.display = 'block';
+    document.getElementById('rec-brewery-name-display').textContent = b.name + (b.brand ? '「' + b.brand + '」' : '');
+
+    // Load brands from brewery JSON
+    loadBreweryBrands(b);
+    validateRecord();
+  }
+
+  window.clearBrewerySelection = function(){
+    selectedBrewery = null;
+    selectedBrand = '';
+    brewInput.style.display = 'block';
+    brewInput.value = '';
+    document.getElementById('rec-brewery-selected').style.display = 'none';
+    document.getElementById('rec-brand-section').style.display = 'none';
+    document.getElementById('rec-brand-custom').value = '';
+    validateRecord();
+  };
+
+  function loadBreweryBrands(b){
+    var brandSection = document.getElementById('rec-brand-section');
+    var brandList = document.getElementById('rec-brand-list');
+    brandSection.style.display = 'block';
+    brandList.innerHTML = '';
+
+    // Try to load from JSON
+    if(b.pref && b.id){
+      fetch('/sake/' + encodeURIComponent(b.pref) + '/' + encodeURIComponent(b.id) + '.html')
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          // Extract brand names from HTML
+          var matches = html.match(/class="brand-name[^"]*">([^<]+)</g);
+          var brands = [];
+          if(matches){
+            matches.forEach(function(m){
+              var name = m.replace(/class="brand-name[^"]*">/, '').trim();
+              if(name && brands.indexOf(name) < 0) brands.push(name);
+            });
+          }
+          // Fallback: use the brand from search index
+          if(brands.length === 0 && b.brand) brands = [b.brand];
+          renderBrandChips(brands);
+        })
+        .catch(function(){
+          if(b.brand) renderBrandChips([b.brand]);
+        });
+    } else {
+      if(b.brand) renderBrandChips([b.brand]);
+    }
+  }
+
+  function renderBrandChips(brands){
+    var brandList = document.getElementById('rec-brand-list');
+    brandList.innerHTML = brands.map(function(name){
+      return '<div class="brand-chip" data-name="' + escHtml(name) + '">' + escHtml(name) + '</div>';
+    }).join('');
+
+    brandList.querySelectorAll('.brand-chip').forEach(function(chip){
+      chip.addEventListener('click', function(){
+        brandList.querySelectorAll('.brand-chip').forEach(function(c){ c.classList.remove('selected'); });
+        chip.classList.add('selected');
+        selectedBrand = chip.getAttribute('data-name');
+        document.getElementById('rec-brand-custom').value = '';
+        validateRecord();
+      });
+    });
+  }
+
+  // Brand custom input
+  document.getElementById('rec-brand-custom').addEventListener('input', function(){
+    if(this.value.trim()){
+      selectedBrand = this.value.trim();
+      document.getElementById('rec-brand-list').querySelectorAll('.brand-chip').forEach(function(c){ c.classList.remove('selected'); });
+    } else {
+      selectedBrand = '';
+    }
+    validateRecord();
+  });
+
+  // ── Record: Star rating ──
+  var starsEl = document.getElementById('rec-stars');
+  starsEl.querySelectorAll('.star').forEach(function(star){
+    star.addEventListener('click', function(){
+      selectedRating = parseInt(star.getAttribute('data-v'));
+      starsEl.querySelectorAll('.star').forEach(function(s){
+        var v = parseInt(s.getAttribute('data-v'));
+        if(v <= selectedRating){
+          s.classList.add('filled');
+          s.classList.add('animate');
+          setTimeout(function(){ s.classList.remove('animate'); }, 300);
+        } else {
+          s.classList.remove('filled');
+        }
+      });
+      validateRecord();
+    });
+  });
+
+  // ── Record: Photo ──
+  var photoFile = document.getElementById('rec-photo-file');
+  var photoDrop = document.getElementById('rec-photo-drop');
+
+  photoFile.addEventListener('change', function(){
+    if(this.files && this.files[0]) handleRecordPhoto(this.files[0]);
+  });
+  photoDrop.addEventListener('dragover', function(e){ e.preventDefault(); this.classList.add('dragover'); });
+  photoDrop.addEventListener('dragleave', function(){ this.classList.remove('dragover'); });
+  photoDrop.addEventListener('drop', function(e){
+    e.preventDefault(); this.classList.remove('dragover');
+    if(e.dataTransfer.files && e.dataTransfer.files[0]) handleRecordPhoto(e.dataTransfer.files[0]);
+  });
+
+  function handleRecordPhoto(file){
+    if(!file.type.startsWith('image/')){ showToast('画像ファイルを選択してください'); return; }
+    var reader = new FileReader();
+    reader.onload = function(e){
+      photoDataUrl = e.target.result;
+      document.getElementById('rec-photo-img').src = photoDataUrl;
+      document.getElementById('rec-photo-preview').style.display = 'block';
+      photoDrop.style.display = 'none';
+    };
+    reader.readAsDataURL(file);
+  }
+
+  window.removeRecordPhoto = function(){
+    photoDataUrl = null;
+    document.getElementById('rec-photo-preview').style.display = 'none';
+    photoDrop.style.display = 'block';
+    photoFile.value = '';
+  };
+
+  // ── Record: Validate ──
+  function validateRecord(){
+    var ok = selectedBrewery && selectedBrand && selectedRating > 0;
+    document.getElementById('btn-submit-record').disabled = !ok;
+  }
+
+  // ── Record: Submit ──
+  window.submitRecord = function(){
+    if(!selectedBrewery || !selectedBrand || !selectedRating || !currentUser || !sb) return;
+
+    var btn = document.getElementById('btn-submit-record');
+    btn.disabled = true;
+    btn.textContent = '記録中...';
+
+    var record = {
+      user_id: currentUser.id,
+      user_nickname: currentUser.email ? currentUser.email.split('@')[0] : '匿名',
+      brewery_id: selectedBrewery.id,
+      brewery_name: selectedBrewery.name,
+      brand_name: selectedBrand,
+      rating: selectedRating,
+      comment: document.getElementById('rec-comment').value.trim() || null,
+      image_url: photoDataUrl || null,
+      area: selectedBrewery.pref || ''
+    };
+
+    // Save to localStorage
+    var logs = JSON.parse(localStorage.getItem('thub_quest_logs') || '[]');
+    logs.unshift(Object.assign({}, record, { created_at: new Date().toISOString() }));
+    localStorage.setItem('thub_quest_logs', JSON.stringify(logs));
+
+    // Save to Supabase
+    sb.from('sake_logs').insert([record]).then(function(res){
+      if(res.error){
+        console.error('[RECORD]', res.error);
+        showToast('記録を保存しました（ローカル）');
+      } else {
+        showToast('記録しました！');
+      }
+
+      // Reset form
+      resetRecordForm();
+      btn.textContent = '記録する';
+
+      // Check badges
+      checkBadges();
+
+      // Refresh feed
+      feedOffset = 0;
+      feedDone = false;
+      document.getElementById('feed-list').innerHTML = '';
+      loadFeed();
+      renderQuest();
+    });
+  };
+
+  function resetRecordForm(){
+    window.clearBrewerySelection();
+    selectedRating = 0;
+    photoDataUrl = null;
+    document.getElementById('rec-stars').querySelectorAll('.star').forEach(function(s){ s.classList.remove('filled'); });
+    document.getElementById('rec-comment').value = '';
+    document.getElementById('rec-photo-preview').style.display = 'none';
+    document.getElementById('rec-photo-drop').style.display = 'block';
+    document.getElementById('rec-photo-file').value = '';
+    document.getElementById('btn-submit-record').disabled = true;
+  }
+
+  // ── Quest Tab ──
+  function renderQuest(){
+    var logs = JSON.parse(localStorage.getItem('thub_quest_logs') || '[]');
+    var brewerySet = new Set();
+    var prefSet = new Set();
+    logs.forEach(function(l){
+      if(l.brewery_id) brewerySet.add(l.brewery_id);
+      if(l.area) prefSet.add(l.area);
+    });
+
+    // Rank
+    var rank = '初心者';
+    if(logs.length >= 50) rank = 'マスター';
+    else if(logs.length >= 20) rank = '通';
+    else if(logs.length >= 10) rank = '酒好き';
+    else if(logs.length >= 5) rank = '探求者';
+
+    // Stats
+    document.getElementById('quest-stats').innerHTML =
+      '<div class="quest-stat"><div class="value num">' + logs.length + '</div><div class="label">投稿数</div></div>' +
+      '<div class="quest-stat"><div class="value num">' + brewerySet.size + '</div><div class="label">訪問蔵元</div></div>' +
+      '<div class="quest-stat"><div class="value">' + rank + '</div><div class="label">ランク</div></div>';
+
+    // Unvisited breweries (from logs that have no photo)
+    var noPhotoLogs = logs.filter(function(l){ return !l.image_url && l.brewery_id; });
+    var unvisitedMap = {};
+    noPhotoLogs.forEach(function(l){
+      if(!unvisitedMap[l.brewery_id]) unvisitedMap[l.brewery_id] = l;
+    });
+    var unvisited = Object.values(unvisitedMap).slice(0, 5);
+
+    var unvisitedHtml = '';
+    if(unvisited.length > 0){
+      unvisitedHtml = '<div class="quest-section-title">📷 写真未投稿の蔵</div>';
+      unvisited.forEach(function(l){
+        var link = '/sake/' + encodeURIComponent(l.area || '') + '/' + encodeURIComponent(l.brewery_id) + '.html';
+        unvisitedHtml += '<div class="quest-brewery-item">' +
+          '<div><div class="info">' + escHtml(l.brewery_name) + '</div><div class="sub">' + escHtml(l.brand_name || '') + '</div></div>' +
+          '<a href="' + escHtml(link) + '" class="go">撮りに行く →</a>' +
+        '</div>';
+      });
+    }
+    document.getElementById('quest-unvisited').innerHTML = unvisitedHtml;
+
+    // History
+    var historyHtml = '';
+    if(logs.length > 0){
+      historyHtml = '<div class="quest-section-title">📋 投稿履歴</div>';
+      logs.slice(0, 10).forEach(function(l){
+        historyHtml += '<div class="quest-brewery-item">' +
+          '<div><div class="info">' + escHtml(l.brewery_name || '') + '「' + escHtml(l.brand_name || '') + '」</div>' +
+          '<div class="sub">' + starsHtml(l.rating) + ' ' + (l.created_at ? timeAgo(l.created_at) : '') + '</div></div>' +
+          (l.image_url ? '<span style="font-size:16px;">📷</span>' : '') +
+        '</div>';
+      });
+    }
+    document.getElementById('quest-history').innerHTML = historyHtml;
+  }
+
+  // ── Badges ──
+  var BADGES = [
+    { id:'first',     icon:'📸', name:'初めての記録',        desc:'1杯目を記録',          check:function(l){ return l.length >= 1; } },
+    { id:'lover',     icon:'🍶', name:'酒好き',             desc:'10杯記録',             check:function(l){ return l.length >= 10; } },
+    { id:'expert',    icon:'🏅', name:'通',                desc:'50杯記録',             check:function(l){ return l.length >= 50; } },
+    { id:'seeker',    icon:'🔍', name:'探求者',             desc:'写真付き5件投稿',       check:function(l){ return l.filter(function(x){ return x.image_url; }).length >= 5; } },
+    { id:'hunter',    icon:'🏆', name:'テロワールハンター',  desc:'写真付き10件投稿',      check:function(l){ return l.filter(function(x){ return x.image_url; }).length >= 10; } },
+    { id:'master',    icon:'👑', name:'マスターハンター',    desc:'写真付き30件投稿',      check:function(l){ return l.filter(function(x){ return x.image_url; }).length >= 30; } },
+    { id:'star',      icon:'⭐', name:'星の収集家',          desc:'★5を10回つけた',       check:function(l){ return l.filter(function(x){ return x.rating === 5; }).length >= 10; } },
+    { id:'national',  icon:'🗾', name:'全国制覇者',          desc:'10県以上の蔵を記録',    check:function(l){ var s = new Set(); l.forEach(function(x){ if(x.area) s.add(x.area); }); return s.size >= 10; } },
+    { id:'world',     icon:'🌍', name:'ワールドクエスター',  desc:'3カ国以上から投稿',     check:function(l){ var s = new Set(); l.forEach(function(x){ if(x.country) s.add(x.country); }); return s.size >= 3; } }
+  ];
+
+  function renderBadges(){
+    var logs = JSON.parse(localStorage.getItem('thub_quest_logs') || '[]');
+    var earned = JSON.parse(localStorage.getItem('thub_quest_badges') || '[]');
+    var grid = document.getElementById('badge-grid');
+
+    grid.innerHTML = BADGES.map(function(b){
+      var isEarned = b.check(logs);
+      if(isEarned && earned.indexOf(b.id) < 0){
+        earned.push(b.id);
+        localStorage.setItem('thub_quest_badges', JSON.stringify(earned));
+      }
+      return '<div class="badge-card ' + (isEarned ? 'earned' : 'locked') + '">' +
+        '<div class="badge-icon">' + b.icon + '</div>' +
+        '<div class="badge-name">' + escHtml(b.name) + '</div>' +
+        '<div class="badge-desc">' + escHtml(b.desc) + '</div>' +
+      '</div>';
+    }).join('');
+  }
+
+  function checkBadges(){
+    var logs = JSON.parse(localStorage.getItem('thub_quest_logs') || '[]');
+    var earned = JSON.parse(localStorage.getItem('thub_quest_badges') || '[]');
+    var newBadge = false;
+    BADGES.forEach(function(b){
+      if(earned.indexOf(b.id) < 0 && b.check(logs)){
+        earned.push(b.id);
+        newBadge = true;
+        showToast(b.icon + ' バッジ獲得！「' + b.name + '」');
+      }
+    });
+    if(newBadge) localStorage.setItem('thub_quest_badges', JSON.stringify(earned));
+  }
+
+  // ── Start ──
+  waitForSupabase();
+
+})();
+</script>
+
+<!-- Service Worker registration -->
+<script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('/sw.js').catch(function(e){ console.log('SW registration failed:', e); });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "テロワールクエスト — Terroir HUB",
+  "short_name": "テロワールクエスト",
+  "description": "日本酒を飲んで記録して、バッジを集めよう",
+  "start_url": "/quest/",
+  "display": "standalone",
+  "background_color": "#FAFAF8",
+  "theme_color": "#B8452A",
+  "icons": [
+    {"src": "/img/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/img/icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}
