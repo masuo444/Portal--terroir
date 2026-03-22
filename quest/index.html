@@ -283,7 +283,7 @@ textarea.record-input{resize:none;min-height:80px;}
 </main>
 
 <!-- Tab bar -->
-<nav class="tab-bar" id="tab-bar" style="display:none;">
+<nav class="tab-bar" id="tab-bar">
   <button class="active" data-tab="feed"><span class="tab-icon">🏠</span>フィード</button>
   <button data-tab="record"><span class="tab-icon">📝</span>記録</button>
   <button data-tab="quest"><span class="tab-icon">🗺️</span>クエスト</button>
@@ -343,25 +343,37 @@ textarea.record-input{resize:none;min-height:80px;}
   }
 
   // ── Init ──
+  // auth.jsのSupabaseインスタンスを再利用、なければ自前で作成
   function waitForSupabase(){
-    if(typeof supabase !== 'undefined' && supabase.createClient){
+    // auth.jsが初期化済みならそのsbを使う
+    if(window.thubAuth && window.thubAuth.supabase){
+      sb = window.thubAuth.supabase;
+      checkAuth();
+    } else if(typeof supabase !== 'undefined' && supabase.createClient){
       sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       checkAuth();
     } else {
-      setTimeout(waitForSupabase, 100);
+      setTimeout(waitForSupabase, 200);
     }
   }
 
   function checkAuth(){
-    sb.auth.getSession().then(function(res){
-      var session = res.data.session;
-      if(session && session.user){
-        currentUser = session.user;
-        showApp();
-      } else {
-        showLoginWall();
-      }
-    });
+    // auth.jsで既にログイン済みか確認
+    if(window.thubAuth && window.thubAuth.isLoggedIn && window.thubAuth.user){
+      currentUser = window.thubAuth.user;
+      showApp();
+    } else {
+      // Supabaseセッションを直接確認
+      sb.auth.getSession().then(function(res){
+        var session = res.data.session;
+        if(session && session.user){
+          currentUser = session.user;
+          showApp();
+        } else {
+          showLoginWall();
+        }
+      });
+    }
 
     sb.auth.onAuthStateChange(function(event, session){
       if(event === 'SIGNED_IN' && session){
@@ -376,10 +388,12 @@ textarea.record-input{resize:none;min-height:80px;}
 
   function showLoginWall(){
     document.getElementById('login-wall').style.display = 'block';
+    document.getElementById('tab-bar').style.display = 'none';
   }
 
   function showApp(){
     document.getElementById('login-wall').style.display = 'none';
+    document.getElementById('tab-bar').style.display = 'flex';
     // 認証モーダルが開いていたら閉じる
     var authModal = document.getElementById('q-auth');
     if(authModal) authModal.classList.remove('open');
