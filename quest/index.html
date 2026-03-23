@@ -358,6 +358,27 @@ textarea.record-input{resize:none;min-height:80px;}
   }
 
   function checkAuth(){
+    // URLパラメータからトークンを受け取り（SAKEサイトからの遷移）
+    var params = new URLSearchParams(window.location.search);
+    var accessToken = params.get('access_token');
+    var refreshToken = params.get('refresh_token');
+    if(accessToken && refreshToken){
+      sb.auth.setSession({access_token: accessToken, refresh_token: refreshToken}).then(function(res){
+        if(res.data && res.data.session){
+          currentUser = res.data.session.user;
+          // URLからトークンを除去
+          var url = new URL(window.location);
+          url.searchParams.delete('access_token');
+          url.searchParams.delete('refresh_token');
+          window.history.replaceState({}, '', url);
+          showApp();
+        } else {
+          showLoginWall();
+        }
+      });
+      return;
+    }
+
     // auth.jsで既にログイン済みか確認
     if(window.thubAuth && window.thubAuth.isLoggedIn && window.thubAuth.user){
       currentUser = window.thubAuth.user;
