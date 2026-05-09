@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<title>酒造向け AIチャットボット導入 — Terroir HUB</title>
+<meta name="description" content="Terroir HUBの酒造向けAIチャットボット導入プラン。FAQ、商品説明、購入先、見学・体験案内、日本語・英語対応まで整理し、問い合わせ対応を支援します。">
+<link rel="canonical" href="https://www.terroirhub.com/business/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700;800&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fbfaf7;--paper:#fff;--soft:#f4efe8;--ink:#1f1b17;--muted:#6f655e;--faint:#9a9189;--line:rgba(39,28,22,.1);--accent:#996e1a;--red:#b8452a;--charcoal:#241b16;--green:#2f6b4f;--shadow:0 24px 70px rgba(50,34,22,.12);--display:'Shippori Mincho',serif;--body:'Noto Sans JP','Hiragino Sans',sans-serif;--num:'Inter',sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font-family:inherit}
+::selection{background:var(--accent);color:#fff}
+.nav{position:fixed;top:0;left:0;right:0;height:64px;z-index:50;background:rgba(251,250,247,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-inner{height:64px;max-width:1180px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:var(--display);font-size:19px;font-weight:800;letter-spacing:.08em;color:var(--ink);white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{font-size:13px;font-weight:700;color:var(--muted);white-space:nowrap}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{display:inline-flex;align-items:center;height:38px;padding:0 18px;border-radius:999px;background:var(--ink);color:#fff!important;font-size:12px!important}
+.hero{padding:116px 24px 74px;background:linear-gradient(180deg,#fff 0%,#f4efe8 100%);border-bottom:1px solid var(--line)}
+.hero-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center}
+.label{font-family:var(--num);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.hero h1{font-family:var(--display);font-size:clamp(38px,5.2vw,66px);font-weight:800;line-height:1.18;letter-spacing:.02em;margin-bottom:20px}
+.hero-copy{font-family:var(--display);font-size:clamp(18px,2vw,24px);font-weight:700;line-height:1.85;color:#332820;margin-bottom:18px}
+.hero-copy span{display:inline-block;color:var(--red)}
+.hero-lead{font-size:16px;line-height:2.05;color:var(--muted);max-width:640px;margin-bottom:24px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 28px;border-radius:8px;font-size:14px;font-weight:800;border:0;cursor:pointer;transition:transform .18s,opacity .18s}
+.btn:hover{opacity:.9;transform:translateY(-1px)}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 12px 26px rgba(184,69,42,.2)}
+.btn-secondary{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.hero-note{font-size:12px;color:var(--faint);line-height:1.75;max-width:620px}
+.chat-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.chat-head{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--line);background:#fff}
+.chat-title{display:flex;align-items:center;gap:10px;font-weight:800;color:#31261f}
+.chat-dot{width:12px;height:12px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(47,107,79,.12)}
+.chat-status{font-size:12px;color:var(--green);font-weight:800}
+.chat-body{padding:22px;background:#fbfaf7;display:grid;gap:14px}
+.bubble{max-width:86%;padding:13px 15px;border-radius:14px;font-size:13px;line-height:1.75}
+.bubble.user{justify-self:end;background:var(--red);color:#fff;border-bottom-right-radius:3px}
+.bubble.ai{justify-self:start;background:#fff;border:1px solid var(--line);color:#4c423b;border-bottom-left-radius:3px}
+.chat-input{display:flex;align-items:center;gap:10px;padding:16px 18px;background:#fff;border-top:1px solid var(--line)}
+.fake-input{flex:1;height:42px;border-radius:999px;background:#f3eee8;color:#a29992;font-size:13px;display:flex;align-items:center;padding:0 16px}
+.send{width:42px;height:42px;border-radius:50%;background:var(--ink);position:relative}
+.send:after{content:'';position:absolute;left:16px;top:13px;width:10px;height:14px;border-top:2px solid #fff;border-right:2px solid #fff;transform:rotate(45deg)}
+.section{max-width:1180px;margin:0 auto;padding:86px 24px}
+.section.compact{padding-top:68px;padding-bottom:68px}
+.section-label{font-family:var(--num);font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.section-title{font-family:var(--display);font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.36;margin-bottom:14px}
+.section-desc{font-size:15px;color:var(--muted);line-height:2;max-width:760px}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
+.feature{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;min-height:164px}
+.feature-mark{width:38px;height:38px;border-radius:10px;background:rgba(153,110,26,.08);display:grid;place-items:center;margin-bottom:16px}
+.feature-mark:before{content:'';display:block;width:16px;height:16px;border-radius:50%;border:3px solid var(--accent)}
+.feature h3{font-size:16px;font-weight:800;margin-bottom:7px}
+.feature p{font-size:13px;color:var(--muted);line-height:1.85}
+.campaign{max-width:1180px;margin:0 auto 24px;padding:0 24px}
+.campaign-inner{background:var(--charcoal);color:#fff;border-radius:18px;display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;padding:36px;box-shadow:0 20px 60px rgba(36,27,22,.18)}
+.price-kicker{font-family:var(--num);font-size:12px;font-weight:800;letter-spacing:.16em;color:#e4bd73;margin-bottom:12px}
+.price-title{font-family:var(--display);font-size:28px;font-weight:800;line-height:1.45;margin-bottom:16px}
+.price-main{display:flex;align-items:flex-end;gap:10px;margin-bottom:12px}
+.price-main strong{font-family:var(--num);font-size:54px;line-height:1;color:#fff}
+.price-main span{font-size:15px;color:rgba(255,255,255,.62);margin-bottom:8px}
+.price-note{font-size:12px;color:rgba(255,255,255,.58);line-height:1.8}
+.checklist{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.check{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:9px;padding:12px 13px;font-size:13px;font-weight:700;color:rgba(255,255,255,.9)}
+.check:before{content:'✓';color:#e4bd73;margin-right:8px}
+.campaign-warning{grid-column:1/-1;margin-top:8px;padding:14px 16px;background:rgba(255,255,255,.07);border-left:3px solid #e4bd73;color:rgba(255,255,255,.78);font-size:12px;line-height:1.8}
+.bonus{max-width:1180px;margin:0 auto;padding:0 24px 40px}
+.bonus-inner{background:#fff;border:1px solid rgba(153,110,26,.2);border-radius:14px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.bonus strong{font-family:var(--display);font-size:23px;color:var(--accent)}
+.bonus p{font-size:13px;color:var(--muted);line-height:1.85;margin-top:4px}
+.bonus-tag{font-size:12px;font-weight:800;color:#fff;background:var(--accent);border-radius:999px;padding:8px 14px;white-space:nowrap}
+.soft-band{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.problems{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+.problem{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:24px}
+.problem h3{font-size:17px;font-weight:800;margin-bottom:8px}
+.problem p{font-size:13px;color:var(--muted);line-height:1.9}
+.closing-copy{font-family:var(--display);font-size:clamp(24px,3.2vw,36px);font-weight:800;line-height:1.55;margin-top:42px;max-width:760px}
+.closing-copy span{color:var(--red)}
+.solution-grid{display:grid;grid-template-columns:minmax(0,760px);gap:40px;align-items:start;margin-top:34px}
+.steps{display:grid;gap:12px}
+.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:start}
+.step-num{font-family:var(--num);font-weight:800;color:var(--accent);letter-spacing:.08em}
+.step h3{font-size:17px;font-weight:800;margin-bottom:4px}
+.step p{font-size:13px;color:var(--muted);line-height:1.8}
+.reason{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.reason-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px;box-shadow:0 14px 40px rgba(50,34,22,.08)}
+.reason-list{display:grid;gap:12px;margin-top:18px}
+.reason-list div{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--line);font-size:13px}
+.reason-list div:last-child{border-bottom:0}
+.reason-list span{color:var(--muted)}
+.reason-list b{color:var(--ink);text-align:right}
+.plan-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;margin-top:34px}
+.plan-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px;box-shadow:0 14px 40px rgba(50,34,22,.08)}
+.plan-card h3{font-family:var(--display);font-size:27px;font-weight:800;line-height:1.42;margin-bottom:12px}
+.plan-card .mini{font-size:13px;color:var(--muted);line-height:1.9;margin-bottom:20px}
+.delivery{padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
+.delivery strong{display:block;color:var(--ink);font-family:var(--num);font-size:22px;line-height:1.2;margin-bottom:4px}
+.self-site{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px}
+.self-site h3{font-size:22px;font-weight:800;margin-bottom:10px}
+.self-site p{font-size:14px;color:var(--muted);line-height:2}
+.form-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:start;margin-top:38px}
+.form-note{background:var(--charcoal);color:#fff;padding:32px;border-radius:14px}
+.form-note h3{font-family:var(--display);font-size:26px;line-height:1.45;margin-bottom:12px}
+.form-note p{font-size:13px;color:rgba(255,255,255,.72);line-height:1.95}
+.form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px;display:grid;gap:14px}
+.field{display:grid;gap:6px}
+.field label{font-size:12px;color:var(--faint);font-weight:700}
+.field input,.field select,.field textarea{width:100%;border:1px solid rgba(0,0,0,.13);background:#fff;padding:12px 13px;font-family:var(--body);font-size:14px;outline:none;border-radius:8px}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.status{display:none;font-size:13px;line-height:1.8;padding:12px 14px}
+.status.ok{display:block;background:#f0f7f1;color:#225a31}
+.status.err{display:block;background:#fff0ed;color:#9a3a23}
+.flow{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:34px}
+.flow-step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;min-height:138px}
+.flow-step b{font-family:var(--num);font-size:12px;color:var(--accent);display:block;margin-bottom:14px}
+.flow-step span{font-size:14px;font-weight:800;line-height:1.6}
+.faq{display:grid;gap:0;margin-top:34px;max-width:900px}
+.faq-item{padding:22px 0;border-bottom:1px solid var(--line)}
+.faq-item:first-child{border-top:1px solid var(--line)}
+.faq-q{font-size:16px;font-weight:800;margin-bottom:7px}
+.faq-a{font-size:13px;color:var(--muted);line-height:1.95}
+.final-cta{background:var(--charcoal);color:#fff;text-align:center;padding:78px 24px}
+.final-cta h2{font-family:var(--display);font-size:clamp(30px,4.4vw,50px);font-weight:800;line-height:1.38;margin-bottom:16px}
+.final-cta p{font-size:15px;color:rgba(255,255,255,.75);line-height:2;margin-bottom:28px}
+.final-cta .btn{background:#fff;color:var(--red)}
+.footer{padding:42px 24px;background:#1d1511;color:rgba(255,255,255,.5);text-align:center;font-size:12px}
+@media(max-width:1040px){.hero-inner,.campaign-inner,.solution-grid,.reason,.plan-grid,.form-wrap{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,1fr)}.problems{grid-template-columns:repeat(2,1fr)}.flow{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.nav-links a:not(.nav-cta){display:none}.nav-inner{padding:0 16px}.hero{padding:92px 18px 54px}.section{padding:62px 18px}.campaign,.bonus{padding-left:18px;padding-right:18px}.campaign-inner{padding:26px}.features,.problems,.flow{grid-template-columns:1fr}.checklist{grid-template-columns:1fr}.bonus-inner{align-items:flex-start;flex-direction:column}.step{grid-template-columns:1fr}.btn{width:100%}.price-main strong{font-size:44px}.form-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="/">Terroir HUB</a>
+    <div class="nav-links">
+      <a href="#problem">お悩み</a>
+      <a href="#plan">料金</a>
+      <a href="#flow">導入の流れ</a>
+      <a class="nav-cta" href="#form">相談する</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="label">酒造向け AIチャットボット導入</div>
+      <h1>お客様からの問い合わせ、<br>取りこぼしていませんか？</h1>
+      <div class="hero-copy">
+        <span>「どこで買える？」</span><br>
+        <span>「見学・体験できますか？」</span><br>
+        <span>「英語で案内できますか？」</span>
+      </div>
+      <p class="hero-lead">よくある質問に24時間対応できる、酒造向けAIチャットボットを導入します。人手不足でも、問い合わせ対応を止めないための導入プランです。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#form">問い合わせ対応について相談する</a>
+        <a class="btn btn-secondary" href="#plan">料金を見る</a>
+      </div>
+      <p class="hero-note">味わい、購入先、見学・体験、営業時間、よくある質問などを整理し、日本語・英語で商品やサービスの魅力と必要な情報を案内できる状態に整えます。</p>
+    </div>
+    <div class="chat-card">
+      <div class="chat-head">
+        <div class="chat-title"><span class="chat-dot"></span>AI接客コンシェルジュ</div>
+        <div class="chat-status">24時間対応</div>
+      </div>
+      <div class="chat-body">
+        <div class="bubble user">この商品はどこで買えますか？</div>
+        <div class="bubble ai">公式オンラインショップと一部取扱店で購入できます。購入先リンクをご案内します。</div>
+        <div class="bubble user">見学や体験はできますか？</div>
+        <div class="bubble ai">見学の可否、予約方法、営業時間を確認してご案内します。</div>
+        <div class="bubble user">英語でも案内できますか？</div>
+        <div class="bubble ai">はい。日本語・英語の基本案内に対応できます。</div>
+      </div>
+      <div class="chat-input">
+        <div class="fake-input">質問を入力してください</div>
+        <div class="send" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section compact">
+  <div class="features">
+    <div class="feature"><div class="feature-mark"></div><h3>24時間自動対応</h3><p>営業時間外でも、お客様の質問に自動で案内できます。</p></div>
+    <div class="feature"><div class="feature-mark"></div><h3>同じ質問に自動回答</h3><p>購入先、見学、予約、営業時間など、繰り返しの対応を効率化します。</p></div>
+    <div class="feature"><div class="feature-mark"></div><h3>日本語・英語対応</h3><p>海外のお客様にも伝わる案内の土台を整えます。</p></div>
+    <div class="feature"><div class="feature-mark"></div><h3>自社サイトにも設置可能</h3><p>既存ホームページへのAIチャットボット設置も相談できます。</p></div>
+  </div>
+</section>
+
+<div class="campaign" id="plan">
+  <div class="campaign-inner">
+    <div>
+      <div class="price-kicker">2026年夏限定</div>
+      <div class="price-title">導入キャンペーン価格</div>
+      <div class="price-main"><strong>10万円</strong><span>税込</span></div>
+      <p class="price-note">納期目安 1週間。内容により変動します。</p>
+    </div>
+    <div>
+      <div class="checklist">
+        <div class="check">AIチャットボット設置・設定</div>
+        <div class="check">FAQ整理・設定</div>
+        <div class="check">商品説明設計</div>
+        <div class="check">購入先・見学導線整理</div>
+        <div class="check">スマホ・PC対応</div>
+        <div class="check">公開後サポート</div>
+      </div>
+      <div class="campaign-warning">※本サービスは、大規模送客を約束する広告サービスではありません。まずは「お客様に伝わる状態」を整え、問い合わせ対応を効率化するための導入プランです。</div>
+    </div>
+  </div>
+</div>
+
+<div class="bonus">
+  <div class="bonus-inner">
+    <div>
+      <strong>導入特典として、Terroir HUB上にも掲載します</strong>
+      <p>掲載費無料。海外ユーザーにも伝わる情報整理として活用できます。</p>
+    </div>
+    <div class="bonus-tag">導入特典</div>
+  </div>
+</div>
+
+<div class="soft-band" id="problem">
+  <section class="section">
+    <div class="section-label">Problems</div>
+    <h2 class="section-title">こんなお悩み、ありませんか？</h2>
+    <div class="problems">
+      <div class="problem"><h3>電話対応が大変</h3><p>営業時間中に対応できず、問い合わせを取りこぼしてしまう。</p></div>
+      <div class="problem"><h3>同じ質問が多い</h3><p>「どこで買える？」「予約できる？」を何度も説明している。</p></div>
+      <div class="problem"><h3>見学・体験の問い合わせが多い</h3><p>営業時間や予約方法の説明に手間がかかる。</p></div>
+      <div class="problem"><h3>購入先の案内が大変</h3><p>オンラインショップや取扱店のURLを毎回送っている。</p></div>
+      <div class="problem"><h3>SNS返信が追いつかない</h3><p>Instagram、LINE、DM対応が負担になっている。</p></div>
+      <div class="problem"><h3>海外対応はもっと難しい</h3><p>英語での問い合わせに不安がある。</p></div>
+    </div>
+    <div class="closing-copy">良い商品でも、<br><span>「対応できなかった」</span>だけで機会損失につながることがあります。</div>
+  </section>
+</div>
+
+<section class="section">
+  <div class="section-label">Solution</div>
+  <h2 class="section-title">AIが、お客様対応を24時間サポート。</h2>
+  <p class="section-desc">AIチャットボットが、よくある質問に自動回答。スタッフの負担を減らしながら、接客品質を落とさず問い合わせ機会を守ります。</p>
+  <div class="solution-grid">
+    <div class="steps">
+      <div class="step"><div class="step-num">01</div><div><h3>質問を受ける</h3><p>お客様がAIに質問します。</p></div></div>
+      <div class="step"><div class="step-num">02</div><div><h3>AIが自動回答</h3><p>24時間いつでも最適な回答をご案内します。</p></div></div>
+      <div class="step"><div class="step-num">03</div><div><h3>必要な時だけ人対応</h3><p>複雑な相談のみスタッフが対応できます。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="soft-band">
+  <section class="section">
+    <div class="reason">
+      <div>
+        <div class="section-label">Why Now</div>
+        <h2 class="section-title">AI検索時代、情報が整理された事業者が選ばれる。</h2>
+        <p class="section-desc">最近は、Google検索だけでなく、AIチャット経由で商品や体験を探す人も増えています。だからこそ、商品説明・購入先・見学情報を整理しておくことが、“選ばれる事業者”への第一歩になります。</p>
+      </div>
+      <div class="reason-card">
+        <h3 style="font-size:20px;font-weight:800;margin-bottom:4px;">AIに案内させる情報</h3>
+        <div class="reason-list">
+          <div><span>商品説明</span><b>特徴 / 使い方 / 背景</b></div>
+          <div><span>購入先</span><b>EC / 取扱店 / 公式リンク</b></div>
+          <div><span>体験</span><b>見学 / 予約 / 営業時間</b></div>
+          <div><span>海外対応</span><b>日本語 / 英語の基本案内</b></div>
+          <div><span>FAQ</span><b>よくある質問への自動回答</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="section">
+  <div class="section-label">Plan Detail</div>
+  <h2 class="section-title">シンプルな導入プラン</h2>
+  <div class="plan-grid">
+    <div class="plan-card">
+      <h3>AIチャットボットを、まずは導入しやすく。</h3>
+      <p class="mini">事業者様の情報を整理し、よくある質問にAIが回答できる状態を作ります。公開後の軽微修正や運用相談も含みます。</p>
+      <div class="delivery"><strong>1週間</strong>納期目安 ※内容により変動します</div>
+    </div>
+    <div class="self-site">
+      <h3>自社サイトにも導入可能</h3>
+      <p>既存ホームページにも、AIを設置できます。AIチャットボット埋め込み、FAQ追加、英語案内の土台づくりまで対応可能です。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="flow">
+  <div class="section-label">Flow</div>
+  <h2 class="section-title">導入までの流れ</h2>
+  <div class="flow">
+    <div class="flow-step"><b>01</b><span>無料相談</span></div>
+    <div class="flow-step"><b>02</b><span>ヒアリング</span></div>
+    <div class="flow-step"><b>03</b><span>情報整理・設計</span></div>
+    <div class="flow-step"><b>04</b><span>制作・AI設定</span></div>
+    <div class="flow-step"><b>05</b><span>確認・修正</span></div>
+    <div class="flow-step"><b>06</b><span>公開・運用開始</span></div>
+  </div>
+</section>
+
+<div class="soft-band">
+  <section class="section">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">よくある質問</h2>
+    <div class="faq">
+      <div class="faq-item"><div class="faq-q">AIはどのように回答する？</div><div class="faq-a">事前にいただいた情報（商品情報・見学案内・購入先など）を元に、AIが最適な回答をご案内します。</div></div>
+      <div class="faq-item"><div class="faq-q">英語にも対応できる？</div><div class="faq-a">はい。日本語対応はもちろん、英語にも対応可能です。</div></div>
+      <div class="faq-item"><div class="faq-q">自社サイトにも設置できる？</div><div class="faq-a">可能です。既存サイトへの埋め込みもご相談いただけます。</div></div>
+      <div class="faq-item"><div class="faq-q">導入後のサポートは？</div><div class="faq-a">公開後の軽微修正や運用相談を含みます。</div></div>
+    </div>
+  </section>
+</div>
+
+<section class="section" id="form">
+  <div class="section-label">Application</div>
+  <h2 class="section-title">申込・導入相談フォーム</h2>
+  <p class="section-desc">正式申込前の相談でも大丈夫です。対象ジャンル、公式URL、問い合わせ対応で困っている内容をお送りください。</p>
+  <div class="form-wrap">
+    <div class="form-note">
+      <h3>送信後、運営会社FOMUSより内容確認のご連絡をします。</h3>
+      <p>AIに回答させたい内容、FAQ、既存サイトへの設置有無、Terroir HUB掲載特典について確認し、導入可否とスケジュールをご案内します。</p>
+    </div>
+    <form class="form" id="business-form">
+      <div class="form-row">
+        <div class="field"><label for="company">会社名・団体名 *</label><input id="company" name="company" required></div>
+        <div class="field"><label for="contact">ご担当者名 *</label><input id="contact" name="contact" required></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="email">メールアドレス *</label><input id="email" name="email" type="email" required></div>
+        <div class="field"><label for="category">ジャンル *</label><select id="category" name="category" required><option value="">選択してください</option><option>日本酒</option><option>焼酎</option><option>ワイン</option><option>ウイスキー</option><option>リキュール</option><option>クラフトビール</option><option>工芸</option><option>地域産品</option><option>その他</option></select></div>
+      </div>
+      <div class="field"><label for="website">公式サイトURL</label><input id="website" name="website" type="url" placeholder="https://example.com"></div>
+      <div class="field"><label for="product">商品・サービス名</label><input id="product" name="product" placeholder="例：銘柄名、見学体験、工芸品、地域産品など"></div>
+      <div class="field"><label for="message">相談内容 *</label><textarea id="message" name="message" required placeholder="よくある質問、問い合わせ対応で困っていること、自社サイト設置の希望など"></textarea></div>
+      <input type="hidden" name="source" value="portal_ai_chatbot">
+      <button class="btn btn-primary" type="submit">送信する</button>
+      <div class="status" id="form-status"></div>
+    </form>
+  </div>
+</section>
+
+<section class="final-cta">
+  <h2>人手不足でも、<br>お客様対応を止めない事業者へ。</h2>
+  <p>まずは、あなたの事業でも使えるかお気軽にご相談ください。</p>
+  <a class="btn" href="#form">問い合わせ対応について相談する</a>
+</section>
+
+<footer class="footer">
+  <div>&copy; 2026 Terroir HUB / FOMUS</div>
+</footer>
+
+<script>
+(function(){
+  const form = document.getElementById('business-form');
+  const status = document.getElementById('form-status');
+  const endpoint = 'https://sake.terroirhub.com/api/business-inquiry';
+  function setStatus(type, text){ status.className = 'status ' + type; status.textContent = text; }
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    setStatus('', '');
+    const data = Object.fromEntries(new FormData(form).entries());
+    data.page_url = location.href;
+    data.created_at = new Date().toISOString();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = '送信中...';
+    try{
+      const res = await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+      if(!res.ok) throw new Error('送信に失敗しました');
+      form.reset();
+      setStatus('ok','送信しました。内容を確認のうえ、FOMUSよりご連絡します。');
+    }catch(err){
+      const subject = encodeURIComponent('Terroir HUB AIチャットボット導入相談');
+      const body = encodeURIComponent(
+        '会社名・団体名: ' + (data.company || '') + '\n' +
+        '担当者名: ' + (data.contact || '') + '\n' +
+        'メール: ' + (data.email || '') + '\n' +
+        'ジャンル: ' + (data.category || '') + '\n' +
+        '公式URL: ' + (data.website || '') + '\n' +
+        '商品・サービス名: ' + (data.product || '') + '\n' +
+        '相談内容:\n' + (data.message || '')
+      );
+      setStatus('err','送信できませんでした。お手数ですが info@terroirhub.com へご連絡ください。');
+      window.location.href = 'mailto:info@terroirhub.com?subject=' + subject + '&body=' + body;
+    }finally{
+      btn.disabled = false;
+      btn.textContent = '送信する';
+    }
+  });
+})();
+</script>
+</body>
+</html>
