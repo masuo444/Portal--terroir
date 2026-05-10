@@ -117,6 +117,7 @@ button,input,textarea,select{font-family:inherit}
 .field input,.field select,.field textarea{width:100%;border:1px solid rgba(0,0,0,.13);background:#fff;padding:12px 13px;font-family:var(--body);font-size:14px;outline:none;border-radius:8px}
 .field textarea{min-height:110px;resize:vertical}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent)}
+.hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .status{display:none;font-size:13px;line-height:1.8;padding:12px 14px}
 .status.ok{display:block;background:#f0f7f1;color:#225a31}
@@ -147,6 +148,7 @@ button,input,textarea,select{font-family:inherit}
       <a href="#problem">お悩み</a>
       <a href="#plan">料金</a>
       <a href="#flow">導入の流れ</a>
+      <a href="/listing-update/">掲載修正</a>
       <a class="nav-cta" href="#form">相談する</a>
     </div>
   </div>
@@ -331,20 +333,21 @@ button,input,textarea,select{font-family:inherit}
   <div class="form-wrap">
     <div class="form-note">
       <h3>送信後、運営会社FOMUSより内容確認のご連絡をします。</h3>
-      <p>AIに回答させたい内容、FAQ、既存サイトへの設置有無、Terroir HUB掲載特典について確認し、導入可否とスケジュールをご案内します。</p>
+      <p>AIに回答させたい内容、FAQ、既存サイトへの設置有無、Terroir HUB掲載特典について確認し、導入可否とスケジュールをご案内します。パスワード、契約書、未公開資料などの機密情報は送信しないでください。</p>
     </div>
     <form class="form" id="business-form">
+      <div class="hp" aria-hidden="true"><label for="company_url">Company URL</label><input id="company_url" name="company_url" tabindex="-1" autocomplete="off"></div>
       <div class="form-row">
-        <div class="field"><label for="company">会社名・団体名 *</label><input id="company" name="company" required></div>
-        <div class="field"><label for="contact">ご担当者名 *</label><input id="contact" name="contact" required></div>
+        <div class="field"><label for="company">会社名・団体名 *</label><input id="company" name="company" required maxlength="160"></div>
+        <div class="field"><label for="contact">ご担当者名 *</label><input id="contact" name="contact" required maxlength="120"></div>
       </div>
       <div class="form-row">
-        <div class="field"><label for="email">メールアドレス *</label><input id="email" name="email" type="email" required></div>
+        <div class="field"><label for="email">メールアドレス *</label><input id="email" name="email" type="email" required maxlength="180"></div>
         <div class="field"><label for="category">ジャンル *</label><select id="category" name="category" required><option value="">選択してください</option><option>日本酒</option><option>焼酎</option><option>ワイン</option><option>ウイスキー</option><option>リキュール</option><option>クラフトビール</option><option>工芸</option><option>地域産品</option><option>その他</option></select></div>
       </div>
-      <div class="field"><label for="website">公式サイトURL</label><input id="website" name="website" type="url" placeholder="https://example.com"></div>
-      <div class="field"><label for="product">商品・サービス名</label><input id="product" name="product" placeholder="例：銘柄名、見学体験、工芸品、地域産品など"></div>
-      <div class="field"><label for="message">相談内容 *</label><textarea id="message" name="message" required placeholder="よくある質問、問い合わせ対応で困っていること、自社サイト設置の希望など"></textarea></div>
+      <div class="field"><label for="website">公式サイトURL</label><input id="website" name="website" type="url" maxlength="240" placeholder="https://example.com"></div>
+      <div class="field"><label for="product">商品・サービス名</label><input id="product" name="product" maxlength="180" placeholder="例：銘柄名、見学体験、工芸品、地域産品など"></div>
+      <div class="field"><label for="message">相談内容 *</label><textarea id="message" name="message" required maxlength="2000" placeholder="よくある質問、問い合わせ対応で困っていること、自社サイト設置の希望など。機密情報は記載しないでください。"></textarea></div>
       <input type="hidden" name="source" value="portal_ai_chatbot">
       <button class="btn btn-primary" type="submit">送信する</button>
       <div class="status" id="form-status"></div>
@@ -360,6 +363,7 @@ button,input,textarea,select{font-family:inherit}
 
 <footer class="footer">
   <div>&copy; 2026 Terroir HUB / FOMUS</div>
+  <div><a href="/listing-update/" style="color:rgba(255,255,255,.72);">掲載情報の修正・公式写真提供</a></div>
 </footer>
 
 <script>
