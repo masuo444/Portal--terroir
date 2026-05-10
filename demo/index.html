@@ -370,6 +370,63 @@
     .product-img { width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:2px; display:block; margin-bottom:2rem; opacity:0.92; transition:opacity .3s; }
     .product-card:hover .product-img { opacity:1; }
 
+    /* ============================================================ PC: EACH SECTION FITS IN ONE VIEWPORT */
+    @media(min-width:1025px){
+      #philosophy,#history,#statement,#products,#process,#terroir,#visit{
+        min-height:100vh;
+        display:flex;
+        align-items:center;
+      }
+      #philosophy > .container,
+      #history > .container,
+      #products > .container,
+      #process > .container,
+      #terroir > .container,
+      #visit > .container { width:100%; }
+      #statement > .container { width:100%; position:relative; z-index:1; }
+
+      /* Reduce section padding */
+      #philosophy { padding:5rem 0; }
+      #history    { padding:4rem 0; }
+      #statement  { padding:5rem 0; }
+      #products   { padding:5rem 0; }
+      #process    { padding:5rem 0; }
+      #terroir    { padding:5rem 0; }
+      #visit      { padding:5rem 0; }
+
+      /* Philosophy */
+      .philosophy-inner { gap:5rem; }
+      .philosophy-visual { height:420px; }
+      .phil-quote { margin:1.5rem 0; }
+      .phil-num-list { margin-top:1.5rem; gap:1rem; }
+      .phil-num-item { gap:1rem; }
+
+      /* History */
+      #history .container > div[style*="margin-bottom:5rem"]{ margin-bottom:2.5rem !important; }
+
+      /* Products */
+      .products-header  { margin-bottom:2rem; }
+      .category-tabs    { margin-bottom:2rem; }
+      .product-card     { padding:1.8rem 2rem; }
+      .product-number   { margin-bottom:1rem; }
+      .product-img      { aspect-ratio:4/3; max-height:160px; object-fit:cover; }
+      .product-name-en  { margin-bottom:.8rem; }
+      .product-type     { margin-bottom:.8rem; }
+      .product-arrow    { bottom:1.5rem; right:1.5rem; }
+
+      /* Process */
+      .process-header { margin-bottom:3.5rem; }
+
+      /* Terroir */
+      .terroir-inner  { gap:5rem; }
+      .terroir-visual { height:460px; }
+      .terroir-stats  { margin-top:2rem; }
+
+      /* Visit */
+      .visit-inner  { gap:4rem; }
+      .visit-forest { min-height:320px; }
+    }
+
     /* ── DEMO RIBBON ── */
     .demo-ribbon { background:rgba(10,30,12,0.95); border-bottom:1px solid var(--fline); color:rgba(200,210,180,.65); text-align:center; font-family:'Cormorant Garamond',serif; font-size:.72rem; letter-spacing:.25em; padding:.55rem 1rem; display:flex; align-items:center; justify-content:center; gap:1.2rem; flex-wrap:wrap; }
     .demo-ribbon a { color:var(--gold); text-decoration:none; border-bottom:1px solid rgba(184,154,74,.3); transition:border-color .2s; }
