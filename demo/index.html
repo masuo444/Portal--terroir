@@ -556,7 +556,7 @@
     <div class="hero-cta-group">
       <a href="#products" class="btn-primary">Collection を見る</a>
       <a href="#philosophy" class="btn-ghost">Our Story</a>
-      <button class="btn-ghost" onclick="openChat()" style="cursor:pointer;background:none;border-color:rgba(184,154,74,.5);font-family:'Cormorant Garamond',serif;font-size:.9rem;letter-spacing:.4em;color:var(--warm);">AIに聞く ✦</button>
+      <button class="btn-ghost" onclick="openChat()" style="cursor:pointer;background:none;border-color:rgba(184,154,74,.5);font-family:'Cormorant Garamond',serif;font-size:.9rem;letter-spacing:.4em;color:var(--warm);">AIサクラに聞く ✦</button>
     </div>
   </div>
 
@@ -889,7 +889,7 @@
 <button class="fab" id="fab" onclick="openChat()">
   <div class="fab-dot"></div>
   <svg viewBox="0 0 24 24" style="width:15px;height:15px;fill:var(--bg)"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
-  AIに聞く
+  AIサクラに聞く
 </button>
 
 <!-- ── CHAT OVERLAY ── -->
@@ -898,9 +898,9 @@
     <div class="c-handle"></div>
     <div class="c-hdr">
       <div class="c-hdr-l">
-        <div class="c-av">木</div>
+        <div class="c-av">桜</div>
         <div>
-          <div class="c-name">樹木酒造 AIコンシェルジュ</div>
+          <div class="c-name">AIサクラ</div>
           <div class="c-status"><span class="c-dot"></span>オンライン</div>
         </div>
       </div>
@@ -1024,7 +1024,7 @@ function cSetupVp() {
 }
 
 function cGreet() {
-  cAddAI('いらっしゃいませ。樹木酒造のAIコンシェルジュです。\n\n日本酒・ワイン・ウイスキーのご案内から、蔵見学のご予約まで、何でもお気軽にどうぞ。英語でのご質問にも対応しております。');
+  cAddAI('いらっしゃいませ。Terroir HUBのAIサクラです。\n\n樹木酒造の日本酒・ワイン・ウイスキー、蔵見学のご予約、ペアリングのご提案など、何でもお気軽にどうぞ。');
   cRenderSugs();
 }
 
@@ -1032,7 +1032,7 @@ function cAddAI(text) {
   const c = document.getElementById('cMsgs');
   const d = document.createElement('div');
   d.className = 'c-msg ai';
-  d.innerHTML = '<div class="c-av-sm">木</div><div class="c-bubble">' + cEsc(text).replace(/\n/g,'<br>') + '</div>';
+  d.innerHTML = '<div class="c-av-sm">桜</div><div class="c-bubble">' + cEsc(text).replace(/\n/g,'<br>') + '</div>';
   c.appendChild(d); cScrollBot();
 }
 function cAddUser(text) {
@@ -1046,7 +1046,7 @@ function cShowTyping() {
   const c = document.getElementById('cMsgs');
   const d = document.createElement('div');
   d.className = 'c-msg ai'; d.id = 'cTyping';
-  d.innerHTML = '<div class="c-av-sm">木</div><div class="c-typing"><div class="c-td"></div><div class="c-td"></div><div class="c-td"></div></div>';
+  d.innerHTML = '<div class="c-av-sm">桜</div><div class="c-typing"><div class="c-td"></div><div class="c-td"></div><div class="c-td"></div></div>';
   c.appendChild(d); cScrollBot();
 }
 function cRemoveTyping() { document.getElementById('cTyping')?.remove(); }
