@@ -175,9 +175,9 @@ button,input,textarea,select{font-family:inherit}
 .ai-exp .sec-h2{color:var(--white)}
 .ai-exp .sec-h2 em{color:rgba(255,255,255,.55)}
 .ai-sub{font-size:.84rem;color:rgba(255,255,255,.58);text-align:center;max-width:520px;margin:0 auto 24px;line-height:1.8;font-weight:300}
-.ai-grid-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.ai-grid-wrap{display:block}
 .ai-features-ttl{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.ai-features{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2);overflow:hidden}
+.ai-features{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2);overflow:hidden}
 .ai-feat{background:rgba(255,255,255,.04);padding:11px 14px;display:flex;align-items:center;gap:10px;transition:background var(--dur)}
 .ai-feat:hover{background:rgba(255,255,255,.08)}
 .ai-feat svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.7;flex-shrink:0}
@@ -258,8 +258,7 @@ footer{background:var(--g900);border-top:1px solid rgba(255,255,255,.07);padding
   .hero-inner{grid-template-columns:1fr;padding:72px 48px 40px;height:auto}
   .hero-right{display:none}
   .hero-sub,.hero-perks{max-width:100%}
-  .ai-grid-wrap{grid-template-columns:1fr}
-  .ai-phone-wrap{display:none}
+  .ai-features{grid-template-columns:repeat(2,1fr)}
   .pricing-grid{grid-template-columns:1fr}
   .process-steps{grid-template-columns:1fr 1fr}
   .bubbles-grid{grid-template-columns:1fr 1fr}
@@ -481,27 +480,6 @@ footer{background:var(--g900);border-top:1px solid rgba(255,255,255,.07);padding
           <div class="ai-feat"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><span class="ai-feat-txt">よくある質問対応</span></div>
           <div class="ai-feat"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="ai-feat-txt">24時間自動回答</span></div>
           <div class="ai-feat"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span class="ai-feat-txt">将来的な多言語対応</span></div>
-        </div>
-      </div>
-      <div class="ai-phone-wrap">
-        <div class="ai-phone">
-          <div class="pscreen">
-            <div class="pnotch"><div class="pnotch-pill"></div></div>
-            <div class="pchat-hd">
-              <div class="pchat-av">AI</div>
-              <div><div class="pchat-info-name">AIコンシェルジュ</div><div class="pchat-info-status"><div class="pchat-dot"></div>オンライン</div></div>
-            </div>
-            <div class="pmsgs" style="gap:8px;padding:10px 10px">
-              <div class="pmsg pmsg--u vis"><div class="pbub">純米大吟醸の飲み頃温度は？</div></div>
-              <div class="pmsg pmsg--a vis"><div class="pbub">5〜10℃の冷酒がおすすめです。フルーティな香りが引き立ちます。常温（15℃前後）でも美味しくお楽しみいただけます。</div></div>
-              <div class="pmsg pmsg--u vis"><div class="pbub">ギフト包装はできますか？</div></div>
-              <div class="pmsg pmsg--a vis"><div class="pbub">はい。熨斗・箱入り包装に対応しています。ご注文時にご指定ください。</div></div>
-            </div>
-            <div class="pinput-row">
-              <div class="pinput-box">何でも聞いてください…</div>
-              <div class="psend"><svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg></div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
