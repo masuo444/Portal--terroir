@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="robots" content="noindex">
+  <title>樹木酒造 | JUKI SHUZO — AIコンシェルジュ体験デモ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    :root {
+      --bg:         #040906;
+      --bg-mid:     #070d09;
+      --bg-light:   #0c1510;
+      --cream:      #eee8d4;
+      --warm:       #cec29f;
+      --muted:      #6b7060;
+      --gold:       #b89a4a;
+      --gold-light: #d4b86a;
+      --gold-dark:  #7a6228;
+      --moss:       #2d4a2e;
+      --leaf:       #3d6b3e;
+      --wine:       #6b2040;
+      --whisky:     #7a4a1a;
+      --mist:       rgba(160,200,160,.06);
+      --line:       rgba(184,154,74,.16);
+      --fline:      rgba(80,140,80,.12);
+    }
+
+    html { scroll-behavior:smooth; font-size:16px; }
+    body { background:var(--bg); color:var(--cream); font-family:'Noto Serif JP', serif; line-height:1.8; overflow-x:hidden; }
+    ::selection { background:var(--gold-dark); color:var(--cream); }
+    ::-webkit-scrollbar { width:2px; }
+    ::-webkit-scrollbar-track { background:var(--bg); }
+    ::-webkit-scrollbar-thumb { background:var(--moss); }
+
+    /* ============================================================ LOADER */
+    #loader { position:fixed; inset:0; background:var(--bg); z-index:10000; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2rem; transition:opacity .8s ease, visibility .8s ease; }
+    #loader.hidden { opacity:0; visibility:hidden; }
+    .loader-trees { display:flex; gap:8px; align-items:flex-end; margin-bottom:.5rem; }
+    .ltree { display:flex; flex-direction:column; align-items:center; gap:1px; }
+    .ltree-top { width:0; height:0; border-left:8px solid transparent; border-right:8px solid transparent; border-bottom:18px solid rgba(60,100,60,.5); }
+    .ltree-mid { width:0; height:0; border-left:11px solid transparent; border-right:11px solid transparent; border-bottom:16px solid rgba(60,100,60,.4); margin-top:-6px; }
+    .ltree-bot { width:0; height:0; border-left:14px solid transparent; border-right:14px solid transparent; border-bottom:16px solid rgba(60,100,60,.3); margin-top:-6px; }
+    .ltree-trunk { width:4px; height:10px; background:rgba(80,55,30,.4); }
+    .ltree.sm .ltree-top { border-bottom-width:12px; border-left-width:5px; border-right-width:5px; }
+    .ltree.sm .ltree-mid { border-bottom-width:11px; border-left-width:7px; border-right-width:7px; }
+    .ltree.sm .ltree-bot { border-bottom-width:11px; border-left-width:9px; border-right-width:9px; }
+    .ltree.sm .ltree-trunk { height:7px; }
+    .loader-logo { font-family:'Noto Serif JP', serif; font-size:clamp(1.8rem,4vw,3rem); font-weight:300; letter-spacing:.4em; color:var(--cream); writing-mode:vertical-rl; }
+    .loader-bar-wrap { width:120px; height:1px; background:rgba(60,100,60,.3); overflow:hidden; }
+    .loader-bar { height:100%; background:var(--gold); width:0%; animation:loadBar 1.8s ease forwards; }
+    @keyframes loadBar { to { width:100%; } }
+
+    /* ============================================================ NAV */
+    nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:2rem 3rem; display:flex; justify-content:space-between; align-items:center; transition:background .4s, padding .4s; }
+    nav.scrolled { background:rgba(4,9,6,.94); backdrop-filter:blur(14px); padding:1.2rem 3rem; border-bottom:1px solid var(--fline); }
+    .nav-logo { font-family:'Noto Serif JP', serif; font-size:1.1rem; font-weight:300; letter-spacing:.35em; color:var(--cream); text-decoration:none; }
+    .nav-logo span { display:block; font-family:'Cormorant Garamond', serif; font-size:.7rem; letter-spacing:.5em; color:var(--gold); font-weight:300; }
+    .nav-links { display:flex; gap:2.5rem; list-style:none; }
+    .nav-links a { font-family:'Cormorant Garamond', serif; font-size:.85rem; letter-spacing:.25em; color:var(--warm); text-decoration:none; transition:color .3s; position:relative; }
+    .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1px; background:var(--gold); transition:width .3s; }
+    .nav-links a:hover { color:var(--gold-light); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-lang { font-family:'Cormorant Garamond', serif; font-size:.8rem; letter-spacing:.2em; color:var(--muted); cursor:pointer; transition:color .3s; }
+    .nav-lang:hover { color:var(--gold); }
+
+    /* ============================================================ ANIMATIONS */
+    @keyframes fadeUp   { to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeIn   { to { opacity:1; } }
+    @keyframes lineReveal { to { opacity:1; } }
+    .reveal      { opacity:0; transform:translateY(40px); transition:opacity .9s ease, transform .9s ease; }
+    .reveal.visible    { opacity:1; transform:translateY(0); }
+    .reveal-left { opacity:0; transform:translateX(-40px); transition:opacity .9s ease, transform .9s ease; }
+    .reveal-left.visible { opacity:1; transform:translateX(0); }
+    .reveal-right{ opacity:0; transform:translateX(40px); transition:opacity .9s ease, transform .9s ease; }
+    .reveal-right.visible{ opacity:1; transform:translateX(0); }
+    .delay-1{ transition-delay:.1s; } .delay-2{ transition-delay:.2s; }
+    .delay-3{ transition-delay:.3s; } .delay-4{ transition-delay:.4s; }
+    .delay-5{ transition-delay:.5s; } .delay-6{ transition-delay:.6s; }
+
+    /* ============================================================ HERO */
+    #hero { height:100vh; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+    .hero-bg { position:absolute; inset:0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(20,50,25,.55) 0%, transparent 65%), radial-gradient(ellipse 40% 50% at 20% 30%, rgba(15,40,18,.35) 0%, transparent 55%), radial-gradient(ellipse 30% 40% at 80% 20%, rgba(10,30,12,.3) 0%, transparent 50%), linear-gradient(180deg, #040a06 0%, #020603 45%, #050b06 100%); }
+    .hero-grain { position:absolute; inset:-50%; width:200%; height:200%; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"); opacity:.3; animation:grain 4s steps(2) infinite; pointer-events:none; }
+    @keyframes grain { 0%,100%{transform:translate(0,0)} 10%{transform:translate(-2%,-3%)} 20%{transform:translate(3%,2%)} 30%{transform:translate(-1%,4%)} 40%{transform:translate(4%,-1%)} 50%{transform:translate(-3%,1%)} 60%{transform:translate(2%,3%)} 70%{transform:translate(-4%,-2%)} 80%{transform:translate(1%,-4%)} 90%{transform:translate(3%,1%)} }
+    .hero-forest { position:absolute; bottom:0; left:0; right:0; height:55%; pointer-events:none; }
+    .hero-mist { position:absolute; bottom:0; left:0; right:0; height:40%; background:linear-gradient(to top, rgba(20,60,25,.18) 0%, rgba(20,60,25,.10) 25%, rgba(20,50,22,.04) 55%, transparent 100%); pointer-events:none; }
+    .hero-mist-2 { position:absolute; bottom:0; left:-20%; right:-20%; height:30%; background:radial-gradient(ellipse 80% 60% at 50% 100%, rgba(140,200,140,.07) 0%, transparent 70%); animation:mistDrift 8s ease-in-out infinite alternate; pointer-events:none; }
+    @keyframes mistDrift { 0%{ transform:translateX(-5%) scaleX(1); } 100%{ transform:translateX(5%) scaleX(1.08); } }
+    .firefly { position:absolute; width:3px; height:3px; border-radius:50%; background:rgba(200,240,180,.8); box-shadow:0 0 6px rgba(180,230,160,.9), 0 0 14px rgba(160,210,140,.5); pointer-events:none; animation:fireflyFloat var(--dur,8s) ease-in-out infinite var(--delay,0s); }
+    @keyframes fireflyFloat { 0%{ opacity:0; transform:translate(0,0); } 20%{ opacity:.8; } 50%{ opacity:.4; transform:translate(var(--tx,20px), var(--ty,-30px)); } 80%{ opacity:.9; } 100%{ opacity:0; transform:translate(var(--tx2,-10px), var(--ty2,10px)); } }
+    .hero-rays { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
+    .ray { position:absolute; top:0; width:1px; bottom:0; background:linear-gradient(to bottom, transparent 0%, rgba(80,140,60,.06) 30%, rgba(60,110,40,.04) 60%, transparent 100%); opacity:0; animation:lineReveal 2s ease forwards; }
+    .ray:nth-child(1){ left:12%; animation-delay:.3s; } .ray:nth-child(2){ left:28%; animation-delay:.5s; }
+    .ray:nth-child(3){ left:44%; animation-delay:.4s; } .ray:nth-child(4){ left:62%; animation-delay:.6s; }
+    .ray:nth-child(5){ left:78%; animation-delay:.35s; } .ray:nth-child(6){ left:92%; animation-delay:.45s; }
+    .hero-content { position:relative; z-index:4; text-align:center; display:flex; flex-direction:column; align-items:center; gap:2.5rem; }
+    .hero-eyebrow { font-family:'Cormorant Garamond', serif; font-size:.8rem; letter-spacing:.6em; color:var(--gold); font-weight:300; opacity:0; transform:translateY(20px); animation:fadeUp .8s ease .6s forwards; }
+    .hero-title-wrap { opacity:0; transform:translateY(30px); animation:fadeUp 1s ease .8s forwards; }
+    .hero-title-ja { font-family:'Noto Serif JP', serif; font-size:clamp(3.5rem,10vw,8rem); font-weight:300; letter-spacing:.25em; line-height:1.15; color:var(--cream); text-indent:.25em; }
+    .hero-title-en { font-family:'Cormorant Garamond', serif; font-size:clamp(.8rem,1.5vw,1.1rem); letter-spacing:.6em; color:rgba(184,154,74,.8); font-weight:300; display:block; margin-top:.5rem; }
+    .hero-ornament { width:120px; height:1px; background:linear-gradient(to right, transparent, var(--gold), transparent); opacity:0; animation:fadeIn 1s ease 1.3s forwards; }
+    .hero-tagline { font-family:'Noto Serif JP', serif; font-size:clamp(.85rem,1.4vw,1rem); font-weight:300; color:var(--warm); letter-spacing:.25em; line-height:2.4; opacity:0; transform:translateY(20px); animation:fadeUp .9s ease 1.1s forwards; }
+    .hero-cta-group { display:flex; gap:1.5rem; align-items:center; opacity:0; transform:translateY(20px); animation:fadeUp .9s ease 1.4s forwards; }
+    .btn-primary { font-family:'Cormorant Garamond', serif; font-size:.9rem; letter-spacing:.4em; color:var(--bg); background:var(--gold); padding:.85rem 2.5rem; text-decoration:none; transition:background .3s, transform .3s; display:inline-block; }
+    .btn-primary:hover { background:var(--gold-light); transform:translateY(-2px); }
+    .btn-ghost { font-family:'Cormorant Garamond', serif; font-size:.9rem; letter-spacing:.4em; color:var(--warm); border:1px solid rgba(184,154,74,.35); padding:.85rem 2.5rem; text-decoration:none; transition:border-color .3s, color .3s, transform .3s; display:inline-block; }
+    .btn-ghost:hover { border-color:var(--gold); color:var(--gold-light); transform:translateY(-2px); }
+    .hero-scroll { position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:.75rem; opacity:0; animation:fadeIn 1s ease 2s forwards; z-index:5; }
+    .hero-scroll span { font-family:'Cormorant Garamond', serif; font-size:.65rem; letter-spacing:.5em; color:rgba(200,230,200,.5); }
+    .scroll-line { width:1px; height:50px; background:linear-gradient(to bottom, rgba(80,160,80,.5), transparent); animation:scrollPulse 2s ease-in-out infinite; }
+    @keyframes scrollPulse { 0%,100%{ opacity:.3; transform:scaleY(.5) translateY(-10px); } 50%{ opacity:1; transform:scaleY(1) translateY(0); } }
+    .hero-bg-text { position:absolute; bottom:12%; left:50%; transform:translateX(-50%); font-family:'Cormorant Garamond', serif; font-size:clamp(5rem,14vw,12rem); font-weight:300; letter-spacing:.08em; color:rgba(60,120,60,.05); white-space:nowrap; pointer-events:none; line-height:1; z-index:1; }
+
+    /* ============================================================ SECTION COMMON */
+    section { position:relative; overflow:hidden; }
+    .section-label { font-family:'Cormorant Garamond', serif; font-size:.7rem; letter-spacing:.6em; color:var(--gold); font-weight:300; display:block; margin-bottom:1.5rem; }
+    .section-title { font-family:'Noto Serif JP', serif; font-size:clamp(1.6rem,3.5vw,2.8rem); font-weight:300; letter-spacing:.15em; line-height:1.6; color:var(--cream); }
+    .section-body { font-family:'Noto Serif JP', serif; font-size:clamp(.85rem,1.2vw,.95rem); font-weight:300; color:var(--warm); letter-spacing:.08em; line-height:2.4; }
+    .gold-line { width:60px; height:1px; background:linear-gradient(to right, var(--gold), transparent); margin-bottom:1.5rem; }
+    .container { max-width:1200px; margin:0 auto; padding:0 3rem; }
+
+    /* ============================================================ TICKER */
+    .ticker-wrap { background:linear-gradient(to right, #0e1f0e, #1a3318, #0e1f0e); border-top:1px solid var(--fline); border-bottom:1px solid var(--fline); padding:.7rem 0; overflow:hidden; white-space:nowrap; }
+    .ticker { display:inline-flex; animation:ticker 35s linear infinite; }
+    .ticker-item { font-family:'Cormorant Garamond', serif; font-size:.72rem; letter-spacing:.5em; color:rgba(184,154,74,.7); padding:0 3rem; }
+    .ticker-sep { color:rgba(80,140,60,.5); padding:0 1rem; }
+    @keyframes ticker { 0%{ transform:translateX(0); } 100%{ transform:translateX(-50%); } }
+
+    /* ============================================================ PHILOSOPHY */
+    #philosophy { padding:12rem 0 10rem; background:linear-gradient(180deg, var(--bg-mid) 0%, #091209 60%, var(--bg-mid) 100%); }
+    #philosophy::before { content:''; position:absolute; top:0; left:0; right:0; height:200px; background:linear-gradient(to bottom, rgba(10,30,12,.6), transparent); pointer-events:none; }
+    .philosophy-inner { display:grid; grid-template-columns:1fr 1fr; gap:8rem; align-items:center; }
+    .philosophy-visual { position:relative; height:560px; }
+    .phil-card { position:absolute; background:var(--bg-light); border:1px solid var(--fline); }
+    .phil-card-main { width:70%; height:80%; top:0; left:0; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+    .phil-card-accent { width:55%; height:55%; bottom:0; right:0; display:flex; align-items:center; justify-content:center; border-color:var(--fline); }
+    .forest-scene { width:100%; height:100%; position:relative; overflow:hidden; background:linear-gradient(180deg, #030806 0%, #071009 30%, #091510 65%, #0c1d12 100%); }
+    .scene-moon { position:absolute; top:18%; left:50%; transform:translateX(-50%); width:52px; height:52px; border-radius:50%; background:radial-gradient(circle at 45% 45%, rgba(230,230,200,.18), rgba(180,180,140,.06)); border:1px solid rgba(220,220,180,.12); box-shadow:0 0 30px rgba(200,220,180,.08), 0 0 80px rgba(160,190,140,.05); }
+    .scene-moon-glow { position:absolute; top:8%; left:50%; transform:translateX(-50%); width:160px; height:120px; border-radius:50%; background:radial-gradient(circle, rgba(180,220,160,.06), transparent 70%); pointer-events:none; }
+    .scene-mist { position:absolute; bottom:0; left:0; right:0; height:35%; background:linear-gradient(to top, rgba(80,140,80,.12), rgba(60,110,60,.06), transparent); }
+    .scene-bottle { position:absolute; bottom:30px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; }
+    .sb-cork  { width:14px; height:10px; background:rgba(100,75,35,.55); border-radius:2px 2px 0 0; }
+    .sb-neck  { width:18px; height:45px; background:linear-gradient(to right, rgba(184,154,74,.22), rgba(80,120,60,.15), rgba(184,154,74,.22)); border:1px solid rgba(184,154,74,.25); }
+    .sb-shldr { width:38px; height:14px; background:linear-gradient(to right, rgba(184,154,74,.2), rgba(60,100,50,.14), rgba(184,154,74,.2)); border:1px solid rgba(184,154,74,.2); border-top:none; border-radius:0 0 3px 3px; }
+    .sb-body  { width:52px; height:110px; background:linear-gradient(to right, rgba(184,154,74,.2), rgba(40,80,40,.2), rgba(184,154,74,.2)); border:1px solid rgba(184,154,74,.22); border-top:none; display:flex; align-items:center; justify-content:center; }
+    .sb-label { font-family:'Noto Serif JP', serif; font-size:.5rem; color:rgba(184,154,74,.75); writing-mode:vertical-rl; letter-spacing:.15em; }
+    .sb-ripple { position:absolute; bottom:-2px; left:50%; border-radius:50%; border:1px solid rgba(80,150,80,.2); animation:sceneRipple 3s ease-out infinite; }
+    .sb-ripple:nth-child(1){ width:60px; height:16px; transform:translateX(-50%); }
+    .sb-ripple:nth-child(2){ width:90px; height:22px; transform:translateX(-50%); animation-delay:.7s; }
+    .sb-ripple:nth-child(3){ width:120px; height:28px; transform:translateX(-50%); animation-delay:1.4s; }
+    @keyframes sceneRipple { 0%{ opacity:.6; } 100%{ opacity:0; transform:translateX(-50%) scaleX(1.2); } }
+    .ring-art { position:relative; width:120px; height:120px; display:flex; align-items:center; justify-content:center; }
+    .ring-circle { position:absolute; border-radius:50%; border:1px solid rgba(80,130,60,.2); }
+    .ring-circle:nth-child(1){ width:28px; height:28px; }
+    .ring-circle:nth-child(2){ width:48px; height:48px; border-color:rgba(80,130,60,.18); }
+    .ring-circle:nth-child(3){ width:68px; height:68px; border-color:rgba(80,130,60,.15); }
+    .ring-circle:nth-child(4){ width:88px; height:88px; border-color:rgba(80,130,60,.12); }
+    .ring-circle:nth-child(5){ width:108px; height:108px; border-color:rgba(80,130,60,.09); }
+    .ring-label { position:relative; z-index:1; font-family:'Noto Serif JP', serif; font-size:1.8rem; font-weight:300; color:rgba(80,140,60,.5); letter-spacing:.05em; }
+    .phil-quote { font-family:'Noto Serif JP', serif; font-size:clamp(1rem,1.8vw,1.3rem); font-weight:300; color:var(--cream); letter-spacing:.12em; line-height:2.2; border-left:2px solid var(--leaf); padding-left:2rem; margin:2.5rem 0; }
+    .phil-num-list { margin-top:2.5rem; display:flex; flex-direction:column; gap:1.5rem; }
+    .phil-num-item { display:flex; gap:1.5rem; align-items:flex-start; }
+    .phil-num { font-family:'Cormorant Garamond', serif; font-size:2rem; font-weight:300; color:var(--gold-dark); line-height:1; flex-shrink:0; width:2.5rem; }
+    .phil-num-title { font-family:'Noto Serif JP', serif; font-size:.9rem; font-weight:400; color:var(--cream); letter-spacing:.12em; margin-bottom:.4rem; }
+    .phil-num-text { font-family:'Noto Serif JP', serif; font-size:.82rem; font-weight:300; color:var(--muted); letter-spacing:.06em; line-height:2; }
+
+    /* ============================================================ HISTORY TIMELINE */
+    #history { padding:8rem 0; background:linear-gradient(180deg, var(--bg-mid) 0%, #050c06 50%, var(--bg-mid) 100%); position:relative; }
+    #history::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(to right, transparent, var(--fline), rgba(80,140,60,.2), var(--fline), transparent); }
+    .history-inner { display:grid; grid-template-columns:repeat(3,1fr); gap:0; position:relative; }
+    .history-inner::before { content:''; position:absolute; top:58px; left:16.5%; right:16.5%; height:1px; background:linear-gradient(to right, transparent, var(--fline), rgba(80,130,60,.25), var(--fline), transparent); }
+    .hist-item { display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 3rem; }
+    .hist-year-wrap { position:relative; margin-bottom:2.5rem; }
+    .hist-year { font-family:'Cormorant Garamond', serif; font-size:2.4rem; font-weight:300; color:var(--gold); letter-spacing:.08em; line-height:1; }
+    .hist-dot { width:10px; height:10px; border-radius:50%; background:var(--gold); box-shadow:0 0 14px rgba(184,154,74,.5); margin:1rem auto 0; }
+    .hist-tag { font-family:'Cormorant Garamond', serif; font-size:.65rem; letter-spacing:.5em; color:var(--gold-dark); margin-bottom:.8rem; display:block; }
+    .hist-title { font-family:'Noto Serif JP', serif; font-size:1rem; font-weight:400; color:var(--cream); letter-spacing:.18em; margin-bottom:1rem; }
+    .hist-desc { font-family:'Noto Serif JP', serif; font-size:.78rem; font-weight:300; color:var(--muted); letter-spacing:.06em; line-height:2; }
+
+    /* ============================================================ STATEMENT */
+    #statement { padding:10rem 0; background:linear-gradient(180deg, #091209 0%, var(--bg) 40%, #050d06 80%, var(--bg) 100%); position:relative; }
+    .stmt-ring-bg { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:min(90vw,700px); height:min(90vw,700px); pointer-events:none; }
+    .stmt-ring-bg circle { fill:none; stroke:rgba(60,110,50,.06); }
+    .statement-inner { text-align:center; position:relative; z-index:1; }
+    .statement-text { font-family:'Noto Serif JP', serif; font-size:clamp(1.2rem,2.8vw,2rem); font-weight:300; color:var(--cream); letter-spacing:.2em; line-height:2.8; }
+    .statement-text em { font-style:normal; color:var(--gold); }
+    .statement-sub { margin-top:3rem; font-family:'Cormorant Garamond', serif; font-size:1rem; letter-spacing:.4em; color:var(--muted); font-style:italic; }
+
+    /* ============================================================ PRODUCTS */
+    #products { padding:12rem 0 10rem; background:linear-gradient(180deg, var(--bg-mid) 0%, #091509 50%, var(--bg-mid) 100%); }
+    .products-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:4rem; }
+
+    /* Category tabs */
+    .category-tabs { display:flex; justify-content:center; gap:0; margin-bottom:5rem; border:1px solid var(--fline); max-width:480px; margin-left:auto; margin-right:auto; }
+    .cat-tab { font-family:'Cormorant Garamond', serif; font-size:.85rem; letter-spacing:.4em; color:var(--muted); background:transparent; border:none; border-right:1px solid var(--fline); padding:1rem 3rem; cursor:pointer; transition:all .3s; flex:1; }
+    .cat-tab:last-child { border-right:none; }
+    .cat-tab.active { color:var(--cream); background:rgba(60,100,50,.1); }
+    .cat-tab:hover:not(.active) { color:var(--gold-light); }
+    .cat-tab[data-cat="sake"].active  { color:var(--gold-light); }
+    .cat-tab[data-cat="wine"].active  { color:rgba(200,120,150,.9); }
+    .cat-tab[data-cat="whisky"].active{ color:rgba(210,160,80,.9); }
+
+    .cat-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
+    .cat-grid.hidden { display:none; }
+
+    .product-card { background:var(--bg-light); border:1px solid var(--fline); padding:3rem 2.5rem; position:relative; overflow:hidden; transition:border-color .4s, transform .4s; }
+    .product-card::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg, rgba(40,80,40,.06), transparent); opacity:0; transition:opacity .4s; }
+    .product-card:hover { border-color:rgba(80,140,70,.4); transform:translateY(-4px); }
+    .product-card:hover::before { opacity:1; }
+    .product-number { font-family:'Cormorant Garamond', serif; font-size:.7rem; letter-spacing:.5em; color:var(--gold-dark); margin-bottom:3rem; display:block; }
+    .product-bottle { height:180px; display:flex; align-items:flex-end; justify-content:center; margin-bottom:2.5rem; }
+    .p-bottle { display:flex; flex-direction:column; align-items:center; }
+    .p-b-cork  { width:16px; height:10px; background:rgba(100,75,35,.5); border-radius:2px 2px 0 0; }
+    .p-b-neck  { width:20px; height:55px; background:linear-gradient(to right,rgba(184,154,74,.15),rgba(40,80,40,.12),rgba(184,154,74,.15)); border:1px solid rgba(184,154,74,.2); }
+    .p-b-shldr { width:42px; height:18px; background:linear-gradient(to right,rgba(184,154,74,.15),rgba(40,80,40,.1),rgba(184,154,74,.15)); border:1px solid rgba(184,154,74,.2); border-top:none; border-radius:0 0 4px 4px; }
+    .p-b-body  { border:1px solid rgba(184,154,74,.2); border-top:none; display:flex; align-items:center; justify-content:center; }
+    .p-b-lbl   { font-family:'Noto Serif JP', serif; font-size:.5rem; letter-spacing:.1em; writing-mode:vertical-rl; }
+
+    /* SAKE bottle tints */
+    .cat-grid[data-cat="sake"] .product-card:nth-child(1) .p-b-body { width:58px; height:130px; background:linear-gradient(to right,rgba(184,154,74,.18),rgba(50,90,40,.2),rgba(184,154,74,.18)); }
+    .cat-grid[data-cat="sake"] .product-card:nth-child(1) .p-b-lbl  { color:rgba(184,154,74,.85); }
+    .cat-grid[data-cat="sake"] .product-card:nth-child(2) .p-b-body { width:52px; height:120px; background:linear-gradient(to right,rgba(180,200,160,.1),rgba(60,100,60,.12),rgba(180,200,160,.1)); border-color:rgba(120,180,100,.2); }
+    .cat-grid[data-cat="sake"] .product-card:nth-child(2) .p-b-lbl  { color:rgba(150,210,130,.7); }
+    .cat-grid[data-cat="sake"] .product-card:nth-child(3) .p-b-body { width:58px; height:130px; background:linear-gradient(to right,rgba(184,154,74,.12),rgba(30,60,30,.18),rgba(184,154,74,.12)); border-color:rgba(100,140,60,.25); }
+    .cat-grid[data-cat="sake"] .product-card:nth-child(3) .p-b-lbl  { color:rgba(180,154,74,.7); }
+
+    /* WINE bottle tints (taller, slimmer) */
+    .cat-grid[data-cat="wine"] .p-b-neck  { height:72px; width:16px; }
+    .cat-grid[data-cat="wine"] .p-b-shldr { width:32px; height:14px; }
+    .cat-grid[data-cat="wine"] .product-card:nth-child(1) .p-b-body { width:44px; height:145px; background:linear-gradient(to right,rgba(220,240,200,.08),rgba(180,220,160,.1),rgba(220,240,200,.08)); border-color:rgba(160,210,120,.2); }
+    .cat-grid[data-cat="wine"] .product-card:nth-child(1) .p-b-lbl  { color:rgba(180,230,150,.75); }
+    .cat-grid[data-cat="wine"] .product-card:nth-child(2) .p-b-body { width:44px; height:145px; background:linear-gradient(to right,rgba(120,30,60,.22),rgba(80,15,40,.28),rgba(120,30,60,.22)); border-color:rgba(160,50,80,.3); }
+    .cat-grid[data-cat="wine"] .product-card:nth-child(2) .p-b-neck  { border-color:rgba(140,40,70,.25); }
+    .cat-grid[data-cat="wine"] .product-card:nth-child(2) .p-b-lbl  { color:rgba(200,100,130,.8); }
+    .cat-grid[data-cat="wine"] .product-card:nth-child(3) .p-b-body { width:44px; height:145px; background:linear-gradient(to right,rgba(200,180,100,.15),rgba(160,140,60,.18),rgba(200,180,100,.15)); border-color:rgba(200,180,80,.2); }
+    .cat-grid[data-cat="wine"] .product-card:nth-child(3) .p-b-lbl  { color:rgba(220,200,120,.75); }
+
+    /* WHISKY bottle tints (stockier) */
+    .cat-grid[data-cat="whisky"] .p-b-neck  { height:42px; width:22px; }
+    .cat-grid[data-cat="whisky"] .p-b-shldr { width:52px; height:22px; border-radius:0 0 6px 6px; }
+    .cat-grid[data-cat="whisky"] .product-card:nth-child(1) .p-b-body { width:64px; height:120px; background:linear-gradient(to right,rgba(200,120,30,.18),rgba(160,80,15,.22),rgba(200,120,30,.18)); border-color:rgba(200,140,50,.25); }
+    .cat-grid[data-cat="whisky"] .product-card:nth-child(1) .p-b-lbl  { color:rgba(220,160,70,.8); }
+    .cat-grid[data-cat="whisky"] .product-card:nth-child(2) .p-b-body { width:64px; height:120px; background:linear-gradient(to right,rgba(140,80,20,.22),rgba(100,55,10,.28),rgba(140,80,20,.22)); border-color:rgba(160,100,30,.3); }
+    .cat-grid[data-cat="whisky"] .product-card:nth-child(2) .p-b-lbl  { color:rgba(180,130,60,.8); }
+    .cat-grid[data-cat="whisky"] .product-card:nth-child(3) .p-b-body { width:64px; height:120px; background:linear-gradient(to right,rgba(100,50,10,.28),rgba(70,30,5,.35),rgba(100,50,10,.28)); border-color:rgba(130,75,20,.35); }
+    .cat-grid[data-cat="whisky"] .product-card:nth-child(3) .p-b-lbl  { color:rgba(160,110,50,.8); }
+
+    .product-name-ja { font-family:'Noto Serif JP', serif; font-size:1.4rem; font-weight:300; color:var(--cream); letter-spacing:.15em; margin-bottom:.3rem; }
+    .product-name-en { font-family:'Cormorant Garamond', serif; font-size:.8rem; letter-spacing:.4em; color:var(--gold); margin-bottom:1.5rem; display:block; }
+    .product-type    { font-family:'Cormorant Garamond', serif; font-size:.72rem; letter-spacing:.3em; color:var(--muted); padding:.3rem .8rem; border:1px solid var(--fline); display:inline-block; margin-bottom:1.5rem; }
+    .product-desc    { font-family:'Noto Serif JP', serif; font-size:.8rem; font-weight:300; color:var(--muted); letter-spacing:.06em; line-height:2.2; }
+    .product-arrow   { position:absolute; bottom:2.5rem; right:2.5rem; font-family:'Cormorant Garamond', serif; font-size:.75rem; letter-spacing:.3em; color:var(--gold-dark); transition:color .3s, transform .3s; display:flex; align-items:center; gap:.5rem; }
+    .product-card:hover .product-arrow { color:var(--gold); transform:translateX(4px); }
+    .product-arrow::after { content:'→'; }
+
+    /* ============================================================ PROCESS */
+    #process { padding:12rem 0 10rem; background:linear-gradient(180deg, var(--bg) 0%, #060d07 50%, var(--bg) 100%); position:relative; }
+    #process::before { content:''; position:absolute; bottom:0; left:0; right:0; height:40%; background:linear-gradient(to top, rgba(10,30,12,.3), transparent); pointer-events:none; }
+    .process-header { text-align:center; margin-bottom:8rem; }
+    .process-steps  { display:grid; grid-template-columns:repeat(5,1fr); position:relative; }
+    .process-steps::before { content:''; position:absolute; top:50px; left:10%; right:10%; height:1px; background:linear-gradient(to right, transparent, var(--fline), rgba(80,130,60,.2), var(--fline), transparent); }
+    .process-step { display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 1.5rem; position:relative; }
+    .step-circle { width:100px; height:100px; border:1px solid rgba(80,140,60,.3); border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:2rem; position:relative; background:var(--bg); transition:border-color .3s, background .3s, box-shadow .3s; }
+    .step-circle::before { content:''; position:absolute; inset:6px; border:1px solid rgba(80,140,60,.1); border-radius:50%; }
+    .process-step:hover .step-circle { border-color:rgba(100,180,80,.6); background:rgba(40,80,35,.08); box-shadow:0 0 30px rgba(60,140,50,.12); }
+    .step-icon { font-family:'Noto Serif JP', serif; font-size:1.5rem; color:rgba(140,200,100,.8); }
+    .step-num  { position:absolute; top:-10px; right:-4px; font-family:'Cormorant Garamond', serif; font-size:.65rem; letter-spacing:.3em; color:var(--gold-dark); }
+    .step-name { font-family:'Noto Serif JP', serif; font-size:.9rem; font-weight:400; color:var(--cream); letter-spacing:.12em; margin-bottom:.6rem; }
+    .step-desc { font-family:'Noto Serif JP', serif; font-size:.72rem; font-weight:300; color:var(--muted); letter-spacing:.04em; line-height:1.9; }
+
+    /* ============================================================ TERROIR */
+    #terroir { padding:12rem 0 10rem; background:linear-gradient(180deg, #080e09 0%, #091409 50%, var(--bg-mid) 100%); position:relative; }
+    .terroir-bg-text { position:absolute; right:-2%; top:50%; transform:translateY(-50%); font-family:'Cormorant Garamond', serif; font-size:18vw; font-weight:300; font-style:italic; color:rgba(40,90,40,.04); white-space:nowrap; pointer-events:none; line-height:1; }
+    .terroir-inner { display:grid; grid-template-columns:1fr 1fr; gap:8rem; align-items:center; }
+    .terroir-stats { display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-top:3rem; }
+    .stat-box { background:var(--bg-light); border:1px solid var(--fline); padding:2rem; }
+    .stat-num { font-family:'Cormorant Garamond', serif; font-size:2.8rem; font-weight:300; color:var(--gold); line-height:1; letter-spacing:.03em; }
+    .stat-num sup { font-size:1.2rem; vertical-align:super; }
+    .stat-label { font-family:'Noto Serif JP', serif; font-size:.72rem; font-weight:300; color:var(--muted); letter-spacing:.12em; margin-top:.5rem; line-height:1.8; }
+    .terroir-visual { position:relative; height:600px; }
+    .forest-panorama { width:100%; height:100%; position:relative; background:linear-gradient(180deg, #030a04 0%, #061009 45%, #0a1a0c 100%); border:1px solid var(--fline); overflow:hidden; }
+    .fp-sky { position:absolute; top:0; left:0; right:0; height:50%; background:radial-gradient(ellipse 80% 70% at 50% 0%, rgba(20,60,25,.6), rgba(10,30,12,.2), transparent); }
+    .fp-moon { position:absolute; top:12%; left:55%; width:44px; height:44px; border-radius:50%; background:radial-gradient(circle at 42% 42%, rgba(220,220,180,.15), rgba(160,180,140,.05)); border:1px solid rgba(200,210,160,.1); box-shadow:0 0 40px rgba(180,210,140,.07); }
+    .fp-mist { position:absolute; bottom:0; left:-10%; right:-10%; height:35%; background:linear-gradient(to top, rgba(60,130,70,.1), rgba(40,100,50,.05), transparent); animation:mistDrift 10s ease-in-out infinite alternate; }
+    .fp-ground { position:absolute; bottom:0; left:0; right:0; height:22%; background:linear-gradient(to top, rgba(10,30,12,.8), rgba(8,20,10,.4), transparent); }
+    .fp-pin { position:absolute; bottom:25%; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:.6rem; }
+    .fp-pin-dot { width:10px; height:10px; border-radius:50%; background:var(--gold); box-shadow:0 0 14px rgba(184,154,74,.7), 0 0 30px rgba(184,154,74,.3); animation:pinPulse 2.2s ease-in-out infinite; }
+    @keyframes pinPulse { 0%,100%{ box-shadow:0 0 10px rgba(184,154,74,.6), 0 0 25px rgba(184,154,74,.2); } 50%{ box-shadow:0 0 20px rgba(184,154,74,.9), 0 0 50px rgba(184,154,74,.4); } }
+    .fp-pin-ring { position:absolute; border:1px solid rgba(184,154,74,.2); border-radius:50%; top:50%; left:50%; transform:translate(-50%,-50%); animation:fpRingPulse 2.5s ease-out infinite; }
+    .fp-pin-ring:nth-child(1){ width:40px; height:40px; animation-delay:0s; }
+    .fp-pin-ring:nth-child(2){ width:70px; height:70px; animation-delay:.6s; }
+    .fp-pin-ring:nth-child(3){ width:100px; height:100px; animation-delay:1.2s; }
+    @keyframes fpRingPulse { 0%{ opacity:.6; transform:translate(-50%,-50%) scale(.8); } 100%{ opacity:0; transform:translate(-50%,-50%) scale(1.3); } }
+    .fp-label { font-family:'Noto Serif JP', serif; font-size:.7rem; letter-spacing:.2em; color:var(--gold); background:rgba(4,9,6,.85); padding:.3rem .9rem; border:1px solid rgba(184,154,74,.2); white-space:nowrap; }
+    .fp-fly { position:absolute; width:2px; height:2px; border-radius:50%; background:rgba(180,240,160,.85); box-shadow:0 0 5px rgba(160,220,140,.9); animation:fireflyFloat var(--dur,7s) ease-in-out infinite var(--delay,0s); }
+
+
+    /* ============================================================ VISIT */
+    #visit { padding:10rem 0; background:linear-gradient(180deg, #070e08 0%, var(--bg-mid) 100%); position:relative; }
+    .visit-inner { display:grid; grid-template-columns:1fr 1fr; gap:6rem; }
+    .info-row { display:grid; grid-template-columns:120px 1fr; gap:1.5rem; padding:1.5rem 0; border-bottom:1px solid var(--fline); }
+    .info-row:first-of-type { border-top:1px solid var(--fline); margin-top:2rem; }
+    .info-key { font-family:'Cormorant Garamond', serif; font-size:.75rem; letter-spacing:.3em; color:var(--gold-dark); }
+    .info-val { font-family:'Noto Serif JP', serif; font-size:.85rem; font-weight:300; color:var(--warm); letter-spacing:.08em; line-height:1.9; }
+    .visit-forest { background:var(--bg-light); border:1px solid var(--fline); min-height:420px; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+    .vf-bg { position:absolute; inset:0; background:linear-gradient(180deg, #030806 0%, #061009 55%, #0a1a0c 100%); }
+    .vf-mist { position:absolute; bottom:0; left:-10%; right:-10%; height:40%; background:linear-gradient(to top, rgba(50,110,55,.12), rgba(40,90,45,.05), transparent); animation:mistDrift 12s ease-in-out infinite alternate; }
+    .vf-kura { position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; }
+    .kura-roof { width:0; height:0; border-left:70px solid transparent; border-right:70px solid transparent; border-bottom:50px solid rgba(30,55,32,.7); }
+    .kura-roof-2 { width:0; height:0; border-left:55px solid transparent; border-right:55px solid transparent; border-bottom:30px solid rgba(25,50,28,.6); margin-top:-20px; }
+    .kura-body { width:110px; height:90px; background:rgba(20,40,22,.7); border:1px solid rgba(60,100,60,.2); display:flex; align-items:center; justify-content:center; }
+    .kura-door { width:26px; height:44px; background:rgba(8,18,8,.9); border:1px solid rgba(60,100,60,.25); position:relative; }
+    .kura-door::before { content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:8px; height:8px; border-radius:50%; background:rgba(184,154,74,.35); }
+    .kura-base { width:130px; height:12px; background:rgba(15,35,18,.8); }
+    .kura-label { font-family:'Noto Serif JP', serif; font-size:.65rem; letter-spacing:.3em; color:rgba(184,154,74,.5); margin-top:1rem; }
+    .vf-fly { position:absolute; width:2px; height:2px; border-radius:50%; background:rgba(200,240,160,.9); box-shadow:0 0 5px rgba(180,230,140,.9); animation:fireflyFloat var(--dur,9s) ease-in-out infinite var(--delay,0s); }
+
+    /* ============================================================ FOOTER */
+    footer { background:var(--bg); padding:6rem 0 3rem; border-top:1px solid var(--fline); position:relative; }
+    footer::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(to right, transparent, rgba(80,140,60,.2), var(--gold-dark), rgba(80,140,60,.2), transparent); }
+    .footer-inner { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:4rem; margin-bottom:5rem; }
+    .footer-logo    { font-family:'Noto Serif JP', serif; font-size:1.3rem; font-weight:300; letter-spacing:.3em; color:var(--cream); margin-bottom:.5rem; }
+    .footer-logo-en { font-family:'Cormorant Garamond', serif; font-size:.7rem; letter-spacing:.5em; color:var(--gold-dark); display:block; margin-bottom:1.5rem; }
+    .footer-tagline { font-family:'Noto Serif JP', serif; font-size:.78rem; font-weight:300; color:var(--muted); letter-spacing:.1em; line-height:2.2; }
+    .footer-col-title { font-family:'Cormorant Garamond', serif; font-size:.72rem; letter-spacing:.5em; color:var(--gold-dark); margin-bottom:1.5rem; }
+    .footer-links { list-style:none; display:flex; flex-direction:column; gap:1rem; }
+    .footer-links a { font-family:'Noto Serif JP', serif; font-size:.8rem; font-weight:300; color:var(--muted); text-decoration:none; letter-spacing:.08em; transition:color .3s; }
+    .footer-links a:hover { color:var(--cream); }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; padding-top:3rem; border-top:1px solid var(--fline); }
+    .footer-copy   { font-family:'Cormorant Garamond', serif; font-size:.72rem; letter-spacing:.3em; color:var(--muted); }
+    .footer-sns    { display:flex; gap:1.5rem; }
+    .footer-sns a  { font-family:'Cormorant Garamond', serif; font-size:.72rem; letter-spacing:.3em; color:var(--muted); text-decoration:none; transition:color .3s; }
+    .footer-sns a:hover { color:var(--gold); }
+
+    /* ============================================================ RESPONSIVE */
+    @media (max-width:1024px) {
+      .philosophy-inner,.terroir-inner,.visit-inner { grid-template-columns:1fr; gap:5rem; }
+      .philosophy-visual,.terroir-visual { height:360px; }
+      .cat-grid { grid-template-columns:1fr 1fr; }
+      .process-steps { grid-template-columns:1fr 1fr 1fr; gap:2rem; }
+      .process-steps::before { display:none; }
+      .footer-inner { grid-template-columns:1fr 1fr; gap:3rem; }
+      .history-inner { grid-template-columns:1fr; gap:4rem; }
+      .history-inner::before { display:none; }
+    }
+    @media (max-width:768px) {
+      nav { padding:1.5rem; }
+      nav.scrolled { padding:1rem 1.5rem; }
+      .nav-links,.nav-lang { display:none; }
+      .container { padding:0 1.5rem; }
+      .cat-grid { grid-template-columns:1fr; }
+      .products-header { flex-direction:column; gap:1.5rem; align-items:flex-start; }
+      .process-steps { grid-template-columns:1fr 1fr; }
+      .news-grid { grid-template-columns:1fr; }
+      .footer-inner { grid-template-columns:1fr; gap:2.5rem; }
+      .footer-bottom { flex-direction:column; gap:1rem; }
+      .hero-cta-group { flex-direction:column; }
+      .terroir-stats { grid-template-columns:1fr 1fr; }
+      .category-tabs { flex-direction:column; max-width:100%; }
+      .cat-tab { border-right:none; border-bottom:1px solid var(--fline); }
+      .cat-tab:last-child { border-bottom:none; }
+    }
+
+    /* ── PRODUCT IMAGES ── */
+    .product-img { width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:2px; display:block; margin-bottom:2rem; opacity:0.92; transition:opacity .3s; }
+    .product-card:hover .product-img { opacity:1; }
+
+    /* ── DEMO RIBBON ── */
+    .demo-ribbon { background:rgba(10,30,12,0.95); border-bottom:1px solid var(--fline); color:rgba(200,210,180,.65); text-align:center; font-family:'Cormorant Garamond',serif; font-size:.72rem; letter-spacing:.25em; padding:.55rem 1rem; display:flex; align-items:center; justify-content:center; gap:1.2rem; flex-wrap:wrap; }
+    .demo-ribbon a { color:var(--gold); text-decoration:none; border-bottom:1px solid rgba(184,154,74,.3); transition:border-color .2s; }
+    .demo-ribbon a:hover { border-color:var(--gold); }
+
+    /* ── FAB ── */
+    .fab { position:fixed; bottom:24px; right:20px; z-index:600; display:flex; align-items:center; gap:9px; background:var(--gold); border:none; border-radius:28px; padding:12px 20px; cursor:pointer; box-shadow:0 8px 28px rgba(184,154,74,.25),0 2px 8px rgba(0,0,0,.3); font-family:'Cormorant Garamond',serif; font-size:.9rem; letter-spacing:.2em; color:var(--bg); transition:all .3s; animation:fabIn .8s .6s ease both; }
+    @keyframes fabIn { from{opacity:0;transform:translateY(18px) scale(.9)} to{opacity:1;transform:translateY(0) scale(1)} }
+    .fab:hover { background:var(--gold-light); transform:translateY(-2px); }
+    .fab-dot { position:absolute; top:3px; right:3px; width:8px; height:8px; background:#4caf7d; border-radius:50%; border:2px solid var(--gold); animation:dotPulse 2s infinite; }
+    @keyframes dotPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.8)} }
+
+    /* ── CHAT OVERLAY ── */
+    .c-overlay { position:fixed; inset:0; z-index:700; background:rgba(2,6,3,.55); backdrop-filter:blur(8px); display:none; opacity:0; transition:opacity .3s; }
+    .c-overlay.open { display:block; }
+    .c-overlay.visible { opacity:1; }
+
+    /* Panel: bottom-sheet mobile / side-panel desktop */
+    .c-panel { position:fixed; bottom:0; left:0; right:0; height:88svh; background:var(--bg-light); border:1px solid var(--fline); border-radius:16px 16px 0 0; display:flex; flex-direction:column; overflow:hidden; transform:translateY(100%); transition:transform .42s cubic-bezier(.16,1,.3,1); box-shadow:0 -20px 60px rgba(0,0,0,.5); }
+    .c-panel.open { transform:translateY(0); }
+    @media(min-width:700px) {
+      .c-panel { top:0; right:0; bottom:0; left:auto; width:400px; max-width:100vw; height:100%; border-radius:0; transform:translateX(100%); box-shadow:-8px 0 40px rgba(0,0,0,.4); }
+      .c-panel.open { transform:translateX(0); }
+    }
+
+    .c-handle { width:36px; height:3px; background:var(--line); border-radius:2px; margin:10px auto 0; flex-shrink:0; }
+    @media(min-width:700px){.c-handle{display:none;}}
+
+    .c-hdr { display:flex; align-items:center; justify-content:space-between; padding:11px 16px; border-bottom:1px solid var(--fline); flex-shrink:0; }
+    .c-hdr-l { display:flex; align-items:center; gap:10px; }
+    .c-av { width:36px; height:36px; border:1px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Noto Serif JP',serif; font-size:.8rem; color:var(--gold); background:rgba(184,154,74,.06); flex-shrink:0; }
+    .c-name { font-family:'Noto Serif JP',serif; font-size:.9rem; letter-spacing:.12em; color:var(--cream); }
+    .c-status { font-size:.65rem; color:#4caf7d; letter-spacing:.1em; display:flex; align-items:center; gap:3px; }
+    .c-dot { width:5px; height:5px; background:#4caf7d; border-radius:50%; animation:dotPulse 2s infinite; }
+    .c-close { background:none; border:1px solid var(--fline); color:var(--muted); width:28px; height:28px; border-radius:50%; cursor:pointer; font-size:15px; display:flex; align-items:center; justify-content:center; transition:all .2s; }
+    .c-close:hover { border-color:var(--gold-dark); color:var(--cream); }
+
+    .c-msgs { flex:1; overflow-y:auto; padding:14px 16px; display:flex; flex-direction:column; gap:10px; overscroll-behavior:contain; }
+    .c-msgs::-webkit-scrollbar { width:2px; }
+    .c-msgs::-webkit-scrollbar-thumb { background:var(--fline); }
+
+    .c-msg { display:flex; gap:8px; animation:msgIn .3s ease both; }
+    @keyframes msgIn { from{opacity:0;transform:translateY(5px)} to{opacity:1;transform:translateY(0)} }
+    .c-msg.user { flex-direction:row-reverse; }
+    .c-av-sm { width:26px; height:26px; border-radius:50%; flex-shrink:0; border:1px solid var(--line); display:flex; align-items:center; justify-content:center; font-family:'Noto Serif JP',serif; font-size:.65rem; color:var(--gold); background:rgba(184,154,74,.06); margin-top:2px; }
+    .c-msg.user .c-av-sm { border-color:var(--fline); color:var(--muted); background:rgba(60,100,60,.05); }
+    .c-bubble { max-width:84%; padding:9px 13px; font-size:.82rem; line-height:1.9; letter-spacing:.04em; border-radius:2px; }
+    .c-msg.ai .c-bubble { background:rgba(184,154,74,.06); border:1px solid var(--line); border-left:2px solid rgba(184,154,74,.35); font-family:'Noto Serif JP',serif; font-weight:300; color:var(--warm); }
+    .c-msg.user .c-bubble { background:rgba(30,60,30,.4); border:1px solid var(--fline); color:var(--cream); }
+
+    .c-typing { display:flex; gap:4px; align-items:center; padding:11px 14px; background:rgba(184,154,74,.06); border:1px solid var(--line); border-left:2px solid rgba(184,154,74,.35); border-radius:2px; }
+    .c-td { width:5px; height:5px; background:rgba(184,154,74,.4); border-radius:50%; animation:ctd 1.2s infinite; }
+    .c-td:nth-child(2){animation-delay:.18s} .c-td:nth-child(3){animation-delay:.36s}
+    @keyframes ctd { 0%,80%,100%{opacity:.3;transform:scale(.8)} 40%{opacity:1;transform:scale(1)} }
+
+    .c-sugs { padding:7px 14px; border-top:1px solid var(--fline); display:flex; gap:5px; flex-wrap:wrap; flex-shrink:0; background:rgba(10,20,12,.4); }
+    .c-sug { background:none; border:1px solid var(--fline); color:var(--muted); font-size:.7rem; padding:5px 10px; border-radius:2px; cursor:pointer; font-family:'Cormorant Garamond',serif; letter-spacing:.15em; transition:all .18s; white-space:nowrap; }
+    .c-sug:hover { border-color:rgba(184,154,74,.4); color:var(--gold-light); }
+
+    .c-inp-row { padding:10px 12px; border-top:1px solid var(--fline); display:flex; gap:8px; align-items:flex-end; flex-shrink:0; padding-bottom:max(10px,env(safe-area-inset-bottom)); background:var(--bg-light); }
+    #c-inp { flex:1; background:rgba(255,255,255,.03); border:1px solid var(--fline); border-radius:4px; color:var(--cream); font-family:'Noto Serif JP',serif; font-size:.85rem; font-weight:300; padding:9px 12px; outline:none; resize:none; transition:border-color .2s; line-height:1.5; max-height:88px; }
+    #c-inp:focus { border-color:rgba(184,154,74,.4); }
+    #c-inp::placeholder { color:var(--muted); }
+    #c-send { background:var(--gold-dark); border:none; color:var(--cream); width:38px; height:38px; border-radius:4px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .2s; flex-shrink:0; }
+    #c-send:hover { background:var(--gold); }
+    #c-send:disabled { background:rgba(60,80,60,.3); cursor:not-allowed; }
+    #c-send svg { width:14px; height:14px; fill:var(--cream); }
+    .c-powered { display:flex; align-items:center; justify-content:center; gap:5px; font-family:'Cormorant Garamond',serif; font-size:.62rem; letter-spacing:.2em; color:rgba(100,130,90,.5); padding:6px 0; border-top:1px solid var(--fline); flex-shrink:0; }
+  </style>
+</head>
+<body>
+
+<!-- ── DEMO RIBBON ── -->
+<div class="demo-ribbon">
+  <span>🍶 Terroir HUB — AI接客コンシェルジュ 体験デモ（樹木酒造）</span>
+  <a href="/lp-sake-ai.html" target="_blank">→ 導入について詳しく</a>
+</div>
+
+<!-- ── LOADER ── -->
+<div id="loader">
+  <div class="loader-trees">
+    <div class="ltree sm"><div class="ltree-top"></div><div class="ltree-mid"></div><div class="ltree-bot"></div><div class="ltree-trunk"></div></div>
+    <div class="ltree"><div class="ltree-top"></div><div class="ltree-mid"></div><div class="ltree-bot"></div><div class="ltree-trunk"></div></div>
+    <div class="ltree sm"><div class="ltree-top"></div><div class="ltree-mid"></div><div class="ltree-bot"></div><div class="ltree-trunk"></div></div>
+    <div class="ltree"><div class="ltree-top"></div><div class="ltree-mid"></div><div class="ltree-bot"></div><div class="ltree-trunk"></div></div>
+    <div class="ltree sm"><div class="ltree-top"></div><div class="ltree-mid"></div><div class="ltree-bot"></div><div class="ltree-trunk"></div></div>
+  </div>
+  <div class="loader-logo">樹木酒造</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">樹木酒造<span>JUKI SHUZO EST. 1887</span></a>
+  <ul class="nav-links">
+    <li><a href="#philosophy">Philosophy</a></li>
+    <li><a href="#products">Collection</a></li>
+    <li><a href="#process">Brewing</a></li>
+    <li><a href="#terroir">Terroir</a></li>
+    <li><a href="#history">History</a></li>
+    <li><a href="#visit">Visit</a></li>
+  </ul>
+  <span class="nav-lang">EN / JA</span>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div style="position:absolute;inset:0;background-image:url('img/brewery.png');background-size:cover;background-position:center 30%;opacity:.18;pointer-events:none;"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-rays">
+    <div class="ray"></div><div class="ray"></div><div class="ray"></div>
+    <div class="ray"></div><div class="ray"></div><div class="ray"></div>
+  </div>
+
+  <!-- Forest / mountain silhouettes -->
+  <div class="hero-forest">
+    <svg viewBox="0 0 1440 500" preserveAspectRatio="xMidYMax meet"
+         style="position:absolute;bottom:0;left:0;width:100%;height:100%;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="treeGrad1" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="rgba(15,45,18,0.85)"/>
+          <stop offset="100%" stop-color="rgba(8,25,10,0.95)"/>
+        </linearGradient>
+        <linearGradient id="treeGrad2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="rgba(12,38,15,0.7)"/>
+          <stop offset="100%" stop-color="rgba(6,20,8,0.9)"/>
+        </linearGradient>
+        <linearGradient id="treeGrad3" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="rgba(20,55,22,0.5)"/>
+          <stop offset="100%" stop-color="rgba(10,30,12,0.8)"/>
+        </linearGradient>
+        <linearGradient id="mistGrad" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="rgba(40,110,50,0.12)"/>
+          <stop offset="50%" stop-color="rgba(30,90,40,0.06)"/>
+          <stop offset="100%" stop-color="rgba(20,70,30,0)"/>
+        </linearGradient>
+      </defs>
+      <g fill="url(#treeGrad3)" opacity="0.55">
+        <polygon points="0,500 30,380 60,500"/> <polygon points="55,500 80,370 105,500"/>
+        <polygon points="100,500 135,355 170,500"/> <polygon points="160,500 200,345 240,500"/>
+        <polygon points="235,500 265,365 295,500"/> <polygon points="290,500 320,350 350,500"/>
+        <polygon points="345,500 385,340 425,500"/> <polygon points="420,500 450,360 480,500"/>
+        <polygon points="475,500 515,345 555,500"/> <polygon points="550,500 580,355 610,500"/>
+        <polygon points="605,500 650,335 695,500"/> <polygon points="690,500 725,350 760,500"/>
+        <polygon points="755,500 795,340 835,500"/> <polygon points="830,500 860,355 890,500"/>
+        <polygon points="885,500 930,338 975,500"/> <polygon points="970,500 1005,348 1040,500"/>
+        <polygon points="1035,500 1075,342 1115,500"/> <polygon points="1110,500 1145,352 1180,500"/>
+        <polygon points="1175,500 1215,340 1255,500"/> <polygon points="1250,500 1285,355 1320,500"/>
+        <polygon points="1315,500 1360,345 1405,500"/> <polygon points="1400,500 1440,360 1440,500"/>
+      </g>
+      <g fill="url(#treeGrad2)">
+        <polygon points="0,500 50,330 100,500"/> <polygon points="85,500 140,295 195,500"/>
+        <polygon points="180,500 250,270 320,500"/> <polygon points="305,500 360,305 415,500"/>
+        <polygon points="400,500 465,260 530,500"/> <polygon points="515,500 570,285 625,500"/>
+        <polygon points="610,500 680,255 750,500"/> <polygon points="735,500 790,275 845,500"/>
+        <polygon points="830,500 900,250 970,500"/> <polygon points="955,500 1015,270 1075,500"/>
+        <polygon points="1060,500 1130,258 1200,500"/> <polygon points="1185,500 1245,272 1305,500"/>
+        <polygon points="1290,500 1365,248 1440,500"/>
+      </g>
+      <g fill="url(#treeGrad1)">
+        <polygon points="0,500 70,290 140,500"/>
+        <rect x="62" y="430" width="16" height="70" fill="rgba(8,22,10,0.95)"/>
+        <polygon points="130,500 215,250 300,500"/>
+        <rect x="207" y="420" width="16" height="80" fill="rgba(8,22,10,0.95)"/>
+        <polygon points="285,500 385,220 485,500"/>
+        <rect x="377" y="400" width="16" height="100" fill="rgba(8,22,10,0.95)"/>
+        <polygon points="470,500 560,245 650,500"/>
+        <rect x="552" y="415" width="16" height="85" fill="rgba(8,22,10,0.95)"/>
+        <polygon points="635,500 735,215 835,500"/>
+        <rect x="727" y="395" width="16" height="105" fill="rgba(8,22,10,0.95)"/>
+        <polygon points="820,500 910,240 1000,500"/>
+        <rect x="902" y="410" width="16" height="90" fill="rgba(8,22,10,0.95)"/>
+        <polygon points="985,500 1085,222 1185,500"/>
+        <rect x="1077" y="400" width="16" height="100" fill="rgba(8,22,10,0.95)"/>
+        <polygon points="1170,500 1265,238 1360,500"/>
+        <rect x="1257" y="412" width="16" height="88" fill="rgba(8,22,10,0.95)"/>
+        <polygon points="1345,500 1440,255 1440,500"/>
+      </g>
+      <rect x="0" y="440" width="1440" height="60" fill="rgba(6,15,8,0.9)"/>
+      <rect x="0" y="400" width="1440" height="50" fill="url(#mistGrad)"/>
+    </svg>
+  </div>
+
+  <!-- Fireflies -->
+  <div class="firefly" style="left:15%;top:55%;--dur:7s;--delay:0s;--tx:40px;--ty:-50px;--tx2:-20px;--ty2:15px;"></div>
+  <div class="firefly" style="left:28%;top:60%;--dur:9s;--delay:1.2s;--tx:-30px;--ty:-40px;--tx2:15px;--ty2:20px;"></div>
+  <div class="firefly" style="left:42%;top:58%;--dur:8s;--delay:.5s;--tx:25px;--ty:-60px;--tx2:-35px;--ty2:10px;"></div>
+  <div class="firefly" style="left:58%;top:62%;--dur:11s;--delay:2s;--tx:-40px;--ty:-35px;--tx2:20px;--ty2:25px;"></div>
+  <div class="firefly" style="left:72%;top:56%;--dur:7.5s;--delay:.8s;--tx:35px;--ty:-55px;--tx2:-25px;--ty2:18px;"></div>
+  <div class="firefly" style="left:85%;top:63%;--dur:10s;--delay:1.8s;--tx:-45px;--ty:-38px;--tx2:15px;--ty2:22px;"></div>
+  <div class="firefly" style="left:22%;top:45%;--dur:13s;--delay:3s;--tx:50px;--ty:-70px;--tx2:-30px;--ty2:30px;"></div>
+  <div class="firefly" style="left:64%;top:48%;--dur:8.5s;--delay:.3s;--tx:-35px;--ty:-45px;--tx2:25px;--ty2:15px;"></div>
+
+  <div class="hero-mist"></div>
+  <div class="hero-mist-2"></div>
+
+  <div class="hero-content">
+    <span class="hero-eyebrow">JUKI SHUZO — EST. 1887 — FUEFUKI, YAMANASHI</span>
+    <div class="hero-title-wrap">
+      <h1 class="hero-title-ja">樹木酒造</h1>
+      <span class="hero-title-en">THE SPIRIT OF THE MOUNTAIN FOREST</span>
+    </div>
+    <div class="hero-ornament"></div>
+    <p class="hero-tagline">
+      山が育み、木々が記憶する。<br>
+      自然の時間を、一滴に宿す。
+    </p>
+    <div class="hero-cta-group">
+      <a href="#products" class="btn-primary">Collection を見る</a>
+      <a href="#philosophy" class="btn-ghost">Our Story</a>
+      <button class="btn-ghost" onclick="openChat()" style="cursor:pointer;background:none;border-color:rgba(184,154,74,.5);font-family:'Cormorant Garamond',serif;font-size:.9rem;letter-spacing:.4em;color:var(--warm);">AIに聞く ✦</button>
+    </div>
+  </div>
+
+  <div class="hero-bg-text">YAMANASHI</div>
+
+  <div class="hero-scroll">
+    <span>SCROLL</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span class="ticker-item">SAKE · WINE · WHISKY</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">樹木酒造</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">ESTABLISHED 1887</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">南アルプス伏流水</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">甲州ぶどう醸造</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">FUEFUKI · YAMANASHI</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">クラフトウイスキー蒸留所</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">SAKE · WINE · WHISKY</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">樹木酒造</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">ESTABLISHED 1887</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">南アルプス伏流水</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">甲州ぶどう醸造</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">FUEFUKI · YAMANASHI</span><span class="ticker-sep">✦</span>
+    <span class="ticker-item">クラフトウイスキー蒸留所</span><span class="ticker-sep">✦</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PHILOSOPHY
+══════════════════════════════════════════════════════════════ -->
+<section id="philosophy">
+  <div class="container">
+    <div class="philosophy-inner">
+
+      <div class="philosophy-visual reveal-left">
+        <div class="phil-card phil-card-main">
+          <div class="forest-scene">
+            <div class="scene-moon-glow"></div>
+            <div class="scene-moon"></div>
+            <svg viewBox="0 0 300 280" style="position:absolute;bottom:0;left:0;width:100%;height:65%;" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="cg1" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="rgba(12,40,15,0.8)"/>
+                  <stop offset="100%" stop-color="rgba(6,18,8,0.95)"/>
+                </linearGradient>
+              </defs>
+              <g fill="url(#cg1)">
+                <polygon points="0,280 20,200 40,280"/> <polygon points="35,280 58,185 81,280"/>
+                <polygon points="75,280 105,170 135,280"/> <polygon points="130,280 160,180 190,280"/>
+                <polygon points="185,280 215,168 245,280"/> <polygon points="240,280 265,178 290,280"/>
+                <polygon points="285,280 300,190 300,280"/>
+              </g>
+              <rect x="0" y="255" width="300" height="25" fill="rgba(5,14,7,0.9)"/>
+            </svg>
+            <div class="scene-mist"></div>
+            <div class="scene-bottle" style="z-index:3;">
+              <div class="sb-cork"></div>
+              <div class="sb-neck"></div>
+              <div class="sb-shldr"></div>
+              <div class="sb-body"><span class="sb-label">翠根酒</span></div>
+              <div class="sb-ripple"></div>
+              <div class="sb-ripple"></div>
+              <div class="sb-ripple"></div>
+            </div>
+          </div>
+        </div>
+        <div class="phil-card phil-card-accent reveal delay-3">
+          <div class="ring-art">
+            <div class="ring-circle"></div><div class="ring-circle"></div>
+            <div class="ring-circle"></div><div class="ring-circle"></div>
+            <div class="ring-circle"></div>
+            <span class="ring-label">年輪</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="philosophy-text">
+        <span class="section-label reveal">OUR STORY</span>
+        <div class="gold-line reveal delay-1"></div>
+        <h2 class="section-title reveal delay-2">
+          木の根のように、深く。<br>木の葉のように、豊かに。
+        </h2>
+        <blockquote class="phil-quote reveal delay-3">
+          「私たちが造るのは、酒ではない。<br>
+          この土地の季節、その記憶そのものだ。」
+        </blockquote>
+        <p class="section-body reveal delay-4">
+          樹木酒造は明治二十年、甲斐の山々に囲まれた笛吹市芦川町に創業した。古くから豊かな南アルプス伏流水に恵まれたこの土地で、私たちは137年にわたり酒を醸してきた。<br><br>
+          時代とともに、日本酒だけでなく、この風土に育まれた甲州葡萄からワインを、清らかな水からウイスキーを生み出してきた。春は桃の花が咲き、夏には葡萄が実る。冬の凛とした寒さが、酒とウイスキーに静かな深みを与える。
+        </p>
+        <div class="phil-num-list reveal delay-5">
+          <div class="phil-num-item">
+            <div class="phil-num">01</div>
+            <div class="phil-num-body">
+              <div class="phil-num-title">南アルプス伏流水</div>
+              <div class="phil-num-text">標高780mの芦川渓谷から湧き出る超軟水。寒暖差が生む清冽な水が、すべての醸造の礎となる。</div>
+            </div>
+          </div>
+          <div class="phil-num-item">
+            <div class="phil-num">02</div>
+            <div class="phil-num-body">
+              <div class="phil-num-title">甲州の土壌と果実</div>
+              <div class="phil-num-text">笛吹市は日本最大のぶどう産地。在来品種・甲州ぶどうのテロワールを、ワインと蒸留酒に刻む。</div>
+            </div>
+          </div>
+          <div class="phil-num-item">
+            <div class="phil-num">03</div>
+            <div class="phil-num-body">
+              <div class="phil-num-title">三つの醸造の哲学</div>
+              <div class="phil-num-text">日本酒・ワイン・ウイスキー。手法は異なれど、すべてに共通するのは「この土地の記憶を一滴に宿す」という一点だ。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     HISTORY TIMELINE
+══════════════════════════════════════════════════════════════ -->
+<section id="history">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:5rem;">
+      <span class="section-label reveal">HISTORY</span>
+      <div class="gold-line reveal delay-1" style="margin:0 auto; background:linear-gradient(to right,transparent,var(--gold),transparent);"></div>
+      <h2 class="section-title reveal delay-2">137年の醸造史</h2>
+    </div>
+    <div class="history-inner">
+      <div class="hist-item reveal delay-1">
+        <div class="hist-year-wrap">
+          <div class="hist-year">1887</div>
+          <div class="hist-dot"></div>
+        </div>
+        <span class="hist-tag">SAKE — FOUNDING</span>
+        <div class="hist-title">日本酒蔵 創業</div>
+        <div class="hist-desc">甲斐の山々に囲まれた笛吹市芦川町に、樹木酒造を創業。南アルプスの伏流水と地元の米で、日本酒の醸造を始める。明治の石蔵は今も現役で使われ続けている。</div>
+      </div>
+      <div class="hist-item reveal delay-2">
+        <div class="hist-year-wrap">
+          <div class="hist-year">1985</div>
+          <div class="hist-dot"></div>
+        </div>
+        <span class="hist-tag">WINE — WINERY EST.</span>
+        <div class="hist-title">甲州ワイン醸造 開始</div>
+        <div class="hist-desc">この土地に自生する甲州ぶどうに着目。蔵に隣接するワイナリーを設立し、日本固有のテロワールを生かしたワイン醸造を開始。甲州ワインの草分け的存在となる。</div>
+      </div>
+      <div class="hist-item reveal delay-3">
+        <div class="hist-year-wrap">
+          <div class="hist-year">2021</div>
+          <div class="hist-dot"></div>
+        </div>
+        <span class="hist-tag">WHISKY — DISTILLERY EST.</span>
+        <div class="hist-title">クラフトウイスキー蒸留所 設立</div>
+        <div class="hist-desc">南アルプスの清廉な水と笛吹の冷涼な気候。新たなる醸造の地平として、クラフトウイスキー蒸留所を蔵敷地内に設立。水楢（ミズナラ）樽熟成に取り組む。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     STATEMENT
+══════════════════════════════════════════════════════════════ -->
+<section id="statement">
+  <svg class="stmt-ring-bg" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="350" cy="350" r="30"/> <circle cx="350" cy="350" r="60"/>
+    <circle cx="350" cy="350" r="100"/> <circle cx="350" cy="350" r="148"/>
+    <circle cx="350" cy="350" r="200"/> <circle cx="350" cy="350" r="255"/>
+    <circle cx="350" cy="350" r="310" stroke-width="2"/>
+    <circle cx="350" cy="350" r="330"/> <circle cx="350" cy="350" r="340"/>
+  </svg>
+  <div class="container">
+    <div class="statement-inner">
+      <p class="statement-text reveal">
+        山が育み、<em>水が記憶する</em>。<br>
+        この土地にしかない<em>季節の味</em>を、<br>
+        三つの醸造で、世界へ。
+      </p>
+      <p class="statement-sub reveal delay-2">— JUKI SHUZO, FUEFUKI 1887 —</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PRODUCTS
+══════════════════════════════════════════════════════════════ -->
+<section id="products">
+  <div class="container">
+    <div class="products-header">
+      <div>
+        <span class="section-label reveal">COLLECTION</span>
+        <div class="gold-line reveal delay-1"></div>
+        <h2 class="section-title reveal delay-2">代表銘柄</h2>
+      </div>
+      <a href="#" class="btn-ghost reveal delay-3" style="font-size:.8rem;padding:.7rem 2rem;">All Products</a>
+    </div>
+
+    <!-- Category tab buttons -->
+    <div class="category-tabs reveal delay-2">
+      <button class="cat-tab active" data-cat="sake">SAKE</button>
+      <button class="cat-tab" data-cat="wine">WINE</button>
+      <button class="cat-tab" data-cat="whisky">WHISKY</button>
+    </div>
+
+    <!-- SAKE -->
+    <div class="cat-grid" data-cat="sake">
+      <div class="product-card reveal">
+        <span class="product-number">No.01</span>
+        <img class="product-img" src="img/suikon.png" alt="翠根酒">
+        <div class="product-name-ja">翠根酒</div>
+        <span class="product-name-en">SUIKONSU</span>
+        <span class="product-type">純米大吟醸</span>
+        <p class="product-desc">山田錦を35%まで磨いた最高峰。南アルプス伏流水の清澄さと、芦川渓谷の朝霧のような余韻が続く。全国新酒鑑評会金賞受賞。</p>
+        <span class="product-arrow">VIEW</span>
+      </div>
+      <div class="product-card reveal delay-2">
+        <span class="product-number">No.02</span>
+        <img class="product-img" src="img/morie-sake.png" alt="森恵">
+        <div class="product-name-ja">森恵</div>
+        <span class="product-name-en">MORIMEGUMI</span>
+        <span class="product-type">純米吟醸</span>
+        <p class="product-desc">美山錦55%精米。山の恵みをそのままに表現した、透明感あふれる食中酒。桃の花を思わせる華やかな香りと、やわらかな甘みが特徴。</p>
+        <span class="product-arrow">VIEW</span>
+      </div>
+      <div class="product-card reveal delay-4">
+        <span class="product-number">No.03</span>
+        <img class="product-img" src="img/juki.png" alt="樹木">
+        <div class="product-name-ja">樹木</div>
+        <span class="product-name-en">JUKI</span>
+        <span class="product-type">純米 生酛</span>
+        <p class="product-desc">古法・生酛造りによる濃醇旨口。樹木の根が大地に深く張るように、複雑で力強い旨みが口中に広がる。熟成向きの原点にして頂点。</p>
+        <span class="product-arrow">VIEW</span>
+      </div>
+    </div>
+
+    <!-- WINE -->
+    <div class="cat-grid hidden" data-cat="wine">
+      <div class="product-card reveal">
+        <span class="product-number">No.01</span>
+        <img class="product-img" src="img/koshin.png" alt="甲森">
+        <div class="product-name-ja">甲森</div>
+        <span class="product-name-en">KOSHIN — KOSHU WHITE</span>
+        <span class="product-type">甲州 白ワイン</span>
+        <p class="product-desc">笛吹市産甲州ぶどう100%。柑橘と白桃の香り、凛とした酸味と穏やかなミネラル。南アルプスを仰ぎながら飲む、この土地だけの白。</p>
+        <span class="product-arrow">VIEW</span>
+      </div>
+      <div class="product-card reveal delay-2">
+        <span class="product-number">No.02</span>
+        <img class="product-img" src="img/shinju.png" alt="深樹">
+        <div class="product-name-ja">深樹</div>
+        <span class="product-name-en">SHINJU — MERLOT BLEND</span>
+        <span class="product-type">メルロー ブレンド</span>
+        <p class="product-desc">自社農園のメルローを主体に、カベルネを少量ブレンド。甲府盆地の昼夜寒暖差が生む、深いルビー色とシルキーなタンニン。</p>
+        <span class="product-arrow">VIEW</span>
+      </div>
+      <div class="product-card reveal delay-4">
+        <span class="product-number">No.03</span>
+        <img class="product-img" src="img/komorebi.png" alt="木洩">
+        <div class="product-name-ja">木洩</div>
+        <span class="product-name-en">KOMOREBI — SPARKLING</span>
+        <span class="product-type">瓶内二次発酵</span>
+        <p class="product-desc">甲州ぶどうを瓶内二次発酵でスパークリングに。森から差し込む木漏れ日のように、細やかな泡が光を帯びる。乾杯のための一本。</p>
+        <span class="product-arrow">VIEW</span>
+      </div>
+    </div>
+
+    <!-- WHISKY -->
+    <div class="cat-grid hidden" data-cat="whisky">
+      <div class="product-card reveal">
+        <span class="product-number">No.01</span>
+        <img class="product-img" src="img/jurei.png" alt="樹齢">
+        <div class="product-name-ja">樹齢</div>
+        <span class="product-name-en">JUREI — SINGLE MALT</span>
+        <span class="product-type">シングルモルト</span>
+        <p class="product-desc">南アルプスの伏流水で仕込んだシングルモルト。ファーストフィルのバーボン樽で熟成。青りんごと蜂蜜の香り、スムースな余韻が続く。</p>
+        <span class="product-arrow">VIEW</span>
+      </div>
+      <div class="product-card reveal delay-2">
+        <span class="product-number">No.02</span>
+        <img class="product-img" src="img/morie-whisky.png" alt="森恵">
+        <div class="product-name-ja">深森</div>
+        <span class="product-name-en">SHINRIN — MIZUNARA OAK</span>
+        <span class="product-type">水楢樽熟成</span>
+        <p class="product-desc">国産水楢（ミズナラ）樽で長期熟成。伽羅と白檀を思わせる東洋的な香りと、甘く複雑な余韻。日本の森から生まれた唯一無二のウイスキー。</p>
+        <span class="product-arrow">VIEW</span>
+      </div>
+      <div class="product-card reveal delay-4">
+        <span class="product-number">No.03</span>
+        <img class="product-img" src="img/shinka.png" alt="森霞">
+        <div class="product-name-ja">森霞</div>
+        <span class="product-name-en">MORIKASUMI — LIMITED CASK</span>
+        <span class="product-type">リミテッドカスク</span>
+        <p class="product-desc">年間わずか数樽のみリリースする限定品。甲州ワイン樽でフィニッシュを施した、甘美で複雑な一本。霧が晴れた後の森の静寂を、グラスの中に。</p>
+        <span class="product-arrow">VIEW</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PROCESS
+══════════════════════════════════════════════════════════════ -->
+<section id="process">
+  <div class="container">
+    <div class="process-header">
+      <span class="section-label reveal">BREWING</span>
+      <div class="gold-line reveal delay-1" style="margin:0 auto;background:linear-gradient(to right,transparent,var(--gold),transparent);"></div>
+      <h2 class="section-title reveal delay-2" style="text-align:center;">酒造りの歩み</h2>
+      <p class="section-body reveal delay-3" style="text-align:center;max-width:480px;margin:.8rem auto 0;">
+        自然の声に耳を澄ます。それが、樹木酒造のすべての醸造の始まりだ。
+      </p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-circle"><span class="step-icon">米</span><span class="step-num">01</span></div>
+        <div class="step-name">原料処理</div>
+        <div class="step-desc">山田錦・美山錦を丁寧に精米。磨きの程度がその後の全てを決める。</div>
+      </div>
+      <div class="process-step reveal delay-1">
+        <div class="step-circle"><span class="step-icon">麹</span><span class="step-num">02</span></div>
+        <div class="step-name">製麹</div>
+        <div class="step-desc">麹室にこもり、手で温度と湿度を管理。二昼夜、蔵人は眠らない。</div>
+      </div>
+      <div class="process-step reveal delay-2">
+        <div class="step-circle"><span class="step-icon">酛</span><span class="step-num">03</span></div>
+        <div class="step-name">酒母</div>
+        <div class="step-desc">南アルプスの伏流水と麹で酵母を育てる。この小さな命が酒の骨格を作る。</div>
+      </div>
+      <div class="process-step reveal delay-3">
+        <div class="step-circle"><span class="step-icon">醸</span><span class="step-num">04</span></div>
+        <div class="step-name">醪</div>
+        <div class="step-desc">三段仕込みで醪を育てる。低温でゆっくりと、30日以上かけて発酵させる。</div>
+      </div>
+      <div class="process-step reveal delay-4">
+        <div class="step-circle"><span class="step-icon">搾</span><span class="step-num">05</span></div>
+        <div class="step-name">搾り・仕上げ</div>
+        <div class="step-desc">槽（ふね）で丁寧に搾り、最小限の処理で瓶詰め。自然の味をそのままに。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     TERROIR
+══════════════════════════════════════════════════════════════ -->
+<section id="terroir">
+  <div class="terroir-bg-text">TERROIR</div>
+  <div class="container">
+    <div class="terroir-inner">
+      <div>
+        <span class="section-label reveal">TERROIR</span>
+        <div class="gold-line reveal delay-1"></div>
+        <h2 class="section-title reveal delay-2">山と果実、<br>水が育む蔵</h2>
+        <p class="section-body reveal delay-3" style="margin-top:1.5rem;">
+          山梨県笛吹市芦川町、標高780メートル。南アルプスの伏流水と寒暖差の大きな気候、そして果樹栽培に適した豊かな土壌。<br><br>
+          春は桃の花が咲き、夏には甲州ぶどうが実る。冬の凛とした寒さが、日本酒とウイスキーに静かな深みを与える。この土地だからこそ生まれる味がある。その確信が、137年にわたり樹木酒造を支えてきた。
+        </p>
+        <div class="terroir-stats reveal delay-4">
+          <div class="stat-box"><div class="stat-num">780<sup>m</sup></div><div class="stat-label">蔵の標高<br>Altitude</div></div>
+          <div class="stat-box"><div class="stat-num">137</div><div class="stat-label">創業からの年数<br>Years of History</div></div>
+          <div class="stat-box"><div class="stat-num">3</div><div class="stat-label">醸造カテゴリ<br>Sake · Wine · Whisky</div></div>
+          <div class="stat-box"><div class="stat-num">35<sup>%</sup></div><div class="stat-label">最高精米歩合<br>Highest Polish Rate</div></div>
+        </div>
+      </div>
+
+      <div class="terroir-visual reveal-right">
+        <div class="forest-panorama">
+          <div class="fp-sky"></div>
+          <div class="fp-moon"></div>
+          <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMax meet"
+               style="position:absolute;bottom:0;left:0;width:100%;height:70%;" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="tg1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="rgba(12,38,15,0.75)"/>
+                <stop offset="100%" stop-color="rgba(5,16,7,0.95)"/>
+              </linearGradient>
+              <linearGradient id="tg2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="rgba(18,52,20,0.55)"/>
+                <stop offset="100%" stop-color="rgba(8,24,10,0.85)"/>
+              </linearGradient>
+            </defs>
+            <g fill="url(#tg2)">
+              <polygon points="0,600 25,470 50,600"/> <polygon points="45,600 75,455 105,600"/>
+              <polygon points="100,600 135,440 170,600"/> <polygon points="165,600 200,450 235,600"/>
+              <polygon points="230,600 265,438 300,600"/> <polygon points="295,600 330,448 365,600"/>
+              <polygon points="360,600 400,435 440,600"/> <polygon points="435,600 470,445 500,600"/>
+            </g>
+            <g fill="url(#tg1)">
+              <polygon points="0,600 35,420 70,600"/>
+              <rect x="28" y="530" width="14" height="70"/>
+              <polygon points="65,600 115,385 165,600"/>
+              <rect x="108" y="510" width="14" height="90"/>
+              <polygon points="160,600 220,370 280,600"/>
+              <rect x="213" y="495" width="14" height="105"/>
+              <polygon points="275,600 335,380 395,600"/>
+              <rect x="328" y="502" width="14" height="98"/>
+              <polygon points="390,600 445,374 500,600"/>
+              <rect x="438" y="498" width="14" height="102"/>
+            </g>
+            <rect x="0" y="565" width="500" height="35" fill="rgba(4,12,5,0.95)"/>
+          </svg>
+          <div class="fp-mist"></div>
+          <div class="fp-ground"></div>
+          <div class="fp-fly" style="left:18%;top:40%;--dur:8s;--delay:0s;--tx:30px;--ty:-40px;--tx2:-20px;--ty2:15px;"></div>
+          <div class="fp-fly" style="left:35%;top:50%;--dur:10s;--delay:1s;--tx:-25px;--ty:-30px;--tx2:18px;--ty2:20px;"></div>
+          <div class="fp-fly" style="left:55%;top:44%;--dur:7s;--delay:.5s;--tx:20px;--ty:-45px;--tx2:-30px;--ty2:10px;"></div>
+          <div class="fp-fly" style="left:72%;top:52%;--dur:11s;--delay:2s;--tx:-35px;--ty:-28px;--tx2:15px;--ty2:22px;"></div>
+          <div class="fp-pin">
+            <div class="fp-pin-ring"></div>
+            <div class="fp-pin-ring"></div>
+            <div class="fp-pin-ring"></div>
+            <div class="fp-pin-dot"></div>
+            <div class="fp-label">山梨県笛吹市芦川町</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     VISIT
+══════════════════════════════════════════════════════════════ -->
+<section id="visit">
+  <div class="container">
+    <div class="visit-inner">
+      <div>
+        <span class="section-label reveal">VISIT</span>
+        <div class="gold-line reveal delay-1"></div>
+        <h2 class="section-title reveal delay-2">蔵を訪ねる</h2>
+        <p class="section-body reveal delay-3" style="margin-top:1.5rem;">
+          明治時代の石蔵、隣接するワイナリー、そして2021年に完成した蒸留所。三つの醸造空間が、笛吹市芦川町の山あいに並んでいる。南アルプスを仰ぎながら、137年の時間が染み込んだ酒造りの息吹を、ぜひ直接感じてください。蔵見学は予約制です。
+        </p>
+        <div class="visit-info reveal delay-4">
+          <div class="info-row"><span class="info-key">ADDRESS</span><span class="info-val">山梨県笛吹市芦川町樹木1887番地</span></div>
+          <div class="info-row"><span class="info-key">TEL</span><span class="info-val">055-000-0000</span></div>
+          <div class="info-row"><span class="info-key">VISIT</span><span class="info-val">蔵見学・蒸留所ツアーは要予約<br>土・日・祝日のみ 10:00 / 14:00</span></div>
+          <div class="info-row"><span class="info-key">SHOP</span><span class="info-val">直売所 毎日 9:00〜17:00<br>（年末年始を除く）</span></div>
+        </div>
+      </div>
+
+      <div class="visit-forest reveal-right">
+        <div class="vf-bg"></div>
+        <svg viewBox="0 0 500 420" style="position:absolute;bottom:0;left:0;width:100%;height:80%;" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="vg1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(10,35,12,0.7)"/>
+              <stop offset="100%" stop-color="rgba(4,14,5,0.95)"/>
+            </linearGradient>
+          </defs>
+          <g fill="url(#vg1)">
+            <polygon points="0,420 28,300 56,420"/> <polygon points="50,420 90,278 130,420"/>
+            <polygon points="125,420 165,265 205,420"/> <polygon points="200,420 235,288 270,420"/>
+            <polygon points="265,420 305,272 345,420"/> <polygon points="340,420 380,282 420,420"/>
+            <polygon points="415,420 455,270 500,420"/>
+          </g>
+          <rect x="0" y="396" width="500" height="24" fill="rgba(3,10,4,0.97)"/>
+        </svg>
+        <div class="vf-mist"></div>
+        <div class="vf-kura">
+          <div class="kura-roof"></div>
+          <div class="kura-roof-2"></div>
+          <div class="kura-body"><div class="kura-door"></div></div>
+          <div class="kura-base"></div>
+          <div class="kura-label">樹木酒造 明治蔵</div>
+        </div>
+        <div class="vf-fly" style="left:15%;top:35%;--dur:9s;--delay:0s;--tx:25px;--ty:-35px;--tx2:-15px;--ty2:12px;"></div>
+        <div class="vf-fly" style="left:25%;top:55%;--dur:7s;--delay:1.2s;--tx:-20px;--ty:-28px;--tx2:14px;--ty2:18px;"></div>
+        <div class="vf-fly" style="left:70%;top:40%;--dur:11s;--delay:.4s;--tx:18px;--ty:-40px;--tx2:-22px;--ty2:9px;"></div>
+        <div class="vf-fly" style="left:80%;top:60%;--dur:8s;--delay:2.1s;--tx:-28px;--ty:-22px;--tx2:12px;--ty2:20px;"></div>
+        <div class="vf-fly" style="left:45%;top:30%;--dur:13s;--delay:.7s;--tx:30px;--ty:-50px;--tx2:-18px;--ty2:14px;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">樹木酒造</div>
+        <span class="footer-logo-en">JUKI SHUZO — FUEFUKI, YAMANASHI</span>
+        <p class="footer-tagline">山が育み、木々が記憶する。<br>この土地の季節を、<br>三つの醸造で、一滴に宿す。</p>
+      </div>
+      <div>
+        <div class="footer-col-title">SAKE</div>
+        <ul class="footer-links">
+          <li><a href="#">翠根酒 — 純米大吟醸</a></li>
+          <li><a href="#">森恵 — 純米吟醸</a></li>
+          <li><a href="#">樹木 — 純米生酛</a></li>
+        </ul>
+        <div class="footer-col-title" style="margin-top:2rem;">WINE</div>
+        <ul class="footer-links">
+          <li><a href="#">甲森 — Koshu White</a></li>
+          <li><a href="#">深樹 — Merlot Blend</a></li>
+          <li><a href="#">木洩 — Sparkling</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">WHISKY</div>
+        <ul class="footer-links">
+          <li><a href="#">樹齢 — Single Malt</a></li>
+          <li><a href="#">深森 — Mizunara Oak</a></li>
+          <li><a href="#">森霞 — Limited Cask</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">INFO</div>
+        <ul class="footer-links">
+          <li><a href="#">Philosophy</a></li>
+          <li><a href="#">蔵・蒸留所見学</a></li>
+          <li><a href="#">Terroir</a></li>
+          <li><a href="#">お取扱い店舗</a></li>
+          <li><a href="#">Online Shop</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 JUKI SHUZO. ALL RIGHTS RESERVED. — 山梨県笛吹市芦川町樹木1887番地</span>
+      <div class="footer-sns">
+        <a href="#">INSTAGRAM</a>
+        <a href="#">X</a>
+        <a href="#">FACEBOOK</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── FAB ── -->
+<button class="fab" id="fab" onclick="openChat()">
+  <div class="fab-dot"></div>
+  <svg viewBox="0 0 24 24" style="width:15px;height:15px;fill:var(--bg)"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+  AIに聞く
+</button>
+
+<!-- ── CHAT OVERLAY ── -->
+<div class="c-overlay" id="cOverlay" onclick="if(event.target===this)closeChat()">
+  <div class="c-panel" id="cPanel">
+    <div class="c-handle"></div>
+    <div class="c-hdr">
+      <div class="c-hdr-l">
+        <div class="c-av">木</div>
+        <div>
+          <div class="c-name">樹木酒造 AIコンシェルジュ</div>
+          <div class="c-status"><span class="c-dot"></span>オンライン</div>
+        </div>
+      </div>
+      <button class="c-close" onclick="closeChat()">×</button>
+    </div>
+    <div class="c-msgs" id="cMsgs"></div>
+    <div class="c-sugs" id="cSugs"></div>
+    <div class="c-inp-row">
+      <textarea id="c-inp" rows="1" placeholder="ご質問をどうぞ…"
+        onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();cSend();}"
+        oninput="cGrow(this);document.getElementById('c-send').disabled=!this.value.trim();"
+      ></textarea>
+      <button id="c-send" onclick="cSend()" disabled>
+        <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      </button>
+    </div>
+    <div class="c-powered">Powered by Terroir HUB × Claude AI (Anthropic)</div>
+  </div>
+</div>
+
+<script>
+  // LOADER
+  window.addEventListener('load', () => {
+    setTimeout(() => { document.getElementById('loader').classList.add('hidden'); }, 2000);
+  });
+
+  // NAV SCROLL
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // SCROLL REVEAL
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => observer.observe(el));
+
+  // HERO BG TEXT PARALLAX
+  const heroBgText = document.querySelector('.hero-bg-text');
+  window.addEventListener('scroll', () => {
+    if (heroBgText) heroBgText.style.transform = `translateX(-50%) translateY(${window.scrollY * 0.2}px)`;
+  }, { passive: true });
+
+  // NAV ACTIVE STATE
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const secObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = e.target.id;
+        navLinks.forEach(a => { a.style.color = a.getAttribute('href') === `#${id}` ? 'var(--gold-light)' : ''; });
+      }
+    });
+  }, { threshold: 0.45 });
+  sections.forEach(s => secObs.observe(s));
+
+  // PRODUCT CATEGORY TABS
+  document.querySelectorAll('.cat-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.cat-grid').forEach(g => g.classList.add('hidden'));
+      tab.classList.add('active');
+      const grid = document.querySelector(`.cat-grid[data-cat="${tab.dataset.cat}"]`);
+      grid.classList.remove('hidden');
+      // Re-trigger reveal animations for newly shown cards
+      grid.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => {
+        el.classList.remove('visible');
+        setTimeout(() => observer.observe(el), 10);
+      });
+    });
+  });
+
+  // PRODUCT CARD TILT
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width  - 0.5;
+      const y = (e.clientY - r.top)  / r.height - 0.5;
+      card.style.transform = `perspective(800px) rotateY(${x*7}deg) rotateX(${-y*7}deg) translateY(-4px)`;
+    });
+    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+  });
+</script>
+
+<script>
+/* ── AI Concierge Chat ── */
+const CHAT_API = '/api/demo-chat';
+const SUGS = ['どこで買えますか？','蔵見学はできますか？','翠根酒と森恵の違いは？','ウイスキーも造ってるの？','Can you answer in English?'];
+let cHistory = [], cBusy = false, cInited = false;
+
+function openChat() {
+  const ov = document.getElementById('cOverlay');
+  const pn = document.getElementById('cPanel');
+  ov.style.display = 'block';
+  requestAnimationFrame(() => { ov.classList.add('visible'); pn.classList.add('open'); });
+  document.body.style.overflow = 'hidden';
+  if (!cInited) { cInited = true; cGreet(); }
+  setTimeout(() => document.getElementById('c-inp').focus(), 450);
+  cSetupVp();
+}
+
+function closeChat() {
+  const ov = document.getElementById('cOverlay');
+  const pn = document.getElementById('cPanel');
+  ov.classList.remove('visible'); pn.classList.remove('open');
+  setTimeout(() => { ov.style.display = 'none'; }, 420);
+  document.body.style.overflow = '';
+}
+
+function cSetupVp() {
+  if (!window.visualViewport) return;
+  const fn = () => {
+    const pn = document.getElementById('cPanel');
+    if (window.innerWidth < 700) { pn.style.height = window.visualViewport.height + 'px'; cScrollBot(); }
+    else { pn.style.height = ''; }
+  };
+  window.visualViewport.addEventListener('resize', fn);
+  window.visualViewport.addEventListener('scroll', fn);
+}
+
+function cGreet() {
+  cAddAI('いらっしゃいませ。樹木酒造のAIコンシェルジュです。\n\n日本酒・ワイン・ウイスキーのご案内から、蔵見学のご予約まで、何でもお気軽にどうぞ。英語でのご質問にも対応しております。');
+  cRenderSugs();
+}
+
+function cAddAI(text) {
+  const c = document.getElementById('cMsgs');
+  const d = document.createElement('div');
+  d.className = 'c-msg ai';
+  d.innerHTML = '<div class="c-av-sm">木</div><div class="c-bubble">' + cEsc(text).replace(/\n/g,'<br>') + '</div>';
+  c.appendChild(d); cScrollBot();
+}
+function cAddUser(text) {
+  const c = document.getElementById('cMsgs');
+  const d = document.createElement('div');
+  d.className = 'c-msg user';
+  d.innerHTML = '<div class="c-av-sm">私</div><div class="c-bubble">' + cEsc(text).replace(/\n/g,'<br>') + '</div>';
+  c.appendChild(d); cScrollBot();
+}
+function cShowTyping() {
+  const c = document.getElementById('cMsgs');
+  const d = document.createElement('div');
+  d.className = 'c-msg ai'; d.id = 'cTyping';
+  d.innerHTML = '<div class="c-av-sm">木</div><div class="c-typing"><div class="c-td"></div><div class="c-td"></div><div class="c-td"></div></div>';
+  c.appendChild(d); cScrollBot();
+}
+function cRemoveTyping() { document.getElementById('cTyping')?.remove(); }
+function cScrollBot() { const c = document.getElementById('cMsgs'); requestAnimationFrame(() => { c.scrollTop = c.scrollHeight; }); }
+function cRenderSugs() {
+  document.getElementById('cSugs').innerHTML = SUGS.map(s => '<button class="c-sug" onclick="cSugClick(this)">' + s + '</button>').join('');
+}
+function cHideSugs() { document.getElementById('cSugs').innerHTML = ''; }
+function cEsc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+async function cSend(override) {
+  if (cBusy) return;
+  const inp = document.getElementById('c-inp');
+  const q = (override || inp.value).trim();
+  if (!q) return;
+  inp.value = ''; inp.style.height = '';
+  document.getElementById('c-send').disabled = true;
+  cHideSugs(); cBusy = true;
+  cAddUser(q); cShowTyping();
+  try {
+    const res = await fetch(CHAT_API, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({message:q, history:cHistory}) });
+    const data = await res.json();
+    cRemoveTyping();
+    const reply = data.reply || '申し訳ありません、もう一度お試しください。';
+    cAddAI(reply);
+    cHistory.push({role:'user',content:q});
+    cHistory.push({role:'assistant',content:reply});
+    if (cHistory.length > 16) cHistory = cHistory.slice(-16);
+  } catch { cRemoveTyping(); cAddAI('現在接続できません。しばらくしてからお試しください。'); }
+  cBusy = false;
+  document.getElementById('c-send').disabled = false;
+  document.getElementById('c-inp').focus();
+}
+function cSugClick(btn) { cHideSugs(); cSend(btn.textContent); }
+function cGrow(el) { el.style.height = ''; el.style.height = Math.min(el.scrollHeight, 88) + 'px'; }
+</script>
+</body>
+</html>
