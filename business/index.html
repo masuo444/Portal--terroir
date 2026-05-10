@@ -75,27 +75,27 @@ button,input,textarea,select{font-family:inherit}
 .nav.on .nav-cta:hover{background:var(--g700)}
 
 /* ── HERO ── */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero{position:relative;height:100vh;display:flex;align-items:center;overflow:hidden}
 .hero-bg{position:absolute;inset:0;
   background:linear-gradient(112deg,rgba(27,53,40,.97) 0%,rgba(27,53,40,.88) 42%,rgba(27,53,40,.58) 70%,rgba(27,53,40,.32) 100%),
   url('https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=1920&q=85&fit=crop') center/cover no-repeat}
 .hero-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 68% 55%,rgba(196,163,90,.08),transparent 56%)}
-.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:56px;max-width:1360px;margin:0 auto;padding:120px 72px 80px;min-height:100vh}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:48px;max-width:1360px;margin:0 auto;padding:80px 72px 36px;height:100%}
 .hero-left{color:var(--white)}
-.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
 .hero-badge{display:inline-flex;align-items:center;gap:7px;padding:6px 14px;border:1px solid rgba(196,163,90,.35);border-radius:100px;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
 .hero-badge-dot{width:4px;height:4px;background:var(--gold);border-radius:50%}
-.hero-h1{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(3.2rem,5.6vw,6rem);font-weight:300;line-height:1.06;letter-spacing:-.01em;margin-bottom:26px}
+.hero-h1{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(2.8rem,4.8vw,5rem);font-weight:300;line-height:1.06;letter-spacing:-.01em;margin-bottom:12px}
 .hero-h1 em{font-style:italic;color:rgba(255,255,255,.55)}
-.hero-sub{font-size:.9rem;line-height:2;color:rgba(255,255,255,.62);margin-bottom:40px;font-weight:300;max-width:420px}
+.hero-sub{font-size:.84rem;line-height:1.75;color:rgba(255,255,255,.62);margin-bottom:12px;font-weight:300;max-width:420px}
 /* perks */
-.hero-perks{padding:18px 22px;background:rgba(255,255,255,.05);border:1px solid rgba(196,163,90,.2);border-radius:var(--r2);max-width:420px;margin-bottom:36px;backdrop-filter:blur(10px)}
+.hero-perks{padding:12px 18px;background:rgba(255,255,255,.05);border:1px solid rgba(196,163,90,.2);border-radius:var(--r2);max-width:420px;margin-bottom:12px;backdrop-filter:blur(10px)}
 .hero-perks-ttl{font-size:.57rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:11px}
 .hero-perk{display:flex;align-items:center;gap:8px;font-size:.81rem;color:rgba(255,255,255,.72);margin-bottom:5px}
 .hero-perk:last-child{margin-bottom:0}
 .hero-perk svg{flex-shrink:0;color:var(--gold)}
 /* price row */
-.hero-pricing{display:flex;gap:24px;align-items:center;margin-bottom:34px}
+.hero-pricing{display:flex;gap:24px;align-items:center;margin-bottom:18px}
 .hero-price-div{width:1px;height:36px;background:rgba(255,255,255,.14)}
 .hero-price-lbl{font-size:.57rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:2px}
 .hero-price-val{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--white);line-height:1}
@@ -168,22 +168,23 @@ button,input,textarea,select{font-family:inherit}
 .bridge-h3 em{font-style:italic;color:var(--g700)}
 
 /* ── S03 AI EXPERIENCE ── */
-.ai-exp{background:var(--g900)}
+.ai-exp{background:var(--g900);padding:60px 0}
+.ai-exp .sec-hd{margin-bottom:28px}
 .ai-exp .sec-num{color:var(--gold)}
 .ai-exp .sec-num::before,.ai-exp .sec-num::after{background:var(--gold)}
 .ai-exp .sec-h2{color:var(--white)}
 .ai-exp .sec-h2 em{color:rgba(255,255,255,.55)}
-.ai-sub{font-size:.9rem;color:rgba(255,255,255,.58);text-align:center;max-width:520px;margin:0 auto 56px;line-height:1.95;font-weight:300}
+.ai-sub{font-size:.84rem;color:rgba(255,255,255,.58);text-align:center;max-width:520px;margin:0 auto 24px;line-height:1.8;font-weight:300}
 .ai-grid-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .ai-features-ttl{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
 .ai-features{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2);overflow:hidden}
-.ai-feat{background:rgba(255,255,255,.04);padding:16px 18px;display:flex;align-items:center;gap:10px;transition:background var(--dur)}
+.ai-feat{background:rgba(255,255,255,.04);padding:11px 14px;display:flex;align-items:center;gap:10px;transition:background var(--dur)}
 .ai-feat:hover{background:rgba(255,255,255,.08)}
 .ai-feat svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.7;flex-shrink:0}
 .ai-feat-txt{font-size:.8rem;color:rgba(255,255,255,.75)}
 /* mini phone for AI section */
 .ai-phone-wrap{display:flex;justify-content:center}
-.ai-phone{width:240px;height:500px;background:var(--g900);border-radius:36px;border:6px solid rgba(255,255,255,.13);overflow:hidden;box-shadow:0 28px 80px rgba(0,0,0,.5);transform:perspective(900px) rotateY(6deg) rotateX(-2deg)}
+.ai-phone{width:210px;height:380px;background:var(--g900);border-radius:30px;border:6px solid rgba(255,255,255,.13);overflow:hidden;box-shadow:0 28px 80px rgba(0,0,0,.5);transform:perspective(900px) rotateY(6deg) rotateX(-2deg)}
 .ai-phone .pscreen{background:#f0ede7}
 
 /* ── S04 BENEFITS (image) ── */
@@ -254,7 +255,7 @@ footer{background:var(--g900);border-top:1px solid rgba(255,255,255,.07);padding
 
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
-  .hero-inner{grid-template-columns:1fr;padding:90px 48px 60px;min-height:auto;padding-top:100px}
+  .hero-inner{grid-template-columns:1fr;padding:72px 48px 40px;height:auto}
   .hero-right{display:none}
   .hero-sub,.hero-perks{max-width:100%}
   .ai-grid-wrap{grid-template-columns:1fr}
@@ -465,7 +466,7 @@ footer{background:var(--g900);border-top:1px solid rgba(255,255,255,.07);padding
   <div class="wrap">
     <div class="sec-hd r">
       <div class="sec-num">03 &nbsp; AI Experience</div>
-      <h2 class="sec-h2" style="color:var(--white)">AIが、<br>お客様の質問に<br><em>答えます。</em></h2>
+      <h2 class="sec-h2" style="color:var(--white)">AIが、お客様の質問に<br><em>答えます。</em></h2>
     </div>
     <p class="ai-sub r">銘柄の説明から飲み方、ペアリング提案まで。<br>蔵人の知識をAIが代わりにお伝えします。</p>
     <div class="ai-grid-wrap r">
