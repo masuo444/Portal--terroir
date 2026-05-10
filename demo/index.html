@@ -409,7 +409,7 @@
       .category-tabs    { margin-bottom:2rem; }
       .product-card     { padding:1.8rem 2rem; }
       .product-number   { margin-bottom:1rem; }
-      .product-img      { aspect-ratio:4/3; max-height:160px; object-fit:cover; }
+      .product-img      { aspect-ratio:1/1; max-height:220px; object-fit:cover; }
       .product-name-en  { margin-bottom:.8rem; }
       .product-type     { margin-bottom:.8rem; }
       .product-arrow    { bottom:1.5rem; right:1.5rem; }
@@ -942,12 +942,6 @@
           山梨県笛吹市芦川町、標高780メートル。南アルプスの伏流水と寒暖差の大きな気候、そして果樹栽培に適した豊かな土壌。<br><br>
           春は桃の花が咲き、夏には甲州ぶどうが実る。冬の凛とした寒さが、日本酒とウイスキーに静かな深みを与える。この土地だからこそ生まれる味がある。その確信が、137年にわたり樹木酒造を支えてきた。
         </p>
-        <div class="terroir-stats reveal delay-4">
-          <div class="stat-box"><div class="stat-num">780<sup>m</sup></div><div class="stat-label">蔵の標高<br>Altitude</div></div>
-          <div class="stat-box"><div class="stat-num">137</div><div class="stat-label">創業からの年数<br>Years of History</div></div>
-          <div class="stat-box"><div class="stat-num">3</div><div class="stat-label">醸造カテゴリ<br>Sake · Wine · Whisky</div></div>
-          <div class="stat-box"><div class="stat-num">35<sup>%</sup></div><div class="stat-label">最高精米歩合<br>Highest Polish Rate</div></div>
-        </div>
       </div>
 
       <div class="terroir-visual reveal-right">
@@ -1026,36 +1020,8 @@
         </div>
       </div>
 
-      <div class="visit-forest reveal-right">
-        <div class="vf-bg"></div>
-        <svg viewBox="0 0 500 420" style="position:absolute;bottom:0;left:0;width:100%;height:80%;" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="vg1" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="rgba(10,35,12,0.7)"/>
-              <stop offset="100%" stop-color="rgba(4,14,5,0.95)"/>
-            </linearGradient>
-          </defs>
-          <g fill="url(#vg1)">
-            <polygon points="0,420 28,300 56,420"/> <polygon points="50,420 90,278 130,420"/>
-            <polygon points="125,420 165,265 205,420"/> <polygon points="200,420 235,288 270,420"/>
-            <polygon points="265,420 305,272 345,420"/> <polygon points="340,420 380,282 420,420"/>
-            <polygon points="415,420 455,270 500,420"/>
-          </g>
-          <rect x="0" y="396" width="500" height="24" fill="rgba(3,10,4,0.97)"/>
-        </svg>
-        <div class="vf-mist"></div>
-        <div class="vf-kura">
-          <div class="kura-roof"></div>
-          <div class="kura-roof-2"></div>
-          <div class="kura-body"><div class="kura-door"></div></div>
-          <div class="kura-base"></div>
-          <div class="kura-label">樹木酒造 明治蔵</div>
-        </div>
-        <div class="vf-fly" style="left:15%;top:35%;--dur:9s;--delay:0s;--tx:25px;--ty:-35px;--tx2:-15px;--ty2:12px;"></div>
-        <div class="vf-fly" style="left:25%;top:55%;--dur:7s;--delay:1.2s;--tx:-20px;--ty:-28px;--tx2:14px;--ty2:18px;"></div>
-        <div class="vf-fly" style="left:70%;top:40%;--dur:11s;--delay:.4s;--tx:18px;--ty:-40px;--tx2:-22px;--ty2:9px;"></div>
-        <div class="vf-fly" style="left:80%;top:60%;--dur:8s;--delay:2.1s;--tx:-28px;--ty:-22px;--tx2:12px;--ty2:20px;"></div>
-        <div class="vf-fly" style="left:45%;top:30%;--dur:13s;--delay:.7s;--tx:30px;--ty:-50px;--tx2:-18px;--ty2:14px;"></div>
+      <div class="visit-forest reveal-right" style="overflow:hidden;border:1px solid var(--fline);">
+        <img src="img/visit.png" alt="樹木酒造 蔵見学" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9;">
       </div>
     </div>
   </div>
