@@ -367,7 +367,7 @@
     }
 
     /* ── PRODUCT IMAGES ── */
-    .product-img { width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:2px; display:block; margin-bottom:2rem; opacity:0.92; transition:opacity .3s; }
+    .product-img { width:100%; aspect-ratio:1/1; object-fit:cover; object-position:center; border-radius:2px; display:block; margin-bottom:2rem; opacity:0.92; transition:opacity .3s; }
     .product-card:hover .product-img { opacity:1; }
 
     /* ============================================================ PC: EACH SECTION FITS IN ONE VIEWPORT */
@@ -409,7 +409,7 @@
       .category-tabs    { margin-bottom:2rem; }
       .product-card     { padding:1.8rem 2rem; }
       .product-number   { margin-bottom:1rem; }
-      .product-img      { aspect-ratio:1/1; max-height:220px; object-fit:cover; }
+      .product-img      { aspect-ratio:1/1; width:100%; max-height:none; object-fit:cover; object-position:center; }
       .product-name-en  { margin-bottom:.8rem; }
       .product-type     { margin-bottom:.8rem; }
       .product-arrow    { bottom:1.5rem; right:1.5rem; }
@@ -944,56 +944,8 @@
         </p>
       </div>
 
-      <div class="terroir-visual reveal-right">
-        <div class="forest-panorama">
-          <div class="fp-sky"></div>
-          <div class="fp-moon"></div>
-          <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMax meet"
-               style="position:absolute;bottom:0;left:0;width:100%;height:70%;" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="tg1" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="rgba(12,38,15,0.75)"/>
-                <stop offset="100%" stop-color="rgba(5,16,7,0.95)"/>
-              </linearGradient>
-              <linearGradient id="tg2" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="rgba(18,52,20,0.55)"/>
-                <stop offset="100%" stop-color="rgba(8,24,10,0.85)"/>
-              </linearGradient>
-            </defs>
-            <g fill="url(#tg2)">
-              <polygon points="0,600 25,470 50,600"/> <polygon points="45,600 75,455 105,600"/>
-              <polygon points="100,600 135,440 170,600"/> <polygon points="165,600 200,450 235,600"/>
-              <polygon points="230,600 265,438 300,600"/> <polygon points="295,600 330,448 365,600"/>
-              <polygon points="360,600 400,435 440,600"/> <polygon points="435,600 470,445 500,600"/>
-            </g>
-            <g fill="url(#tg1)">
-              <polygon points="0,600 35,420 70,600"/>
-              <rect x="28" y="530" width="14" height="70"/>
-              <polygon points="65,600 115,385 165,600"/>
-              <rect x="108" y="510" width="14" height="90"/>
-              <polygon points="160,600 220,370 280,600"/>
-              <rect x="213" y="495" width="14" height="105"/>
-              <polygon points="275,600 335,380 395,600"/>
-              <rect x="328" y="502" width="14" height="98"/>
-              <polygon points="390,600 445,374 500,600"/>
-              <rect x="438" y="498" width="14" height="102"/>
-            </g>
-            <rect x="0" y="565" width="500" height="35" fill="rgba(4,12,5,0.95)"/>
-          </svg>
-          <div class="fp-mist"></div>
-          <div class="fp-ground"></div>
-          <div class="fp-fly" style="left:18%;top:40%;--dur:8s;--delay:0s;--tx:30px;--ty:-40px;--tx2:-20px;--ty2:15px;"></div>
-          <div class="fp-fly" style="left:35%;top:50%;--dur:10s;--delay:1s;--tx:-25px;--ty:-30px;--tx2:18px;--ty2:20px;"></div>
-          <div class="fp-fly" style="left:55%;top:44%;--dur:7s;--delay:.5s;--tx:20px;--ty:-45px;--tx2:-30px;--ty2:10px;"></div>
-          <div class="fp-fly" style="left:72%;top:52%;--dur:11s;--delay:2s;--tx:-35px;--ty:-28px;--tx2:15px;--ty2:22px;"></div>
-          <div class="fp-pin">
-            <div class="fp-pin-ring"></div>
-            <div class="fp-pin-ring"></div>
-            <div class="fp-pin-ring"></div>
-            <div class="fp-pin-dot"></div>
-            <div class="fp-label">山梨県笛吹市芦川町</div>
-          </div>
-        </div>
+      <div class="terroir-visual reveal-right" style="overflow:hidden;border:1px solid var(--fline);">
+        <img src="img/terroir.png" alt="笛吹市のテロワール" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9;">
       </div>
     </div>
   </div>
