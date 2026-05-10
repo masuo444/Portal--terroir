@@ -3,366 +3,273 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>蔵元・蒸留所向け導入プラン — Terroir HUB for Business</title>
-<meta name="description" content="Terroir HUBに御社専用LPとAIコンシェルジュを。海外向け発信・AI検索対策・問い合わせ導線を一括整備。先行導入キャンペーン10万円（税別）。">
+<title>酒造専用 AIコンシェルジュ — Terroir HUB by FOMUS</title>
+<meta name="description" content="お客様からの質問に24時間365日対応。味わい、飲み方、購入先、蔵見学情報まで。酒造専用AIコンシェルジュが、会話形式で案内できる状態を整えます。初期導入10万円・月額1万円。">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://terroirhub.com/business/">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&family=Noto+Serif+JP:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --ivory:#F7F4EE; --white:#FFFFFF;
+:root{
+  --ivory:#F7F4EE; --warm:#F0EBE0;
+  --white:#FFFFFF;
   --g900:#1B3528; --g800:#234535; --g700:#2C5440; --g600:#3A6B51;
   --g100:#E8EFE9;
-  --gold:#C4A35A; --gold-light:#DFC07A; --gold-pale:#F3EAD4;
+  --gold:#C4A35A; --gold-lt:#DFC07A; --gold-pale:#F3EAD4;
   --t100:#1A1A1A; --t300:#4A4744; --t500:#7A7672; --t700:#AEAAA5;
   --border:#E4DFD5;
-  --rad-sm:2px; --rad-md:6px; --rad-lg:14px; --rad-xl:28px;
-  --sh-sm:0 2px 10px rgba(0,0,0,.06);
-  --sh-md:0 8px 36px rgba(0,0,0,.10);
-  --sh-lg:0 24px 72px rgba(0,0,0,.14);
   --ease:cubic-bezier(.25,.46,.45,.94); --dur:.3s;
+  --r2:2px; --r6:6px; --r14:14px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Inter','Noto Serif JP',sans-serif;background:var(--white);color:var(--t100);line-height:1.7;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter','Noto Serif JP',sans-serif;background:var(--white);color:var(--t100);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
+button,input,textarea,select{font-family:inherit}
 
+/* ── TYPE ── */
 .serif{font-family:'Cormorant Garamond','Noto Serif JP',serif}
-.display{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-weight:300;line-height:1.1;letter-spacing:-.01em}
-.eyebrow{font-family:'Inter',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase}
+.eyebrow{font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
 
-.wrap{max-width:1200px;margin:0 auto;padding:0 56px}
-.wrap--narrow{max-width:860px}
-.section{padding:120px 0}
-.section--sm{padding:80px 0}
+/* ── LAYOUT ── */
+.wrap{max-width:1140px;margin:0 auto;padding:0 48px}
+.wrap--sm{max-width:760px}
+.sec{padding:112px 0}
+.sec--sm{padding:80px 0}
 
-.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 34px;border-radius:var(--rad-sm);font-size:.825rem;font-weight:500;letter-spacing:.06em;cursor:pointer;border:1px solid transparent;transition:all var(--dur) var(--ease);white-space:nowrap}
-.btn svg{width:15px;height:15px}
-.btn--green{background:var(--g900);color:var(--white);border-color:var(--g900)}
-.btn--green:hover{background:var(--g800);box-shadow:var(--sh-md);transform:translateY(-1px)}
-.btn--gold{background:var(--gold);color:var(--g900);border-color:var(--gold);font-weight:600}
-.btn--gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 10px 36px rgba(196,163,90,.28)}
-.btn--ghost-white{background:transparent;color:var(--white);border-color:rgba(255,255,255,.45)}
-.btn--ghost-white:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.75)}
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:var(--r2);font-size:.82rem;font-weight:600;letter-spacing:.06em;cursor:pointer;border:1px solid transparent;transition:all var(--dur) var(--ease);white-space:nowrap}
+.btn--gold{background:var(--gold);color:var(--g900);border-color:var(--gold)}
+.btn--gold:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 10px 32px rgba(196,163,90,.3)}
+.btn--ghost{background:transparent;color:var(--white);border-color:rgba(255,255,255,.4)}
+.btn--ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7)}
 .btn--ghost-dark{background:transparent;color:var(--g900);border-color:var(--g900)}
 .btn--ghost-dark:hover{background:var(--g900);color:var(--white)}
+.btn--green{background:var(--g900);color:var(--white)}
+.btn--green:hover{background:var(--g800);transform:translateY(-1px);box-shadow:0 8px 28px rgba(0,0,0,.18)}
 
-.sec-label{display:inline-flex;align-items:center;gap:14px;font-family:'Inter',sans-serif;font-size:.65rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
-.sec-label::before{content:'';display:block;width:28px;height:1px;background:var(--gold);flex-shrink:0}
-
-/* Reveal */
-.r{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+/* ── REVEAL ── */
+.r{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .r.in{opacity:1;transform:none}
 .r.d1{transition-delay:.1s}.r.d2{transition-delay:.2s}.r.d3{transition-delay:.3s}
 .r.d4{transition-delay:.4s}.r.d5{transition-delay:.5s}
 
-/* ===== NAV ===== */
-.nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:20px 56px;display:flex;align-items:center;justify-content:space-between;transition:background var(--dur),padding var(--dur),box-shadow var(--dur)}
-.nav.on{background:rgba(255,255,255,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);padding:15px 56px;box-shadow:0 1px 0 var(--border)}
-.nav-logo{display:flex;flex-direction:column}
-.nav-logo .logo-main{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500;letter-spacing:.1em;color:var(--white);transition:color var(--dur)}
-.nav-logo .logo-sub{font-family:'Inter',sans-serif;font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.45);transition:color var(--dur)}
-.nav.on .logo-main{color:var(--g900)}
-.nav.on .logo-sub{color:var(--t500)}
-.nav-links{display:flex;gap:36px;list-style:none;align-items:center}
-.nav-links a{font-size:.78rem;letter-spacing:.05em;color:rgba(255,255,255,.7);transition:color var(--dur)}
+/* ── NAV ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:18px 48px;display:flex;align-items:center;justify-content:space-between;transition:background var(--dur),box-shadow var(--dur),padding var(--dur)}
+.nav.on{background:rgba(255,255,255,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:14px 48px;box-shadow:0 1px 0 var(--border)}
+.nav-brand{display:flex;flex-direction:column;line-height:1.1}
+.nav-brand-main{font-family:'Cormorant Garamond',serif;font-size:1.12rem;font-weight:500;letter-spacing:.1em;color:var(--white);transition:color var(--dur)}
+.nav-brand-sub{font-size:.52rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.42);transition:color var(--dur)}
+.nav.on .nav-brand-main{color:var(--g900)}
+.nav.on .nav-brand-sub{color:var(--t500)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{font-size:.76rem;letter-spacing:.04em;color:rgba(255,255,255,.7);transition:color var(--dur)}
 .nav.on .nav-links a{color:var(--t300)}
 .nav-links a:hover{color:var(--gold)}
-.nav-cta{font-size:.78rem;letter-spacing:.07em;padding:10px 22px;background:rgba(255,255,255,.12);color:var(--white);border:1px solid rgba(255,255,255,.3);border-radius:var(--rad-sm);cursor:pointer;transition:all var(--dur) var(--ease);backdrop-filter:blur(8px)}
-.nav.on .nav-cta{background:var(--g900);border-color:var(--g900);color:var(--white)}
-.nav-cta:hover{background:rgba(255,255,255,.22);transform:none}
+.nav-cta{padding:9px 20px;border-radius:var(--r2);font-size:.76rem;font-weight:600;letter-spacing:.06em;background:rgba(255,255,255,.12);color:var(--white);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(8px);cursor:pointer;transition:all var(--dur)}
+.nav.on .nav-cta{background:var(--g900);color:var(--white);border-color:var(--g900)}
+.nav-cta:hover{background:rgba(255,255,255,.22)}
 .nav.on .nav-cta:hover{background:var(--g700)}
 
-/* ===== S01 HERO ===== */
+/* ── HERO ── */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
-.hero__bg{
-  position:absolute;inset:0;
-  background:
-    linear-gradient(110deg,rgba(27,53,40,.97) 0%,rgba(27,53,40,.88) 45%,rgba(27,53,40,.55) 72%,rgba(27,53,40,.30) 100%),
-    url('https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=1920&q=85&fit=crop') center/cover no-repeat;
-}
-.hero__bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 72% 58%,rgba(196,163,90,.08) 0%,transparent 55%)}
-.hero__inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:56px;width:100%;max-width:1360px;margin:0 auto;padding:110px 72px 80px}
-.hero__left{color:var(--white)}
-.hero__pill{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border:1px solid rgba(196,163,90,.4);border-radius:100px;margin-bottom:30px}
-.hero__pill span{font-family:'Inter',sans-serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
-.hero__pill-dot{width:5px;height:5px;background:var(--gold);border-radius:50%}
-.hero__campaign{display:inline-flex;align-items:center;gap:8px;background:rgba(196,163,90,.18);border:1px solid rgba(196,163,90,.32);border-radius:4px;padding:6px 13px;margin-bottom:22px}
-.hero__campaign span{font-size:.65rem;letter-spacing:.12em;color:var(--gold-light)}
-.hero__headline{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(3rem,5vw,5.4rem);font-weight:300;line-height:1.1;letter-spacing:-.01em;margin-bottom:28px;color:var(--white)}
-.hero__headline em{font-style:italic;color:rgba(255,255,255,.6)}
-.hero__sub{font-size:.92rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.65);margin-bottom:38px;max-width:420px}
-.hero__benefits{padding:20px 24px;background:rgba(255,255,255,.05);border:1px solid rgba(196,163,90,.22);border-radius:var(--rad-sm);backdrop-filter:blur(12px);max-width:420px;margin-bottom:40px}
-.hero__benefits-ttl{font-family:'Inter',sans-serif;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
-.hero__benefit{display:flex;align-items:flex-start;gap:9px;font-size:.82rem;color:rgba(255,255,255,.75);margin-bottom:6px}
-.hero__benefit:last-child{margin-bottom:0}
-.hero__benefit-ck{color:var(--gold);flex-shrink:0;margin-top:2px}
-.hero__prices{display:flex;gap:26px;align-items:center;margin-bottom:36px}
-.hero__price-div{width:1px;height:38px;background:rgba(255,255,255,.14)}
-.hero__price-lbl{font-family:'Inter',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:3px}
-.hero__price-val{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--white)}
-.hero__price-unit{font-size:.75rem;color:rgba(255,255,255,.42);margin-left:2px}
-.hero__price-note{font-size:.65rem;color:rgba(255,255,255,.38);margin-top:2px}
-.hero__cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-bg{position:absolute;inset:0;
+  background:linear-gradient(112deg,rgba(27,53,40,.97) 0%,rgba(27,53,40,.88) 42%,rgba(27,53,40,.58) 70%,rgba(27,53,40,.32) 100%),
+  url('https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=1920&q=85&fit=crop') center/cover no-repeat}
+.hero-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 68% 55%,rgba(196,163,90,.08),transparent 56%)}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:56px;max-width:1360px;margin:0 auto;padding:120px 72px 80px;min-height:100vh}
+.hero-left{color:var(--white)}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;padding:6px 14px;border:1px solid rgba(196,163,90,.35);border-radius:100px;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.hero-badge-dot{width:4px;height:4px;background:var(--gold);border-radius:50%}
+.hero-h1{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(3.2rem,5.6vw,6rem);font-weight:300;line-height:1.06;letter-spacing:-.01em;margin-bottom:26px}
+.hero-h1 em{font-style:italic;color:rgba(255,255,255,.55)}
+.hero-sub{font-size:.9rem;line-height:2;color:rgba(255,255,255,.62);margin-bottom:40px;font-weight:300;max-width:420px}
+/* perks */
+.hero-perks{padding:18px 22px;background:rgba(255,255,255,.05);border:1px solid rgba(196,163,90,.2);border-radius:var(--r2);max-width:420px;margin-bottom:36px;backdrop-filter:blur(10px)}
+.hero-perks-ttl{font-size:.57rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:11px}
+.hero-perk{display:flex;align-items:center;gap:8px;font-size:.81rem;color:rgba(255,255,255,.72);margin-bottom:5px}
+.hero-perk:last-child{margin-bottom:0}
+.hero-perk svg{flex-shrink:0;color:var(--gold)}
+/* price row */
+.hero-pricing{display:flex;gap:24px;align-items:center;margin-bottom:34px}
+.hero-price-div{width:1px;height:36px;background:rgba(255,255,255,.14)}
+.hero-price-lbl{font-size:.57rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:2px}
+.hero-price-val{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--white);line-height:1}
+.hero-price-unit{font-size:.72rem;color:rgba(255,255,255,.4);margin-left:2px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
 
-/* HERO RIGHT – phone mockup */
-.hero__right{display:flex;align-items:center;justify-content:center;position:relative}
-.hero__glow{position:absolute;width:340px;height:340px;background:radial-gradient(circle,rgba(196,163,90,.14) 0%,transparent 70%);border-radius:50%;filter:blur(28px);pointer-events:none}
-.phone{width:280px;height:586px;background:var(--g900);border-radius:42px;border:7px solid rgba(255,255,255,.13);overflow:hidden;box-shadow:0 36px 100px rgba(0,0,0,.52),0 0 0 1px rgba(255,255,255,.04),inset 0 1px 0 rgba(255,255,255,.08);transform:perspective(1100px) rotateY(-9deg) rotateX(3deg) translateY(-10px);transition:transform .7s var(--ease)}
+/* HERO RIGHT – phone */
+.hero-right{display:flex;align-items:center;justify-content:center;position:relative}
+.hero-glow{position:absolute;width:320px;height:320px;background:radial-gradient(circle,rgba(196,163,90,.14),transparent 70%);border-radius:50%;filter:blur(28px);pointer-events:none}
+.phone{width:272px;height:572px;background:var(--g900);border-radius:40px;border:7px solid rgba(255,255,255,.13);overflow:hidden;box-shadow:0 36px 100px rgba(0,0,0,.52),inset 0 1px 0 rgba(255,255,255,.08);transform:perspective(1100px) rotateY(-9deg) rotateX(3deg) translateY(-10px);transition:transform .7s var(--ease)}
 .phone:hover{transform:perspective(1100px) rotateY(-4deg) rotateX(1.5deg) translateY(-14px)}
-.pscreen{background:var(--white);height:100%;display:flex;flex-direction:column}
-.pnotch{background:var(--g900);height:24px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.pnotch-pill{width:72px;height:8px;background:rgba(0,0,0,.8);border-radius:10px}
-.pchat-hd{padding:11px 14px;background:var(--g900);display:flex;align-items:center;gap:9px;flex-shrink:0}
-.pchat-av{width:30px;height:30px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-size:.58rem;font-weight:700;color:var(--g900);flex-shrink:0}
-.pchat-name{font-size:.74rem;font-weight:600;color:var(--white);line-height:1.2}
-.pchat-status{font-size:.56rem;color:rgba(255,255,255,.42);display:flex;align-items:center;gap:4px}
-.pchat-dot{width:5px;height:5px;background:#4CAF50;border-radius:50%}
-.pmessages{flex:1;overflow:hidden;padding:14px 12px;display:flex;flex-direction:column;gap:10px;background:#F0EDE7}
-.pmsg{display:flex;flex-direction:column;max-width:84%;opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .5s ease}
+.pscreen{background:#f0ede7;height:100%;display:flex;flex-direction:column}
+.pnotch{background:var(--g900);height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pnotch-pill{width:68px;height:7px;background:rgba(0,0,0,.8);border-radius:10px}
+.pchat-hd{padding:10px 13px;background:var(--g900);display:flex;align-items:center;gap:8px;flex-shrink:0}
+.pchat-av{width:28px;height:28px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.55rem;font-weight:700;color:var(--g900);flex-shrink:0}
+.pchat-info-name{font-size:.7rem;font-weight:600;color:var(--white)}
+.pchat-info-status{font-size:.54rem;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:3px}
+.pchat-dot{width:4px;height:4px;background:#4caf50;border-radius:50%}
+.pmsgs{flex:1;overflow:hidden;padding:12px 11px;display:flex;flex-direction:column;gap:9px}
+.pmsg{display:flex;flex-direction:column;max-width:84%;opacity:0;transform:translateY(7px);transition:opacity .45s ease,transform .45s ease}
 .pmsg.vis{opacity:1;transform:none}
 .pmsg--u{align-self:flex-end;align-items:flex-end}
 .pmsg--a{align-self:flex-start;align-items:flex-start}
-.pbubble{padding:8px 12px;border-radius:14px;font-size:.67rem;line-height:1.55}
-.pmsg--u .pbubble{background:var(--g900);color:var(--white);border-bottom-right-radius:3px}
-.pmsg--a .pbubble{background:var(--white);color:var(--t100);border-bottom-left-radius:3px;box-shadow:0 1px 5px rgba(0,0,0,.08)}
-.ptime{font-size:.52rem;color:var(--t700);margin-top:3px;padding:0 2px}
-.ptyping{display:flex;gap:4px;padding:8px 12px;background:var(--white);border-radius:14px;border-bottom-left-radius:3px;width:fit-content;box-shadow:0 1px 5px rgba(0,0,0,.08);opacity:0;transition:opacity .3s ease}
+.pbub{padding:8px 11px;border-radius:13px;font-size:.65rem;line-height:1.55}
+.pmsg--u .pbub{background:var(--g900);color:var(--white);border-bottom-right-radius:3px}
+.pmsg--a .pbub{background:var(--white);color:var(--t100);border-bottom-left-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.ptime{font-size:.5rem;color:var(--t700);margin-top:2px;padding:0 2px}
+.ptyping{display:flex;gap:3px;padding:7px 11px;background:var(--white);border-radius:13px;border-bottom-left-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,.08);width:fit-content;opacity:0;transition:opacity .3s}
 .ptyping.vis{opacity:1}
-.pdot{width:5px;height:5px;background:var(--t700);border-radius:50%;animation:dotpulse 1.4s ease-in-out infinite}
+.pdot{width:5px;height:5px;background:var(--t700);border-radius:50%;animation:dp 1.4s ease-in-out infinite}
 .pdot:nth-child(2){animation-delay:.22s}
 .pdot:nth-child(3){animation-delay:.44s}
-@keyframes dotpulse{0%,60%,100%{transform:translateY(0);opacity:.4}30%{transform:translateY(-4px);opacity:1}}
-.pinput-area{padding:10px 12px;background:var(--white);display:flex;align-items:center;gap:8px;border-top:1px solid var(--border);flex-shrink:0}
-.pinput{flex:1;padding:6px 12px;background:#F2F2F2;border-radius:16px;font-size:.64rem;color:var(--t500)}
-.psend{width:27px;height:27px;background:var(--g900);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.psend svg{width:12px;height:12px;fill:var(--white)}
-/* floating badges */
-.fbadge{position:absolute;background:rgba(255,255,255,.96);backdrop-filter:blur(18px);border-radius:12px;padding:11px 15px;box-shadow:0 10px 36px rgba(0,0,0,.16);display:flex;align-items:center;gap:10px;white-space:nowrap}
-.fbadge--tl{left:-44px;top:24%}
-.fbadge--br{right:-30px;bottom:27%}
-.fbadge-icon{width:32px;height:32px;background:var(--g900);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.fbadge-icon svg{width:16px;height:16px;stroke:var(--white);fill:none;stroke-width:1.7}
-.fbadge-val{font-size:.78rem;font-weight:700;color:var(--t100);line-height:1.2}
-.fbadge-lbl{font-size:.57rem;color:var(--t500)}
+@keyframes dp{0%,60%,100%{transform:translateY(0);opacity:.4}30%{transform:translateY(-4px);opacity:1}}
+.pinput-row{padding:9px 11px;background:var(--white);display:flex;align-items:center;gap:7px;border-top:1px solid var(--border);flex-shrink:0}
+.pinput-box{flex:1;padding:6px 11px;background:#f2f2f2;border-radius:14px;font-size:.62rem;color:var(--t500)}
+.psend{width:25px;height:25px;background:var(--g900);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.psend svg{width:11px;height:11px;fill:var(--white)}
+/* fbadge */
+.fbadge{position:absolute;background:rgba(255,255,255,.95);backdrop-filter:blur(18px);border-radius:11px;padding:10px 14px;box-shadow:0 10px 32px rgba(0,0,0,.15);display:flex;align-items:center;gap:9px;white-space:nowrap}
+.fbadge--tl{left:-42px;top:23%}
+.fbadge--br{right:-28px;bottom:26%}
+.fbadge-icon{width:30px;height:30px;background:var(--g900);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fbadge-icon svg{width:15px;height:15px;stroke:var(--white);fill:none;stroke-width:1.7}
+.fbadge-val{font-size:.76rem;font-weight:700;color:var(--t100);line-height:1.2}
+.fbadge-lbl{font-size:.56rem;color:var(--t500)}
+/* scroll cue */
+.hero-scroll{position:absolute;bottom:34px;left:72px;z-index:3;display:flex;align-items:center;gap:10px}
+.hero-scroll-line{width:32px;height:1px;background:rgba(255,255,255,.25)}
+.hero-scroll-txt{font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.32)}
 
-/* Scroll cue */
-.hero__scroll{position:absolute;bottom:36px;left:72px;z-index:3;display:flex;align-items:center;gap:12px}
-.hero__scroll-line{width:34px;height:1px;background:rgba(255,255,255,.25)}
-.hero__scroll-txt{font-family:'Inter',sans-serif;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+/* ── S02 CUSTOMER INSIGHT ── */
+.insight{background:var(--ivory)}
+.sec-hd{text-align:center;margin-bottom:60px}
+.sec-num{font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;justify-content:center;gap:10px}
+.sec-num::before,.sec-num::after{content:'';width:28px;height:1px;background:var(--gold)}
+.sec-h2{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:400;line-height:1.3;color:var(--t100)}
+.sec-h2 em{font-style:italic;color:var(--g700)}
+.bubbles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;margin-bottom:64px}
+.bubble-card{background:var(--white);padding:30px 26px;display:flex;flex-direction:column;gap:14px;transition:background var(--dur)}
+.bubble-card:hover{background:var(--ivory)}
+.bubble-q{display:inline-flex;align-items:flex-start;gap:9px;background:var(--ivory);border:1px solid var(--border);border-radius:16px;border-bottom-left-radius:3px;padding:10px 14px;font-family:'Noto Serif JP',serif;font-size:.88rem;color:var(--t100);line-height:1.55}
+.bubble-q svg{flex-shrink:0;margin-top:2px;color:var(--t500)}
+.bubble-label{font-size:.76rem;color:var(--t500);padding-left:4px}
+.insight-bridge{text-align:center}
+.bridge-rule{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:20px}
+.bridge-hr{width:56px;height:1px;background:var(--border)}
+.bridge-dot{width:5px;height:5px;background:var(--gold);border-radius:50%}
+.bridge-h3{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(1.7rem,2.8vw,2.5rem);font-weight:400;color:var(--t100);line-height:1.35}
+.bridge-h3 em{font-style:italic;color:var(--g700)}
 
-/* ===== S02 PAIN ===== */
-.pain{background:var(--ivory)}
-.pain__hd{text-align:center;margin-bottom:64px}
-.pain__hd .sec-label{justify-content:center}
-.pain__hd .sec-label::before{display:none}
-.pain__h2{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:400;line-height:1.3;color:var(--t100)}
-.pain__h2 em{font-style:italic;color:var(--g700)}
-.pain__grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:var(--rad-sm);overflow:hidden;background:var(--border);gap:1px;margin-bottom:72px}
-.pain__card{background:var(--white);padding:36px 30px;display:flex;flex-direction:column;gap:12px;transition:background var(--dur) var(--ease)}
-.pain__card:hover{background:var(--ivory)}
-.pain__card-icon{width:40px;height:40px;background:var(--ivory);border-radius:var(--rad-sm);display:flex;align-items:center;justify-content:center}
-.pain__card-icon svg{width:20px;height:20px;stroke:var(--g900);fill:none;stroke-width:1.6}
-.pain__card-q{font-family:'Noto Serif JP',serif;font-size:.96rem;font-weight:400;color:var(--t100);line-height:1.6}
-.pain__card-sub{font-size:.76rem;color:var(--t500)}
-.pain__bridge{text-align:center}
-.pain__bridge-rule{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:22px}
-.pain__bridge-hr{width:64px;height:1px;background:var(--border)}
-.pain__bridge-dot{width:6px;height:6px;background:var(--gold);border-radius:50%}
-.pain__bridge-h2{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(1.7rem,2.8vw,2.6rem);font-weight:400;line-height:1.38;color:var(--t100);margin-bottom:18px}
-.pain__bridge-h2 em{font-style:italic;color:var(--g700)}
-.pain__bridge-sub{font-size:.88rem;color:var(--t500);max-width:540px;margin:0 auto;line-height:1.9}
+/* ── S03 AI EXPERIENCE ── */
+.ai-exp{background:var(--g900)}
+.ai-exp .sec-num{color:var(--gold)}
+.ai-exp .sec-num::before,.ai-exp .sec-num::after{background:var(--gold)}
+.ai-exp .sec-h2{color:var(--white)}
+.ai-exp .sec-h2 em{color:rgba(255,255,255,.55)}
+.ai-sub{font-size:.9rem;color:rgba(255,255,255,.58);text-align:center;max-width:520px;margin:0 auto 56px;line-height:1.95;font-weight:300}
+.ai-grid-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.ai-features-ttl{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.ai-features{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2);overflow:hidden}
+.ai-feat{background:rgba(255,255,255,.04);padding:16px 18px;display:flex;align-items:center;gap:10px;transition:background var(--dur)}
+.ai-feat:hover{background:rgba(255,255,255,.08)}
+.ai-feat svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.7;flex-shrink:0}
+.ai-feat-txt{font-size:.8rem;color:rgba(255,255,255,.75)}
+/* mini phone for AI section */
+.ai-phone-wrap{display:flex;justify-content:center}
+.ai-phone{width:240px;height:500px;background:var(--g900);border-radius:36px;border:6px solid rgba(255,255,255,.13);overflow:hidden;box-shadow:0 28px 80px rgba(0,0,0,.5);transform:perspective(900px) rotateY(6deg) rotateX(-2deg)}
+.ai-phone .pscreen{background:#f0ede7}
 
-/* ===== S03 SOLUTION ===== */
-.solution{background:var(--g900)}
-.sol__inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.sol__left{}
-.sol__label{display:inline-flex;align-items:center;gap:14px;font-family:'Inter',sans-serif;font-size:.65rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
-.sol__label::before{content:'';display:block;width:28px;height:1px;background:var(--gold);flex-shrink:0}
-.sol__h2{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(2.2rem,3.5vw,3.2rem);font-weight:300;line-height:1.2;color:var(--white);margin-bottom:24px}
-.sol__lead{font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.95;margin-bottom:36px}
-.sol__stats{display:flex;gap:32px}
-.sol__stat-val{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;color:var(--gold);line-height:1}
-.sol__stat-lbl{font-size:.72rem;color:rgba(255,255,255,.48);margin-top:4px;letter-spacing:.04em}
-.sol__div{width:1px;height:48px;background:rgba(255,255,255,.1);align-self:center}
-.sol__right{}
-.sol__cards{display:flex;flex-direction:column;gap:16px}
-.sol__card{background:rgba(255,255,255,.05);border:1px solid rgba(196,163,90,.18);border-radius:var(--rad-sm);padding:26px 28px;display:flex;gap:18px;align-items:flex-start;transition:background var(--dur)}
-.sol__card:hover{background:rgba(255,255,255,.08)}
-.sol__card-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);opacity:.6;line-height:1;flex-shrink:0;width:36px}
-.sol__card-body{}
-.sol__card-ttl{font-family:'Noto Serif JP',serif;font-size:.96rem;font-weight:400;color:var(--white);margin-bottom:6px}
-.sol__card-desc{font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.75}
+/* ── S04 BENEFITS (image) ── */
+.benefits-sec{background:var(--ivory)}
 
-/* ===== S04 DELIVERABLES ===== */
-.delivers{background:var(--white)}
-.del__hd{text-align:center;margin-bottom:64px}
-.del__hd .sec-label{justify-content:center}
-.del__hd .sec-label::before{display:none}
-.del__h2{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(2rem,3.2vw,2.9rem);font-weight:400;line-height:1.3;color:var(--t100)}
-.del__h2 em{font-style:italic;color:var(--g700)}
-.del__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--rad-sm);overflow:hidden;margin-bottom:56px}
-.del__item{background:var(--white);padding:32px 28px;display:flex;flex-direction:column;gap:10px;transition:background var(--dur)}
-.del__item:hover{background:var(--ivory)}
-.del__item-icon{width:38px;height:38px;background:var(--g100);border-radius:var(--rad-sm);display:flex;align-items:center;justify-content:center}
-.del__item-icon svg{width:19px;height:19px;stroke:var(--g900);fill:none;stroke-width:1.6}
-.del__item-ttl{font-family:'Noto Serif JP',serif;font-size:.92rem;font-weight:500;color:var(--t100)}
-.del__item-desc{font-size:.76rem;color:var(--t500);line-height:1.7}
-.del__note{background:var(--ivory);border:1px solid var(--border);border-radius:var(--rad-sm);padding:28px 32px}
-.del__note-ttl{font-size:.72rem;font-weight:600;letter-spacing:.1em;color:var(--t500);text-transform:uppercase;margin-bottom:14px}
-.del__note-list{display:flex;flex-wrap:wrap;gap:8px 20px}
-.del__note-item{font-size:.8rem;color:var(--t500);display:flex;align-items:center;gap:6px}
-.del__note-item::before{content:'—';color:var(--border)}
+/* ── S05 PROCESS ── */
+.process{background:var(--white)}
+.process-note{text-align:center;margin-top:32px;font-size:.76rem;color:var(--t700)}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden}
+.process-step{background:var(--white);padding:32px 26px;display:flex;flex-direction:column;gap:12px;transition:background var(--dur)}
+.process-step:hover{background:var(--ivory)}
+.process-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);opacity:.7;line-height:1}
+.process-ttl{font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:500;color:var(--t100)}
+.process-desc{font-size:.78rem;color:var(--t500);line-height:1.75}
+.process-period{display:inline-block;margin-top:4px;font-size:.68rem;font-weight:600;color:var(--g900);background:var(--g100);padding:4px 12px;border-radius:100px}
 
-/* ===== S05 PRICE ===== */
-.price-section{background:var(--ivory)}
-.price__hd{text-align:center;margin-bottom:64px}
-.price__hd .sec-label{justify-content:center}
-.price__hd .sec-label::before{display:none}
-.price__h2{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(2rem,3.2vw,2.9rem);font-weight:400;line-height:1.3;color:var(--t100)}
-.price__grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px}
-.price__card{background:var(--white);border:1px solid var(--border);border-radius:var(--rad-sm);padding:40px 36px;position:relative;overflow:hidden}
-.price__card--main{border-color:var(--g900);box-shadow:var(--sh-md)}
-.price__card--main::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--g900),var(--g700))}
-.price__badge{position:absolute;top:20px;right:20px;background:var(--gold);color:var(--g900);font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;border-radius:100px}
-.price__phase{font-family:'Inter',sans-serif;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--t500);margin-bottom:12px}
-.price__name{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:400;color:var(--t100);margin-bottom:6px}
-.price__period{font-size:.76rem;color:var(--gold);margin-bottom:24px}
-.price__val{font-family:'Cormorant Garamond',serif;font-size:3.4rem;font-weight:300;color:var(--t100);line-height:1;margin-bottom:4px}
-.price__val span{font-size:1.2rem;color:var(--t300);margin-right:4px}
-.price__tax{font-size:.72rem;color:var(--t700);margin-bottom:28px}
-.price__features{list-style:none;display:flex;flex-direction:column;gap:10px}
-.price__feature{display:flex;align-items:flex-start;gap:9px;font-size:.82rem;color:var(--t300)}
-.price__feature-ck{color:var(--g900);flex-shrink:0;margin-top:2px}
-.price__feature--x{color:var(--t700)}
-.price__feature--x .price__feature-ck{color:var(--t700)}
-.price__note{background:var(--gold-pale);border:1px solid rgba(196,163,90,.3);border-radius:var(--rad-sm);padding:24px 28px;display:flex;gap:18px;align-items:flex-start}
-.price__note-icon{width:36px;height:36px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.price__note-icon svg{width:18px;height:18px;stroke:var(--white);fill:none;stroke-width:2}
-.price__note-ttl{font-size:.9rem;font-weight:600;color:var(--g900);margin-bottom:6px}
-.price__note-desc{font-size:.8rem;color:var(--t300);line-height:1.8}
+/* ── S06 PRICING ── */
+.pricing{background:var(--ivory)}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:36px}
+.pricing-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r2);padding:40px 36px;position:relative;overflow:hidden}
+.pricing-card--main{border-color:var(--g900);box-shadow:0 8px 36px rgba(0,0,0,.1)}
+.pricing-card--main::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--g900),var(--g700))}
+.pricing-tag{font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--t500);margin-bottom:10px}
+.pricing-name{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:400;color:var(--t100);margin-bottom:20px}
+.pricing-val{display:flex;align-items:baseline;gap:4px;margin-bottom:4px}
+.pricing-val-num{font-family:'Cormorant Garamond',serif;font-size:3.6rem;font-weight:300;color:var(--t100);line-height:1}
+.pricing-val-unit{font-size:1rem;color:var(--t300)}
+.pricing-val-sfx{font-size:.78rem;color:var(--t500)}
+.pricing-tax{font-size:.72rem;color:var(--t700);margin-bottom:28px}
+.pricing-badge{position:absolute;top:18px;right:18px;background:var(--gold);color:var(--g900);font-size:.56rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 11px;border-radius:100px}
+.pricing-features{list-style:none;display:flex;flex-direction:column;gap:9px}
+.pricing-feat{display:flex;align-items:flex-start;gap:8px;font-size:.82rem;color:var(--t300)}
+.pricing-feat svg{flex-shrink:0;margin-top:2px;color:var(--g700)}
+.pricing-message{background:var(--g900);border-radius:var(--r2);padding:28px 32px;text-align:center}
+.pricing-message p{font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.95}
+.pricing-message p strong{color:var(--gold)}
 
-/* Phase table */
-.phase-table{width:100%;border-collapse:collapse;margin-top:24px;background:var(--white);border-radius:var(--rad-sm);overflow:hidden;border:1px solid var(--border)}
-.phase-table th{padding:14px 20px;background:var(--g900);color:rgba(255,255,255,.7);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;text-align:left}
-.phase-table td{padding:14px 20px;font-size:.82rem;color:var(--t300);border-bottom:1px solid var(--border)}
-.phase-table tr:last-child td{border-bottom:none}
-.phase-table tr:hover td{background:var(--ivory)}
-.phase-current td:first-child{font-weight:600;color:var(--gold)}
-.phase-current td{color:var(--t100)}
+/* ── S07 FAQ ── */
+.faq{background:var(--white)}
+.faq-list{max-width:760px;margin:0 auto;border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;background:var(--border);display:flex;flex-direction:column;gap:1px}
+.faq-item{background:var(--white)}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:14px;cursor:pointer;font-family:'Noto Serif JP',serif;font-size:.93rem;color:var(--t100);line-height:1.5;transition:background var(--dur)}
+.faq-q:hover{background:var(--ivory)}
+.faq-q-icon{width:20px;height:20px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all var(--dur)}
+.faq-q-icon svg{width:9px;height:9px;stroke:var(--t500);fill:none;stroke-width:2;transition:transform var(--dur)}
+.faq-item.open .faq-q-icon{background:var(--g900);border-color:var(--g900)}
+.faq-item.open .faq-q-icon svg{stroke:var(--white);transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a-inner{padding:0 26px 22px;font-size:.83rem;color:var(--t500);line-height:1.9;border-top:1px solid var(--border)}
 
-/* ===== S06 BONUS ===== */
-.bonus{background:var(--g900)}
-.bonus__inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.bonus__left{}
-.bonus__label{display:inline-flex;align-items:center;gap:12px;font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.bonus__label::before{content:'';display:block;width:24px;height:1px;background:var(--gold)}
-.bonus__h2{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(2rem,3vw,2.8rem);font-weight:300;line-height:1.2;color:var(--white);margin-bottom:22px}
-.bonus__desc{font-size:.88rem;color:rgba(255,255,255,.62);line-height:1.95;margin-bottom:32px}
-.bonus__highlight{padding:20px 24px;background:rgba(196,163,90,.12);border:1px solid rgba(196,163,90,.28);border-radius:var(--rad-sm)}
-.bonus__hl-val{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);margin-bottom:4px}
-.bonus__hl-desc{font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.75}
-.bonus__right{}
-.bonus__card{background:rgba(255,255,255,.05);border:1px solid rgba(196,163,90,.18);border-radius:var(--rad-sm);overflow:hidden}
-.bonus__card-hd{background:rgba(196,163,90,.14);padding:20px 24px;border-bottom:1px solid rgba(196,163,90,.18)}
-.bonus__card-ttl{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-.bonus__card-sub{font-family:'Noto Serif JP',serif;font-size:.96rem;color:var(--white)}
-.bonus__steps{padding:24px;display:flex;flex-direction:column;gap:16px}
-.bonus__step{display:flex;gap:14px;align-items:flex-start}
-.bonus__step-num{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--gold);opacity:.6;line-height:1;flex-shrink:0;width:24px}
-.bonus__step-body{}
-.bonus__step-ttl{font-size:.85rem;font-weight:500;color:var(--white);margin-bottom:3px}
-.bonus__step-desc{font-size:.75rem;color:rgba(255,255,255,.5);line-height:1.65}
+/* ── FINAL CTA ── */
+.final-cta{background:var(--g900);position:relative;overflow:hidden}
+.final-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 45%,rgba(196,163,90,.07),transparent 58%);pointer-events:none}
+.final-cta-inner{position:relative;z-index:1;text-align:center;max-width:660px;margin:0 auto}
+.final-cta-h2{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(2.4rem,4.5vw,4.2rem);font-weight:300;line-height:1.1;color:var(--white);margin-bottom:18px}
+.final-cta-h2 em{font-style:italic;color:rgba(255,255,255,.5)}
+.final-cta-sub{font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.95;margin-bottom:38px}
+.final-cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.final-cta-note{font-size:.72rem;color:rgba(255,255,255,.3)}
 
-/* ===== S07 FLOW ===== */
-.flow{background:var(--white)}
-.flow__hd{text-align:center;margin-bottom:64px}
-.flow__hd .sec-label{justify-content:center}
-.flow__hd .sec-label::before{display:none}
-.flow__h2{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(2rem,3.2vw,2.9rem);font-weight:400;line-height:1.3;color:var(--t100)}
-.flow__steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
-.flow__steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--border) 20%,var(--border) 80%,transparent)}
-.flow__step{text-align:center;padding:0 20px;position:relative}
-.flow__step-circle{width:56px;height:56px;background:var(--g900);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;position:relative;z-index:1}
-.flow__step-circle svg{width:22px;height:22px;stroke:var(--white);fill:none;stroke-width:1.6}
-.flow__step-num{position:absolute;top:-4px;right:-4px;width:20px;height:20px;background:var(--gold);border-radius:50%;font-family:'Inter',sans-serif;font-size:.6rem;font-weight:700;color:var(--g900);display:flex;align-items:center;justify-content:center}
-.flow__step-ttl{font-family:'Noto Serif JP',serif;font-size:.92rem;font-weight:500;color:var(--t100);margin-bottom:8px}
-.flow__step-desc{font-size:.76rem;color:var(--t500);line-height:1.7}
-.flow__step-days{display:inline-block;margin-top:8px;font-size:.62rem;letter-spacing:.1em;color:var(--gold);background:var(--gold-pale);padding:3px 10px;border-radius:100px}
+/* ── FOOTER ── */
+footer{background:var(--g900);border-top:1px solid rgba(255,255,255,.07);padding:36px 0}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:.96rem;letter-spacing:.1em;color:rgba(255,255,255,.35)}
+.footer-brand span{font-size:.54rem;letter-spacing:.18em;display:block;color:rgba(255,255,255,.22)}
+.footer-copy{font-size:.68rem;color:rgba(255,255,255,.22)}
 
-/* ===== S08 FAQ ===== */
-.faq{background:var(--ivory)}
-.faq__hd{text-align:center;margin-bottom:56px}
-.faq__hd .sec-label{justify-content:center}
-.faq__hd .sec-label::before{display:none}
-.faq__h2{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(2rem,3vw,2.7rem);font-weight:400;line-height:1.3;color:var(--t100)}
-.faq__list{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:0;border:1px solid var(--border);border-radius:var(--rad-sm);overflow:hidden;background:var(--border)}
-.faq__item{background:var(--white)}
-.faq__item+.faq__item{margin-top:1px}
-.faq__q{width:100%;text-align:left;background:none;border:none;padding:24px 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:400;color:var(--t100);line-height:1.5;transition:background var(--dur)}
-.faq__q:hover{background:var(--ivory)}
-.faq__q-icon{width:22px;height:22px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all var(--dur)}
-.faq__q-icon svg{width:10px;height:10px;stroke:var(--t500);fill:none;stroke-width:2;transition:transform var(--dur)}
-.faq__item.open .faq__q-icon{background:var(--g900);border-color:var(--g900)}
-.faq__item.open .faq__q-icon svg{stroke:var(--white);transform:rotate(45deg)}
-.faq__a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
-.faq__item.open .faq__a{max-height:300px}
-.faq__a-inner{padding:0 28px 24px;font-size:.84rem;color:var(--t500);line-height:1.9;border-top:1px solid var(--border)}
-
-/* ===== S09 CTA ===== */
-.cta-section{background:var(--g900);position:relative;overflow:hidden}
-.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(196,163,90,.07) 0%,transparent 60%);pointer-events:none}
-.cta__inner{position:relative;z-index:1;text-align:center;max-width:680px;margin:0 auto}
-.cta__label{display:inline-flex;align-items:center;gap:10px;font-family:'Inter',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;justify-content:center}
-.cta__h2{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(2.2rem,4vw,3.8rem);font-weight:300;line-height:1.15;color:var(--white);margin-bottom:20px}
-.cta__sub{font-size:.9rem;color:rgba(255,255,255,.58);margin-bottom:44px;line-height:1.9}
-.cta__form{background:rgba(255,255,255,.06);border:1px solid rgba(196,163,90,.2);border-radius:var(--rad-sm);padding:40px;text-align:left;backdrop-filter:blur(12px)}
-.cta__row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
-.cta__field{display:flex;flex-direction:column;gap:6px}
-.cta__field--full{grid-column:1/-1}
-.cta__label-text{font-size:.72rem;letter-spacing:.08em;color:rgba(255,255,255,.55)}
-.cta__input{width:100%;padding:12px 16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:var(--rad-sm);font-size:.84rem;color:var(--white);font-family:'Inter','Noto Serif JP',sans-serif;transition:border-color var(--dur),background var(--dur);resize:none}
-.cta__input::placeholder{color:rgba(255,255,255,.28)}
-.cta__input:focus{outline:none;border-color:rgba(196,163,90,.5);background:rgba(255,255,255,.1)}
-textarea.cta__input{min-height:100px}
-.cta__submit{width:100%;margin-top:20px;padding:16px;background:var(--gold);color:var(--g900);border:none;border-radius:var(--rad-sm);font-size:.88rem;font-weight:700;letter-spacing:.1em;cursor:pointer;transition:all var(--dur) var(--ease);font-family:'Inter',sans-serif}
-.cta__submit:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 10px 36px rgba(196,163,90,.3)}
-.cta__note{text-align:center;margin-top:16px;font-size:.72rem;color:rgba(255,255,255,.32)}
-
-/* ===== FOOTER ===== */
-footer{background:var(--g900);border-top:1px solid rgba(255,255,255,.08);padding:40px 0}
-.footer__inner{display:flex;align-items:center;justify-content:space-between}
-.footer__logo{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:500;letter-spacing:.1em;color:rgba(255,255,255,.4)}
-.footer__links{display:flex;gap:24px;list-style:none}
-.footer__links a{font-size:.72rem;color:rgba(255,255,255,.3);transition:color var(--dur)}
-.footer__links a:hover{color:var(--gold)}
-.footer__copy{font-size:.7rem;color:rgba(255,255,255,.25)}
-
-/* ===== RESPONSIVE ===== */
+/* ── RESPONSIVE ── */
 @media(max-width:1024px){
-  .hero__inner{grid-template-columns:1fr;padding:90px 48px 60px}
-  .hero__right{display:none}
-  .hero__sub{max-width:560px}
-  .hero__benefits{max-width:560px}
-  .sol__inner,.bonus__inner,.del__grid{grid-template-columns:1fr}
-  .del__grid{grid-template-columns:1fr 1fr}
-  .price__grid{grid-template-columns:1fr}
-  .flow__steps{grid-template-columns:1fr 1fr;gap:40px}
-  .flow__steps::before{display:none}
+  .hero-inner{grid-template-columns:1fr;padding:90px 48px 60px;min-height:auto;padding-top:100px}
+  .hero-right{display:none}
+  .hero-sub,.hero-perks{max-width:100%}
+  .ai-grid-wrap{grid-template-columns:1fr}
+  .ai-phone-wrap{display:none}
+  .pricing-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr 1fr}
+  .bubbles-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
-  .wrap{padding:0 24px}
-  .nav{padding:16px 24px}
-  .nav.on{padding:14px 24px}
+  .wrap{padding:0 22px}
+  .nav{padding:15px 22px}
+  .nav.on{padding:13px 22px}
   .nav-links{display:none}
-  .section{padding:80px 0}
-  .pain__grid,.del__grid{grid-template-columns:1fr}
-  .cta__row{grid-template-columns:1fr}
-  .footer__inner{flex-direction:column;gap:16px;text-align:center}
-  .phase-table th,.phase-table td{padding:10px 14px;font-size:.75rem}
+  .sec{padding:72px 0}
+  .bubbles-grid,.process-steps{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -370,86 +277,72 @@ footer{background:var(--g900);border-top:1px solid rgba(255,255,255,.08);padding
 
 <!-- NAV -->
 <nav class="nav" id="nav">
-  <a href="https://terroirhub.com/" class="nav-logo">
-    <span class="logo-main">Terroir HUB</span>
-    <span class="logo-sub">for Business</span>
+  <a href="https://terroirhub.com/" class="nav-brand">
+    <span class="nav-brand-main">Terroir HUB</span>
+    <span class="nav-brand-sub">by FOMUS</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#solution">できること</a></li>
-    <li><a href="#delivers">含まれるもの</a></li>
-    <li><a href="#price">料金</a></li>
+    <li><a href="#insight">課題</a></li>
+    <li><a href="#ai-exp">AIでできること</a></li>
+    <li><a href="#benefits">導入特典</a></li>
+    <li><a href="#pricing">料金</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">相談する →</a>
+  <a href="#contact" class="nav-cta">無料相談</a>
 </nav>
 
 <!-- S01 HERO -->
 <section class="hero" id="top">
-  <div class="hero__bg"></div>
-  <div class="hero__inner">
-    <!-- LEFT -->
-    <div class="hero__left">
-      <div class="hero__pill r in">
-        <div class="hero__pill-dot"></div>
-        <span>Terroir HUB · 蔵元・蒸留所向け</span>
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badges r in">
+        <div class="hero-badge"><div class="hero-badge-dot"></div><span>酒造専用 AIコンシェルジュ</span></div>
       </div>
-      <div class="hero__campaign r in d1">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold-light)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <span>先行導入キャンペーン ・ 2026年5月〜8月31日</span>
-      </div>
-      <h1 class="hero__headline r in d1">
-        御社の醸造文化を、<br>
-        <em>海外にも届く</em><br>
-        場所へ。
+      <h1 class="hero-h1 r in d1">
+        AIが、<br>
+        もう一人の<br>
+        <em>蔵人になる。</em>
       </h1>
-      <p class="hero__sub r in d2">
-        Terroir HUBに、御社専用のLPとAIコンシェルジュを。<br>
-        海外向け発信・AI検索対策・問い合わせ導線を<br>
-        一括で整える10万円の導入プランです。
+      <p class="hero-sub r in d2">
+        お客様からの質問に、24時間365日対応。<br>
+        味わい、飲み方、購入先、蔵見学情報まで。<br>
+        酒造専用AIコンシェルジュが、<br>
+        会話形式で案内できる状態を整えます。
       </p>
-      <div class="hero__benefits r in d3">
-        <div class="hero__benefits-ttl">含まれるもの</div>
-        <div class="hero__benefit">
-          <svg class="hero__benefit-ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Terroir HUB上の酒造専用LP制作
+      <div class="hero-perks r in d3">
+        <div class="hero-perks-ttl">AIコンシェルジュ 導入特典</div>
+        <div class="hero-perk">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Terroir HUB 酒造専用ページ制作
         </div>
-        <div class="hero__benefit">
-          <svg class="hero__benefit-ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          海外ユーザーに伝わる構成・英語対応
-        </div>
-        <div class="hero__benefit">
-          <svg class="hero__benefit-ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          AIコンシェルジュの実装（銘柄・見学・購入を案内）
-        </div>
-        <div class="hero__benefit">
-          <svg class="hero__benefit-ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          導入特典：運営会社がお酒を最大2万円で買い取り
+        <div class="hero-perk">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          最大2万円分のお酒を正規価格で購入
         </div>
       </div>
-      <div class="hero__prices r in d4">
+      <div class="hero-pricing r in d4">
         <div>
-          <div class="hero__price-lbl">キャンペーン価格</div>
-          <div class="hero__price-val">¥<span style="font-size:2.2rem">100,000</span><span class="hero__price-unit">（税別）</span></div>
-          <div class="hero__price-note">通常価格は¥150,000（9月以降）</div>
+          <div class="hero-price-lbl">初期導入</div>
+          <div class="hero-price-val">10万円<span class="hero-price-unit">（税別）</span></div>
         </div>
-        <div class="hero__price-div"></div>
+        <div class="hero-price-div"></div>
         <div>
-          <div class="hero__price-lbl">導入特典</div>
-          <div class="hero__price-val" style="font-size:1.6rem">最大<span style="font-size:1.6rem">¥20,000</span></div>
-          <div class="hero__price-note">お酒を正規価格で買い取り</div>
+          <div class="hero-price-lbl">月額運用</div>
+          <div class="hero-price-val">1万円<span class="hero-price-unit"> / 月（税別）</span></div>
         </div>
       </div>
-      <div class="hero__cta r in d5">
+      <div class="hero-cta r in d5">
         <a href="#contact" class="btn btn--gold">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          無料で相談する
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          無料相談をする
         </a>
-        <a href="#delivers" class="btn btn--ghost-white">含まれるもの →</a>
+        <a href="#ai-exp" class="btn btn--ghost">デモを見る →</a>
       </div>
     </div>
-    <!-- RIGHT – phone -->
-    <div class="hero__right">
-      <div class="hero__glow"></div>
+
+    <div class="hero-right">
+      <div class="hero-glow"></div>
       <div style="position:relative">
         <div class="phone" id="phone">
           <div class="pscreen">
@@ -457,606 +350,403 @@ footer{background:var(--g900);border-top:1px solid rgba(255,255,255,.08);padding
             <div class="pchat-hd">
               <div class="pchat-av">AI</div>
               <div>
-                <div class="pchat-name">山乃蔵 AIコンシェルジュ</div>
-                <div class="pchat-status"><div class="pchat-dot"></div>オンライン</div>
+                <div class="pchat-info-name">山乃蔵 AIコンシェルジュ</div>
+                <div class="pchat-info-status"><div class="pchat-dot"></div>オンライン</div>
               </div>
             </div>
-            <div class="pmessages" id="pmessages">
+            <div class="pmsgs" id="pmsgs">
               <div class="pmsg pmsg--a" id="pm1">
-                <div class="pbubble">こんにちは。山乃蔵のAIコンシェルジュです。銘柄・見学・購入について何でもお気軽にどうぞ。</div>
+                <div class="pbub">こんにちは。山乃蔵のAIコンシェルジュです。銘柄・見学・購入など、何でもどうぞ。</div>
                 <div class="ptime">AI · 今</div>
               </div>
               <div class="pmsg pmsg--u" id="pm2">
-                <div class="pbubble">大吟醸のおすすめを教えてください</div>
+                <div class="pbub">おすすめの日本酒を教えてください</div>
                 <div class="ptime">14:23</div>
               </div>
               <div class="ptyping" id="typing">
                 <div class="pdot"></div><div class="pdot"></div><div class="pdot"></div>
               </div>
               <div class="pmsg pmsg--a" id="pm3">
-                <div class="pbubble">「天峰 純米大吟醸」は山田錦45%精米。南アルプスの伏流水が生む繊細な香りが特徴です。ギフトとしても人気があります。</div>
+                <div class="pbub">「天峰 純米大吟醸」がおすすめです。山田錦45%精米で、南アルプスの伏流水が生む透明感と花のような香りが特徴です。</div>
                 <div class="ptime">AI · 14:23</div>
               </div>
               <div class="pmsg pmsg--u" id="pm4">
-                <div class="pbubble">Can you answer in English?</div>
+                <div class="pbub">どんな料理に合いますか？</div>
                 <div class="ptime">14:24</div>
               </div>
               <div class="pmsg pmsg--a" id="pm5">
-                <div class="pbubble">Of course! "Tenho Junmai Daiginjo" uses Yamadanishiki rice polished to 45%. Clean, floral, and elegant — perfect as a gift.</div>
+                <div class="pbub">白身魚の刺身や茶碗蒸しとよく合います。繊細な味わいなので、素材の旨みを引き立てる和食全般がおすすめです。</div>
                 <div class="ptime">AI · 14:24</div>
               </div>
             </div>
-            <div class="pinput-area">
-              <div class="pinput">何でも聞いてください…</div>
+            <div class="pinput-row">
+              <div class="pinput-box">何でも聞いてください…</div>
               <div class="psend"><svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg></div>
             </div>
           </div>
         </div>
-        <!-- floating badges -->
         <div class="fbadge fbadge--tl">
           <div class="fbadge-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div>
-            <div class="fbadge-val">24時間</div>
-            <div class="fbadge-lbl">自動対応</div>
-          </div>
+          <div><div class="fbadge-val">24時間 365日</div><div class="fbadge-lbl">自動対応</div></div>
         </div>
         <div class="fbadge fbadge--br">
-          <div class="fbadge-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
-          <div>
-            <div class="fbadge-val">日・英 対応</div>
-            <div class="fbadge-lbl">海外ユーザーにも</div>
-          </div>
+          <div class="fbadge-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <div><div class="fbadge-val">日本語 / 英語</div><div class="fbadge-lbl">マルチ言語対応</div></div>
         </div>
       </div>
     </div>
   </div>
-  <div class="hero__scroll">
-    <div class="hero__scroll-line"></div>
-    <span class="hero__scroll-txt">Scroll</span>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span class="hero-scroll-txt">Scroll to explore</span>
   </div>
 </section>
 
-<!-- S02 PAIN -->
-<section class="pain section" id="pain">
+<!-- S02 CUSTOMER INSIGHT -->
+<section class="insight sec" id="insight">
   <div class="wrap">
-    <div class="pain__hd r">
-      <div class="sec-label">現場の声</div>
-      <h2 class="pain__h2">こんな悩み、<em>ありませんか？</em></h2>
+    <div class="sec-hd r">
+      <div class="sec-num">02 &nbsp; Customer Insight</div>
+      <h2 class="sec-h2">お客様は、<em>"知りたい"のに、</em><br>うまく伝わっていない。</h2>
     </div>
-    <div class="pain__grid">
-      <div class="pain__card r d1">
-        <div class="pain__card-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    <div class="bubbles-grid r">
+      <div class="bubble-card d1">
+        <div class="bubble-q">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          どれがおすすめですか？
         </div>
-        <div class="pain__card-q">Web担当者がいない、更新が止まっている</div>
-        <div class="pain__card-sub">公式サイトの商品情報が数年前のまま。更新を頼める人もいない。</div>
+        <div class="bubble-label">銘柄が多くて選びにくい</div>
       </div>
-      <div class="pain__card r d2">
-        <div class="pain__card-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="bubble-card d2">
+        <div class="bubble-q">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          甘口？辛口？どう違う？
         </div>
-        <div class="pain__card-q">英語の発信ができていない</div>
-        <div class="pain__card-sub">インバウンド需要が増えているのに、英語の説明がない。外国のお客様に伝わらない。</div>
+        <div class="bubble-label">専門用語がわかりにくい</div>
       </div>
-      <div class="pain__card r d3">
-        <div class="pain__card-icon">
-          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <div class="bubble-card d3">
+        <div class="bubble-q">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          どんな料理に合いますか？
         </div>
-        <div class="pain__card-q">AI検索に情報が出てこない</div>
-        <div class="pain__card-sub">ChatGPTやGeminiに蔵の名前を入力しても、正確な情報が返ってこない。</div>
+        <div class="bubble-label">ペアリングの参考がほしい</div>
       </div>
-      <div class="pain__card r d1">
-        <div class="pain__card-icon">
-          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div class="bubble-card d1">
+        <div class="bubble-q">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          どこで買えますか？
         </div>
-        <div class="pain__card-q">見学・問い合わせの導線が弱い</div>
-        <div class="pain__card-sub">蔵見学に興味を持った人が、どこに連絡すればいいか分からず離脱してしまう。</div>
+        <div class="bubble-label">購入先への誘導が必要</div>
       </div>
-      <div class="pain__card r d2">
-        <div class="pain__card-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      <div class="bubble-card d2">
+        <div class="bubble-q">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          蔵見学はできますか？
         </div>
-        <div class="pain__card-q">公式サイトの制作・改修が高額</div>
-        <div class="pain__card-sub">業者に頼むと数百万かかると言われた。小回りが利かず、何度も修正を頼みにくい。</div>
+        <div class="bubble-label">体験情報の問い合わせが多い</div>
       </div>
-      <div class="pain__card r d3">
-        <div class="pain__card-icon">
-          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <div class="bubble-card d3">
+        <div class="bubble-q">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          営業時間は何時まで？
         </div>
-        <div class="pain__card-q">お客様対応に時間が取られる</div>
-        <div class="pain__card-sub">繰り返し同じ質問が来る。蔵仕事の合間にメールや電話対応をするのが負担。</div>
+        <div class="bubble-label">基本情報への問い合わせ対応</div>
       </div>
     </div>
-    <div class="pain__bridge r">
-      <div class="pain__bridge-rule">
-        <div class="pain__bridge-hr"></div>
-        <div class="pain__bridge-dot"></div>
-        <div class="pain__bridge-hr"></div>
-      </div>
-      <h3 class="pain__bridge-h2">Terroir HUBが、<em>まとめて解決します。</em></h3>
-      <p class="pain__bridge-sub">1,700以上の蔵が掲載される日本酒・ウイスキー・焼酎の総合データベースに、御社専用のページとAIを加えます。</p>
+    <div class="insight-bridge r">
+      <div class="bridge-rule"><div class="bridge-hr"></div><div class="bridge-dot"></div><div class="bridge-hr"></div></div>
+      <h3 class="bridge-h3">その説明、<em>AIコンシェルジュに任せませんか？</em></h3>
     </div>
   </div>
 </section>
 
-<!-- S03 SOLUTION -->
-<section class="solution section" id="solution">
+<!-- S03 AI EXPERIENCE -->
+<section class="ai-exp sec" id="ai-exp">
   <div class="wrap">
-    <div class="sol__inner">
-      <div class="sol__left r">
-        <div class="sol__label">Terroir HUB とは</div>
-        <h2 class="sol__h2">日本の酒文化を、<br>世界に届けるプラットフォーム</h2>
-        <p class="sol__lead">
-          Terroir HUBは日本酒1,711蔵・ウイスキー119蒸留所・焼酎389蒸留所を収録した、日本最大級の醸造家データベースです。<br><br>
-          海外ユーザーやAI検索エンジンが「日本の酒」を調べたとき、ここに情報があれば正確に届きます。御社の蔵がここにある、それだけで発見される可能性が変わります。
-        </p>
-        <div class="sol__stats">
-          <div>
-            <div class="sol__stat-val">1,711</div>
-            <div class="sol__stat-lbl">日本酒蔵 掲載中</div>
-          </div>
-          <div class="sol__div"></div>
-          <div>
-            <div class="sol__stat-val">4</div>
-            <div class="sol__stat-lbl">ジャンル統合</div>
-          </div>
-          <div class="sol__div"></div>
-          <div>
-            <div class="sol__stat-val">24h</div>
-            <div class="sol__stat-lbl">AI自動対応</div>
-          </div>
-        </div>
-      </div>
-      <div class="sol__right r d2">
-        <div class="sol__cards">
-          <div class="sol__card">
-            <div class="sol__card-num">01</div>
-            <div class="sol__card-body">
-              <div class="sol__card-ttl">海外向けLP制作</div>
-              <div class="sol__card-desc">銘柄・味わい・飲み方・ペアリング・見学情報を整理し、海外ユーザーにも伝わる構成で専用ページを制作します。英語を意識した文章・レイアウト。公式サイトへの送客・EC・見学予約の導線も設置。</div>
-            </div>
-          </div>
-          <div class="sol__card">
-            <div class="sol__card-num">02</div>
-            <div class="sol__card-body">
-              <div class="sol__card-ttl">AIコンシェルジュ実装</div>
-              <div class="sol__card-desc">御社の情報を学習したAIが、銘柄の説明・見学予約の案内・購入先の紹介を日本語・英語で24時間対応します。繰り返しの問い合わせを自動化。</div>
-            </div>
-          </div>
-          <div class="sol__card">
-            <div class="sol__card-num">03</div>
-            <div class="sol__card-body">
-              <div class="sol__card-ttl">AI検索時代への準備</div>
-              <div class="sol__card-desc">ChatGPTやGeminiなどのAI検索は、構造化されたデータを参照します。Terroir HUBの正確な情報は、AI回答の信頼できるソースになります。</div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="sec-hd r">
+      <div class="sec-num">03 &nbsp; AI Experience</div>
+      <h2 class="sec-h2" style="color:var(--white)">AIが、<br>お客様の質問に<br><em>答えます。</em></h2>
     </div>
-  </div>
-</section>
-
-<!-- S04 DELIVERABLES -->
-<section class="delivers section" id="delivers">
-  <div class="wrap">
-    <div class="del__hd r">
-      <div class="sec-label">プラン詳細</div>
-      <h2 class="del__h2">含まれるもの、<em>すべて</em></h2>
-    </div>
-    <div class="del__grid">
-      <div class="del__item r d1">
-        <div class="del__item-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-        <div class="del__item-ttl">専用LPページ制作</div>
-        <div class="del__item-desc">Terroir HUB上に、御社専用のランディングページを制作します。蔵の歴史・銘柄・見学情報・購入導線を整備。</div>
-      </div>
-      <div class="del__item r d2">
-        <div class="del__item-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <div class="del__item-ttl">AIコンシェルジュ実装</div>
-        <div class="del__item-desc">御社の情報を学習したAIチャット。銘柄説明・見学案内・購入先を24時間・日英で自動対応。</div>
-      </div>
-      <div class="del__item r d3">
-        <div class="del__item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-        <div class="del__item-ttl">英語対応の構成設計</div>
-        <div class="del__item-desc">海外ユーザーが理解しやすい説明と構成。英語圏・欧米の酒文化に合わせた表現で制作します。</div>
-      </div>
-      <div class="del__item r d1">
-        <div class="del__item-icon"><svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
-        <div class="del__item-ttl">銘柄・味わい情報整理</div>
-        <div class="del__item-desc">商品名・味わい・飲み方・料理との相性・精米歩合などをヒアリングし、分かりやすい形に整理。</div>
-      </div>
-      <div class="del__item r d2">
-        <div class="del__item-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
-        <div class="del__item-ttl">見学・購入・問い合わせ導線</div>
-        <div class="del__item-desc">公式サイト・EC・見学申込み・電話・SNSへの自然な誘導設計。離脱を防ぎ行動につなげます。</div>
-      </div>
-      <div class="del__item r d3">
-        <div class="del__item-icon"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
-        <div class="del__item-ttl">公開後の軽微修正</div>
-        <div class="del__item-desc">公開後の小さな修正（文字修正・商品追加など）は対応します。大幅な改変は別途ご相談。</div>
-      </div>
-    </div>
-    <div class="del__note r">
-      <div class="del__note-ttl">含まれないもの</div>
-      <div class="del__note-list">
-        <div class="del__note-item">写真撮影・取材</div>
-        <div class="del__note-item">御社公式サイトの改修</div>
-        <div class="del__note-item">多言語（英語以外）の追加対応</div>
-        <div class="del__note-item">EC・予約システムの構築</div>
-        <div class="del__note-item">月次レポート・データ提供</div>
-        <div class="del__note-item">継続的な運用代行</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- S05 PRICE -->
-<section class="price-section section" id="price">
-  <div class="wrap">
-    <div class="price__hd r">
-      <div class="sec-label">料金</div>
-      <h2 class="price__h2">シンプルな<em>1回完結</em>の料金</h2>
-    </div>
-    <div class="price__grid r">
-      <div class="price__card price__card--main">
-        <div class="price__badge">キャンペーン中</div>
-        <div class="price__phase">先行導入 · 2026/5/15〜8/31</div>
-        <div class="price__name">海外向けLP＋AIコンシェルジュ 導入プラン</div>
-        <div class="price__period">キャンペーン期間限定価格</div>
-        <div class="price__val"><span>¥</span>100,000</div>
-        <div class="price__tax">税別。月額・維持費なし。1回払い完結。</div>
-        <ul class="price__features">
-          <li class="price__feature">
-            <svg class="price__feature-ck" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Terroir HUB専用LP制作（全ジャンル対応）
-          </li>
-          <li class="price__feature">
-            <svg class="price__feature-ck" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            AIコンシェルジュ実装（日本語・英語対応）
-          </li>
-          <li class="price__feature">
-            <svg class="price__feature-ck" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            銘柄・見学・購入導線の整備
-          </li>
-          <li class="price__feature">
-            <svg class="price__feature-ck" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            公開後の軽微修正対応
-          </li>
-          <li class="price__feature">
-            <svg class="price__feature-ck" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            導入特典：お酒の買い取り（最大2万円）
-          </li>
-        </ul>
-      </div>
-      <div class="price__card">
-        <div class="price__phase">通常価格以降のオプション例</div>
-        <div class="price__name">追加オプション</div>
-        <div class="price__period">キャンペーン後、実績に応じて対応</div>
-        <div class="price__val" style="font-size:2rem;color:var(--t500)">別途相談</div>
-        <div class="price__tax">内容により異なります</div>
-        <ul class="price__features">
-          <li class="price__feature price__feature--x">
-            <svg class="price__feature-ck" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            英語LP本格対応（+5〜10万円）
-          </li>
-          <li class="price__feature price__feature--x">
-            <svg class="price__feature-ck" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            多言語追加（1言語 +5万円〜）
-          </li>
-          <li class="price__feature price__feature--x">
-            <svg class="price__feature-ck" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            御社公式サイト向けLP制作（+10〜30万円）
-          </li>
-          <li class="price__feature price__feature--x">
-            <svg class="price__feature-ck" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            取材記事（+10万円〜）
-          </li>
-          <li class="price__feature price__feature--x">
-            <svg class="price__feature-ck" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            月次レポート（+1〜3万円/月）
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="price__note r">
-      <div class="price__note-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+    <p class="ai-sub r">銘柄の説明から飲み方、ペアリング提案まで。<br>蔵人の知識をAIが代わりにお伝えします。</p>
+    <div class="ai-grid-wrap r">
       <div>
-        <div class="price__note-ttl">将来の値上げについて</div>
-        <div class="price__note-desc">現在のキャンペーン価格（10万円）は2026年8月31日で終了予定です。9月以降は15万円、実績が増えるにつれて20〜30万円に移行する予定です。早期にご検討いただく方がお得です。</div>
+        <div class="ai-features-ttl">AIでできること</div>
+        <div class="ai-features">
+          <div class="ai-feat"><svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span class="ai-feat-txt">銘柄・味わいの説明</span></div>
+          <div class="ai-feat"><svg viewBox="0 0 24 24"><path d="M12 22c-4.97 0-9-2.686-9-6V8.5A2.5 2.5 0 0 1 5.5 6h13A2.5 2.5 0 0 1 21 8.5V16c0 3.314-4.03 6-9 6z"/></svg><span class="ai-feat-txt">飲み方・温度の提案</span></div>
+          <div class="ai-feat"><svg viewBox="0 0 24 24"><path d="M3 2l2 5H6l5-2 5 2h1l2-5"/><path d="M6 7c0 8 2 12 6 13 4-1 6-5 6-13"/></svg><span class="ai-feat-txt">ペアリング提案</span></div>
+          <div class="ai-feat"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg><span class="ai-feat-txt">購入先への案内</span></div>
+          <div class="ai-feat"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span class="ai-feat-txt">蔵見学・予約案内</span></div>
+          <div class="ai-feat"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><span class="ai-feat-txt">よくある質問対応</span></div>
+          <div class="ai-feat"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="ai-feat-txt">24時間自動回答</span></div>
+          <div class="ai-feat"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span class="ai-feat-txt">将来的な多言語対応</span></div>
+        </div>
+      </div>
+      <div class="ai-phone-wrap">
+        <div class="ai-phone">
+          <div class="pscreen">
+            <div class="pnotch"><div class="pnotch-pill"></div></div>
+            <div class="pchat-hd">
+              <div class="pchat-av">AI</div>
+              <div><div class="pchat-info-name">AIコンシェルジュ</div><div class="pchat-info-status"><div class="pchat-dot"></div>オンライン</div></div>
+            </div>
+            <div class="pmsgs" style="gap:8px;padding:10px 10px">
+              <div class="pmsg pmsg--u vis"><div class="pbub">純米大吟醸の飲み頃温度は？</div></div>
+              <div class="pmsg pmsg--a vis"><div class="pbub">5〜10℃の冷酒がおすすめです。フルーティな香りが引き立ちます。常温（15℃前後）でも美味しくお楽しみいただけます。</div></div>
+              <div class="pmsg pmsg--u vis"><div class="pbub">ギフト包装はできますか？</div></div>
+              <div class="pmsg pmsg--a vis"><div class="pbub">はい。熨斗・箱入り包装に対応しています。ご注文時にご指定ください。</div></div>
+            </div>
+            <div class="pinput-row">
+              <div class="pinput-box">何でも聞いてください…</div>
+              <div class="psend"><svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <table class="phase-table r" style="margin-top:32px">
-      <thead>
-        <tr>
-          <th>フェーズ</th>
-          <th>期間</th>
-          <th>価格（税別）</th>
-          <th>備考</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="phase-current">
-          <td>先行導入キャンペーン</td>
-          <td>2026年5月〜8月31日</td>
-          <td>¥100,000</td>
-          <td>現在受付中</td>
-        </tr>
-        <tr>
-          <td>通常価格</td>
-          <td>2026年9月以降</td>
-          <td>¥150,000</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>強化版</td>
-          <td>実績10件以降</td>
-          <td>¥200,000〜</td>
-          <td>英語LP・取材込みなど</td>
-        </tr>
-      </tbody>
-    </table>
   </div>
 </section>
 
-<!-- S06 BONUS -->
-<section class="section" id="bonus" style="background:var(--ivory);padding:80px 0">
+<!-- S04 BENEFITS -->
+<section class="benefits-sec sec" id="benefits">
   <div class="wrap r">
+    <div class="sec-hd" style="margin-bottom:40px">
+      <div class="sec-num">04 &nbsp; Benefits</div>
+      <h2 class="sec-h2">導入特典をご用意しています。</h2>
+    </div>
     <picture>
       <source media="(max-width:767px)" srcset="/img/ai-concierge-mobile.png">
       <img src="/img/ai-concierge-desktop.png"
-           alt="04 AIコンシェルジュ導入特典 — 特典01: 酒造専用ページ制作 / 特典02: お酒を最大2万円で正規価格購入"
-           style="width:100%;height:auto;display:block;border-radius:8px;">
+           alt="特典01: Terroir HUB酒造専用ページ制作 / 特典02: 最大2万円分のお酒を正規価格で購入"
+           style="width:100%;height:auto;display:block;border-radius:8px">
     </picture>
   </div>
 </section>
 
-<!-- S07 FLOW -->
-<section class="flow section" id="flow">
+<!-- S05 PROCESS -->
+<section class="process sec" id="process">
   <div class="wrap">
-    <div class="flow__hd r">
-      <div class="sec-label">導入の流れ</div>
-      <h2 class="flow__h2">お問い合わせから<em>公開まで</em></h2>
+    <div class="sec-hd r">
+      <div class="sec-num">05 &nbsp; Process</div>
+      <h2 class="sec-h2">導入までの流れ</h2>
     </div>
-    <div class="flow__steps r">
-      <div class="flow__step">
-        <div class="flow__step-circle">
-          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          <div class="flow__step-num">1</div>
-        </div>
-        <div class="flow__step-ttl">ご相談・ヒアリング</div>
-        <div class="flow__step-desc">このページのフォームまたはメールからご連絡ください。蔵の情報・銘柄・ご要望をお聞きします。</div>
-        <div class="flow__step-days">1〜3日</div>
+    <p style="text-align:center;font-size:.88rem;color:var(--gold);font-weight:600;margin-bottom:40px;letter-spacing:.06em" class="r">最短 2週間で導入可能</p>
+    <div class="process-steps r">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <div class="process-ttl">お問い合わせ</div>
+        <div class="process-desc">フォームまたはお電話にてご連絡ください。</div>
       </div>
-      <div class="flow__step">
-        <div class="flow__step-circle">
-          <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-          <div class="flow__step-num">2</div>
-        </div>
-        <div class="flow__step-ttl">情報整理・LP制作</div>
-        <div class="flow__step-desc">ご提供いただいた情報をもとに、専用LPとAIの学習データを整備。初稿をご確認いただきます。</div>
-        <div class="flow__step-days">7〜14日</div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <div class="process-ttl">ヒアリング・情報整理</div>
+        <div class="process-desc">銘柄情報やよく聞かれる質問などをお伺いします。</div>
       </div>
-      <div class="flow__step">
-        <div class="flow__step-circle">
-          <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          <div class="flow__step-num">3</div>
-        </div>
-        <div class="flow__step-ttl">修正・確認</div>
-        <div class="flow__step-desc">ご確認いただき、修正を反映します。AIの回答もテストし、問題なければ公開準備へ。</div>
-        <div class="flow__step-days">3〜5日</div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <div class="process-ttl">AI構築</div>
+        <div class="process-desc">情報をもとに回答設計・学習を行います。</div>
       </div>
-      <div class="flow__step">
-        <div class="flow__step-circle">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-          <div class="flow__step-num">4</div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <div class="process-ttl">ページ制作</div>
+        <div class="process-desc">Terroir HUB上に専用ページを制作します。</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">05</div>
+        <div class="process-ttl">テスト・調整</div>
+        <div class="process-desc">精度を確認し必要に応じて調整します。</div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">06</div>
+        <div class="process-ttl">公開・運用開始</div>
+        <div class="process-desc">専用ページを公開し、運用サポートを開始します。</div>
+      </div>
+    </div>
+    <p class="process-note r">※ 情報のご提供状況により、期間は前後する場合があります。</p>
+  </div>
+</section>
+
+<!-- S06 PRICING -->
+<section class="pricing sec" id="pricing">
+  <div class="wrap">
+    <div class="sec-hd r">
+      <div class="sec-num">06 &nbsp; Pricing</div>
+      <h2 class="sec-h2">シンプルな料金体系</h2>
+      <p style="margin-top:14px;font-size:.88rem;color:var(--t500)">明快な料金で、必要なものがすべて揃っています。</p>
+    </div>
+    <div class="pricing-grid r">
+      <div class="pricing-card pricing-card--main">
+        <div class="pricing-badge">Initial Setup</div>
+        <div class="pricing-tag">初期導入費</div>
+        <div class="pricing-name">AIコンシェルジュ 初期導入</div>
+        <div class="pricing-val">
+          <span class="pricing-val-num">10</span>
+          <span class="pricing-val-unit">万円</span>
+          <span class="pricing-val-sfx">（税別）</span>
         </div>
-        <div class="flow__step-ttl">公開・運用開始</div>
-        <div class="flow__step-desc">Terroir HUBに公開。AIが24時間、御社の代わりに問い合わせに対応を始めます。</div>
-        <div class="flow__step-days">即日〜翌日</div>
+        <div class="pricing-tax">初期費用。月額は別途。</div>
+        <ul class="pricing-features">
+          <li class="pricing-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>AIコンシェルジュ 初期構築</li>
+          <li class="pricing-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>銘柄・味わい・飲み方などの情報整理</li>
+          <li class="pricing-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>FAQ整備</li>
+          <li class="pricing-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Terroir HUB 酒造専用ページ制作</li>
+          <li class="pricing-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>購入先・蔵見学などの導線設計</li>
+          <li class="pricing-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>公開時の調整</li>
+        </ul>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-badge" style="background:var(--g100);color:var(--g900)">Monthly Support</div>
+        <div class="pricing-tag">月額 AI運用サポート</div>
+        <div class="pricing-name">継続運用・最適化プラン</div>
+        <div class="pricing-val">
+          <span class="pricing-val-num">1</span>
+          <span class="pricing-val-unit">万円</span>
+          <span class="pricing-val-sfx"> / 月（税別）</span>
+        </div>
+        <div class="pricing-tax">導入後、任意で継続。</div>
+        <ul class="pricing-features">
+          <li class="pricing-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>AI回答の改善・最適化</li>
+          <li class="pricing-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>FAQの追加・更新</li>
+          <li class="pricing-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>新商品・季節商品の反映</li>
+          <li class="pricing-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>軽微なページ修正</li>
+          <li class="pricing-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>よく聞かれる質問の分析・改善</li>
+          <li class="pricing-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>月1回のAI最適化サポート</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pricing-message r">
+      <p>AIは使いながら育てていくことで、より正確に、より役立つ存在になっていきます。<br>
+      <strong>私たちが伴走し、AIを御社のもう一人の蔵人として育てます。</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- S07 FAQ -->
+<section class="faq sec" id="faq">
+  <div class="wrap">
+    <div class="sec-hd r">
+      <div class="sec-num">07 &nbsp; FAQ</div>
+      <h2 class="sec-h2">よくある<br><em>ご質問</em></h2>
+      <p style="margin-top:14px;font-size:.86rem;color:var(--t500)">導入前にご不明な点があればお気軽にご相談ください。</p>
+    </div>
+    <div class="faq-list r">
+      <div class="faq-item">
+        <button class="faq-q">AIはどんな質問に答えられますか？<div class="faq-q-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-a"><div class="faq-a-inner">銘柄の説明・味わい・飲み方・温度提案・ペアリング・購入先案内・蔵見学情報・営業時間・ギフト包装など、御社からご提供いただいた情報をもとに幅広く対応します。情報がない質問には「担当者にお問い合わせください」と案内します。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">英語には対応していますか？<div class="faq-q-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-a"><div class="faq-a-inner">はい。基本的な日本語・英語対応は標準で含まれます。フランス語・中国語などの多言語対応は、将来的に追加オプションとして提供予定です。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">月額サポートは必須ですか？<div class="faq-q-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-a"><div class="faq-a-inner">いいえ。月額サポートは任意です。初期導入（10万円）のみでもご利用いただけます。ただし、AIは使い続けることで精度が上がります。商品の追加・更新や回答の最適化をご希望の場合は、月額サポートをおすすめします。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">公式サイトがなくても大丈夫ですか？<div class="faq-q-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-a"><div class="faq-a-inner">はい、問題ありません。Terroir HUBの専用ページ自体がランディングページとして機能します。EC・電話・SNSなど既存の問い合わせ先への導線を設計します。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">お酒の買い取り特典について教えてください。<div class="faq-q-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-a"><div class="faq-a-inner">運営会社FOMUSが、御社のお酒を最大2万円まで正規価格で購入します（割引・無償提供ではありません）。購入したお酒はFOMUS・Terroir HUB関連の小規模イベントで提供します。再販売は行いません。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">日本酒以外（ウイスキー・焼酎・ワイン）でも対応できますか？<div class="faq-q-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-a"><div class="faq-a-inner">はい。Terroir HUBは日本酒・ウイスキー・焼酎・リキュール・クラフトビールに対応しています。複数ジャンルを扱う蔵・蒸留所も1プランで対応可能です。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">「すぐ売上が増える」「大量送客」は期待できますか？<div class="faq-q-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-a"><div class="faq-a-inner">売上・送客の保証は行いません。このサービスは「お客様の質問に正確に答えられる状態を整え、自社サイトとは別の発信チャネルを作る」ことを目的としています。AI検索時代の情報整備への投資としてご検討ください。</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- S08 FAQ -->
-<section class="faq section" id="faq">
-  <div class="wrap wrap--narrow">
-    <div class="faq__hd r">
-      <div class="sec-label">よくある質問</div>
-      <h2 class="faq__h2">FAQ</h2>
-    </div>
-    <div class="faq__list r">
-      <div class="faq__item">
-        <button class="faq__q">
-          無料掲載との違いは何ですか？
-          <div class="faq__q-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-        </button>
-        <div class="faq__a"><div class="faq__a-inner">無料掲載は、公開されている情報をもとにした基本データの収録です。このプランでは、御社から直接情報をヒアリングして専用ページを制作し、AIコンシェルジュを実装します。公式ページとして御社の意図した情報を届けられます。</div></div>
-      </div>
-      <div class="faq__item">
-        <button class="faq__q">
-          日本酒以外（ウイスキー・焼酎・ワイン）でも対応できますか？
-          <div class="faq__q-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-        </button>
-        <div class="faq__a"><div class="faq__a-inner">はい。Terroir HUBは日本酒・ウイスキー・焼酎・リキュール・クラフトビールの各ジャンルに対応しています。複数ジャンルを扱う蔵・蒸留所も1プランで対応可能です。ご相談ください。</div></div>
-      </div>
-      <div class="faq__item">
-        <button class="faq__q">
-          AIは何語に対応していますか？
-          <div class="faq__q-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-        </button>
-        <div class="faq__a"><div class="faq__a-inner">基本プランでは日本語・英語に対応します。フランス語・中国語など他言語への対応は追加オプションとして別途ご相談いただけます。</div></div>
-      </div>
-      <div class="faq__item">
-        <button class="faq__q">
-          公式サイトは持っていなくても大丈夫ですか？
-          <div class="faq__q-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-        </button>
-        <div class="faq__a"><div class="faq__a-inner">はい、問題ありません。Terroir HUBのページ自体がLPとして機能します。公式サイトをお持ちの場合はそちらへの送客、ない場合はECや電話・問い合わせ先への誘導を設計します。</div></div>
-      </div>
-      <div class="faq__item">
-        <button class="faq__q">
-          「大量送客」「すぐ売上が増える」は期待できますか？
-          <div class="faq__q-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-        </button>
-        <div class="faq__a"><div class="faq__a-inner">約束しません。このプランは「御社の情報を海外向け・AI検索向けに整え、発見される状態を作る」ことを目的にしています。集客保証や売上保証は行いません。自社サイトとは別の発信チャネルを整える投資として考えてください。</div></div>
-      </div>
-      <div class="faq__item">
-        <button class="faq__q">
-          お酒の買い取りはどのように行いますか？
-          <div class="faq__q-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-        </button>
-        <div class="faq__a"><div class="faq__a-inner">FOMUSが御社のECまたは直販価格で正規購入します（割引・無償提供ではありません）。合計2万円以内で、銘柄・本数は御社にご指定いただきます。買い取ったお酒は関連イベントで提供します（再販売はしません）。発送費は別途ご相談。</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- S09 CTA -->
-<section class="cta-section section" id="contact">
+<!-- FINAL CTA -->
+<section class="final-cta sec" id="contact">
   <div class="wrap">
-    <div class="cta__inner r">
-      <div class="cta__label">お問い合わせ</div>
-      <h2 class="cta__h2">まず、話を聞いてみる。</h2>
-      <p class="cta__sub">費用や内容について、無料でご相談いただけます。<br>「まだ迷っている」でも大丈夫です。お気軽にどうぞ。</p>
-      <form class="cta__form" onsubmit="handleSubmit(event)">
-        <div class="cta__row">
-          <div class="cta__field">
-            <label class="cta__label-text">蔵・蒸留所名 *</label>
-            <input type="text" class="cta__input" placeholder="例：山乃蔵（合同会社FOMUS）" required>
-          </div>
-          <div class="cta__field">
-            <label class="cta__label-text">ご担当者名 *</label>
-            <input type="text" class="cta__input" placeholder="例：山田 太郎" required>
-          </div>
-        </div>
-        <div class="cta__row">
-          <div class="cta__field">
-            <label class="cta__label-text">メールアドレス *</label>
-            <input type="email" class="cta__input" placeholder="example@sake.jp" required>
-          </div>
-          <div class="cta__field">
-            <label class="cta__label-text">取り扱いジャンル</label>
-            <select class="cta__input" style="cursor:pointer">
-              <option value="" style="background:#1B3528">選択してください</option>
-              <option style="background:#1B3528">日本酒</option>
-              <option style="background:#1B3528">ウイスキー</option>
-              <option style="background:#1B3528">焼酎・泡盛</option>
-              <option style="background:#1B3528">ワイン</option>
-              <option style="background:#1B3528">クラフトビール</option>
-              <option style="background:#1B3528">複数ジャンル</option>
-              <option style="background:#1B3528">その他</option>
-            </select>
-          </div>
-        </div>
-        <div class="cta__row" style="grid-template-columns:1fr">
-          <div class="cta__field cta__field--full">
-            <label class="cta__label-text">ご質問・ご要望（任意）</label>
-            <textarea class="cta__input" placeholder="現在の課題や、気になっていることをお聞かせください。" rows="4"></textarea>
-          </div>
-        </div>
-        <button type="submit" class="cta__submit" id="submitBtn">
-          無料で相談する →
-        </button>
-        <div class="cta__note">送信後、2営業日以内にご返信します。 · お問い合わせ内容は外部に共有しません。</div>
-      </form>
+    <div class="final-cta-inner r">
+      <div class="sec-num" style="justify-content:center;margin-bottom:20px;color:var(--gold)">まずはお気軽にご相談ください</div>
+      <h2 class="final-cta-h2">AIが、<br>もう一人の<br><em>蔵人になる。</em></h2>
+      <p class="final-cta-sub">酒蔵の魅力を正しく伝え、<br>お客様とのつながりを深めるために。<br>AIコンシェルジュが、これからの酒造りをサポートします。</p>
+      <div class="final-cta-btns">
+        <a href="mailto:info@fomus.jp?subject=【Terroir HUB】AIコンシェルジュ導入のご相談" class="btn btn--gold">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          無料相談をする
+        </a>
+        <a href="/sake/demo/" class="btn btn--ghost">デモを体験してみる →</a>
+      </div>
+      <p class="final-cta-note">ご相談・お見積りは無料です。お気軽にお問い合わせください。</p>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="wrap footer__inner">
-    <div class="footer__logo">Terroir HUB</div>
-    <ul class="footer__links">
-      <li><a href="https://terroirhub.com/">ポータルTOPへ</a></li>
-      <li><a href="https://sake.terroirhub.com/">日本酒</a></li>
-      <li><a href="https://terroirhub.com/tokushoho.html">特定商取引法</a></li>
-    </ul>
-    <div class="footer__copy">© 2026 合同会社FOMUS / Terroir HUB</div>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      Terroir HUB
+      <span>by FOMUS</span>
+    </div>
+    <div class="footer-copy">© 2024 FOMUS Inc. All rights reserved.</div>
   </div>
 </footer>
 
 <script>
 // Nav scroll
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('on', window.scrollY > 48);
-}, { passive: true });
+window.addEventListener('scroll', () => nav.classList.toggle('on', scrollY > 48), {passive:true});
 
-// Reveal on scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); observer.unobserve(e.target); }});
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.r').forEach(el => observer.observe(el));
+// Reveal
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}});
+}, {threshold:.1, rootMargin:'0px 0px -32px 0px'});
+document.querySelectorAll('.r').forEach(el => ro.observe(el));
 
-// Phone chat animation
+// Hero phone chat animation
 const msgs = ['pm1','pm2','pm3','pm4','pm5'];
 const typing = document.getElementById('typing');
 let step = 0;
-function showNext() {
-  if (step === 1) {
+function nextMsg() {
+  if(step === 1){
     setTimeout(() => { typing.classList.add('vis'); }, 300);
     setTimeout(() => {
       typing.classList.remove('vis');
       document.getElementById(msgs[step]).classList.add('vis');
       step++;
-      setTimeout(showNext, 1800);
-    }, 1600);
-  } else if (step < msgs.length) {
+      setTimeout(nextMsg, 1600);
+    }, 1500);
+  } else if(step < msgs.length){
     const el = document.getElementById(msgs[step]);
-    if (el) {
-      el.classList.add('vis');
-      step++;
-      if (step < msgs.length) setTimeout(showNext, step === 3 ? 1200 : 1600);
-    }
+    if(el){ el.classList.add('vis'); step++; if(step < msgs.length) setTimeout(nextMsg, 1400); }
   }
 }
-// Start when phone in view
-const phoneObs = new IntersectionObserver((entries) => {
-  if (entries[0].isIntersecting) {
+const phoneObs = new IntersectionObserver(entries => {
+  if(entries[0].isIntersecting){
     document.getElementById(msgs[0]).classList.add('vis');
-    step = 1;
-    setTimeout(showNext, 1400);
+    step = 1; setTimeout(nextMsg, 1200);
     phoneObs.disconnect();
   }
-}, { threshold: 0.3 });
+}, {threshold:.3});
 const phone = document.getElementById('phone');
-if (phone) phoneObs.observe(phone);
+if(phone) phoneObs.observe(phone);
 
 // FAQ accordion
-document.querySelectorAll('.faq__q').forEach(btn => {
+document.querySelectorAll('.faq-q').forEach(btn => {
   btn.addEventListener('click', () => {
-    const item = btn.closest('.faq__item');
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq__item').forEach(i => i.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
+    const item = btn.closest('.faq-item');
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if(!open) item.classList.add('open');
   });
 });
 
-// Form submit → mailto fallback
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = document.getElementById('submitBtn');
-  const form = e.target;
-  const brewery = form.querySelector('input[type=text]').value;
-  const name    = form.querySelectorAll('input[type=text]')[1].value;
-  const email   = form.querySelector('input[type=email]').value;
-  const genre   = form.querySelector('select').value;
-  const msg     = form.querySelector('textarea').value;
-  const body = encodeURIComponent(
-    `蔵・蒸留所名: ${brewery}\n担当者名: ${name}\nジャンル: ${genre}\n\nご要望:\n${msg}`
-  );
-  window.location.href = `mailto:info@fomus.jp?subject=${encodeURIComponent('【Terroir HUB】導入プランについてのご相談 — ' + brewery)}&body=${body}`;
-  btn.textContent = '送信されました ✓';
-  btn.style.background = 'var(--g600)';
-  btn.disabled = true;
-}
-
-// Smooth scroll for anchor links
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    const t = document.querySelector(a.getAttribute('href'));
+    if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
   });
 });
 </script>
