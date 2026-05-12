@@ -14,6 +14,30 @@ const ALLOWED_ORIGINS = [
   'http://127.0.0.1:5500',
 ];
 
+// IPベース レートリミット（インメモリ）
+// Vercelはサーバーレスなのでインスタンス間は共有されないが、デモ用途として十分
+const RATE_LIMIT = 10;       // リクエスト上限
+const RATE_WINDOW_MS = 60_000; // 1分
+const ipMap = new Map();
+
+function checkRateLimit(ip) {
+  const now = Date.now();
+  const entry = ipMap.get(ip);
+  if (!entry || now - entry.start > RATE_WINDOW_MS) {
+    ipMap.set(ip, { start: now, count: 1 });
+    return true;
+  }
+  if (entry.count >= RATE_LIMIT) return false;
+  entry.count++;
+  return true;
+}
+
+function getClientIp(req) {
+  const forwarded = req.headers['x-forwarded-for'];
+  if (typeof forwarded === 'string') return forwarded.split(',')[0].trim();
+  return req.socket?.remoteAddress || 'unknown';
+}
+
 // sakura.js（sake.terroirhub.com/api/sakura）のSYSTEM_PROMPTを継承しつつ、
 // 樹木酒造デモ用に context を固定化したもの。認証・クレジット不要のデモ版。
 const SYSTEM_PROMPT = `あなたは「サクラ」、Terroir HUBのAIコンシェルジュです。
@@ -126,9 +150,8 @@ TEL: 055-000-0000
 
 function setCors(req, res) {
   const origin = req.headers.origin || '';
-  const allowed = ALLOWED_ORIGINS.includes(origin) || !origin;
-  if (allowed) {
-    res.setHeader('Access-Control-Allow-Origin', origin || '*');
+  if (ALLOWED_ORIGINS.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
     res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   }
@@ -147,6 +170,19 @@ module.exports = async function handler(req, res) {
   setCors(req, res);
   if (req.method === 'OPTIONS') return res.status(204).end();
   if (req.method !== 'POST') return res.status(405).end();
+
+  // CORS: originなし（curl等の直接アクセス）は拒否
+  const origin = req.headers.origin || '';
+  if (!ALLOWED_ORIGINS.includes(origin)) {
+    return res.status(403).json({ error: 'Forbidden' });
+  }
+
+  // レートリミット
+  const ip = getClientIp(req);
+  if (!checkRateLimit(ip)) {
+    res.setHeader('Retry-After', '60');
+    return res.status(429).json({ error: 'Too many requests. Please wait a moment.' });
+  }
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) return res.status(500).json({ error: 'API key not configured' });
