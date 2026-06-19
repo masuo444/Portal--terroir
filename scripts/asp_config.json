@@ -1,0 +1,25 @@
+{
+  "_README": "ふるさと納税ASPアフィリ設定。各ASP(A8.net/バリューコマース等)で発行した『アフィリエイト済み検索URL』を貼ると、対応ボタンが全ページに点灯します。空欄のままなら非表示（楽天は別経路で常時稼働）。{kw}は検索語に置換されます。",
+  "furunavi": {
+    "label": "ふるなび",
+    "enabled": false,
+    "search_url_by_genre": {
+      "sake": "",
+      "wine": "",
+      "shochu": "",
+      "whisky": "",
+      "liqueur": ""
+    }
+  },
+  "satofuru": {
+    "label": "さとふる",
+    "enabled": false,
+    "search_url_by_genre": {
+      "sake": "",
+      "wine": "",
+      "shochu": "",
+      "whisky": "",
+      "liqueur": ""
+    }
+  }
+}

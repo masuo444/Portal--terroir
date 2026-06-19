@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<title>掲載情報の修正・公式写真提供 — Terroir HUB</title>
+<meta name="description" content="Terroir HUBに掲載されている事業者情報の修正依頼、公式写真提供、掲載停止相談を受け付けています。送信内容は運営確認後に扱います。">
+<link rel="canonical" href="https://www.terroirhub.com/listing-update/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700;800&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fbfaf7;--paper:#fff;--soft:#f4efe8;--ink:#1f1b17;--muted:#6f655e;--faint:#9a9189;--line:rgba(39,28,22,.11);--accent:#996e1a;--red:#b8452a;--charcoal:#241b16;--green:#2f6b4f;--shadow:0 24px 70px rgba(50,34,22,.12);--display:'Shippori Mincho',serif;--body:'Noto Sans JP','Hiragino Sans',sans-serif;--num:'Inter',sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.85;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font-family:inherit}
+.nav{position:fixed;top:0;left:0;right:0;height:64px;z-index:50;background:rgba(251,250,247,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-inner{height:64px;max-width:1180px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:var(--display);font-size:19px;font-weight:800;letter-spacing:.08em;color:var(--ink);white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:22px}.nav-links a{font-size:13px;font-weight:700;color:var(--muted);white-space:nowrap}.nav-links a:hover{color:var(--accent)}
+.nav-cta{display:inline-flex;align-items:center;height:38px;padding:0 18px;border-radius:999px;background:var(--ink);color:#fff!important;font-size:12px!important}
+.hero{padding:118px 24px 70px;background:linear-gradient(180deg,#fff 0%,#f4efe8 100%);border-bottom:1px solid var(--line)}
+.hero-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr .86fr;gap:54px;align-items:center}
+.label{font-family:var(--num);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+h1{font-family:var(--display);font-size:clamp(36px,5.1vw,64px);font-weight:800;line-height:1.2;letter-spacing:.02em;margin-bottom:20px}
+.lead{font-size:16px;line-height:2.05;color:var(--muted);max-width:720px;margin-bottom:24px}
+.hero-note{font-size:12px;color:var(--faint);line-height:1.8;max-width:680px}
+.proof{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:28px}
+.proof h2{font-family:var(--display);font-size:25px;line-height:1.45;margin-bottom:14px}
+.proof-list{display:grid;gap:12px;margin-top:18px}.proof-list div{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}.proof-list div:last-child{border-bottom:0}.proof-list b{color:var(--accent);font-family:var(--num)}
+.section{max-width:1180px;margin:0 auto;padding:78px 24px}
+.section-title{font-family:var(--display);font-size:clamp(28px,4vw,42px);font-weight:800;line-height:1.36;margin-bottom:14px}
+.section-desc{font-size:15px;color:var(--muted);line-height:2;max-width:760px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;min-height:156px}.card h3{font-size:17px;font-weight:800;margin-bottom:8px}.card p{font-size:13px;color:var(--muted);line-height:1.9}
+.form-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:34px;align-items:start;margin-top:38px}
+.form-note{background:var(--charcoal);color:#fff;padding:32px;border-radius:14px}.form-note h3{font-family:var(--display);font-size:26px;line-height:1.45;margin-bottom:12px}.form-note p{font-size:13px;color:rgba(255,255,255,.72);line-height:1.95}
+.form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px;display:grid;gap:14px;box-shadow:0 14px 40px rgba(50,34,22,.08)}
+.field{display:grid;gap:6px}.field label{font-size:12px;color:var(--faint);font-weight:700}.field input,.field select,.field textarea{width:100%;border:1px solid rgba(0,0,0,.13);background:#fff;padding:12px 13px;font-size:14px;outline:none;border-radius:8px}.field textarea{min-height:116px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent)}
+.hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.hint{font-size:11px;color:var(--faint);line-height:1.7}.btn{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 28px;border-radius:8px;font-size:14px;font-weight:800;border:0;cursor:pointer;background:var(--red);color:#fff;box-shadow:0 12px 26px rgba(184,69,42,.2)}.btn:hover{opacity:.9}
+.status{display:none;font-size:13px;line-height:1.8;padding:12px 14px}.status.ok{display:block;background:#f0f7f1;color:#225a31}.status.err{display:block;background:#fff0ed;color:#9a3a23}
+.footer{padding:42px 24px;background:#1d1511;color:rgba(255,255,255,.5);text-align:center;font-size:12px}.footer a{color:rgba(255,255,255,.7)}
+@media(max-width:920px){.hero-inner,.form-wrap{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.nav-links a:not(.nav-cta){display:none}}
+@media(max-width:640px){.nav-inner{padding:0 16px}.hero{padding:94px 18px 54px}.section{padding:58px 18px}.form-row{grid-template-columns:1fr}.form,.form-note{padding:24px}.btn{width:100%}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="/">Terroir HUB</a>
+    <div class="nav-links">
+      <a href="/business/">事業者向け</a>
+      <a href="#form" class="nav-cta">修正・写真提供</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="label">Listing Update</div>
+      <h1>掲載情報の修正・<br>公式写真提供</h1>
+      <p class="lead">Terroir HUBでは、公式情報を尊重しながら掲載内容を整備しています。掲載内容の修正、公式写真の提供、掲載停止の相談はこちらからお送りください。</p>
+      <p class="hero-note">送信内容は、運営会社FOMUSが公式性・権利・内容を確認したうえで扱います。確認前の情報や写真を、サイト表示やAI回答に自動反映することはありません。</p>
+    </div>
+    <div class="proof">
+      <h2>1つのフォームで、全ジャンルに対応します。</h2>
+      <div class="proof-list">
+        <div><b>01</b><span>日本酒・焼酎・ワイン・ウイスキー・リキュールをまとめて受付</span></div>
+        <div><b>02</b><span>社名、商品名、営業時間、購入先、見学情報などの修正に対応</span></div>
+        <div><b>03</b><span>公式写真はURLで共有。権利確認・公式性確認後、該当ページへ反映します</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">受け付けている内容</h2>
+  <p class="section-desc">掲載情報を正確に保つため、事業者様・関係者様からのご連絡を歓迎しています。</p>
+  <div class="cards">
+    <div class="card"><h3>掲載情報の修正</h3><p>社名、所在地、営業時間、公式URL、購入先、見学・体験情報など。</p></div>
+    <div class="card"><h3>公式写真の提供</h3><p>商品写真、外観、ロゴ、代表銘柄写真など。権利者または正式な関係者からの提供か確認します。</p></div>
+    <div class="card"><h3>掲載停止・確認相談</h3><p>掲載方針の確認、情報の非公開相談、権利関係の確認など。</p></div>
+  </div>
+</section>
+
+<section class="section" id="form">
+  <h2 class="section-title">修正・写真提供フォーム</h2>
+  <p class="section-desc">正式なご担当者様でなくても、まずは確認依頼として送信できます。ただし、掲載反映やAI回答への利用は、運営会社FOMUSによる確認完了後に限ります。</p>
+  <div class="form-wrap">
+    <div class="form-note">
+      <h3>写真ファイルは、共有URLでお送りください。</h3>
+      <p>Google Drive、Dropbox、公式サイトの画像URLなどを入力してください。送信された写真・情報は、公式性と利用許諾を確認するまで公開ページやAI回答には使用しません。</p>
+      <p style="margin-top:14px;color:rgba(255,255,255,.72);font-weight:700;">パスワード、契約書、未公開資料、個人情報などの機密情報は送信しないでください。</p>
+    </div>
+    <form class="form" id="listing-form">
+      <div class="hp" aria-hidden="true"><label for="company_url">Company URL</label><input id="company_url" name="company_url" tabindex="-1" autocomplete="off"></div>
+      <div class="form-row">
+        <div class="field"><label for="producer_name">事業者名・蔵名 *</label><input id="producer_name" name="producer_name" required maxlength="180" placeholder="例：〇〇酒造、〇〇蒸溜所"></div>
+        <div class="field"><label for="category">ジャンル *</label><select id="category" name="category" required><option value="">選択してください</option><option>日本酒</option><option>焼酎</option><option>ワイン</option><option>ウイスキー</option><option>リキュール・梅酒</option><option>クラフト</option><option>その他</option></select></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="contact">ご担当者名 *</label><input id="contact" name="contact" required maxlength="120"></div>
+        <div class="field"><label for="email">メールアドレス *</label><input id="email" name="email" type="email" required maxlength="180"></div>
+      </div>
+      <div class="field"><label for="page_url">該当ページURL</label><input id="page_url" name="page_url" type="url" maxlength="400" placeholder="https://sake.terroirhub.com/..."></div>
+      <div class="field"><label for="website">公式サイトURL</label><input id="website" name="website" type="url" maxlength="240" placeholder="https://example.com"></div>
+      <div class="field"><label for="request_type">依頼内容 *</label><select id="request_type" name="request_type" required><option value="">選択してください</option><option>掲載情報の修正</option><option>公式写真の提供</option><option>掲載停止・非公開相談</option><option>その他</option></select></div>
+      <div class="field"><label for="correction_detail">修正内容・提供内容 *</label><textarea id="correction_detail" name="correction_detail" required maxlength="3000" placeholder="修正したい箇所、正しい内容、公式写真の説明などを記入してください。機密情報は記載しないでください。"></textarea></div>
+      <div class="field"><label for="photo_url">写真・資料の共有URL</label><input id="photo_url" name="photo_url" type="url" maxlength="500" placeholder="Google Drive、Dropbox、公式サイト画像URLなど"><p class="hint">共有リンクは、運営者が閲覧できる設定にしてください。パスワード付きURLや非公開機密資料は送信しないでください。</p></div>
+      <div class="field"><label for="authority">提供元・権利確認 *</label><textarea id="authority" name="authority" required maxlength="1000" placeholder="例：公式担当者本人、広報担当、公式サイト掲載写真のURL、権利者から利用許可を得ている等"></textarea><p class="hint">第三者からの情報提供も受け付けますが、公式確認が取れるまで反映しません。</p></div>
+      <div class="field"><label for="notes">補足</label><textarea id="notes" name="notes" maxlength="2000" placeholder="確認事項、公開希望タイミング、権利表記など。機密情報は記載しないでください。"></textarea></div>
+      <input type="hidden" name="source" value="portal_listing_update">
+      <button class="btn" type="submit">送信する</button>
+      <div class="status" id="form-status"></div>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div>&copy; 2026 Terroir HUB / FOMUS</div>
+  <div><a href="/business/">事業者向けページ</a></div>
+</footer>
+
+<script>
+(function(){
+  const form = document.getElementById('listing-form');
+  const status = document.getElementById('form-status');
+  const endpoint = 'https://sake.terroirhub.com/api/listing-update';
+  function setStatus(type, text){ status.className = 'status ' + type; status.textContent = text; }
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    setStatus('', '');
+    const data = Object.fromEntries(new FormData(form).entries());
+    data.current_page = location.href;
+    data.created_at = new Date().toISOString();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = '送信中...';
+    try{
+      const res = await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+      if(!res.ok) throw new Error('送信に失敗しました');
+      form.reset();
+      setStatus('ok','送信しました。公式性・権利・内容を確認したうえで、必要に応じてFOMUSよりご連絡します。確認前にサイト表示やAI回答へ自動反映することはありません。');
+    }catch(err){
+      const subject = encodeURIComponent('Terroir HUB 掲載情報の修正・公式写真提供');
+      const body = encodeURIComponent(
+        '事業者名: ' + (data.producer_name || '') + '\n' +
+        'ジャンル: ' + (data.category || '') + '\n' +
+        '担当者名: ' + (data.contact || '') + '\n' +
+        'メール: ' + (data.email || '') + '\n' +
+        '該当ページURL: ' + (data.page_url || '') + '\n' +
+        '公式サイトURL: ' + (data.website || '') + '\n' +
+        '依頼内容: ' + (data.request_type || '') + '\n' +
+        '写真・資料URL: ' + (data.photo_url || '') + '\n\n' +
+        '提供元・権利確認:\n' + (data.authority || '') + '\n\n' +
+        '修正内容・提供内容:\n' + (data.correction_detail || '') + '\n\n' +
+        '補足:\n' + (data.notes || '')
+      );
+      setStatus('err','送信できませんでした。お手数ですが info@terroirhub.com へご連絡ください。');
+      window.location.href = 'mailto:info@terroirhub.com?subject=' + subject + '&body=' + body;
+    }finally{
+      btn.disabled = false;
+      btn.textContent = '送信する';
+    }
+  });
+})();
+</script>
+</body>
+</html>
