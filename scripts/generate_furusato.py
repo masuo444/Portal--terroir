@@ -16,7 +16,7 @@ DOMAIN = "www.terroirhub.com"
 GENRES = [
     {"key": "sake",    "name": "日本酒",     "color": "#B8452A",
      "dir": "TerriorHUB　sake", "items_sub": "sake",
-     "site": "https://sake.terroirhub.com", "furusato": None},  # 再取得完了後に有効化
+     "site": "https://sake.terroirhub.com", "furusato": "https://sake.terroirhub.com/sake/furusato/"},
     {"key": "wine",    "name": "ワイン",     "color": "#7A1F2B",
      "dir": "terroirHUB wine", "items_sub": "wine",
      "site": "https://wine.terroirhub.com", "furusato": "https://wine.terroirhub.com/wine/furusato/"},
