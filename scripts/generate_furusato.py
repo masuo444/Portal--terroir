@@ -25,7 +25,7 @@ GENRES = [
      "site": "https://shochu.terroirhub.com", "furusato": None},
     {"key": "whisky",  "name": "ウイスキー", "color": "#2D5F3F",
      "dir": "terroirHUB whisky", "items_sub": "whisky",
-     "site": "https://whisky.terroirhub.com", "furusato": None},
+     "site": "https://whisky.terroirhub.com", "furusato": "https://whisky.terroirhub.com/whisky/furusato/"},
     {"key": "liqueur", "name": "リキュール", "color": "#3A7A9E",
      "dir": "terroirHUB liqueur", "items_sub": "liqueur",
      "site": "https://liqueur.terroirhub.com", "furusato": None},
