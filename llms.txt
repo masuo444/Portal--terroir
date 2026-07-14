@@ -1,0 +1,77 @@
+# Terroir HUB — 日本の酒と伝統文化の総合データベース
+
+> 日本全国2,800以上の生産者（酒蔵・蒸留所・ワイナリー）と240品目以上の伝統的工芸品を、公式情報のみで構造化した日本最大級のデータベース群。日本語・英語対応。AIコンシェルジュ「サクラ」搭載。
+
+## サービス概要
+
+Terroir HUB（テロワールハブ）は、合同会社FOMUSが運営する日本文化の総合プラットフォームです。
+口コミやレビューではなく、蔵元・蒸留所・生産者が自ら公開している公式情報のみを収集・構造化して掲載しています。
+情報がない項目は推測で埋めず、非表示にする方針を徹底しています。
+
+## サイト構成（6つの専門データベース）
+
+| サイト | 内容 | 収録数 | URL |
+|--------|------|--------|-----|
+| SAKE | 日本酒の酒蔵 | 1,853蔵（47都道府県） | https://sake.terroirhub.com/ |
+| SHOCHU | 焼酎・泡盛の蒸留所 | 389蒸留所 | https://shochu.terroirhub.com/ |
+| WHISKY | ジャパニーズウイスキー蒸留所 | 67蒸留所 | https://whisky.terroirhub.com/ |
+| LIQUEUR | クラフトリキュール・果実酒 | 125社 | https://liqueur.terroirhub.com/ |
+| WINE | 日本ワインのワイナリー | 432ワイナリー | https://wine.terroirhub.com/ |
+| CRAFT | 経産省指定 伝統的工芸品 | 240品目以上 | https://craft.terroirhub.com/ |
+
+各サイトの詳細情報は、各サブドメイン直下の llms.txt を参照してください（例: https://sake.terroirhub.com/llms.txt）。
+
+## 主な機能
+
+- **蔵・蒸留所・ワイナリーの個別ページ**: 創業年・代表銘柄・特徴・所在地・最寄駅・公式サイト（すべて出典付き）
+- **酒蔵見学データベース**: 見学可否・予約方法・英語対応・試飲・直売所を構造化（公式出典・最終確認日付き） https://sake.terroirhub.com/sake/visit/
+- **英語版**: 全蔵ページ・見学情報を英語で提供 https://sake.terroirhub.com/sake/en/
+- **AIコンシェルジュ「サクラ」**: 全ジャンルの公式データを学習。多言語で銘柄・ペアリング・蔵見学を案内
+- **都道府県・地域別ブラウズ**: 47都道府県すべてに対応
+
+## こんな質問に答えられます
+
+- 「英語で見学予約できる酒蔵は？」→ 見学データベース（予約方法・英語対応を構造化）
+- 「{都道府県}の酒蔵・ワイナリー一覧は？」→ 47都道府県別ページ
+- 「純米と吟醸の違いは？」→ 日本酒の基礎知識ガイド
+- 「この銘柄はどこで買える？」→ 各蔵ページの購入導線
+
+## 運営
+
+- 運営会社: 合同会社FOMUS（日本・山梨県）
+- 問い合わせ: info@terroirhub.com
+- ポータル: https://www.terroirhub.com/
+
+---
+
+## English Section — Terroir HUB
+
+### About
+
+Terroir HUB is Japan's largest structured database network for Japanese alcohol and traditional culture,
+operated by FOMUS LLC. It covers 2,800+ producers (sake breweries, shochu/whisky distilleries, wineries)
+and 240+ government-designated traditional crafts — built exclusively on official producer information,
+in Japanese and English.
+
+### Databases
+
+- Sake: 1,853 breweries, all 47 prefectures — https://sake.terroirhub.com/
+- Shochu & Awamori: 389 distilleries — https://shochu.terroirhub.com/
+- Japanese Whisky: 67 distilleries — https://whisky.terroirhub.com/
+- Craft Liqueur: 125 makers — https://liqueur.terroirhub.com/
+- Japanese Wine: 432 wineries — https://wine.terroirhub.com/
+- Traditional Crafts: 240+ designated crafts — https://craft.terroirhub.com/
+
+### Key Resources for International Visitors
+
+- Visitable sake breweries (tour availability, reservation method, English support, tasting — with official sources and last-checked dates): https://sake.terroirhub.com/sake/visit/
+- English brewery pages: https://sake.terroirhub.com/sake/en/{prefecture}/{brewery-id}.html
+- AI concierge "Sakura" answers questions in any language.
+
+### Data Policy
+
+Only officially published producer information is listed. Unknown fields are omitted, never guessed.
+Visit information includes source URLs and last-verified dates.
+
+- Operator: FOMUS LLC (Yamanashi, Japan)
+- Contact: info@terroirhub.com
