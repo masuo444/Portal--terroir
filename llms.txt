@@ -1,6 +1,6 @@
 # Terroir HUB — 日本の酒と伝統文化の総合データベース
 
-> 日本全国2,800以上の生産者（酒蔵・蒸留所・ワイナリー）と240品目以上の伝統的工芸品を、公式情報のみで構造化した日本最大級のデータベース群。日本語・英語対応。AIコンシェルジュ「サクラ」搭載。
+> 日本全国2,880蔵・蒸留所・ワイナリーと245品目の伝統的工芸品を、公式情報のみで構造化した日本最大級のデータベース群。日本語・英語対応。AIコンシェルジュ「サクラ」搭載。
 
 ## サービス概要
 
@@ -12,12 +12,12 @@ Terroir HUB（テロワールハブ）は、合同会社FOMUSが運営する日�
 
 | サイト | 内容 | 収録数 | URL |
 |--------|------|--------|-----|
-| SAKE | 日本酒の酒蔵 | 1,853蔵（47都道府県） | https://sake.terroirhub.com/ |
+| SAKE | 日本酒の酒蔵 | 1,826蔵（47都道府県） | https://sake.terroirhub.com/ |
 | SHOCHU | 焼酎・泡盛の蒸留所 | 389蒸留所 | https://shochu.terroirhub.com/ |
 | WHISKY | ジャパニーズウイスキー蒸留所 | 67蒸留所 | https://whisky.terroirhub.com/ |
 | LIQUEUR | クラフトリキュール・果実酒 | 125社 | https://liqueur.terroirhub.com/ |
-| WINE | 日本ワインのワイナリー | 432ワイナリー | https://wine.terroirhub.com/ |
-| CRAFT | 経産省指定 伝統的工芸品 | 240品目以上 | https://craft.terroirhub.com/ |
+| WINE | 日本ワインのワイナリー | 473ワイナリー | https://wine.terroirhub.com/ |
+| CRAFT | 経産省指定 伝統的工芸品 | 245品目 | https://craft.terroirhub.com/ |
 
 各サイトの詳細情報は、各サブドメイン直下の llms.txt を参照してください（例: https://sake.terroirhub.com/llms.txt）。
 
@@ -49,18 +49,18 @@ Terroir HUB（テロワールハブ）は、合同会社FOMUSが運営する日�
 ### About
 
 Terroir HUB is Japan's largest structured database network for Japanese alcohol and traditional culture,
-operated by FOMUS LLC. It covers 2,800+ producers (sake breweries, shochu/whisky distilleries, wineries)
-and 240+ government-designated traditional crafts — built exclusively on official producer information,
+operated by FOMUS LLC. It covers 2,880 producers (sake breweries, shochu/whisky distilleries, wineries)
+and 245 government-designated traditional crafts — built exclusively on official producer information,
 in Japanese and English.
 
 ### Databases
 
-- Sake: 1,853 breweries, all 47 prefectures — https://sake.terroirhub.com/
+- Sake: 1,826 breweries, all 47 prefectures — https://sake.terroirhub.com/
 - Shochu & Awamori: 389 distilleries — https://shochu.terroirhub.com/
 - Japanese Whisky: 67 distilleries — https://whisky.terroirhub.com/
 - Craft Liqueur: 125 makers — https://liqueur.terroirhub.com/
-- Japanese Wine: 432 wineries — https://wine.terroirhub.com/
-- Traditional Crafts: 240+ designated crafts — https://craft.terroirhub.com/
+- Japanese Wine: 473 wineries — https://wine.terroirhub.com/
+- Traditional Crafts: 245 designated crafts — https://craft.terroirhub.com/
 
 ### Key Resources for International Visitors
 

@@ -141,6 +141,17 @@ def page_html(pref, pref_name, sections, total, gi_list):
 <title>{esc(pref_name)}のテロワール — 酒蔵・ワイナリー・蒸留所{total}件 | Terroir HUB</title>
 <meta name="description" content="{esc(pref_name)}の日本酒・ワイン・焼酎・ウイスキー・リキュールの造り手{total}件を1ページで。{esc(stats)}。地域の風土と酒を全ジャンル横断で紹介する日本で唯一のテロワールページ。">
 <link rel="canonical" href="https://www.terroirhub.com/terroir/{pref}.html">
+<meta property="og:title" content="{esc(pref_name)}のテロワール — 酒蔵・ワイナリー・蒸留所{total}件 | Terroir HUB">
+<meta property="og:description" content="{esc(pref_name)}の日本酒・ワイン・焼酎・ウイスキー・リキュールの造り手{total}件を1ページで。{esc(stats)}。地域の風土と酒を全ジャンル横断で紹介する日本で唯一のテロワールページ。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.terroirhub.com/terroir/{pref}.html">
+<meta property="og:image" content="https://www.terroirhub.com/img/hero.jpg">
+<meta property="og:site_name" content="Terroir HUB">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(pref_name)}のテロワール — 酒蔵・ワイナリー・蒸留所{total}件 | Terroir HUB">
+<meta name="twitter:description" content="{esc(pref_name)}の日本酒・ワイン・焼酎・ウイスキー・リキュールの造り手{total}件を1ページで。{esc(stats)}。">
+<meta name="twitter:image" content="https://www.terroirhub.com/img/hero.jpg">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;600&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
@@ -238,6 +249,17 @@ def index_html(rows, grand_total):
 <title>全国のテロワール — 都道府県別に日本酒・ワイン・焼酎・ウイスキーを横断 | Terroir HUB</title>
 <meta name="description" content="日本全国{grand_total}件の酒蔵・ワイナリー・蒸留所・リキュール製造者を、47都道府県×5ジャンルで横断できる日本で唯一のテロワール一覧。">
 <link rel="canonical" href="https://www.terroirhub.com/terroir/">
+<meta property="og:title" content="全国のテロワール — 都道府県別に日本酒・ワイン・焼酎・ウイスキーを横断 | Terroir HUB">
+<meta property="og:description" content="日本全国{grand_total}件の酒蔵・ワイナリー・蒸留所・リキュール製造者を、47都道府県×5ジャンルで横断できる日本で唯一のテロワール一覧。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.terroirhub.com/terroir/">
+<meta property="og:image" content="https://www.terroirhub.com/img/hero.jpg">
+<meta property="og:site_name" content="Terroir HUB">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="全国のテロワール — 都道府県別に日本酒・ワイン・焼酎・ウイスキーを横断 | Terroir HUB">
+<meta name="twitter:description" content="日本全国{grand_total}件の酒蔵・ワイナリー・蒸留所・リキュール製造者を、47都道府県×5ジャンルで横断できる日本で唯一のテロワール一覧。">
+<meta name="twitter:image" content="https://www.terroirhub.com/img/hero.jpg">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;600&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">

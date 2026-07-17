@@ -1,4 +1,31 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /brewery/
+Disallow: /sake/brewery.html
+Disallow: /sake/brewery-dashboard.html
+
+# AI crawlers — explicitly allowed for indexing and search
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
 
 Sitemap: https://www.terroirhub.com/sitemap.xml
