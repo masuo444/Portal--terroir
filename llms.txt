@@ -12,7 +12,7 @@ Terroir HUB（テロワールハブ）は、合同会社FOMUSが運営する日�
 
 | サイト | 内容 | 収録数 | URL |
 |--------|------|--------|-----|
-| SAKE | 日本酒の酒蔵 | 1,762蔵（47都道府県） | https://sake.terroirhub.com/ |
+| SAKE | 日本酒の酒蔵 | 1,753蔵（47都道府県） | https://sake.terroirhub.com/ |
 | SHOCHU | 焼酎・泡盛の蒸留所 | 389蒸留所 | https://shochu.terroirhub.com/ |
 | WHISKY | ジャパニーズウイスキー蒸留所 | 67蒸留所 | https://whisky.terroirhub.com/ |
 | LIQUEUR | クラフトリキュール・果実酒 | 125社 | https://liqueur.terroirhub.com/ |
@@ -55,7 +55,7 @@ in Japanese and English.
 
 ### Databases
 
-- Sake: 1,762 breweries, all 47 prefectures — https://sake.terroirhub.com/
+- Sake: 1,753 breweries, all 47 prefectures — https://sake.terroirhub.com/
 - Shochu & Awamori: 389 distilleries — https://shochu.terroirhub.com/
 - Japanese Whisky: 67 distilleries — https://whisky.terroirhub.com/
 - Craft Liqueur: 125 makers — https://liqueur.terroirhub.com/
