@@ -36,6 +36,40 @@ def esc(s):
     return html.escape(str(s or ""), quote=True)
 
 
+PREF_ORDER_JA = ['北海道','青森県','岩手県','宮城県','秋田県','山形県','福島県','茨城県','栃木県','群馬県',
+ '埼玉県','千葉県','東京都','神奈川県','新潟県','富山県','石川県','福井県','山梨県','長野県','岐阜県','静岡県',
+ '愛知県','三重県','滋賀県','京都府','大阪府','兵庫県','奈良県','和歌山県','鳥取県','島根県','岡山県','広島県',
+ '山口県','徳島県','香川県','愛媛県','高知県','福岡県','佐賀県','長崎県','熊本県','大分県','宮崎県','鹿児島県','沖縄県']
+
+
+def build_muni_html():
+    """generate_furusato_municipality.py が出した索引から、県別リンクブロックを作る"""
+    path = os.path.join(BASE, "data", "furusato_municipality_index.json")
+    if not os.path.exists(path):
+        return ""
+    rows = json.load(open(path, encoding="utf-8"))
+    by_pref = {}
+    for r in rows:
+        by_pref.setdefault(r["pref"], {"slug": r["pref_slug"], "n": 0, "items": 0})
+        by_pref[r["pref"]]["n"] += 1
+        by_pref[r["pref"]]["items"] += r["items"]
+    cells = []
+    for pref in PREF_ORDER_JA:
+        v = by_pref.get(pref)
+        if not v:
+            continue
+        cells.append(
+            f'<a href="/furusato/{v["slug"]}/" style="background:#fff;border:1px solid var(--border);'
+            f'padding:0.9rem 1rem;display:block">'
+            f'<div style="font-family:var(--fd);font-size:1rem;font-weight:600">{esc(pref)}</div>'
+            f'<div style="font-family:var(--fn);font-size:0.74rem;color:var(--muted);margin-top:2px">'
+            f'{v["n"]}自治体・{v["items"]}件</div></a>')
+    if not cells:
+        return ""
+    return ('<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0.7rem">'
+            + "".join(cells) + '</div>')
+
+
 def load_asp():
     p = os.path.join(BASE, "scripts", "asp_config.json")
     try:
@@ -149,6 +183,7 @@ def build():
          "返礼品・寄付額・在庫・取扱自治体は時期により変動します。最新情報は各返礼品ページでご確認ください。"),
     ]
     faq_html = "".join(f'<div class="faq-item"><dt>{esc(q)}</dt><dd>{esc(a)}</dd></div>' for q, a in faqs)
+    muni_html = build_muni_html()
 
     desc = (f"日本酒・ワイン・焼酎・ウイスキー・リキュールのふるさと納税返礼品を横断検索。"
             f"全国の蔵元・ワイナリーの返礼品を産地別にまとめ、寄付で地域の造り手を応援できます。楽天ふるさと納税対応。")
@@ -287,6 +322,18 @@ img{{display:block;max-width:100%}}
   {genre_html}
 </main>
 
+<div class="sim"><div class="sim-in">
+  <p><b>年内の寄付は12月31日まで。</b>締切はふるさと納税サイトと決済方法によって異なります。ワンストップ特例には「5団体以内」という条件もあります。</p>
+  <a href="/furusato/deadline/">期限と手続きを確認する →</a>
+</div></div>
+
+<section class="wrap" id="municipalities">
+  <h2 style="font-family:var(--fd);font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:700;margin-bottom:0.5rem">自治体から探す</h2>
+  <p style="font-size:0.9rem;color:var(--muted);line-height:1.9;margin-bottom:1.4rem;max-width:760px">
+    返礼品にお酒がある自治体を、都道府県ごとにまとめています。市区町村のページでは寄付金額から絞り込めます。</p>
+  {muni_html}
+</section>
+
 <section class="faqsec"><h2>お酒のふるさと納税 よくある質問</h2><dl class="faq">{faq_html}</dl></section>
 <p class="note">※ 返礼品・寄付額・在庫・取扱自治体は時期により変動します。本ページは楽天ふるさと納税の情報をもとに構成しており、最新の内容・正確な控除上限は各返礼品ページおよび各自治体・ふるさと納税サイトでご確認ください。控除には確定申告またはワンストップ特例申請が必要です。20歳未満の飲酒・お酒の購入は法律で禁止されています。Terroir HUBはお酒の販売を行っていません。</p>
 
@@ -297,7 +344,6 @@ img{{display:block;max-width:100%}}
     <a href="https://sake.terroirhub.com">日本酒</a>
     <a href="https://wine.terroirhub.com">ワイン</a>
     <a href="/furusato/">ふるさと納税</a>
-    <a href="/community.html">コミュニティ</a>
   </nav>
   <p class="footer-c">&copy; 2026 合同会社FOMUS — Terroir HUB</p>
 </footer>

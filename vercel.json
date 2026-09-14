@@ -59,5 +59,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/community.html",
+      "destination": "/",
+      "permanent": true
+    }
   ]
 }

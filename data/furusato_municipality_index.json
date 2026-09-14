@@ -1,0 +1,3899 @@
+[
+ {
+  "pref": "山梨県",
+  "pref_slug": "yamanashi",
+  "city": "北杜市",
+  "slug": "hokuto",
+  "items": 23,
+  "producers": 13,
+  "url": "/furusato/yamanashi/hokuto/"
+ },
+ {
+  "pref": "山梨県",
+  "pref_slug": "yamanashi",
+  "city": "山梨市",
+  "slug": "yamanashi",
+  "items": 23,
+  "producers": 9,
+  "url": "/furusato/yamanashi/yamanashi/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "小諸市",
+  "slug": "komoro",
+  "items": 21,
+  "producers": 6,
+  "url": "/furusato/nagano/komoro/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "仁木町",
+  "slug": "niki",
+  "items": 21,
+  "producers": 0,
+  "url": "/furusato/hokkaido/niki/"
+ },
+ {
+  "pref": "山梨県",
+  "pref_slug": "yamanashi",
+  "city": "甲州市",
+  "slug": "koshu",
+  "items": 19,
+  "producers": 32,
+  "url": "/furusato/yamanashi/koshu/"
+ },
+ {
+  "pref": "宮崎県",
+  "pref_slug": "miyazaki",
+  "city": "都城市",
+  "slug": "miyakonojo",
+  "items": 18,
+  "producers": 6,
+  "url": "/furusato/miyazaki/miyakonojo/"
+ },
+ {
+  "pref": "佐賀県",
+  "pref_slug": "saga",
+  "city": "鹿島市",
+  "slug": "kashima",
+  "items": 18,
+  "producers": 6,
+  "url": "/furusato/saga/kashima/"
+ },
+ {
+  "pref": "山梨県",
+  "pref_slug": "yamanashi",
+  "city": "韮崎市",
+  "slug": "nirasaki",
+  "items": 17,
+  "producers": 5,
+  "url": "/furusato/yamanashi/nirasaki/"
+ },
+ {
+  "pref": "長崎県",
+  "pref_slug": "nagasaki",
+  "city": "島原市",
+  "slug": "shimabara",
+  "items": 15,
+  "producers": 1,
+  "url": "/furusato/nagasaki/shimabara/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "八女市",
+  "slug": "yame",
+  "items": 14,
+  "producers": 6,
+  "url": "/furusato/fukuoka/yame/"
+ },
+ {
+  "pref": "島根県",
+  "pref_slug": "shimane",
+  "city": "安来市",
+  "slug": "yasugi",
+  "items": 14,
+  "producers": 3,
+  "url": "/furusato/shimane/yasugi/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "余市町",
+  "slug": "yoichi",
+  "items": 14,
+  "producers": 0,
+  "url": "/furusato/hokkaido/yoichi/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "神戸市",
+  "slug": "kobe",
+  "items": 13,
+  "producers": 17,
+  "url": "/furusato/hyogo/kobe/"
+ },
+ {
+  "pref": "岩手県",
+  "pref_slug": "iwate",
+  "city": "紫波町",
+  "slug": "shiwa",
+  "items": 13,
+  "producers": 0,
+  "url": "/furusato/iwate/shiwa/"
+ },
+ {
+  "pref": "奈良県",
+  "pref_slug": "nara",
+  "city": "生駒市",
+  "slug": "ikoma",
+  "items": 13,
+  "producers": 1,
+  "url": "/furusato/nara/ikoma/"
+ },
+ {
+  "pref": "岡山県",
+  "pref_slug": "okayama",
+  "city": "新見市",
+  "slug": "niimi",
+  "items": 13,
+  "producers": 4,
+  "url": "/furusato/okayama/niimi/"
+ },
+ {
+  "pref": "滋賀県",
+  "pref_slug": "shiga",
+  "city": "長浜市",
+  "slug": "nagahama",
+  "items": 13,
+  "producers": 3,
+  "url": "/furusato/shiga/nagahama/"
+ },
+ {
+  "pref": "京都府",
+  "pref_slug": "kyoto",
+  "city": "京都市",
+  "slug": "kyoto",
+  "items": 12,
+  "producers": 5,
+  "url": "/furusato/kyoto/kyoto/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "加東市",
+  "slug": "kato",
+  "items": 12,
+  "producers": 1,
+  "url": "/furusato/hyogo/kato/"
+ },
+ {
+  "pref": "岩手県",
+  "pref_slug": "iwate",
+  "city": "花巻市",
+  "slug": "hanamaki",
+  "items": 12,
+  "producers": 7,
+  "url": "/furusato/iwate/hanamaki/"
+ },
+ {
+  "pref": "大阪府",
+  "pref_slug": "osaka",
+  "city": "高槻市",
+  "slug": "takatsuki",
+  "items": 12,
+  "producers": 4,
+  "url": "/furusato/osaka/takatsuki/"
+ },
+ {
+  "pref": "山口県",
+  "pref_slug": "yamaguchi",
+  "city": "防府市",
+  "slug": "hofu",
+  "items": 12,
+  "producers": 1,
+  "url": "/furusato/yamaguchi/hofu/"
+ },
+ {
+  "pref": "山形県",
+  "pref_slug": "yamagata",
+  "city": "寒河江市",
+  "slug": "sagae",
+  "items": 11,
+  "producers": 0,
+  "url": "/furusato/yamagata/sagae/"
+ },
+ {
+  "pref": "山形県",
+  "pref_slug": "yamagata",
+  "city": "酒田市",
+  "slug": "sakata",
+  "items": 11,
+  "producers": 4,
+  "url": "/furusato/yamagata/sakata/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "久留米市",
+  "slug": "kurume",
+  "items": 11,
+  "producers": 15,
+  "url": "/furusato/fukuoka/kurume/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "札幌市",
+  "slug": "sapporo",
+  "items": 11,
+  "producers": 7,
+  "url": "/furusato/hokkaido/sapporo/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "丹波篠山市",
+  "slug": "tambasasayama",
+  "items": 11,
+  "producers": 8,
+  "url": "/furusato/hyogo/tambasasayama/"
+ },
+ {
+  "pref": "熊本県",
+  "pref_slug": "kumamoto",
+  "city": "山鹿市",
+  "slug": "yamaga",
+  "items": 11,
+  "producers": 4,
+  "url": "/furusato/kumamoto/yamaga/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "池田町",
+  "slug": "ikeda",
+  "items": 11,
+  "producers": 0,
+  "url": "/furusato/nagano/ikeda/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "佐久市",
+  "slug": "saku",
+  "items": 11,
+  "producers": 12,
+  "url": "/furusato/nagano/saku/"
+ },
+ {
+  "pref": "島根県",
+  "pref_slug": "shimane",
+  "city": "雲南市",
+  "slug": "unnan",
+  "items": 11,
+  "producers": 3,
+  "url": "/furusato/shimane/unnan/"
+ },
+ {
+  "pref": "鹿児島県",
+  "pref_slug": "kagoshima",
+  "city": "枕崎市",
+  "slug": "makurazaki",
+  "items": 11,
+  "producers": 2,
+  "url": "/furusato/kagoshima/makurazaki/"
+ },
+ {
+  "pref": "大分県",
+  "pref_slug": "oita",
+  "city": "由布市",
+  "slug": "yufu",
+  "items": 11,
+  "producers": 4,
+  "url": "/furusato/oita/yufu/"
+ },
+ {
+  "pref": "大阪府",
+  "pref_slug": "osaka",
+  "city": "岸和田市",
+  "slug": "kishiwada",
+  "items": 11,
+  "producers": 4,
+  "url": "/furusato/osaka/kishiwada/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "上富良野町",
+  "slug": "kamifurano",
+  "items": 10,
+  "producers": 0,
+  "url": "/furusato/hokkaido/kamifurano/"
+ },
+ {
+  "pref": "石川県",
+  "pref_slug": "ishikawa",
+  "city": "小松市",
+  "slug": "komatsu",
+  "items": 10,
+  "producers": 1,
+  "url": "/furusato/ishikawa/komatsu/"
+ },
+ {
+  "pref": "岩手県",
+  "pref_slug": "iwate",
+  "city": "奥州市",
+  "slug": "oshu",
+  "items": 10,
+  "producers": 1,
+  "url": "/furusato/iwate/oshu/"
+ },
+ {
+  "pref": "京都府",
+  "pref_slug": "kyoto",
+  "city": "京丹後市",
+  "slug": "kyotango",
+  "items": 10,
+  "producers": 2,
+  "url": "/furusato/kyoto/kyotango/"
+ },
+ {
+  "pref": "大分県",
+  "pref_slug": "oita",
+  "city": "宇佐市",
+  "slug": "usa",
+  "items": 10,
+  "producers": 14,
+  "url": "/furusato/oita/usa/"
+ },
+ {
+  "pref": "山梨県",
+  "pref_slug": "yamanashi",
+  "city": "笛吹市",
+  "slug": "fuefuki",
+  "items": 10,
+  "producers": 9,
+  "url": "/furusato/yamanashi/fuefuki/"
+ },
+ {
+  "pref": "福島県",
+  "pref_slug": "fukushima",
+  "city": "磐梯町",
+  "slug": "bandai",
+  "items": 9,
+  "producers": 0,
+  "url": "/furusato/fukushima/bandai/"
+ },
+ {
+  "pref": "岐阜県",
+  "pref_slug": "gifu",
+  "city": "揖斐川町",
+  "slug": "ibigawa",
+  "items": 9,
+  "producers": 0,
+  "url": "/furusato/gifu/ibigawa/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "東御市",
+  "slug": "tomi",
+  "items": 9,
+  "producers": 14,
+  "url": "/furusato/nagano/tomi/"
+ },
+ {
+  "pref": "島根県",
+  "pref_slug": "shimane",
+  "city": "出雲市",
+  "slug": "izumo",
+  "items": 9,
+  "producers": 5,
+  "url": "/furusato/shimane/izumo/"
+ },
+ {
+  "pref": "山形県",
+  "pref_slug": "yamagata",
+  "city": "鶴岡市",
+  "slug": "tsuruoka",
+  "items": 9,
+  "producers": 5,
+  "url": "/furusato/yamagata/tsuruoka/"
+ },
+ {
+  "pref": "秋田県",
+  "pref_slug": "akita",
+  "city": "由利本荘市",
+  "slug": "yurihonjo",
+  "items": 8,
+  "producers": 3,
+  "url": "/furusato/akita/yurihonjo/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "筑紫野市",
+  "slug": "chikushino",
+  "items": 8,
+  "producers": 3,
+  "url": "/furusato/fukuoka/chikushino/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "姫路市",
+  "slug": "himeji",
+  "items": 8,
+  "producers": 6,
+  "url": "/furusato/hyogo/himeji/"
+ },
+ {
+  "pref": "岡山県",
+  "pref_slug": "okayama",
+  "city": "高梁市",
+  "slug": "takahashi",
+  "items": 8,
+  "producers": 0,
+  "url": "/furusato/okayama/takahashi/"
+ },
+ {
+  "pref": "宮城県",
+  "pref_slug": "miyagi",
+  "city": "加美町",
+  "slug": "kami",
+  "items": 8,
+  "producers": 0,
+  "url": "/furusato/miyagi/kami/"
+ },
+ {
+  "pref": "佐賀県",
+  "pref_slug": "saga",
+  "city": "嬉野市",
+  "slug": "ureshino",
+  "items": 8,
+  "producers": 3,
+  "url": "/furusato/saga/ureshino/"
+ },
+ {
+  "pref": "佐賀県",
+  "pref_slug": "saga",
+  "city": "伊万里市",
+  "slug": "imari",
+  "items": 8,
+  "producers": 3,
+  "url": "/furusato/saga/imari/"
+ },
+ {
+  "pref": "徳島県",
+  "pref_slug": "tokushima",
+  "city": "三好市",
+  "slug": "miyoshi",
+  "items": 8,
+  "producers": 2,
+  "url": "/furusato/tokushima/miyoshi/"
+ },
+ {
+  "pref": "山梨県",
+  "pref_slug": "yamanashi",
+  "city": "大月市",
+  "slug": "otsuki",
+  "items": 8,
+  "producers": 2,
+  "url": "/furusato/yamanashi/otsuki/"
+ },
+ {
+  "pref": "鹿児島県",
+  "pref_slug": "kagoshima",
+  "city": "和泊町",
+  "slug": "wadomari",
+  "items": 8,
+  "producers": 0,
+  "url": "/furusato/kagoshima/wadomari/"
+ },
+ {
+  "pref": "大阪府",
+  "pref_slug": "osaka",
+  "city": "羽曳野市",
+  "slug": "habikino",
+  "items": 8,
+  "producers": 5,
+  "url": "/furusato/osaka/habikino/"
+ },
+ {
+  "pref": "愛知県",
+  "pref_slug": "aichi",
+  "city": "碧南市",
+  "slug": "hekinan",
+  "items": 7,
+  "producers": 2,
+  "url": "/furusato/aichi/hekinan/"
+ },
+ {
+  "pref": "岐阜県",
+  "pref_slug": "gifu",
+  "city": "飛騨市",
+  "slug": "hida",
+  "items": 7,
+  "producers": 1,
+  "url": "/furusato/gifu/hida/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "北九州市",
+  "slug": "kitakyushu",
+  "items": 7,
+  "producers": 4,
+  "url": "/furusato/fukuoka/kitakyushu/"
+ },
+ {
+  "pref": "島根県",
+  "pref_slug": "shimane",
+  "city": "邑南町",
+  "slug": "ohnan",
+  "items": 7,
+  "producers": 0,
+  "url": "/furusato/shimane/ohnan/"
+ },
+ {
+  "pref": "熊本県",
+  "pref_slug": "kumamoto",
+  "city": "山江村",
+  "slug": "yamae",
+  "items": 7,
+  "producers": 0,
+  "url": "/furusato/kumamoto/yamae/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "野沢温泉村",
+  "slug": "nozawaonsen",
+  "items": 7,
+  "producers": 0,
+  "url": "/furusato/nagano/nozawaonsen/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "上田市",
+  "slug": "ueda",
+  "items": 7,
+  "producers": 9,
+  "url": "/furusato/nagano/ueda/"
+ },
+ {
+  "pref": "岡山県",
+  "pref_slug": "okayama",
+  "city": "井原市",
+  "slug": "ibara",
+  "items": 7,
+  "producers": 0,
+  "url": "/furusato/okayama/ibara/"
+ },
+ {
+  "pref": "埼玉県",
+  "pref_slug": "saitama",
+  "city": "小川町",
+  "slug": "ogawa",
+  "items": 7,
+  "producers": 0,
+  "url": "/furusato/saitama/ogawa/"
+ },
+ {
+  "pref": "滋賀県",
+  "pref_slug": "shiga",
+  "city": "竜王町",
+  "slug": "ryuo",
+  "items": 7,
+  "producers": 0,
+  "url": "/furusato/shiga/ryuo/"
+ },
+ {
+  "pref": "和歌山県",
+  "pref_slug": "wakayama",
+  "city": "和歌山市",
+  "slug": "wakayama",
+  "items": 7,
+  "producers": 0,
+  "url": "/furusato/wakayama/wakayama/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "西宮市",
+  "slug": "nishinomiya",
+  "items": 7,
+  "producers": 9,
+  "url": "/furusato/hyogo/nishinomiya/"
+ },
+ {
+  "pref": "愛知県",
+  "pref_slug": "aichi",
+  "city": "蟹江町",
+  "slug": "kanie",
+  "items": 6,
+  "producers": 0,
+  "url": "/furusato/aichi/kanie/"
+ },
+ {
+  "pref": "秋田県",
+  "pref_slug": "akita",
+  "city": "横手市",
+  "slug": "yokote",
+  "items": 6,
+  "producers": 1,
+  "url": "/furusato/akita/yokote/"
+ },
+ {
+  "pref": "三重県",
+  "pref_slug": "mie",
+  "city": "四日市市",
+  "slug": "yokkaichi",
+  "items": 6,
+  "producers": 1,
+  "url": "/furusato/mie/yokkaichi/"
+ },
+ {
+  "pref": "福井県",
+  "pref_slug": "fukui",
+  "city": "南越前町",
+  "slug": "minamiechizen",
+  "items": 6,
+  "producers": 0,
+  "url": "/furusato/fukui/minamiechizen/"
+ },
+ {
+  "pref": "福井県",
+  "pref_slug": "fukui",
+  "city": "越前市",
+  "slug": "echizen",
+  "items": 6,
+  "producers": 1,
+  "url": "/furusato/fukui/echizen/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "みやこ町",
+  "slug": "miyako",
+  "items": 6,
+  "producers": 0,
+  "url": "/furusato/fukuoka/miyako/"
+ },
+ {
+  "pref": "岐阜県",
+  "pref_slug": "gifu",
+  "city": "中津川市",
+  "slug": "nakatsugawa",
+  "items": 6,
+  "producers": 0,
+  "url": "/furusato/gifu/nakatsugawa/"
+ },
+ {
+  "pref": "岐阜県",
+  "pref_slug": "gifu",
+  "city": "可児市",
+  "slug": "kani",
+  "items": 6,
+  "producers": 1,
+  "url": "/furusato/gifu/kani/"
+ },
+ {
+  "pref": "広島県",
+  "pref_slug": "hiroshima",
+  "city": "竹原市",
+  "slug": "takehara",
+  "items": 6,
+  "producers": 4,
+  "url": "/furusato/hiroshima/takehara/"
+ },
+ {
+  "pref": "広島県",
+  "pref_slug": "hiroshima",
+  "city": "三次市",
+  "slug": "miyoshi",
+  "items": 6,
+  "producers": 4,
+  "url": "/furusato/hiroshima/miyoshi/"
+ },
+ {
+  "pref": "広島県",
+  "pref_slug": "hiroshima",
+  "city": "庄原市",
+  "slug": "shobara",
+  "items": 6,
+  "producers": 4,
+  "url": "/furusato/hiroshima/shobara/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "淡路市",
+  "slug": "awaji",
+  "items": 6,
+  "producers": 1,
+  "url": "/furusato/hyogo/awaji/"
+ },
+ {
+  "pref": "佐賀県",
+  "pref_slug": "saga",
+  "city": "有田町",
+  "slug": "arita",
+  "items": 6,
+  "producers": 0,
+  "url": "/furusato/saga/arita/"
+ },
+ {
+  "pref": "茨城県",
+  "pref_slug": "ibaraki",
+  "city": "日立市",
+  "slug": "hitachi",
+  "items": 6,
+  "producers": 1,
+  "url": "/furusato/ibaraki/hitachi/"
+ },
+ {
+  "pref": "熊本県",
+  "pref_slug": "kumamoto",
+  "city": "人吉市",
+  "slug": "hitoyoshi",
+  "items": 6,
+  "producers": 10,
+  "url": "/furusato/kumamoto/hitoyoshi/"
+ },
+ {
+  "pref": "長崎県",
+  "pref_slug": "nagasaki",
+  "city": "南島原市",
+  "slug": "minamisimabara",
+  "items": 6,
+  "producers": 1,
+  "url": "/furusato/nagasaki/minamisimabara/"
+ },
+ {
+  "pref": "奈良県",
+  "pref_slug": "nara",
+  "city": "宇陀市",
+  "slug": "uda",
+  "items": 6,
+  "producers": 0,
+  "url": "/furusato/nara/uda/"
+ },
+ {
+  "pref": "大分県",
+  "pref_slug": "oita",
+  "city": "竹田市",
+  "slug": "taketa",
+  "items": 6,
+  "producers": 5,
+  "url": "/furusato/oita/taketa/"
+ },
+ {
+  "pref": "岡山県",
+  "pref_slug": "okayama",
+  "city": "岡山市",
+  "slug": "okayama",
+  "items": 6,
+  "producers": 4,
+  "url": "/furusato/okayama/okayama/"
+ },
+ {
+  "pref": "宮城県",
+  "pref_slug": "miyagi",
+  "city": "大和町",
+  "slug": "taiwa",
+  "items": 6,
+  "producers": 0,
+  "url": "/furusato/miyagi/taiwa/"
+ },
+ {
+  "pref": "埼玉県",
+  "pref_slug": "saitama",
+  "city": "越生町",
+  "slug": "ogose",
+  "items": 6,
+  "producers": 0,
+  "url": "/furusato/saitama/ogose/"
+ },
+ {
+  "pref": "埼玉県",
+  "pref_slug": "saitama",
+  "city": "日高市",
+  "slug": "hidaka",
+  "items": 6,
+  "producers": 0,
+  "url": "/furusato/saitama/hidaka/"
+ },
+ {
+  "pref": "滋賀県",
+  "pref_slug": "shiga",
+  "city": "高島市",
+  "slug": "takashima",
+  "items": 6,
+  "producers": 2,
+  "url": "/furusato/shiga/takashima/"
+ },
+ {
+  "pref": "栃木県",
+  "pref_slug": "tochigi",
+  "city": "栃木市",
+  "slug": "tochigi",
+  "items": 6,
+  "producers": 4,
+  "url": "/furusato/tochigi/tochigi/"
+ },
+ {
+  "pref": "山形県",
+  "pref_slug": "yamagata",
+  "city": "高畠町",
+  "slug": "takahata",
+  "items": 6,
+  "producers": 0,
+  "url": "/furusato/yamagata/takahata/"
+ },
+ {
+  "pref": "秋田県",
+  "pref_slug": "akita",
+  "city": "小坂町",
+  "slug": "kosaka",
+  "items": 6,
+  "producers": 0,
+  "url": "/furusato/akita/kosaka/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "蘭越町",
+  "slug": "rankoshi",
+  "items": 6,
+  "producers": 0,
+  "url": "/furusato/hokkaido/rankoshi/"
+ },
+ {
+  "pref": "大阪府",
+  "pref_slug": "osaka",
+  "city": "泉佐野市",
+  "slug": "izumisano",
+  "items": 6,
+  "producers": 1,
+  "url": "/furusato/osaka/izumisano/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "西脇市",
+  "slug": "nishiwaki",
+  "items": 5,
+  "producers": 0,
+  "url": "/furusato/hyogo/nishiwaki/"
+ },
+ {
+  "pref": "愛知県",
+  "pref_slug": "aichi",
+  "city": "愛西市",
+  "slug": "aisai",
+  "items": 5,
+  "producers": 2,
+  "url": "/furusato/aichi/aisai/"
+ },
+ {
+  "pref": "青森県",
+  "pref_slug": "aomori",
+  "city": "八戸市",
+  "slug": "hachinohe",
+  "items": 5,
+  "producers": 4,
+  "url": "/furusato/aomori/hachinohe/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "朝倉市",
+  "slug": "asakura",
+  "items": 5,
+  "producers": 6,
+  "url": "/furusato/fukuoka/asakura/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "添田町",
+  "slug": "soeda",
+  "items": 5,
+  "producers": 0,
+  "url": "/furusato/fukuoka/soeda/"
+ },
+ {
+  "pref": "福島県",
+  "pref_slug": "fukushima",
+  "city": "白河市",
+  "slug": "shirakawa",
+  "items": 5,
+  "producers": 1,
+  "url": "/furusato/fukushima/shirakawa/"
+ },
+ {
+  "pref": "福島県",
+  "pref_slug": "fukushima",
+  "city": "郡山市",
+  "slug": "koriyama",
+  "items": 5,
+  "producers": 6,
+  "url": "/furusato/fukushima/koriyama/"
+ },
+ {
+  "pref": "広島県",
+  "pref_slug": "hiroshima",
+  "city": "東広島市",
+  "slug": "higasihirosima",
+  "items": 5,
+  "producers": 11,
+  "url": "/furusato/hiroshima/higasihirosima/"
+ },
+ {
+  "pref": "広島県",
+  "pref_slug": "hiroshima",
+  "city": "尾道市",
+  "slug": "onomichi",
+  "items": 5,
+  "producers": 1,
+  "url": "/furusato/hiroshima/onomichi/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "明石市",
+  "slug": "akashi",
+  "items": 5,
+  "producers": 6,
+  "url": "/furusato/hyogo/akashi/"
+ },
+ {
+  "pref": "茨城県",
+  "pref_slug": "ibaraki",
+  "city": "つくばみらい市",
+  "slug": "tsukubamirai",
+  "items": 5,
+  "producers": 0,
+  "url": "/furusato/ibaraki/tsukubamirai/"
+ },
+ {
+  "pref": "香川県",
+  "pref_slug": "kagawa",
+  "city": "小豆島町",
+  "slug": "shodoshima",
+  "items": 5,
+  "producers": 0,
+  "url": "/furusato/kagawa/shodoshima/"
+ },
+ {
+  "pref": "高知県",
+  "pref_slug": "kochi",
+  "city": "室戸市",
+  "slug": "muroto",
+  "items": 5,
+  "producers": 0,
+  "url": "/furusato/kochi/muroto/"
+ },
+ {
+  "pref": "静岡県",
+  "pref_slug": "shizuoka",
+  "city": "掛川市",
+  "slug": "kakegawa",
+  "items": 5,
+  "producers": 2,
+  "url": "/furusato/shizuoka/kakegawa/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "松本市",
+  "slug": "matsumoto",
+  "items": 5,
+  "producers": 13,
+  "url": "/furusato/nagano/matsumoto/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "塩尻市",
+  "slug": "shiojiri",
+  "items": 5,
+  "producers": 15,
+  "url": "/furusato/nagano/shiojiri/"
+ },
+ {
+  "pref": "奈良県",
+  "pref_slug": "nara",
+  "city": "桜井市",
+  "slug": "sakurai",
+  "items": 5,
+  "producers": 1,
+  "url": "/furusato/nara/sakurai/"
+ },
+ {
+  "pref": "新潟県",
+  "pref_slug": "niigata",
+  "city": "南魚沼市",
+  "slug": "minamiuonuma",
+  "items": 5,
+  "producers": 7,
+  "url": "/furusato/niigata/minamiuonuma/"
+ },
+ {
+  "pref": "大分県",
+  "pref_slug": "oita",
+  "city": "豊後大野市",
+  "slug": "bungoono",
+  "items": 5,
+  "producers": 6,
+  "url": "/furusato/oita/bungoono/"
+ },
+ {
+  "pref": "大分県",
+  "pref_slug": "oita",
+  "city": "佐伯市",
+  "slug": "saiki",
+  "items": 5,
+  "producers": 2,
+  "url": "/furusato/oita/saiki/"
+ },
+ {
+  "pref": "岡山県",
+  "pref_slug": "okayama",
+  "city": "赤磐市",
+  "slug": "akaiwa",
+  "items": 5,
+  "producers": 2,
+  "url": "/furusato/okayama/akaiwa/"
+ },
+ {
+  "pref": "大阪府",
+  "pref_slug": "osaka",
+  "city": "阪南市",
+  "slug": "hannan",
+  "items": 5,
+  "producers": 1,
+  "url": "/furusato/osaka/hannan/"
+ },
+ {
+  "pref": "滋賀県",
+  "pref_slug": "shiga",
+  "city": "甲賀市",
+  "slug": "koka",
+  "items": 5,
+  "producers": 3,
+  "url": "/furusato/shiga/koka/"
+ },
+ {
+  "pref": "静岡県",
+  "pref_slug": "shizuoka",
+  "city": "富士宮市",
+  "slug": "fujinomiya",
+  "items": 5,
+  "producers": 4,
+  "url": "/furusato/shizuoka/fujinomiya/"
+ },
+ {
+  "pref": "島根県",
+  "pref_slug": "shimane",
+  "city": "大田市",
+  "slug": "oda",
+  "items": 5,
+  "producers": 4,
+  "url": "/furusato/shimane/oda/"
+ },
+ {
+  "pref": "栃木県",
+  "pref_slug": "tochigi",
+  "city": "日光市",
+  "slug": "nikko",
+  "items": 5,
+  "producers": 2,
+  "url": "/furusato/tochigi/nikko/"
+ },
+ {
+  "pref": "山口県",
+  "pref_slug": "yamaguchi",
+  "city": "岩国市",
+  "slug": "iwakuni",
+  "items": 5,
+  "producers": 6,
+  "url": "/furusato/yamaguchi/iwakuni/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "加西市",
+  "slug": "kasai",
+  "items": 5,
+  "producers": 0,
+  "url": "/furusato/hyogo/kasai/"
+ },
+ {
+  "pref": "茨城県",
+  "pref_slug": "ibaraki",
+  "city": "牛久市",
+  "slug": "ushiku",
+  "items": 5,
+  "producers": 1,
+  "url": "/furusato/ibaraki/ushiku/"
+ },
+ {
+  "pref": "長崎県",
+  "pref_slug": "nagasaki",
+  "city": "五島市",
+  "slug": "goto",
+  "items": 5,
+  "producers": 2,
+  "url": "/furusato/nagasaki/goto/"
+ },
+ {
+  "pref": "東京都",
+  "pref_slug": "tokyo",
+  "city": "渋谷区",
+  "slug": "shibuya",
+  "items": 5,
+  "producers": 1,
+  "url": "/furusato/tokyo/shibuya/"
+ },
+ {
+  "pref": "山形県",
+  "pref_slug": "yamagata",
+  "city": "上山市",
+  "slug": "kaminoyama",
+  "items": 5,
+  "producers": 6,
+  "url": "/furusato/yamagata/kaminoyama/"
+ },
+ {
+  "pref": "愛知県",
+  "pref_slug": "aichi",
+  "city": "江南市",
+  "slug": "konan",
+  "items": 4,
+  "producers": 0,
+  "url": "/furusato/aichi/konan/"
+ },
+ {
+  "pref": "秋田県",
+  "pref_slug": "akita",
+  "city": "秋田市",
+  "slug": "akita",
+  "items": 4,
+  "producers": 3,
+  "url": "/furusato/akita/akita/"
+ },
+ {
+  "pref": "秋田県",
+  "pref_slug": "akita",
+  "city": "美郷町",
+  "slug": "misato",
+  "items": 4,
+  "producers": 0,
+  "url": "/furusato/akita/misato/"
+ },
+ {
+  "pref": "秋田県",
+  "pref_slug": "akita",
+  "city": "鹿角市",
+  "slug": "kazuno",
+  "items": 4,
+  "producers": 2,
+  "url": "/furusato/akita/kazuno/"
+ },
+ {
+  "pref": "福井県",
+  "pref_slug": "fukui",
+  "city": "大野市",
+  "slug": "ono",
+  "items": 4,
+  "producers": 1,
+  "url": "/furusato/fukui/ono/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "桂川町",
+  "slug": "keisen",
+  "items": 4,
+  "producers": 0,
+  "url": "/furusato/fukuoka/keisen/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "嘉麻市",
+  "slug": "kama",
+  "items": 4,
+  "producers": 1,
+  "url": "/furusato/fukuoka/kama/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "宗像市",
+  "slug": "munakata",
+  "items": 4,
+  "producers": 1,
+  "url": "/furusato/fukuoka/munakata/"
+ },
+ {
+  "pref": "岐阜県",
+  "pref_slug": "gifu",
+  "city": "八百津町",
+  "slug": "yaotsu",
+  "items": 4,
+  "producers": 0,
+  "url": "/furusato/gifu/yaotsu/"
+ },
+ {
+  "pref": "群馬県",
+  "pref_slug": "gunma",
+  "city": "高崎市",
+  "slug": "takasaki",
+  "items": 4,
+  "producers": 1,
+  "url": "/furusato/gunma/takasaki/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "帯広市",
+  "slug": "obihiro",
+  "items": 4,
+  "producers": 1,
+  "url": "/furusato/hokkaido/obihiro/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "小樽市",
+  "slug": "otaru",
+  "items": 4,
+  "producers": 2,
+  "url": "/furusato/hokkaido/otaru/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "朝来市",
+  "slug": "asago",
+  "items": 4,
+  "producers": 3,
+  "url": "/furusato/hyogo/asago/"
+ },
+ {
+  "pref": "茨城県",
+  "pref_slug": "ibaraki",
+  "city": "つくば市",
+  "slug": "tsukuba",
+  "items": 4,
+  "producers": 3,
+  "url": "/furusato/ibaraki/tsukuba/"
+ },
+ {
+  "pref": "石川県",
+  "pref_slug": "ishikawa",
+  "city": "白山市",
+  "slug": "hakusan",
+  "items": 4,
+  "producers": 1,
+  "url": "/furusato/ishikawa/hakusan/"
+ },
+ {
+  "pref": "香川県",
+  "pref_slug": "kagawa",
+  "city": "多度津町",
+  "slug": "tadotsu",
+  "items": 4,
+  "producers": 0,
+  "url": "/furusato/kagawa/tadotsu/"
+ },
+ {
+  "pref": "高知県",
+  "pref_slug": "kochi",
+  "city": "土佐市",
+  "slug": "tosa",
+  "items": 4,
+  "producers": 0,
+  "url": "/furusato/kochi/tosa/"
+ },
+ {
+  "pref": "京都府",
+  "pref_slug": "kyoto",
+  "city": "亀岡市",
+  "slug": "kameoka",
+  "items": 4,
+  "producers": 1,
+  "url": "/furusato/kyoto/kameoka/"
+ },
+ {
+  "pref": "京都府",
+  "pref_slug": "kyoto",
+  "city": "福知山市",
+  "slug": "fukuchiyama",
+  "items": 4,
+  "producers": 0,
+  "url": "/furusato/kyoto/fukuchiyama/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "木曽町",
+  "slug": "kiso",
+  "items": 4,
+  "producers": 0,
+  "url": "/furusato/nagano/kiso/"
+ },
+ {
+  "pref": "長崎県",
+  "pref_slug": "nagasaki",
+  "city": "壱岐市",
+  "slug": "iki",
+  "items": 4,
+  "producers": 15,
+  "url": "/furusato/nagasaki/iki/"
+ },
+ {
+  "pref": "奈良県",
+  "pref_slug": "nara",
+  "city": "大和郡山市",
+  "slug": "yamatokoriyama",
+  "items": 4,
+  "producers": 0,
+  "url": "/furusato/nara/yamatokoriyama/"
+ },
+ {
+  "pref": "新潟県",
+  "pref_slug": "niigata",
+  "city": "糸魚川市",
+  "slug": "itoigawa",
+  "items": 4,
+  "producers": 5,
+  "url": "/furusato/niigata/itoigawa/"
+ },
+ {
+  "pref": "新潟県",
+  "pref_slug": "niigata",
+  "city": "弥彦村",
+  "slug": "yahiko",
+  "items": 4,
+  "producers": 0,
+  "url": "/furusato/niigata/yahiko/"
+ },
+ {
+  "pref": "岡山県",
+  "pref_slug": "okayama",
+  "city": "浅口市",
+  "slug": "asakuchi",
+  "items": 4,
+  "producers": 1,
+  "url": "/furusato/okayama/asakuchi/"
+ },
+ {
+  "pref": "佐賀県",
+  "pref_slug": "saga",
+  "city": "小城市",
+  "slug": "ogi",
+  "items": 4,
+  "producers": 3,
+  "url": "/furusato/saga/ogi/"
+ },
+ {
+  "pref": "佐賀県",
+  "pref_slug": "saga",
+  "city": "江北町",
+  "slug": "kouhoku",
+  "items": 4,
+  "producers": 0,
+  "url": "/furusato/saga/kouhoku/"
+ },
+ {
+  "pref": "埼玉県",
+  "pref_slug": "saitama",
+  "city": "秩父市",
+  "slug": "chichibu",
+  "items": 4,
+  "producers": 7,
+  "url": "/furusato/saitama/chichibu/"
+ },
+ {
+  "pref": "滋賀県",
+  "pref_slug": "shiga",
+  "city": "東近江市",
+  "slug": "higashiomi",
+  "items": 4,
+  "producers": 3,
+  "url": "/furusato/shiga/higashiomi/"
+ },
+ {
+  "pref": "静岡県",
+  "pref_slug": "shizuoka",
+  "city": "磐田市",
+  "slug": "iwata",
+  "items": 4,
+  "producers": 0,
+  "url": "/furusato/shizuoka/iwata/"
+ },
+ {
+  "pref": "東京都",
+  "pref_slug": "tokyo",
+  "city": "府中市",
+  "slug": "fuchu",
+  "items": 4,
+  "producers": 0,
+  "url": "/furusato/tokyo/fuchu/"
+ },
+ {
+  "pref": "鳥取県",
+  "pref_slug": "tottori",
+  "city": "若桜町",
+  "slug": "wakasa",
+  "items": 4,
+  "producers": 0,
+  "url": "/furusato/tottori/wakasa/"
+ },
+ {
+  "pref": "鹿児島県",
+  "pref_slug": "kagoshima",
+  "city": "霧島市",
+  "slug": "kirishima",
+  "items": 4,
+  "producers": 11,
+  "url": "/furusato/kagoshima/kirishima/"
+ },
+ {
+  "pref": "千葉県",
+  "pref_slug": "chiba",
+  "city": "多古町",
+  "slug": "tako",
+  "items": 4,
+  "producers": 0,
+  "url": "/furusato/chiba/tako/"
+ },
+ {
+  "pref": "群馬県",
+  "pref_slug": "gunma",
+  "city": "榛東村",
+  "slug": "shinto",
+  "items": 4,
+  "producers": 0,
+  "url": "/furusato/gunma/shinto/"
+ },
+ {
+  "pref": "茨城県",
+  "pref_slug": "ibaraki",
+  "city": "常陸太田市",
+  "slug": "hitachiota",
+  "items": 4,
+  "producers": 4,
+  "url": "/furusato/ibaraki/hitachiota/"
+ },
+ {
+  "pref": "宮崎県",
+  "pref_slug": "miyazaki",
+  "city": "小林市",
+  "slug": "kobayashi",
+  "items": 4,
+  "producers": 5,
+  "url": "/furusato/miyazaki/kobayashi/"
+ },
+ {
+  "pref": "山形県",
+  "pref_slug": "yamagata",
+  "city": "南陽市",
+  "slug": "nanyo",
+  "items": 4,
+  "producers": 6,
+  "url": "/furusato/yamagata/nanyo/"
+ },
+ {
+  "pref": "山梨県",
+  "pref_slug": "yamanashi",
+  "city": "甲府市",
+  "slug": "kofu",
+  "items": 4,
+  "producers": 5,
+  "url": "/furusato/yamanashi/kofu/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "養父市",
+  "slug": "yabu",
+  "items": 4,
+  "producers": 2,
+  "url": "/furusato/hyogo/yabu/"
+ },
+ {
+  "pref": "愛知県",
+  "pref_slug": "aichi",
+  "city": "稲沢市",
+  "slug": "inazawa",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/aichi/inazawa/"
+ },
+ {
+  "pref": "愛媛県",
+  "pref_slug": "ehime",
+  "city": "四国中央市",
+  "slug": "shikokuchuo",
+  "items": 3,
+  "producers": 1,
+  "url": "/furusato/ehime/shikokuchuo/"
+ },
+ {
+  "pref": "福井県",
+  "pref_slug": "fukui",
+  "city": "永平寺町",
+  "slug": "eiheiji",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/fukui/eiheiji/"
+ },
+ {
+  "pref": "福井県",
+  "pref_slug": "fukui",
+  "city": "福井市",
+  "slug": "fukui",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/fukui/fukui/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "岡垣町",
+  "slug": "okagaki",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/fukuoka/okagaki/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "福岡市",
+  "slug": "fukuoka",
+  "items": 3,
+  "producers": 3,
+  "url": "/furusato/fukuoka/fukuoka/"
+ },
+ {
+  "pref": "三重県",
+  "pref_slug": "mie",
+  "city": "桑名市",
+  "slug": "kuwana",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/mie/kuwana/"
+ },
+ {
+  "pref": "岐阜県",
+  "pref_slug": "gifu",
+  "city": "美濃市",
+  "slug": "mino",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/gifu/mino/"
+ },
+ {
+  "pref": "岐阜県",
+  "pref_slug": "gifu",
+  "city": "土岐市",
+  "slug": "toki",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/gifu/toki/"
+ },
+ {
+  "pref": "群馬県",
+  "pref_slug": "gunma",
+  "city": "沼田市",
+  "slug": "numata",
+  "items": 3,
+  "producers": 1,
+  "url": "/furusato/gunma/numata/"
+ },
+ {
+  "pref": "群馬県",
+  "pref_slug": "gunma",
+  "city": "板倉町",
+  "slug": "itakura",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/gunma/itakura/"
+ },
+ {
+  "pref": "広島県",
+  "pref_slug": "hiroshima",
+  "city": "北広島町",
+  "slug": "kitahiroshima",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/hiroshima/kitahiroshima/"
+ },
+ {
+  "pref": "宮崎県",
+  "pref_slug": "miyazaki",
+  "city": "綾町",
+  "slug": "aya",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/miyazaki/aya/"
+ },
+ {
+  "pref": "富山県",
+  "pref_slug": "toyama",
+  "city": "富山市",
+  "slug": "toyama",
+  "items": 3,
+  "producers": 3,
+  "url": "/furusato/toyama/toyama/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "三木市",
+  "slug": "miki",
+  "items": 3,
+  "producers": 1,
+  "url": "/furusato/hyogo/miki/"
+ },
+ {
+  "pref": "石川県",
+  "pref_slug": "ishikawa",
+  "city": "加賀市",
+  "slug": "kaga",
+  "items": 3,
+  "producers": 2,
+  "url": "/furusato/ishikawa/kaga/"
+ },
+ {
+  "pref": "香川県",
+  "pref_slug": "kagawa",
+  "city": "東かがわ市",
+  "slug": "higashikagawa",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/kagawa/higashikagawa/"
+ },
+ {
+  "pref": "香川県",
+  "pref_slug": "kagawa",
+  "city": "三木町",
+  "slug": "miki",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/kagawa/miki/"
+ },
+ {
+  "pref": "高知県",
+  "pref_slug": "kochi",
+  "city": "佐川町",
+  "slug": "sakawa",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/kochi/sakawa/"
+ },
+ {
+  "pref": "奈良県",
+  "pref_slug": "nara",
+  "city": "奈良市",
+  "slug": "nara",
+  "items": 3,
+  "producers": 3,
+  "url": "/furusato/nara/nara/"
+ },
+ {
+  "pref": "京都府",
+  "pref_slug": "kyoto",
+  "city": "京丹波町",
+  "slug": "kyotamba",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/kyoto/kyotamba/"
+ },
+ {
+  "pref": "京都府",
+  "pref_slug": "kyoto",
+  "city": "宮津市",
+  "slug": "miyazu",
+  "items": 3,
+  "producers": 2,
+  "url": "/furusato/kyoto/miyazu/"
+ },
+ {
+  "pref": "三重県",
+  "pref_slug": "mie",
+  "city": "明和町",
+  "slug": "meiwa",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/mie/meiwa/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "長野市",
+  "slug": "nagano",
+  "items": 3,
+  "producers": 9,
+  "url": "/furusato/nagano/nagano/"
+ },
+ {
+  "pref": "奈良県",
+  "pref_slug": "nara",
+  "city": "橿原市",
+  "slug": "kashihara",
+  "items": 3,
+  "producers": 2,
+  "url": "/furusato/nara/kashihara/"
+ },
+ {
+  "pref": "新潟県",
+  "pref_slug": "niigata",
+  "city": "魚沼市　ふるさと納税",
+  "slug": "uonumashi",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/niigata/uonumashi/"
+ },
+ {
+  "pref": "新潟県",
+  "pref_slug": "niigata",
+  "city": "新潟市",
+  "slug": "niigata",
+  "items": 3,
+  "producers": 22,
+  "url": "/furusato/niigata/niigata/"
+ },
+ {
+  "pref": "新潟県",
+  "pref_slug": "niigata",
+  "city": "三条市",
+  "slug": "sanjo",
+  "items": 3,
+  "producers": 1,
+  "url": "/furusato/niigata/sanjo/"
+ },
+ {
+  "pref": "沖縄県",
+  "pref_slug": "okinawa",
+  "city": "名護市",
+  "slug": "nago",
+  "items": 3,
+  "producers": 4,
+  "url": "/furusato/okinawa/nago/"
+ },
+ {
+  "pref": "佐賀県",
+  "pref_slug": "saga",
+  "city": "唐津市",
+  "slug": "karatsu",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/saga/karatsu/"
+ },
+ {
+  "pref": "埼玉県",
+  "pref_slug": "saitama",
+  "city": "長瀞町",
+  "slug": "nagatoro",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/saitama/nagatoro/"
+ },
+ {
+  "pref": "埼玉県",
+  "pref_slug": "saitama",
+  "city": "羽生市",
+  "slug": "hanyu",
+  "items": 3,
+  "producers": 1,
+  "url": "/furusato/saitama/hanyu/"
+ },
+ {
+  "pref": "山形県",
+  "pref_slug": "yamagata",
+  "city": "長井市",
+  "slug": "nagai",
+  "items": 3,
+  "producers": 1,
+  "url": "/furusato/yamagata/nagai/"
+ },
+ {
+  "pref": "埼玉県",
+  "pref_slug": "saitama",
+  "city": "飯能市",
+  "slug": "hanno",
+  "items": 3,
+  "producers": 1,
+  "url": "/furusato/saitama/hanno/"
+ },
+ {
+  "pref": "滋賀県",
+  "pref_slug": "shiga",
+  "city": "草津市",
+  "slug": "kusatsu",
+  "items": 3,
+  "producers": 3,
+  "url": "/furusato/shiga/kusatsu/"
+ },
+ {
+  "pref": "栃木県",
+  "pref_slug": "tochigi",
+  "city": "小山市",
+  "slug": "oyama",
+  "items": 3,
+  "producers": 8,
+  "url": "/furusato/tochigi/oyama/"
+ },
+ {
+  "pref": "山形県",
+  "pref_slug": "yamagata",
+  "city": "米沢市",
+  "slug": "yonezawa",
+  "items": 3,
+  "producers": 2,
+  "url": "/furusato/yamagata/yonezawa/"
+ },
+ {
+  "pref": "山形県",
+  "pref_slug": "yamagata",
+  "city": "山形市",
+  "slug": "yamagata",
+  "items": 3,
+  "producers": 1,
+  "url": "/furusato/yamagata/yamagata/"
+ },
+ {
+  "pref": "山梨県",
+  "pref_slug": "yamanashi",
+  "city": "南アルプス市",
+  "slug": "minamiarupusu",
+  "items": 3,
+  "producers": 3,
+  "url": "/furusato/yamanashi/minamiarupusu/"
+ },
+ {
+  "pref": "沖縄県",
+  "pref_slug": "okinawa",
+  "city": "本部町",
+  "slug": "motobu",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/okinawa/motobu/"
+ },
+ {
+  "pref": "群馬県",
+  "pref_slug": "gunma",
+  "city": "長野原町",
+  "slug": "naganohara",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/gunma/naganohara/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "富良野市",
+  "slug": "furano",
+  "items": 3,
+  "producers": 2,
+  "url": "/furusato/hokkaido/furano/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "浦臼町",
+  "slug": "urausu",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/hokkaido/urausu/"
+ },
+ {
+  "pref": "石川県",
+  "pref_slug": "ishikawa",
+  "city": "穴水町",
+  "slug": "anamizu",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/ishikawa/anamizu/"
+ },
+ {
+  "pref": "石川県",
+  "pref_slug": "ishikawa",
+  "city": "珠洲市",
+  "slug": "suzu",
+  "items": 3,
+  "producers": 1,
+  "url": "/furusato/ishikawa/suzu/"
+ },
+ {
+  "pref": "岩手県",
+  "pref_slug": "iwate",
+  "city": "盛岡市",
+  "slug": "morioka",
+  "items": 3,
+  "producers": 7,
+  "url": "/furusato/iwate/morioka/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "高森町",
+  "slug": "takamori",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/nagano/takamori/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "高山村",
+  "slug": "takayama",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/nagano/takayama/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "伊那市",
+  "slug": "ina",
+  "items": 3,
+  "producers": 5,
+  "url": "/furusato/nagano/ina/"
+ },
+ {
+  "pref": "山形県",
+  "pref_slug": "yamagata",
+  "city": "西川町",
+  "slug": "nishikawa",
+  "items": 3,
+  "producers": 0,
+  "url": "/furusato/yamagata/nishikawa/"
+ },
+ {
+  "pref": "鹿児島県",
+  "pref_slug": "kagoshima",
+  "city": "南さつま市",
+  "slug": "minamisatsuma",
+  "items": 3,
+  "producers": 7,
+  "url": "/furusato/kagoshima/minamisatsuma/"
+ },
+ {
+  "pref": "愛知県",
+  "pref_slug": "aichi",
+  "city": "西尾市",
+  "slug": "nishio",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/aichi/nishio/"
+ },
+ {
+  "pref": "茨城県",
+  "pref_slug": "ibaraki",
+  "city": "笠間市",
+  "slug": "kasama",
+  "items": 2,
+  "producers": 3,
+  "url": "/furusato/ibaraki/kasama/"
+ },
+ {
+  "pref": "青森県",
+  "pref_slug": "aomori",
+  "city": "つがる市",
+  "slug": "tsugaru",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/aomori/tsugaru/"
+ },
+ {
+  "pref": "千葉県",
+  "pref_slug": "chiba",
+  "city": "勝浦市",
+  "slug": "katsuura",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/chiba/katsuura/"
+ },
+ {
+  "pref": "愛媛県",
+  "pref_slug": "ehime",
+  "city": "西条市",
+  "slug": "saijo",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/ehime/saijo/"
+ },
+ {
+  "pref": "愛媛県",
+  "pref_slug": "ehime",
+  "city": "砥部町",
+  "slug": "tobe",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/ehime/tobe/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "茅野市",
+  "slug": "chino",
+  "items": 2,
+  "producers": 2,
+  "url": "/furusato/nagano/chino/"
+ },
+ {
+  "pref": "福井県",
+  "pref_slug": "fukui",
+  "city": "越前町",
+  "slug": "echizen",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/fukui/echizen/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "鞍手町",
+  "slug": "kurate",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/fukuoka/kurate/"
+ },
+ {
+  "pref": "福島県",
+  "pref_slug": "fukushima",
+  "city": "喜多方市",
+  "slug": "kitakata",
+  "items": 2,
+  "producers": 6,
+  "url": "/furusato/fukushima/kitakata/"
+ },
+ {
+  "pref": "福島県",
+  "pref_slug": "fukushima",
+  "city": "本宮市",
+  "slug": "motomiya",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/fukushima/motomiya/"
+ },
+ {
+  "pref": "岐阜県",
+  "pref_slug": "gifu",
+  "city": "恵那市",
+  "slug": "ena",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/gifu/ena/"
+ },
+ {
+  "pref": "岐阜県",
+  "pref_slug": "gifu",
+  "city": "大垣市",
+  "slug": "ogaki",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/gifu/ogaki/"
+ },
+ {
+  "pref": "岐阜県",
+  "pref_slug": "gifu",
+  "city": "高山市",
+  "slug": "takayama",
+  "items": 2,
+  "producers": 3,
+  "url": "/furusato/gifu/takayama/"
+ },
+ {
+  "pref": "広島県",
+  "pref_slug": "hiroshima",
+  "city": "熊野町",
+  "slug": "kumano",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/hiroshima/kumano/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "東川町",
+  "slug": "higashikawa",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/hokkaido/higashikawa/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "増毛町",
+  "slug": "mashike",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/hokkaido/mashike/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "旭川市　ふるさと納税",
+  "slug": "asahikawashi",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/hokkaido/asahikawashi/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "丹波市",
+  "slug": "tamba",
+  "items": 2,
+  "producers": 3,
+  "url": "/furusato/hyogo/tamba/"
+ },
+ {
+  "pref": "大分県",
+  "pref_slug": "oita",
+  "city": "杵築市",
+  "slug": "kitsuki",
+  "items": 2,
+  "producers": 3,
+  "url": "/furusato/oita/kitsuki/"
+ },
+ {
+  "pref": "石川県",
+  "pref_slug": "ishikawa",
+  "city": "能美市",
+  "slug": "nomi",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/ishikawa/nomi/"
+ },
+ {
+  "pref": "石川県",
+  "pref_slug": "ishikawa",
+  "city": "金沢市",
+  "slug": "kanazawa",
+  "items": 2,
+  "producers": 2,
+  "url": "/furusato/ishikawa/kanazawa/"
+ },
+ {
+  "pref": "岩手県",
+  "pref_slug": "iwate",
+  "city": "宮古市",
+  "slug": "miyako",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/iwate/miyako/"
+ },
+ {
+  "pref": "香川県",
+  "pref_slug": "kagawa",
+  "city": "綾川町",
+  "slug": "ayagawa",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/kagawa/ayagawa/"
+ },
+ {
+  "pref": "香川県",
+  "pref_slug": "kagawa",
+  "city": "観音寺市",
+  "slug": "kanonji",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/kagawa/kanonji/"
+ },
+ {
+  "pref": "神奈川県",
+  "pref_slug": "kanagawa",
+  "city": "海老名市",
+  "slug": "ebina",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/kanagawa/ebina/"
+ },
+ {
+  "pref": "神奈川県",
+  "pref_slug": "kanagawa",
+  "city": "開成町",
+  "slug": "kaisei",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/kanagawa/kaisei/"
+ },
+ {
+  "pref": "高知県",
+  "pref_slug": "kochi",
+  "city": "高知市",
+  "slug": "kochi",
+  "items": 2,
+  "producers": 2,
+  "url": "/furusato/kochi/kochi/"
+ },
+ {
+  "pref": "高知県",
+  "pref_slug": "kochi",
+  "city": "田野町",
+  "slug": "tano",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/kochi/tano/"
+ },
+ {
+  "pref": "高知県",
+  "pref_slug": "kochi",
+  "city": "香南市",
+  "slug": "konan",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/kochi/konan/"
+ },
+ {
+  "pref": "熊本県",
+  "pref_slug": "kumamoto",
+  "city": "熊本市",
+  "slug": "kumamoto",
+  "items": 2,
+  "producers": 3,
+  "url": "/furusato/kumamoto/kumamoto/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "市川町",
+  "slug": "ichikawa",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/hyogo/ichikawa/"
+ },
+ {
+  "pref": "京都府",
+  "pref_slug": "kyoto",
+  "city": "与謝野町",
+  "slug": "yosano",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/kyoto/yosano/"
+ },
+ {
+  "pref": "三重県",
+  "pref_slug": "mie",
+  "city": "伊賀市",
+  "slug": "iga",
+  "items": 2,
+  "producers": 5,
+  "url": "/furusato/mie/iga/"
+ },
+ {
+  "pref": "三重県",
+  "pref_slug": "mie",
+  "city": "伊勢市",
+  "slug": "ise",
+  "items": 2,
+  "producers": 4,
+  "url": "/furusato/mie/ise/"
+ },
+ {
+  "pref": "宮城県",
+  "pref_slug": "miyagi",
+  "city": "川崎町",
+  "slug": "kawasaki",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/miyagi/kawasaki/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "富士見町",
+  "slug": "fujimi",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/nagano/fujimi/"
+ },
+ {
+  "pref": "長崎県",
+  "pref_slug": "nagasaki",
+  "city": "新上五島町",
+  "slug": "shinkamigoto",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/nagasaki/shinkamigoto/"
+ },
+ {
+  "pref": "奈良県",
+  "pref_slug": "nara",
+  "city": "天理市",
+  "slug": "tenri",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/nara/tenri/"
+ },
+ {
+  "pref": "奈良県",
+  "pref_slug": "nara",
+  "city": "葛城市",
+  "slug": "katsuragi",
+  "items": 2,
+  "producers": 2,
+  "url": "/furusato/nara/katsuragi/"
+ },
+ {
+  "pref": "新潟県",
+  "pref_slug": "niigata",
+  "city": "上越市",
+  "slug": "joetsu",
+  "items": 2,
+  "producers": 13,
+  "url": "/furusato/niigata/joetsu/"
+ },
+ {
+  "pref": "新潟県",
+  "pref_slug": "niigata",
+  "city": "村上市",
+  "slug": "murakami",
+  "items": 2,
+  "producers": 2,
+  "url": "/furusato/niigata/murakami/"
+ },
+ {
+  "pref": "大分県",
+  "pref_slug": "oita",
+  "city": "日田市",
+  "slug": "hita",
+  "items": 2,
+  "producers": 7,
+  "url": "/furusato/oita/hita/"
+ },
+ {
+  "pref": "大分県",
+  "pref_slug": "oita",
+  "city": "玖珠町",
+  "slug": "kusu",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/oita/kusu/"
+ },
+ {
+  "pref": "大分県",
+  "pref_slug": "oita",
+  "city": "豊後高田市",
+  "slug": "bungotakada",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/oita/bungotakada/"
+ },
+ {
+  "pref": "大分県",
+  "pref_slug": "oita",
+  "city": "大分市",
+  "slug": "oita",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/oita/oita/"
+ },
+ {
+  "pref": "岡山県",
+  "pref_slug": "okayama",
+  "city": "美作市",
+  "slug": "mimasaka",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/okayama/mimasaka/"
+ },
+ {
+  "pref": "沖縄県",
+  "pref_slug": "okinawa",
+  "city": "金武町",
+  "slug": "kin",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/okinawa/kin/"
+ },
+ {
+  "pref": "沖縄県",
+  "pref_slug": "okinawa",
+  "city": "沖縄市",
+  "slug": "okinawa",
+  "items": 2,
+  "producers": 2,
+  "url": "/furusato/okinawa/okinawa/"
+ },
+ {
+  "pref": "大阪府",
+  "pref_slug": "osaka",
+  "city": "池田市",
+  "slug": "ikeda",
+  "items": 2,
+  "producers": 2,
+  "url": "/furusato/osaka/ikeda/"
+ },
+ {
+  "pref": "岩手県",
+  "pref_slug": "iwate",
+  "city": "岩泉町",
+  "slug": "iwaizumi",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/iwate/iwaizumi/"
+ },
+ {
+  "pref": "佐賀県",
+  "pref_slug": "saga",
+  "city": "佐賀市",
+  "slug": "saga",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/saga/saga/"
+ },
+ {
+  "pref": "埼玉県",
+  "pref_slug": "saitama",
+  "city": "行田市",
+  "slug": "gyoda",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/saitama/gyoda/"
+ },
+ {
+  "pref": "埼玉県",
+  "pref_slug": "saitama",
+  "city": "加須市",
+  "slug": "kazo",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/saitama/kazo/"
+ },
+ {
+  "pref": "埼玉県",
+  "pref_slug": "saitama",
+  "city": "上尾市",
+  "slug": "ageo",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/saitama/ageo/"
+ },
+ {
+  "pref": "滋賀県",
+  "pref_slug": "shiga",
+  "city": "豊郷町",
+  "slug": "toyosato",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/shiga/toyosato/"
+ },
+ {
+  "pref": "島根県",
+  "pref_slug": "shimane",
+  "city": "津和野町",
+  "slug": "tsuwano",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/shimane/tsuwano/"
+ },
+ {
+  "pref": "島根県",
+  "pref_slug": "shimane",
+  "city": "浜田市",
+  "slug": "hamada",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/shimane/hamada/"
+ },
+ {
+  "pref": "岡山県",
+  "pref_slug": "okayama",
+  "city": "瀬戸内市",
+  "slug": "setouchi",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/okayama/setouchi/"
+ },
+ {
+  "pref": "静岡県",
+  "pref_slug": "shizuoka",
+  "city": "静岡市",
+  "slug": "shizuoka",
+  "items": 2,
+  "producers": 4,
+  "url": "/furusato/shizuoka/shizuoka/"
+ },
+ {
+  "pref": "栃木県",
+  "pref_slug": "tochigi",
+  "city": "大田原市",
+  "slug": "ohtawara",
+  "items": 2,
+  "producers": 5,
+  "url": "/furusato/tochigi/ohtawara/"
+ },
+ {
+  "pref": "栃木県",
+  "pref_slug": "tochigi",
+  "city": "佐野市",
+  "slug": "sano",
+  "items": 2,
+  "producers": 2,
+  "url": "/furusato/tochigi/sano/"
+ },
+ {
+  "pref": "徳島県",
+  "pref_slug": "tokushima",
+  "city": "徳島市",
+  "slug": "tokushima",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/tokushima/tokushima/"
+ },
+ {
+  "pref": "東京都",
+  "pref_slug": "tokyo",
+  "city": "あきる野市",
+  "slug": "akiruno",
+  "items": 2,
+  "producers": 2,
+  "url": "/furusato/tokyo/akiruno/"
+ },
+ {
+  "pref": "鳥取県",
+  "pref_slug": "tottori",
+  "city": "南部町",
+  "slug": "nanbu",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/tottori/nanbu/"
+ },
+ {
+  "pref": "和歌山県",
+  "pref_slug": "wakayama",
+  "city": "海南市",
+  "slug": "kainan",
+  "items": 2,
+  "producers": 2,
+  "url": "/furusato/wakayama/kainan/"
+ },
+ {
+  "pref": "山形県",
+  "pref_slug": "yamagata",
+  "city": "飯豊町",
+  "slug": "iide",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/yamagata/iide/"
+ },
+ {
+  "pref": "山形県",
+  "pref_slug": "yamagata",
+  "city": "天童市",
+  "slug": "tendo",
+  "items": 2,
+  "producers": 6,
+  "url": "/furusato/yamagata/tendo/"
+ },
+ {
+  "pref": "山梨県",
+  "pref_slug": "yamanashi",
+  "city": "富士河口湖町",
+  "slug": "fujikawagutiko",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/yamanashi/fujikawagutiko/"
+ },
+ {
+  "pref": "山梨県",
+  "pref_slug": "yamanashi",
+  "city": "身延町",
+  "slug": "minobu",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/yamanashi/minobu/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "宇美町",
+  "slug": "umi",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/fukuoka/umi/"
+ },
+ {
+  "pref": "大分県",
+  "pref_slug": "oita",
+  "city": "国東市",
+  "slug": "kunisaki",
+  "items": 2,
+  "producers": 3,
+  "url": "/furusato/oita/kunisaki/"
+ },
+ {
+  "pref": "宮城県",
+  "pref_slug": "miyagi",
+  "city": "名取市",
+  "slug": "natori",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/miyagi/natori/"
+ },
+ {
+  "pref": "広島県",
+  "pref_slug": "hiroshima",
+  "city": "世羅町",
+  "slug": "sera",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/hiroshima/sera/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "三笠市",
+  "slug": "mikasa",
+  "items": 2,
+  "producers": 5,
+  "url": "/furusato/hokkaido/mikasa/"
+ },
+ {
+  "pref": "宮崎県",
+  "pref_slug": "miyazaki",
+  "city": "五ヶ瀬町",
+  "slug": "gokase",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/miyazaki/gokase/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "上ノ国町",
+  "slug": "kaminokuni",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/hokkaido/kaminokuni/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "長沼町",
+  "slug": "naganuma",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/hokkaido/naganuma/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "北見市",
+  "slug": "kitami",
+  "items": 2,
+  "producers": 2,
+  "url": "/furusato/hokkaido/kitami/"
+ },
+ {
+  "pref": "香川県",
+  "pref_slug": "kagawa",
+  "city": "さぬき市　ふるさと納税",
+  "slug": "sanukishi",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/kagawa/sanukishi/"
+ },
+ {
+  "pref": "宮崎県",
+  "pref_slug": "miyazaki",
+  "city": "都農町",
+  "slug": "tsuno",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/miyazaki/tsuno/"
+ },
+ {
+  "pref": "新潟県",
+  "pref_slug": "niigata",
+  "city": "胎内市",
+  "slug": "tainai",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/niigata/tainai/"
+ },
+ {
+  "pref": "静岡県",
+  "pref_slug": "shizuoka",
+  "city": "伊豆市",
+  "slug": "izu",
+  "items": 2,
+  "producers": 2,
+  "url": "/furusato/shizuoka/izu/"
+ },
+ {
+  "pref": "山梨県",
+  "pref_slug": "yamanashi",
+  "city": "甲斐市",
+  "slug": "kai",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/yamanashi/kai/"
+ },
+ {
+  "pref": "山梨県",
+  "pref_slug": "yamanashi",
+  "city": "市川三郷町",
+  "slug": "ichikawamisato",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/yamanashi/ichikawamisato/"
+ },
+ {
+  "pref": "青森県",
+  "pref_slug": "aomori",
+  "city": "六ヶ所村",
+  "slug": "rokkasho",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/aomori/rokkasho/"
+ },
+ {
+  "pref": "愛知県",
+  "pref_slug": "aichi",
+  "city": "知多市",
+  "slug": "chita",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/aichi/chita/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "利尻富士町",
+  "slug": "rishirifuji",
+  "items": 2,
+  "producers": 0,
+  "url": "/furusato/hokkaido/rishirifuji/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "函館市",
+  "slug": "hakodate",
+  "items": 2,
+  "producers": 4,
+  "url": "/furusato/hokkaido/hakodate/"
+ },
+ {
+  "pref": "茨城県",
+  "pref_slug": "ibaraki",
+  "city": "石岡市",
+  "slug": "ishioka",
+  "items": 2,
+  "producers": 3,
+  "url": "/furusato/ibaraki/ishioka/"
+ },
+ {
+  "pref": "鹿児島県",
+  "pref_slug": "kagoshima",
+  "city": "日置市",
+  "slug": "hioki",
+  "items": 2,
+  "producers": 7,
+  "url": "/furusato/kagoshima/hioki/"
+ },
+ {
+  "pref": "栃木県",
+  "pref_slug": "tochigi",
+  "city": "さくら市",
+  "slug": "sakura",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/tochigi/sakura/"
+ },
+ {
+  "pref": "宮城県",
+  "pref_slug": "miyagi",
+  "city": "仙台市",
+  "slug": "sendai",
+  "items": 2,
+  "producers": 3,
+  "url": "/furusato/miyagi/sendai/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "駒ヶ根市",
+  "slug": "komagane",
+  "items": 2,
+  "producers": 1,
+  "url": "/furusato/nagano/komagane/"
+ },
+ {
+  "pref": "愛知県",
+  "pref_slug": "aichi",
+  "city": "設楽町",
+  "slug": "shitara",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/aichi/shitara/"
+ },
+ {
+  "pref": "愛知県",
+  "pref_slug": "aichi",
+  "city": "津島市",
+  "slug": "tsushima",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/aichi/tsushima/"
+ },
+ {
+  "pref": "愛知県",
+  "pref_slug": "aichi",
+  "city": "東浦町",
+  "slug": "higashiura",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/aichi/higashiura/"
+ },
+ {
+  "pref": "秋田県",
+  "pref_slug": "akita",
+  "city": "にかほ市",
+  "slug": "nikaho",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/akita/nikaho/"
+ },
+ {
+  "pref": "秋田県",
+  "pref_slug": "akita",
+  "city": "能代市",
+  "slug": "noshiro",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/akita/noshiro/"
+ },
+ {
+  "pref": "千葉県",
+  "pref_slug": "chiba",
+  "city": "香取市",
+  "slug": "katori",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/chiba/katori/"
+ },
+ {
+  "pref": "千葉県",
+  "pref_slug": "chiba",
+  "city": "銚子市",
+  "slug": "choshi",
+  "items": 1,
+  "producers": 3,
+  "url": "/furusato/chiba/choshi/"
+ },
+ {
+  "pref": "福井県",
+  "pref_slug": "fukui",
+  "city": "鯖江市",
+  "slug": "sabae",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/fukui/sabae/"
+ },
+ {
+  "pref": "愛媛県",
+  "pref_slug": "ehime",
+  "city": "宇和島市",
+  "slug": "uwajima",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/ehime/uwajima/"
+ },
+ {
+  "pref": "富山県",
+  "pref_slug": "toyama",
+  "city": "南砺市",
+  "slug": "nanto",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/toyama/nanto/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "大川市",
+  "slug": "okawa",
+  "items": 1,
+  "producers": 4,
+  "url": "/furusato/fukuoka/okawa/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "久山町",
+  "slug": "hisayama",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/fukuoka/hisayama/"
+ },
+ {
+  "pref": "島根県",
+  "pref_slug": "shimane",
+  "city": "松江市",
+  "slug": "matsue",
+  "items": 1,
+  "producers": 2,
+  "url": "/furusato/shimane/matsue/"
+ },
+ {
+  "pref": "福岡県",
+  "pref_slug": "fukuoka",
+  "city": "飯塚市",
+  "slug": "iizuka",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/fukuoka/iizuka/"
+ },
+ {
+  "pref": "福島県",
+  "pref_slug": "fukushima",
+  "city": "西会津町",
+  "slug": "nishiaizu",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/fukushima/nishiaizu/"
+ },
+ {
+  "pref": "福島県",
+  "pref_slug": "fukushima",
+  "city": "矢吹町",
+  "slug": "yabuki",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/fukushima/yabuki/"
+ },
+ {
+  "pref": "福島県",
+  "pref_slug": "fukushima",
+  "city": "田村市",
+  "slug": "tamura",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/fukushima/tamura/"
+ },
+ {
+  "pref": "福島県",
+  "pref_slug": "fukushima",
+  "city": "二本松市",
+  "slug": "nihonmatsu",
+  "items": 1,
+  "producers": 5,
+  "url": "/furusato/fukushima/nihonmatsu/"
+ },
+ {
+  "pref": "岐阜県",
+  "pref_slug": "gifu",
+  "city": "多治見市",
+  "slug": "tajimi",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/gifu/tajimi/"
+ },
+ {
+  "pref": "静岡県",
+  "pref_slug": "shizuoka",
+  "city": "菊川市",
+  "slug": "kikugawa",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/shizuoka/kikugawa/"
+ },
+ {
+  "pref": "岐阜県",
+  "pref_slug": "gifu",
+  "city": "川辺町",
+  "slug": "kawabe",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/gifu/kawabe/"
+ },
+ {
+  "pref": "群馬県",
+  "pref_slug": "gunma",
+  "city": "太田市",
+  "slug": "ota",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/gunma/ota/"
+ },
+ {
+  "pref": "群馬県",
+  "pref_slug": "gunma",
+  "city": "藤岡市",
+  "slug": "fujioka",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/gunma/fujioka/"
+ },
+ {
+  "pref": "広島県",
+  "pref_slug": "hiroshima",
+  "city": "呉市",
+  "slug": "kure",
+  "items": 1,
+  "producers": 9,
+  "url": "/furusato/hiroshima/kure/"
+ },
+ {
+  "pref": "広島県",
+  "pref_slug": "hiroshima",
+  "city": "江田島市",
+  "slug": "etajima",
+  "items": 1,
+  "producers": 2,
+  "url": "/furusato/hiroshima/etajima/"
+ },
+ {
+  "pref": "富山県",
+  "pref_slug": "toyama",
+  "city": "朝日町",
+  "slug": "asahi",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/toyama/asahi/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "新ひだか町",
+  "slug": "shinhidaka",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/hokkaido/shinhidaka/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "砂川市",
+  "slug": "sunagawa",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/hokkaido/sunagawa/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "たつの市",
+  "slug": "tatsuno",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/hyogo/tatsuno/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "三田市",
+  "slug": "sanda",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/hyogo/sanda/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "香美町",
+  "slug": "kami",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/hyogo/kami/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "南あわじ市",
+  "slug": "minamiawaji",
+  "items": 1,
+  "producers": 2,
+  "url": "/furusato/hyogo/minamiawaji/"
+ },
+ {
+  "pref": "兵庫県",
+  "pref_slug": "hyogo",
+  "city": "加古川市",
+  "slug": "kakogawa",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/hyogo/kakogawa/"
+ },
+ {
+  "pref": "茨城県",
+  "pref_slug": "ibaraki",
+  "city": "古河市",
+  "slug": "koga",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/ibaraki/koga/"
+ },
+ {
+  "pref": "茨城県",
+  "pref_slug": "ibaraki",
+  "city": "八千代町",
+  "slug": "yachiyo",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/ibaraki/yachiyo/"
+ },
+ {
+  "pref": "茨城県",
+  "pref_slug": "ibaraki",
+  "city": "潮来市",
+  "slug": "itako",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/ibaraki/itako/"
+ },
+ {
+  "pref": "石川県",
+  "pref_slug": "ishikawa",
+  "city": "羽咋市",
+  "slug": "hakui",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/ishikawa/hakui/"
+ },
+ {
+  "pref": "岩手県",
+  "pref_slug": "iwate",
+  "city": "大船渡市",
+  "slug": "ofunato",
+  "items": 1,
+  "producers": 2,
+  "url": "/furusato/iwate/ofunato/"
+ },
+ {
+  "pref": "神奈川県",
+  "pref_slug": "kanagawa",
+  "city": "山北町",
+  "slug": "yamakita",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/kanagawa/yamakita/"
+ },
+ {
+  "pref": "神奈川県",
+  "pref_slug": "kanagawa",
+  "city": "秦野市",
+  "slug": "hadano",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/kanagawa/hadano/"
+ },
+ {
+  "pref": "神奈川県",
+  "pref_slug": "kanagawa",
+  "city": "愛川町",
+  "slug": "aikawa",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/kanagawa/aikawa/"
+ },
+ {
+  "pref": "高知県",
+  "pref_slug": "kochi",
+  "city": "安芸市",
+  "slug": "aki",
+  "items": 1,
+  "producers": 2,
+  "url": "/furusato/kochi/aki/"
+ },
+ {
+  "pref": "高知県",
+  "pref_slug": "kochi",
+  "city": "いの町",
+  "slug": "ino",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/kochi/ino/"
+ },
+ {
+  "pref": "高知県",
+  "pref_slug": "kochi",
+  "city": "香美市",
+  "slug": "kami",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/kochi/kami/"
+ },
+ {
+  "pref": "熊本県",
+  "pref_slug": "kumamoto",
+  "city": "小国町",
+  "slug": "oguni",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/kumamoto/oguni/"
+ },
+ {
+  "pref": "京都府",
+  "pref_slug": "kyoto",
+  "city": "城陽市",
+  "slug": "joyo",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/kyoto/joyo/"
+ },
+ {
+  "pref": "京都府",
+  "pref_slug": "kyoto",
+  "city": "南丹市",
+  "slug": "nantan",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/kyoto/nantan/"
+ },
+ {
+  "pref": "京都府",
+  "pref_slug": "kyoto",
+  "city": "舞鶴市",
+  "slug": "maizuru",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/kyoto/maizuru/"
+ },
+ {
+  "pref": "宮城県",
+  "pref_slug": "miyagi",
+  "city": "東松島市",
+  "slug": "higasimatusima",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/miyagi/higasimatusima/"
+ },
+ {
+  "pref": "宮城県",
+  "pref_slug": "miyagi",
+  "city": "塩竈市",
+  "slug": "shiogama",
+  "items": 1,
+  "producers": 2,
+  "url": "/furusato/miyagi/shiogama/"
+ },
+ {
+  "pref": "宮城県",
+  "pref_slug": "miyagi",
+  "city": "村田町",
+  "slug": "murata",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/miyagi/murata/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "飯山市",
+  "slug": "iiyama",
+  "items": 1,
+  "producers": 5,
+  "url": "/furusato/nagano/iiyama/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "諏訪市",
+  "slug": "suwa",
+  "items": 1,
+  "producers": 6,
+  "url": "/furusato/nagano/suwa/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "下諏訪町",
+  "slug": "shimosuwa",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/nagano/shimosuwa/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "辰野町",
+  "slug": "tatsuno",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/nagano/tatsuno/"
+ },
+ {
+  "pref": "長崎県",
+  "pref_slug": "nagasaki",
+  "city": "波佐見町",
+  "slug": "hasami",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/nagasaki/hasami/"
+ },
+ {
+  "pref": "長崎県",
+  "pref_slug": "nagasaki",
+  "city": "西海市",
+  "slug": "saikai",
+  "items": 1,
+  "producers": 2,
+  "url": "/furusato/nagasaki/saikai/"
+ },
+ {
+  "pref": "奈良県",
+  "pref_slug": "nara",
+  "city": "下市町",
+  "slug": "shimoichi",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/nara/shimoichi/"
+ },
+ {
+  "pref": "新潟県",
+  "pref_slug": "niigata",
+  "city": "湯沢町",
+  "slug": "yuzawa",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/niigata/yuzawa/"
+ },
+ {
+  "pref": "新潟県",
+  "pref_slug": "niigata",
+  "city": "柏崎市",
+  "slug": "kashiwazaki",
+  "items": 1,
+  "producers": 3,
+  "url": "/furusato/niigata/kashiwazaki/"
+ },
+ {
+  "pref": "新潟県",
+  "pref_slug": "niigata",
+  "city": "妙高市",
+  "slug": "myoko",
+  "items": 1,
+  "producers": 3,
+  "url": "/furusato/niigata/myoko/"
+ },
+ {
+  "pref": "新潟県",
+  "pref_slug": "niigata",
+  "city": "加茂市",
+  "slug": "kamo",
+  "items": 1,
+  "producers": 3,
+  "url": "/furusato/niigata/kamo/"
+ },
+ {
+  "pref": "新潟県",
+  "pref_slug": "niigata",
+  "city": "阿賀野市",
+  "slug": "agano",
+  "items": 1,
+  "producers": 3,
+  "url": "/furusato/niigata/agano/"
+ },
+ {
+  "pref": "新潟県",
+  "pref_slug": "niigata",
+  "city": "阿賀町",
+  "slug": "aga",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/niigata/aga/"
+ },
+ {
+  "pref": "大分県",
+  "pref_slug": "oita",
+  "city": "臼杵市",
+  "slug": "usuki",
+  "items": 1,
+  "producers": 5,
+  "url": "/furusato/oita/usuki/"
+ },
+ {
+  "pref": "岡山県",
+  "pref_slug": "okayama",
+  "city": "津山市",
+  "slug": "tsuyama",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/okayama/tsuyama/"
+ },
+ {
+  "pref": "沖縄県",
+  "pref_slug": "okinawa",
+  "city": "うるま市",
+  "slug": "uruma",
+  "items": 1,
+  "producers": 3,
+  "url": "/furusato/okinawa/uruma/"
+ },
+ {
+  "pref": "沖縄県",
+  "pref_slug": "okinawa",
+  "city": "那覇市",
+  "slug": "naha",
+  "items": 1,
+  "producers": 9,
+  "url": "/furusato/okinawa/naha/"
+ },
+ {
+  "pref": "大阪府",
+  "pref_slug": "osaka",
+  "city": "忠岡町",
+  "slug": "tadaoka",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/osaka/tadaoka/"
+ },
+ {
+  "pref": "大阪府",
+  "pref_slug": "osaka",
+  "city": "堺市",
+  "slug": "sakai",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/osaka/sakai/"
+ },
+ {
+  "pref": "佐賀県",
+  "pref_slug": "saga",
+  "city": "吉野ヶ里町",
+  "slug": "yoshinogari",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/saga/yoshinogari/"
+ },
+ {
+  "pref": "佐賀県",
+  "pref_slug": "saga",
+  "city": "白石町",
+  "slug": "shiroishi",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/saga/shiroishi/"
+ },
+ {
+  "pref": "佐賀県",
+  "pref_slug": "saga",
+  "city": "鳥栖市",
+  "slug": "tosu",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/saga/tosu/"
+ },
+ {
+  "pref": "佐賀県",
+  "pref_slug": "saga",
+  "city": "上峰町",
+  "slug": "kamimine",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/saga/kamimine/"
+ },
+ {
+  "pref": "佐賀県",
+  "pref_slug": "saga",
+  "city": "基山町",
+  "slug": "kiyama",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/saga/kiyama/"
+ },
+ {
+  "pref": "埼玉県",
+  "pref_slug": "saitama",
+  "city": "幸手市",
+  "slug": "satte",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/saitama/satte/"
+ },
+ {
+  "pref": "埼玉県",
+  "pref_slug": "saitama",
+  "city": "深谷市",
+  "slug": "fukaya",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/saitama/fukaya/"
+ },
+ {
+  "pref": "埼玉県",
+  "pref_slug": "saitama",
+  "city": "美里町",
+  "slug": "misato",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/saitama/misato/"
+ },
+ {
+  "pref": "埼玉県",
+  "pref_slug": "saitama",
+  "city": "毛呂山町",
+  "slug": "moroyama",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/saitama/moroyama/"
+ },
+ {
+  "pref": "滋賀県",
+  "pref_slug": "shiga",
+  "city": "多賀町",
+  "slug": "taga",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/shiga/taga/"
+ },
+ {
+  "pref": "岩手県",
+  "pref_slug": "iwate",
+  "city": "陸前高田市",
+  "slug": "rikuzentakata",
+  "items": 1,
+  "producers": 2,
+  "url": "/furusato/iwate/rikuzentakata/"
+ },
+ {
+  "pref": "島根県",
+  "pref_slug": "shimane",
+  "city": "奥出雲町",
+  "slug": "okuizumo",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/shimane/okuizumo/"
+ },
+ {
+  "pref": "山梨県",
+  "pref_slug": "yamanashi",
+  "city": "忍野村",
+  "slug": "oshino",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/yamanashi/oshino/"
+ },
+ {
+  "pref": "静岡県",
+  "pref_slug": "shizuoka",
+  "city": "藤枝市",
+  "slug": "fujieda",
+  "items": 1,
+  "producers": 3,
+  "url": "/furusato/shizuoka/fujieda/"
+ },
+ {
+  "pref": "栃木県",
+  "pref_slug": "tochigi",
+  "city": "矢板市",
+  "slug": "yaita",
+  "items": 1,
+  "producers": 2,
+  "url": "/furusato/tochigi/yaita/"
+ },
+ {
+  "pref": "徳島県",
+  "pref_slug": "tokushima",
+  "city": "鳴門市",
+  "slug": "naruto",
+  "items": 1,
+  "producers": 3,
+  "url": "/furusato/tokushima/naruto/"
+ },
+ {
+  "pref": "富山県",
+  "pref_slug": "toyama",
+  "city": "氷見市",
+  "slug": "himi",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/toyama/himi/"
+ },
+ {
+  "pref": "和歌山県",
+  "pref_slug": "wakayama",
+  "city": "九度山町",
+  "slug": "kudoyama",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/wakayama/kudoyama/"
+ },
+ {
+  "pref": "和歌山県",
+  "pref_slug": "wakayama",
+  "city": "那智勝浦町",
+  "slug": "nachikatsuura",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/wakayama/nachikatsuura/"
+ },
+ {
+  "pref": "和歌山県",
+  "pref_slug": "wakayama",
+  "city": "高野町",
+  "slug": "koya",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/wakayama/koya/"
+ },
+ {
+  "pref": "山形県",
+  "pref_slug": "yamagata",
+  "city": "白鷹町",
+  "slug": "shirataka",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/yamagata/shirataka/"
+ },
+ {
+  "pref": "神奈川県",
+  "pref_slug": "kanagawa",
+  "city": "伊勢原市",
+  "slug": "isehara",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/kanagawa/isehara/"
+ },
+ {
+  "pref": "山形県",
+  "pref_slug": "yamagata",
+  "city": "大石田町",
+  "slug": "oishida",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/yamagata/oishida/"
+ },
+ {
+  "pref": "山口県",
+  "pref_slug": "yamaguchi",
+  "city": "下関市",
+  "slug": "shimonoseki",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/yamaguchi/shimonoseki/"
+ },
+ {
+  "pref": "山口県",
+  "pref_slug": "yamaguchi",
+  "city": "山口市",
+  "slug": "yamaguchi",
+  "items": 1,
+  "producers": 3,
+  "url": "/furusato/yamaguchi/yamaguchi/"
+ },
+ {
+  "pref": "福島県",
+  "pref_slug": "fukushima",
+  "city": "会津若松市",
+  "slug": "aizuwakamatsu",
+  "items": 1,
+  "producers": 10,
+  "url": "/furusato/fukushima/aizuwakamatsu/"
+ },
+ {
+  "pref": "群馬県",
+  "pref_slug": "gunma",
+  "city": "千代田町",
+  "slug": "chiyoda",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/gunma/chiyoda/"
+ },
+ {
+  "pref": "愛知県",
+  "pref_slug": "aichi",
+  "city": "小牧市",
+  "slug": "komaki",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/aichi/komaki/"
+ },
+ {
+  "pref": "秋田県",
+  "pref_slug": "akita",
+  "city": "北秋田市",
+  "slug": "kitaakita",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/akita/kitaakita/"
+ },
+ {
+  "pref": "青森県",
+  "pref_slug": "aomori",
+  "city": "弘前市",
+  "slug": "hirosaki",
+  "items": 1,
+  "producers": 3,
+  "url": "/furusato/aomori/hirosaki/"
+ },
+ {
+  "pref": "愛媛県",
+  "pref_slug": "ehime",
+  "city": "内子町",
+  "slug": "uchiko",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/ehime/uchiko/"
+ },
+ {
+  "pref": "愛媛県",
+  "pref_slug": "ehime",
+  "city": "今治市",
+  "slug": "imabari",
+  "items": 1,
+  "producers": 2,
+  "url": "/furusato/ehime/imabari/"
+ },
+ {
+  "pref": "広島県",
+  "pref_slug": "hiroshima",
+  "city": "福山市",
+  "slug": "fukuyama",
+  "items": 1,
+  "producers": 8,
+  "url": "/furusato/hiroshima/fukuyama/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "池田町",
+  "slug": "ikeda",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/hokkaido/ikeda/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "奥尻町",
+  "slug": "okushiri",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/hokkaido/okushiri/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "中富良野町",
+  "slug": "nakafurano",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/hokkaido/nakafurano/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "滝川市",
+  "slug": "takikawa",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/hokkaido/takikawa/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "芽室町",
+  "slug": "memuro",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/hokkaido/memuro/"
+ },
+ {
+  "pref": "茨城県",
+  "pref_slug": "ibaraki",
+  "city": "行方市",
+  "slug": "namegata",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/ibaraki/namegata/"
+ },
+ {
+  "pref": "茨城県",
+  "pref_slug": "ibaraki",
+  "city": "下妻市",
+  "slug": "shimotsuma",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/ibaraki/shimotsuma/"
+ },
+ {
+  "pref": "熊本県",
+  "pref_slug": "kumamoto",
+  "city": "高森町",
+  "slug": "takamori",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/kumamoto/takamori/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "飯綱町",
+  "slug": "iizuna",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/nagano/iizuna/"
+ },
+ {
+  "pref": "長野県",
+  "pref_slug": "nagano",
+  "city": "松川町",
+  "slug": "matsukawa",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/nagano/matsukawa/"
+ },
+ {
+  "pref": "広島県",
+  "pref_slug": "hiroshima",
+  "city": "廿日市市",
+  "slug": "hatsukaichi",
+  "items": 1,
+  "producers": 5,
+  "url": "/furusato/hiroshima/hatsukaichi/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "ニセコ町",
+  "slug": "niseko",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/hokkaido/niseko/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "倶知安町",
+  "slug": "kutchan",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/hokkaido/kutchan/"
+ },
+ {
+  "pref": "北海道",
+  "pref_slug": "hokkaido",
+  "city": "利尻町",
+  "slug": "rishiri",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/hokkaido/rishiri/"
+ },
+ {
+  "pref": "岡山県",
+  "pref_slug": "okayama",
+  "city": "真庭市",
+  "slug": "maniwa",
+  "items": 1,
+  "producers": 2,
+  "url": "/furusato/okayama/maniwa/"
+ },
+ {
+  "pref": "静岡県",
+  "pref_slug": "shizuoka",
+  "city": "富士市",
+  "slug": "fuji",
+  "items": 1,
+  "producers": 0,
+  "url": "/furusato/shizuoka/fuji/"
+ },
+ {
+  "pref": "東京都",
+  "pref_slug": "tokyo",
+  "city": "八王子市",
+  "slug": "hachioji",
+  "items": 1,
+  "producers": 1,
+  "url": "/furusato/tokyo/hachioji/"
+ }
+]
