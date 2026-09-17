@@ -238,7 +238,7 @@ button:disabled{opacity:.55;cursor:default}
   var form = document.getElementById('f');
   var btn = document.getElementById('btn');
   var msg = document.getElementById('msg');
-  var ENDPOINT = 'https://sake.terroirhub.com/api/listing-plan';
+  var ENDPOINT = 'https://sake.terroirhub.com/api/create-subscription';
 
   Array.prototype.forEach.call(document.querySelectorAll('.planopt input'), function (r) {
     r.addEventListener('change', function () {
@@ -259,7 +259,8 @@ button:disabled{opacity:.55;cursor:default}
       pref: document.getElementById('pref').value,
       page_url: document.getElementById('page_url').value,
       note: document.getElementById('note').value,
-      plan: picked ? picked.value : 'year'
+      plan: picked ? picked.value : 'year',
+      kind: 'listing'
     };
     btn.disabled = true;
     btn.textContent = '送信中…';
