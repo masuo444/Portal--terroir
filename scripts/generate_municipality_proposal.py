@@ -34,9 +34,9 @@ PRICE = {
                            "掲載内容の更新（回数制限なし）"]},
     "premium":  {"name": "プレミアム", "yen": 600000,
                  "items": ["スタンダードの全内容",
-                           "AIコンシェルジュ（多言語・24時間）の設置",
-                           "見学・体験の予約導線の整備",
-                           "四半期ごとの分析レポートと改善提案"]},
+                           "地域の酒をテーマにした特集記事の制作",
+                           "見学・体験の案内ページの整備",
+                           "四半期ごとの分析と改善のご提案"]},
 }
 PRICE_NOTE = "いずれも年額・税別です。年度途中からのご契約は月割りで承ります。"
 
@@ -162,7 +162,7 @@ def render(r, producers_note):
     <p>掲載の修正・削除のご要望は、ご契約の有無にかかわらず無料で承ります。</p>
   </div>
 </div>
-<div class="foot">合同会社FOMUS — Terroir HUB<br>contact@fomus.jp</div>
+<div class="foot">合同会社FOMUS — Terroir HUB<br>contact@fomus.jp ／ https://www.terroirhub.com/business/municipality/</div>
 </body>
 </html>"""
 
