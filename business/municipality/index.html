@@ -90,6 +90,53 @@ button:disabled{opacity:.55;cursor:default}
 .msg{margin-top:.9rem;font-size:.88rem;line-height:1.8}
 .msg.err{color:#9A2B2B}.msg.ok{color:#1f6b3a}
 .fineprint{font-size:.76rem;color:var(--muted);line-height:1.85;margin-top:1rem}
+
+/* ── 仕組み図 ── */
+.how{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;gap:.6rem}
+@media(max-width:860px){.how{grid-template-columns:1fr}.how .arr{transform:rotate(90deg);justify-self:center;padding:.2rem 0}}
+.hbox{background:#fff;border:1px solid var(--border);border-top:3px solid var(--gold);padding:1.3rem 1.3rem 1.1rem;display:flex;flex-direction:column}
+.hbox .hn{font-family:var(--fn);font-size:.66rem;letter-spacing:.2em;color:var(--gold);font-weight:600}
+.hbox h3{font-family:var(--fd);font-size:1.12rem;margin:.35rem 0 .5rem}
+.hbox ul{list-style:none;font-size:.85rem;line-height:1.85;color:var(--text)}
+.hbox li{padding-left:1.1rem;position:relative}
+.hbox li::before{content:"";position:absolute;left:0;top:.8em;width:.45rem;height:1px;background:var(--gold)}
+.hbox .who{margin-top:auto;padding-top:.8rem;font-size:.74rem;color:var(--muted);border-top:1px dashed var(--border)}
+.hbox .who b{color:var(--text);font-weight:600}
+.arr{display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.4rem;font-family:var(--fn)}
+.loop{margin-top:.8rem;background:var(--surface);border:1px solid var(--border);padding:.8rem 1.1rem;font-size:.84rem;text-align:center}
+.loop b{color:var(--gold)}
+/* ── 3つの安心 ── */
+.merits{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media(max-width:820px){.merits{grid-template-columns:1fr}}
+.merit{background:#fff;border:1px solid var(--border);padding:1.4rem 1.5rem}
+.merit .big{font-family:var(--fd);font-size:1.7rem;font-weight:700;color:var(--gold);line-height:1.2}
+.merit h3{font-family:var(--fd);font-size:1.02rem;margin:.4rem 0 .35rem}
+.merit p{font-size:.86rem;color:var(--muted);line-height:1.85}
+/* ── 年間の流れ ── */
+.year{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem}
+@media(max-width:860px){.year{grid-template-columns:1fr}}
+.ym{background:#fff;border:1px solid var(--border);padding:1rem 1.05rem}
+.ym .mo{font-family:var(--fn);font-size:.78rem;font-weight:600;color:#fff;background:var(--gold);display:inline-block;padding:.12rem .55rem;margin-bottom:.45rem}
+.ym h3{font-family:var(--fd);font-size:.96rem;margin-bottom:.3rem}
+.ym p{font-size:.8rem;color:var(--muted);line-height:1.7}
+.ym.key{border:2px solid var(--gold)}
+/* ── レポート見本 ── */
+.rep{background:#fff;border:1px solid var(--border);padding:clamp(1.2rem,3vw,1.8rem);position:relative}
+.rep-badge{position:absolute;top:.9rem;right:1rem;font-family:var(--fn);font-size:.66rem;font-weight:600;letter-spacing:.12em;color:#8A2A2A;background:#FDECEC;border:1px solid #E0A0A0;padding:.2rem .6rem}
+.rep-h{font-family:var(--fd);font-size:1.05rem;margin-bottom:1rem;padding-right:4rem}
+.rep-k{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-bottom:1rem}
+@media(max-width:720px){.rep-k{grid-template-columns:1fr 1fr}}
+.rk{background:var(--surface);padding:.8rem .85rem}
+.rk .n{font-family:var(--fn);font-size:1.35rem;font-weight:600;line-height:1.1}
+.rk .n small{font-size:.6em}
+.rk .l{font-size:.72rem;color:var(--muted);margin-top:.25rem;line-height:1.45}
+.rk .d{font-family:var(--fn);font-size:.7rem;color:#1f6b3a;margin-top:.2rem}
+.rep-t{width:100%;border-collapse:collapse;font-size:.84rem}
+.rep-t th,.rep-t td{text-align:left;padding:.45rem .2rem;border-bottom:1px solid var(--border)}
+.rep-t th{font-size:.72rem;color:var(--muted);font-weight:500}
+.rep-t td.n{text-align:right;font-family:var(--fn)}
+.rep-note{font-size:.74rem;color:var(--muted);margin-top:.8rem;line-height:1.75}
+
 .foot{margin-top:clamp(3rem,6vw,4.5rem);padding:2.4rem clamp(1.4rem,5vw,5rem);border-top:1px solid var(--border);background:#fff;font-size:.78rem;color:var(--muted)}
 .foot-logo{font-family:var(--fd);font-size:1.05rem;color:var(--text);margin-bottom:.5rem}
 </style>
@@ -135,6 +182,69 @@ button:disabled{opacity:.55;cursor:default}
   </div>
 </div></section>
 
+
+<section><div class="inner">
+  <h2>仕組み</h2>
+  <p class="sec-lead">御自治体にお願いするのは、掲載内容の確認だけです。情報の整理・ページの制作と更新・計測と報告は、すべて Terroir HUB が行います。</p>
+  <div class="how">
+    <div class="hbox"><div class="hn">01 ― 集める</div><h3>公式情報を整理する</h3>
+      <ul><li>返礼品（ふるさと納税サイト掲載分）</li><li>市内の造り手の公式情報</li><li>見学・直売などの案内</li></ul>
+      <div class="who">担当：<b>Terroir HUB</b>（御自治体は内容のご確認のみ）</div></div>
+    <div class="arr">→</div>
+    <div class="hbox"><div class="hn">02 ― 届ける</div><h3>日本語と英語で公開する</h3>
+      <ul><li>御自治体専用のページ</li><li>造り手ごとのページ（日英）</li><li>ふるさと納税の返礼品への導線</li></ul>
+      <div class="who">届く先：<b>国内の寄付者・海外の旅行者</b>（検索・AI検索から）</div></div>
+    <div class="arr">→</div>
+    <div class="hbox"><div class="hn">03 ― 見える化</div><h3>毎月、数字で報告する</h3>
+      <ul><li>ページの閲覧数と海外からの割合</li><li>どんな言葉で検索されたか</li><li>返礼品ページへの送客数</li></ul>
+      <div class="who">使いみち：<b>議会・上長への説明、次年度の予算要求</b></div></div>
+  </div>
+  <div class="loop">報告した数字をもとに、翌月の掲載内容を見直します。<b>集める → 届ける → 見える化 → 改善</b> を毎月くり返します。</div>
+</div></section>
+
+<section><div class="inner">
+  <h2>採用しやすい3つの理由</h2>
+  <div class="merits">
+    <div class="merit"><div class="big">手間ゼロ</div><h3>職員の作業は、確認だけ</h3><p>原稿作成・翻訳・ページ更新・計測はすべて弊社が行います。担当者の負担を増やしません。</p></div>
+    <div class="merit"><div class="big">誤情報ゼロへ</div><h3>公式情報だけで、出典つき</h3><p>公表された情報のみを掲載し、出典と確認日を明記します。推測で埋めないので、行政として紹介しても安心です。</p></div>
+    <div class="merit"><div class="big">説明できる</div><h3>実測値のレポート</h3><p>Google の計測ツールの数字をそのまま報告します。推計値は使わず、事業の成果として説明に使えます。ご契約の有無で造り手の掲載順を変えることもしません。</p></div>
+  </div>
+</div></section>
+
+<section><div class="inner">
+  <h2>1年間の流れ</h2>
+  <p class="sec-lead">会計年度に合わせて進めます。寄付が集中する年末に向けて整え、年度末に1年分をまとめてご報告します。</p>
+  <div class="year">
+    <div class="ym"><span class="mo">4–5月</span><h3>開始・整備</h3><p>掲載内容の確認、造り手ページの追加、英語対応</p></div>
+    <div class="ym"><span class="mo">6–9月</span><h3>毎月のレポート</h3><p>閲覧と検索の数字をもとに内容を改善</p></div>
+    <div class="ym key"><span class="mo">10–12月</span><h3>寄付シーズン</h3><p>年末の駆け込みに向けて返礼品への導線を強化</p></div>
+    <div class="ym"><span class="mo">1–2月</span><h3>振り返り</h3><p>寄付期の結果を整理し、次年度の方針をご提案</p></div>
+    <div class="ym"><span class="mo">3月</span><h3>年次報告</h3><p>1年分の数字をまとめ、議会・予算説明の資料に</p></div>
+  </div>
+</div></section>
+
+<section><div class="inner">
+  <h2>月次レポートの見本</h2>
+  <p class="sec-lead">毎月このような形でお届けします。専門用語は使わず、そのまま庁内の説明資料に使える形にしています。</p>
+  <div class="rep">
+    <span class="rep-badge">見本</span>
+    <div class="rep-h">〇〇市 月次レポート（見本）</div>
+    <div class="rep-k">
+      <div class="rk"><div class="n">1,240<small>回</small></div><div class="l">検索結果に表示された回数</div><div class="d">前月比 +18%</div></div>
+      <div class="rk"><div class="n">310<small>人</small></div><div class="l">ページを見た人</div><div class="d">前月比 +9%</div></div>
+      <div class="rk"><div class="n">34<small>%</small></div><div class="l">海外からの閲覧の割合</div></div>
+      <div class="rk"><div class="n">42<small>回</small></div><div class="l">返礼品ページへの送客</div></div>
+    </div>
+    <table class="rep-t">
+      <tr><th>検索された言葉（上位）</th><th style="text-align:right">表示回数</th></tr>
+      <tr><td>〇〇市 ワイン ふるさと納税</td><td class="n">286</td></tr>
+      <tr><td>〇〇 ワイナリー 見学</td><td class="n">174</td></tr>
+      <tr><td>winery near 〇〇</td><td class="n">92</td></tr>
+    </table>
+    <p class="rep-note">※ 数値はレイアウトを示すための見本で、実在の自治体の実績ではありません。実際のレポートでは、取得できない項目は「計測準備中」と明記し、推計値は用いません。</p>
+  </div>
+</div></section>
+
 <section><div class="inner">
   <h2>ご提供できること</h2>
   <p class="sec-lead">地域の状況やご予算に合わせて、2つの形をご用意しています。</p>
@@ -161,15 +271,6 @@ button:disabled{opacity:.55;cursor:default}
     </div>
   </div>
   <p class="plan-note">いずれも年間契約です。費用はご要望をうかがったうえで、お見積りをお出しします。予算要求の時期に合わせた見積書の作成にも対応します。</p>
-</div></section>
-
-<section><div class="inner">
-  <h2>Terroir HUB の方針</h2>
-  <div class="cards">
-    <div class="card"><h3>公式情報だけを掲載</h3><p>掲載は公式に公表された情報にもとづき、出典と最終確認日を明記します。情報が無い項目は推測で埋めず、表示しません。</p></div>
-    <div class="card"><h3>特定の造り手を優遇しない</h3><p>ご契約の有無で掲載順や扱いを変えることはしません。地域の造り手を公平に紹介します。</p></div>
-    <div class="card"><h3>数字は実測値だけ</h3><p>レポートの数値は Google Analytics と Search Console の実測値です。推計値は用いず、取得できない項目はその旨を記載します。</p></div>
-  </div>
 </div></section>
 
 <section><div class="inner">

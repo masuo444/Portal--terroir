@@ -85,7 +85,20 @@ th{font-size:.75rem;color:var(--muted);font-weight:500}
 td.num{text-align:right;font-family:var(--fn)}
 .note{background:var(--surface);border:1px solid var(--border);padding:1.1rem 1.3rem;font-size:.82rem;color:var(--muted);line-height:1.9;margin-top:2rem}
 .foot{max-width:860px;margin:1.2rem auto 3rem;font-size:.76rem;color:var(--muted);text-align:center;line-height:1.9}
-.notyet{color:var(--muted);font-size:.9rem}"""
+.notyet{color:var(--muted);font-size:.9rem}
+.how{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:.5rem;margin:1rem 0 .6rem}
+@media(max-width:720px){.how{grid-template-columns:1fr}.arr{transform:rotate(90deg)}}
+.hb{border:1px solid var(--border);border-top:3px solid var(--gold);padding:.9rem .95rem}
+.hb .hn{font-family:var(--fn);font-size:.62rem;letter-spacing:.18em;color:var(--gold);font-weight:600}
+.hb h3{font-family:var(--fd);font-size:.98rem;margin:.25rem 0 .35rem}
+.hb p{font-size:.8rem;color:var(--muted);line-height:1.7}
+.arr{display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.2rem}
+.yr{display:grid;grid-template-columns:repeat(5,1fr);gap:.45rem;margin-top:.8rem}
+@media(max-width:720px){.yr{grid-template-columns:1fr}}
+.ym{border:1px solid var(--border);padding:.7rem .75rem}
+.ym.key{border:2px solid var(--gold)}
+.ym b{font-family:var(--fn);font-size:.72rem;color:#fff;background:var(--gold);padding:.08rem .45rem}
+.ym p{font-size:.78rem;margin-top:.35rem;line-height:1.6}"""
 
 
 def render(r, producers_note):
@@ -136,6 +149,25 @@ def render(r, producers_note):
   <div class="urlbox">
     <a href="{url}">{url}</a>
     <p>寄付金額から絞り込めます。ご覧いただき、誤りがあればご指摘ください。修正は無料で承ります。</p>
+  </div>
+
+
+  <h2>仕組み — 御自治体にお願いするのは、内容のご確認だけです</h2>
+  <div class="how">
+    <div class="hb"><div class="hn">01 集める</div><h3>公式情報を整理</h3><p>返礼品と市内の造り手の公式情報を、出典つきで整理します。</p></div>
+    <div class="arr">→</div>
+    <div class="hb"><div class="hn">02 届ける</div><h3>日英で公開</h3><p>{esc(city)}専用ページと造り手ページを公開し、返礼品へつなぎます。</p></div>
+    <div class="arr">→</div>
+    <div class="hb"><div class="hn">03 見える化</div><h3>毎月、数字で報告</h3><p>閲覧数・海外からの割合・検索語を、庁内説明に使える形でお届けします。</p></div>
+  </div>
+
+  <h2>1年間の流れ</h2>
+  <div class="yr">
+    <div class="ym"><b>4–5月</b><p>開始・掲載内容の確認・英語対応</p></div>
+    <div class="ym"><b>6–9月</b><p>毎月のレポートと改善</p></div>
+    <div class="ym key"><b>10–12月</b><p>寄付シーズンに向け返礼品への導線を強化</p></div>
+    <div class="ym"><b>1–2月</b><p>寄付期の振り返り・次年度のご提案</p></div>
+    <div class="ym"><b>3月</b><p>年次報告（議会・予算説明の資料に）</p></div>
   </div>
 
   <h2>{esc(city)}の造り手について</h2>
