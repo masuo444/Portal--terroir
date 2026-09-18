@@ -2711,6 +2711,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.terroirhub.com/area/gifu/takayama/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.terroirhub.com/area/hokkaido/yoichi/</loc>
     <lastmod>2026-09-18</lastmod>
     <priority>0.7</priority>
@@ -2751,7 +2756,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.terroirhub.com/area/yamanashi/fujikawagutiko/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.terroirhub.com/area/yamanashi/hokuto/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.terroirhub.com/area/yamanashi/kai/</loc>
     <lastmod>2026-09-18</lastmod>
     <priority>0.7</priority>
   </url>
@@ -2782,6 +2797,11 @@
   </url>
   <url>
     <loc>https://www.terroirhub.com/area/en/fukuoka/kurume/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.terroirhub.com/area/en/gifu/takayama/</loc>
     <lastmod>2026-09-18</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2826,7 +2846,17 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.terroirhub.com/area/en/yamanashi/fujikawagutiko/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.terroirhub.com/area/en/yamanashi/hokuto/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.terroirhub.com/area/en/yamanashi/kai/</loc>
     <lastmod>2026-09-18</lastmod>
     <priority>0.6</priority>
   </url>

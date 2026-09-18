@@ -71,7 +71,7 @@ def load_producers():
                     if c.get("station"):
                         station = f'{c.get("line","")} {c["station"]}駅'.strip() + "（座標からの算出）"
                 brands = [(x.get("name") if isinstance(x, dict) else str(x)) for x in (b.get("brands") or [])]
-                out.setdefault(b["address"].replace(" ", "").replace("　", ""), []).append({
+                out.setdefault(b["address"], []).append({
                     "name": b.get("name", ""), "genre": g["name"], "color": g["color"],
                     "url": f'{g["site"]}/{g["path"]}/{pref_slug}/{b["id"]}.html',
                     "desc": (b.get("desc") or "").strip(),
@@ -130,13 +130,27 @@ def has_visit(p):
     return bool(vi.get("status") or vi.get("notes_ja") or p.get("visit"))
 
 
-def addr_matches(addr, pref, city):
-    """住所が「県＋市区町村」に一致するか。町村は「県＋◯◯郡＋町村」の形も拾う。"""
+def norm_addr(a):
+    """住所の表記ゆれを吸収する。郵便番号・空白を落とす。"""
     import re as _re
-    if not addr.startswith(pref):
+    a = (a or "").replace(" ", "").replace("　", "")
+    a = _re.sub(r'〒?\d{3}-?\d{4}', '', a)
+    return a.strip()
+
+
+def addr_matches(addr, pref, city):
+    """住所が「県＋市区町村」に一致するか。
+    郵便番号つき・県名なし・郡つき町村（〇〇郡△△町）のいずれにも対応する。"""
+    import re as _re
+    a = norm_addr(addr)
+    if not a:
         return False
-    rest = addr[len(pref):]
+    if pref in a:
+        rest = a[a.find(pref) + len(pref):]
+    else:
+        rest = a  # 県名が書かれていない場合（データは県別ファイルなので県は確定している）
     return rest.startswith(city) or bool(_re.match(r'[^\s]{1,6}郡' + _re.escape(city), rest))
+
 
 CSS = """*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#FAFAF7;--surface:#F3F0EA;--border:rgba(0,0,0,.09);--text:#1a1816;--muted:rgba(26,24,22,.62);--gold:#996E1A;--fd:'Shippori Mincho',serif;--fb:'Noto Sans JP',sans-serif;--fn:'Inter',sans-serif}
