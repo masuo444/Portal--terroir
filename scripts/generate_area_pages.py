@@ -225,7 +225,8 @@ def render_city(d, producers):
   <p>自治体・観光協会・DMO・地域商社・事業者のいずれからでもご相談いただけます。
   事業者への確認、写真の掲載、英語への対応、毎月の閲覧レポートまで一式でお引き受けします。</p>
   <div class="btnrow">
-    <a href="/business/municipality/#contact">導入について相談する</a>
+    <a href="/business/area/">申し込む・料金を見る</a>
+    <a href="/business/municipality/#contact">自治体の方はこちら</a>
     <a href="/area/">ほかの地域の見本を見る</a>
   </div>
 </div></div>
@@ -261,7 +262,7 @@ def render_index(areas):
 <div class="cta"><div class="cta-in">
   <h3>御地域のページをご覧になりたい方へ</h3>
   <p>ご希望の市区町村があれば、見本をお作りしてお送りします。自治体・観光協会・DMO・地域商社・事業者のいずれからでも承ります。</p>
-  <div class="btnrow"><a href="/business/municipality/#contact">見本を依頼する</a><a href="/business/municipality/">サービス内容を見る</a></div>
+  <div class="btnrow"><a href="/business/area/">料金とお申し込み</a><a href="/business/municipality/#contact">見本を依頼する</a></div>
 </div></div>
 <footer class="foot"><div class="foot-logo">Terroir HUB</div>
   <p>日本の風土と造り手を、正確な一次情報で。｜運営：合同会社FOMUS</p></footer>
