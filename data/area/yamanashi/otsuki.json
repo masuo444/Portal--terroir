@@ -1,0 +1,3457 @@
+{
+ "code": "f192066-otsuki",
+ "pref": "山梨県",
+ "pref_slug": "yamanashi",
+ "city": "大月市",
+ "slug": "otsuki",
+ "collected_at": "2026-09-18",
+ "source": "楽天ふるさと納税（山梨県大月市）",
+ "total": 259,
+ "counts": {
+  "food": 36,
+  "fruit": 9,
+  "craft": 107,
+  "other": 23,
+  "sake": 43,
+  "stay": 15,
+  "meat": 22,
+  "seafood": 2,
+  "farm": 1,
+  "sweets": 1
+ },
+ "items": [
+  {
+   "name": "【ふるさと納税】天然醸造 オオツル大豆味噌 大月産 自然栽培大豆＆米100%使用",
+   "price": 8000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12236233/1052-003.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1052-003%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001258%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "調味料",
+    "みそ",
+    "豆みそ"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】先行予約【2025年10月中旬以降発送】低温熟成栗　ぽろたん　大きな栗",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11275778/imgrc0093604338.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F006-075%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001052%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "フルーツ・果物",
+    "栗"
+   ],
+   "cat": "fruit",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【先行予約】訳あり／ご家庭用 国産ゴールドキウイ(小玉) 4kg　2026年10月中旬より順次発送",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11209425/imgrc0099611088.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1094-004%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001345%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "フルーツ・果物",
+    "キウイフルーツ"
+   ],
+   "cat": "fruit",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】とっても可愛いNAHARAオリジナル富士山チェアー(富士)【完成品開梱設置】※北海道・沖縄県・離島への配送不可",
+   "price": 186000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10010104/043-015_1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16042-30042155%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000466%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "イス・チェア",
+    "ダイニングチェア"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】生めんセット（うどん太麺2袋・うどん細麺2袋・ほうとう2袋）自家製激辛とうがらし付き",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11083086/1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F067-001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000793%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "麺類",
+    "うどん"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【介護用】おねしょガード　洗える防水シーツ　150×145cm（超大判サイズ）　2枚組セット 2ST-150",
+   "price": 33000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595212/11896895/imgrc0094920377.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1027-078%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001230%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "寝具",
+    "寝具カバー・シーツ",
+    "フラットシーツ"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】大月織物を使用したギターストラップ",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10596011/09.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1092-003%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000985%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "楽器・音響機器",
+    "ギター・ベース",
+    "アクセサリー・パーツ",
+    "ストラップ"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】糀の甘酒(原液)400gボトル入り4本セット",
+   "price": 8000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16004-30017697-01z.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16004-30017697%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000091%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "甘酒"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】富士山ソファー3人掛 ソファータイプ(富士)【完成品開梱設置】",
+   "price": 527000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10010104/043-013_1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F043-013%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000618%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "寝具",
+    "枕・抱き枕",
+    "枕"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】笹一アルコール77　500ml×4本　※着日指定送不可　※離島への発送不可",
+   "price": 21000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16009-30033185-01z.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16009-30033185%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000298%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "その他"
+   ],
+   "cat": "sake",
+   "review_count": 1
+  },
+  {
+   "name": "【ふるさと納税】富士山焼酎 そば 720ml×2本",
+   "price": 12000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09596049/soba.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F041-006%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000754%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日本酒・焼酎",
+    "焼酎",
+    "そば焼酎"
+   ],
+   "cat": "sake",
+   "review_count": 1
+  },
+  {
+   "name": "【ふるさと納税】渓流釣り体験と炭火焼きバーベキューコース(4名様)",
+   "price": 75000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11533665/023-003-01.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F023-003%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000694%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "金券",
+    "施設利用券",
+    "その他"
+   ],
+   "cat": "stay",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】真木温泉mシリーズ【最高級ミストウォーター】280g×2本",
+   "price": 21000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09584401/004-005c.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F004-005%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000683%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "美容・コスメ・香水",
+    "スキンケア",
+    "化粧水・ローション"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】スリープコルマ・ピロ　単品　C?11　ホワイト",
+   "price": 38000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595212/09595218/imgrc0086437859.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F027-036%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000706%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "寝具",
+    "枕・抱き枕",
+    "枕"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】とっても可愛いNAHARAオリジナル富士山チェアー(紅富士)【完成品開梱設置】※北海道・沖縄県・離島への配送不可",
+   "price": 186000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10010104/043-016_1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16042-30042156%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000467%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "イス・チェア",
+    "ダイニングチェア"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】太うどん　生麺400g（3人前）×8袋",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/13014322/imgrc0098439716.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1116-002%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001557%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "麺類",
+    "うどん"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【蔵元直送】笹一酒造のOLIFANT(オリファン)ワイン＜ロゼ＞3本セット",
+   "price": 32000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088681362.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1001-068%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000959%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "ロゼワイン"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【蔵元直送】笹一酒造のOLIFANT(オリファン)ワイン＜甲州・MBA＞2本セット",
+   "price": 22000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088677758.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16009-30033067%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000279%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "飲み比べセット",
+    "ミックスセット"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】笹一酒造OLIFANTワイン750ml 2種類&こすげ村源流工房ヤマメのアンチョビ2パックセット｜国産ワイン 赤ワイン 白ワイン 飲みくらべ セット おつまみ ヤマメ※離島への配送不可※着日指定不可",
+   "price": 26000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16050-30044251-01a.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16050-30044251%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000505%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "飲み比べセット",
+    "ミックスセット"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】プラチナ ダイヤモンド ピアス 1.0ct PT900 両耳 リング型 レディース シンプル おしゃれ 大人 アクセサリー ジュエリー プレゼント 誕生日 記念日 お祝い かわいい ファッション ジュエリーケース付 17783A",
+   "price": 765000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09558450/10184146/1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F061-024%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000911%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ピアス"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】自分で野菜を作り収穫できる貸し農園",
+   "price": 68000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09538448/imgrc0086282241.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F019-003%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000600%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "花・ガーデン・DIY",
+    "その他"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【6～12ヶ月定期便】奇跡の飲む温泉水「真木温泉 弥生の舞」　飲泉力1000ml 20本入り",
+   "price": 161000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595801/imgrc0086438837.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1004-013%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001234%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "水・炭酸水"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】粉末秋うこん100g×2袋",
+   "price": 16000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09780084/imgrc0096240984.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1050-039%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001410%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ダイエット・健康",
+    "サプリメント",
+    "植物性エキス",
+    "ウコン"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】笹一酒造OLIFANTワイン750ml 2種類&こすげ村源流工房ヤマメのアンチョビ1パックセット｜国産ワイン 赤ワイン 白ワイン 飲みくらべ セット おつまみ ヤマメ※離島への配送不可※着日指定不可",
+   "price": 22000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16050-30044253-01a.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16050-30044253%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000507%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "飲み比べセット",
+    "ミックスセット"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】つるかめZIREL　15Pパズル",
+   "price": 122000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09578302/zirel-tsurukame.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16021-30040489%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000434%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ホビー",
+    "パズル",
+    "その他"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】秀麗富嶽十二景珈琲【雁ヶ腹摺山】×3袋｜珈琲豆 コーヒー 厳選 ギフト 贈答",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09587729/fujitocoffee1-3.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16048-30044035%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000487%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "コーヒー",
+    "コーヒー豆"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】スティグ・リンドベリ　ハーバリウム　白",
+   "price": 121000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16027-30035076-01z.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16027-30035076%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000319%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "バッグ・小物・ブランド雑貨",
+    "マフラー・スカーフ",
+    "レディースマフラー・ストール"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】古民家「奥山の里 隠居」で味わう懐石料理 5名様お食事券",
+   "price": 66000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09562861/09581499/imgrc0086907513.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F006-038%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000761%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "金券",
+    "施設利用券",
+    "その他"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】シャワークライミング体験チケット（1名）",
+   "price": 26000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10005537/imgrc0087607179.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F078-004%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000872%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "スポーツ・アウトドア",
+    "アウトドア",
+    "その他"
+   ],
+   "cat": "stay",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】笹一アルコール77　500ml×2本※離島への発送不可 ※着日指定送不可",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16009-30033077-01z.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16009-30033077%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000290%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ウォッカ"
+   ],
+   "cat": "sake",
+   "review_count": 2
+  },
+  {
+   "name": "【ふるさと納税】古民家「奥山の里 隠居」で味わう懐石料理 5名様お食事券",
+   "price": 66000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09562861/09581499/imgrc0086907513.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F006-038%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000761%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "金券",
+    "施設利用券",
+    "その他"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】スティグ・リンドベリ　ハーバリウム　白",
+   "price": 121000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16027-30035076-01z.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16027-30035076%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000319%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "バッグ・小物・ブランド雑貨",
+    "マフラー・スカーフ",
+    "レディースマフラー・ストール"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】シャワークライミング体験チケット（1名）",
+   "price": 26000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10005537/imgrc0087607179.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F078-004%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000872%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "スポーツ・アウトドア",
+    "アウトドア",
+    "その他"
+   ],
+   "cat": "stay",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】郡内織物　絹紡ストール　パープル　(シルク 100％)※着日指定不可",
+   "price": 18000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i2/16013-42052-01.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16013-30042052%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000456%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "バッグ・小物・ブランド雑貨",
+    "マフラー・スカーフ",
+    "レディースマフラー・ストール"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】笹一アルコール77　500ml×2本※離島への発送不可 ※着日指定送不可",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16009-30033077-01z.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16009-30033077%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000290%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ウォッカ"
+   ],
+   "cat": "sake",
+   "review_count": 2
+  },
+  {
+   "name": "【ふるさと納税】渓流釣り体験と炭火焼きバーベキューコース（3名様）｜魚 さかな つり ニジマス BBQ 手ぶら",
+   "price": 56000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i2/16044-44044-01.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16044-30044044%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000496%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "金券",
+    "施設利用券",
+    "その他"
+   ],
+   "cat": "stay",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】笹一酒造OLIFANTワイン750ml 2種類&こすげ村源流工房ヤマメのアンチョビ1パックセット｜国産ワイン 赤ワイン 白ワイン 飲みくらべ セット おつまみ ヤマメ※離島への配送不可※着日指定不可",
+   "price": 22000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16050-30044253-01a.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16050-30044253%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000507%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "飲み比べセット",
+    "ミックスセット"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】大月桂川ラフティングツアー半日　ペアチケット",
+   "price": 51000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09817921/top.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16034-30038381%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000402%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "金券",
+    "施設利用券",
+    "その他"
+   ],
+   "cat": "stay",
+   "review_count": 1
+  },
+  {
+   "name": "【ふるさと納税】郡内織物　絹紡ストール(シルク100%) ペイズリー赤",
+   "price": 18000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09774839/imgrc0086964213.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F005-007%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000826%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "バッグ・小物・ブランド雑貨",
+    "マフラー・スカーフ",
+    "レディースマフラー・ストール"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】医療機器認証 上腕式 血圧計 VM-BP 自動電子 高精度 チューブレス コンパクト 30秒測定 大画面表示 スマート自動電源オフ 健康管理 血圧管理 介護 高齢者 シニア 敬老の日 プレゼント 日本製",
+   "price": 95000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09681105/ht_1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16036-30039953%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000423%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "医薬品・コンタクト・介護",
+    "身体測定器・医療計測器",
+    "血圧計"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【蔵元直送】笹一酒造のOLIFANT(オリファン)ワイン＜赤・白・ロゼ＞6本セット",
+   "price": 64000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088677761.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1001-066%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000957%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "飲み比べセット",
+    "ミックスセット"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】秋うこん600粒+ミニボトル30粒入",
+   "price": 21000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09780084/imgrc0096736796.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1050-037%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001408%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ダイエット・健康",
+    "サプリメント",
+    "植物性エキス",
+    "ウコン"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ダイヤ　ハーフエタニティリング　プラチナ【サイズ：8号～20号（1号刻み）】",
+   "price": 593000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11481496/11483476/imgrc0094045565.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1081-021-13%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001176%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "指輪・リング"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】木製夫婦茶碗【TOKIWORKS トキワークス】",
+   "price": 50000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12678912/imgrc0097125901.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1072-006%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001477%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "キッチン用品・食器・調理器具",
+    "食器・カトラリー・グラス",
+    "食器",
+    "ご飯茶碗"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】大月市で肥育した馬と放牧豚で作ったソフトサラミソーセージ　70gシート4枚　ウインナソーセージ3本入パック　2個セット",
+   "price": 18000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/10790420/win02.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1087-032%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001182%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "加工品",
+    "ソーセージ",
+    "その他"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】笹一酒造OLIFANTマスカット・ベリーA樽熟成2本&こすげ村源流工房ヤマメのアンチョビ1パックセット｜ 国産ワイン 赤ワイン セット おつまみ ヤマメ※離島への配送不可※着日指定不可",
+   "price": 21000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16050-30044254-01a.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16050-30044254%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000508%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "飲み比べセット",
+    "赤ワインセット"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ネックレス ダイヤモンド 0.50カラット K18 イエローゴールド ペンダント レディース シンプル 豪華 おしゃれ 大人 ファッション ジュエリー アクセサリー カーブライン プレゼント ギフト 誕生日 記念日 お祝い 17780B DIA PN",
+   "price": 495000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09558450/10176607/061-037-1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F061-037%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000885%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ネックレス・ペンダント"
+   ],
+   "cat": "craft",
+   "review_count": 1
+  },
+  {
+   "name": "【ふるさと納税】真木ハマイバキャンプ場ご利用チケット（1名）",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10005537/imgrc0087593275.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F078-001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000869%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "スポーツ・アウトドア",
+    "アウトドア",
+    "その他"
+   ],
+   "cat": "stay",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】チェーンリング　K18(ダイヤ）",
+   "price": 254000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11481496/11482149/imgrc0094044783.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1081-018%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001163%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "指輪・リング"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】奇跡の飲む温泉水「真木温泉 弥生の舞」　飲泉力（BIBバック）10L入り",
+   "price": 15000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595801/imgrc0086438607.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F004-003%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000689%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "水・炭酸水"
+   ],
+   "cat": "food",
+   "review_count": 1
+  },
+  {
+   "name": "【ふるさと納税】つるかめZIREL　15Pパズル",
+   "price": 122000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09578302/zirel-tsurukame.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16021-30040489%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000434%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ホビー",
+    "パズル",
+    "その他"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】奇跡の飲む温泉水「真木温泉 弥生の舞」　飲泉力1000ml 6本入り",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595801/imgrc0086438837.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1004-009%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001210%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "水・炭酸水"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】手作り長座布団とカバー2点セット　ST-105　NO-07B",
+   "price": 25000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595212/imgrc0086437828.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F027-006%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000731%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "クッション・座布団",
+    "座布団"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】引き寄せの宝石ペン【3色から選べます】",
+   "price": 18000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09722835/imgrc0086879055.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F081-000%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000838%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日用品雑貨・文房具・手芸",
+    "文房具・事務用品",
+    "筆記具",
+    "ボールペン"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】プラチナ ラボグロウンダイヤモンド 1.0ct PT900 両耳 リング型 レディース シンプル おしゃれ 大人 アクセサリー ジュエリー プレゼント 誕生日 記念日 お祝い かわいい ファッション LDP17783A",
+   "price": 569000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12644298/imgrc0099868560.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F2161-024%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001504%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ピアス"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ほうとう　生麺400g（3人前）×8袋",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/13014322/imgrc0098439958.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1116-003%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001558%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "麺類",
+    "ほうとう"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【希少豚】大月のびのび放牧豚【バラ肉スライス】900g (300g×3)",
+   "price": 13000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/imgrc0088820806.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F087-010%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000971%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "豚肉",
+    "ロース"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】木漏れ日 ランプシェード【TOKIWORKS トキワークス】",
+   "price": 267000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12678912/imgrc0097125562.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1072-012%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001469%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "ライト・照明器具",
+    "デスクライト・テーブルランプ"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】手作り長座布団とカバーのセット　NO105-04A",
+   "price": 25000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595212/imgrc0088169929.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F027-066%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000907%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "クッション・座布団",
+    "座布団"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】富士山焼酎 芋 720ml×2本",
+   "price": 14000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09596049/imo.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F041-004%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000752%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日本酒・焼酎",
+    "焼酎",
+    "いも焼酎"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】真木ハマイバキャンプ場テントサウナご利用チケット【キャンプ場ご利用の方専用】",
+   "price": 35000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10005537/imgrc0087594834.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F078-003%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000871%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "スポーツ・アウトドア",
+    "アウトドア",
+    "その他"
+   ],
+   "cat": "stay",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】大月市で肥育した馬と放牧豚で作ったソフトサラミソーセージ　70gシート4枚　ウインナソーセージ3本入パック　2個セット",
+   "price": 18000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/10790420/win02.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1087-032%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001182%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "加工品",
+    "ソーセージ",
+    "その他"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】笹一酒造OLIFANTマスカット・ベリーA樽熟成2本&こすげ村源流工房ヤマメのアンチョビ1パックセット｜ 国産ワイン 赤ワイン セット おつまみ ヤマメ※離島への配送不可※着日指定不可",
+   "price": 21000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16050-30044254-01a.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16050-30044254%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000508%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "飲み比べセット",
+    "赤ワインセット"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ダイヤ　ハーフエタニティリング　プラチナ【サイズ：8号～20号（1号刻み）】",
+   "price": 593000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11481496/11483476/imgrc0094045565.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1081-021-13%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001176%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "指輪・リング"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】木製夫婦茶碗【TOKIWORKS トキワークス】",
+   "price": 50000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12678912/imgrc0097125901.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1072-006%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001477%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "キッチン用品・食器・調理器具",
+    "食器・カトラリー・グラス",
+    "食器",
+    "ご飯茶碗"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ネックレス ダイヤモンド 0.50カラット K18 イエローゴールド ペンダント レディース シンプル 豪華 おしゃれ 大人 ファッション ジュエリー アクセサリー カーブライン プレゼント ギフト 誕生日 記念日 お祝い 17780B DIA PN",
+   "price": 495000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09558450/10176607/061-037-1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F061-037%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000885%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ネックレス・ペンダント"
+   ],
+   "cat": "craft",
+   "review_count": 1
+  },
+  {
+   "name": "【ふるさと納税】リズミカルな鉄の花器【TOKIWORKS トキワークス】",
+   "price": 77000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12678912/imgrc0097125878.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1072-009%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001473%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "インテリア小物・置物",
+    "花瓶"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】古民家「奥山の里 隠居」で味わう懐石料理 3名様お食事券",
+   "price": 40000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09562861/09581499/imgrc0086907508.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F006-036%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000759%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "金券",
+    "施設利用券",
+    "その他"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】オリジナルデザインTシャツ 松姫 武田松姫 信玄 姫 Tシャツ 男女共用 レディース メンズ かわいい アパレル コットン",
+   "price": 21000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/wear/wear-0001/202606161200025964.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F096-004%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001240%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "レディースファッション",
+    "トップス",
+    "Tシャツ・カットソー"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】 富士山 麓 四季の 水 / 2 l× 12 本(2箱)・ ミネラルウォーター 水 保存 大容量 まとめ買い 飲料水 天然水 非常 備え 防災 地震 台風 津波 天災 災害 軟水 ペットボトル 備蓄 災害用 家庭備蓄",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09597347/2.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F032-005%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000899%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "水・炭酸水"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】手作り長座布団とカバー2点セット　ST-105　NO-07A",
+   "price": 25000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595212/imgrc0086437826.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F027-005%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000730%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "クッション・座布団",
+    "座布団"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ソイロン製ティーバックのハーブティー4種",
+   "price": 42000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09780084/12400279/imgrc0096737126.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1050-045%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001416%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "お茶・紅茶",
+    "茶葉・ティーバッグ",
+    "ハーブティー"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】おしゃれでかわいい一人掛けソファー【?CUBE】aスタイル【完成品開梱設置】※離島への配送不可",
+   "price": 245000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10010104/043-017_1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16042-30042157%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000468%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "ソファ・ソファベッド",
+    "ソファ"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】桜 ZIREL ジレル 15Pパズル",
+   "price": 122000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09578302/zirel-sakura.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16021-30040490%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000435%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ホビー",
+    "パズル",
+    "立体パズル"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】生めんセット（うどん太麺4袋・うどん細麺4袋・ほうとう4袋）自家製激辛とうがらし付き",
+   "price": 16000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11083086/imgrc0093154269.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F067-006%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000794%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "麺類",
+    "セット・詰め合わせ"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ブルージュの羽根ネックレス　K18（ダイヤ）",
+   "price": 635000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11481496/11481975/imgrc0094044633.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1081-010%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001165%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ネックレス・ペンダント"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ブルージュの羽根ネックレス　シルバー（ブルーダイヤ）",
+   "price": 93000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11481496/11481996/imgrc0094044640.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1081-011%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001159%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ネックレス・ペンダント"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】大月市産杉・檜のスウェーデントーチ　中サイズ×2",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/imgrc0087041483.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F013-015%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000840%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "スポーツ・アウトドア",
+    "アウトドア",
+    "バーベキュー・クッキング用品",
+    "キャンプ用バーナー"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【2026年発送】キウィ おおつきうぃ ゴールドキウイ 900g以上 9個 キウィフルーツ 果物 フルーツ 果肉 旬 ゴールド ゴールデンキング 国産 甘い デザート トッピング ギフト 贈り物 高糖度 産地直送 栽培期間中農薬不使用 送料無料 杉本農園 山梨県 大月市",
+   "price": 8000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12770275/otsuki01_1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F115-001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001538%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "フルーツ・果物",
+    "キウイフルーツ"
+   ],
+   "cat": "fruit",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】生こうじで作る「手作り味噌セット」4kg 仕上がり",
+   "price": 12000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11083086/159-1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16004-30013102%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000064%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "調味料",
+    "みそ",
+    "セット・詰め合わせ"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【山梨の地酒】蔵元直送「笹一山廃純米大吟醸 甲州山田錦35」",
+   "price": 51000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088410512.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F001-052%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000945%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日本酒・焼酎",
+    "日本酒",
+    "純米大吟醸酒"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】真木温泉mシリーズ【最高級ミストウォーター】60g×3　ミスト　化粧水　温泉水",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09584401/imgrc0086438116.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F004-008%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000685%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "美容・コスメ・香水",
+    "スキンケア",
+    "保湿ミスト"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】桂川の冷凍ニジマス 約2.2kg 約20～22尾 山梨県産",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09538471/nijimasu_r.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F012-004%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000590%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "魚介類・水産加工品",
+    "その他水産物",
+    "その他"
+   ],
+   "cat": "seafood",
+   "review_count": 3
+  },
+  {
+   "name": "【ふるさと納税】キュービックシルバーリング（TA-5679)　8～20号・イエローメッキ・ホワイトメッキ・ピンクメッキ",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12298615/12298633/imgrc0096092156.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F110-004%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001289%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "指輪・リング"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】粉末秋うこん300g",
+   "price": 20000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09780084/imgrc0096240985.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1050-040%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001411%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ダイエット・健康",
+    "サプリメント",
+    "植物性エキス",
+    "ウコン"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【山梨の地酒】蔵元直送「笹一純米吟醸 甲州夢山水 720ml×2本セット」",
+   "price": 13000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088411287.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F001-048%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000949%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日本酒・焼酎",
+    "日本酒",
+    "純米吟醸酒"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】タロット・オラクル占い　チケット1回分(1名様)",
+   "price": 38000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09722835/imgrc0088150902.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F081-001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000900%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "その他"
+   ],
+   "cat": "stay",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】オリジナルデザインTシャツ 織田信忠　松姫 武田松姫 信玄 戦国武将 Tシャツ 男女共用 レディース メンズ かわいい　武田　織田　豊臣　シルクスクリーン　あさひや",
+   "price": 18000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11947004/13022165/imgrc0098331436.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F096-007%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001553%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "メンズファッション",
+    "トップス",
+    "Tシャツ・カットソー"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】大月市内で肥育【赤身馬刺し】モモ　300g以上（ブロック×1～3個）/肩・肩ロース/ヒレ・ロース",
+   "price": 14000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/meat/meat-0001/202609081515025382.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1087-012%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000978%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "馬肉",
+    "赤身"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【山梨ワイン】蔵元直送「OLIFANTマスカット・ベーリーAロゼ樽発酵750ml×2本セット」",
+   "price": 22000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088391074.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F001-056%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000939%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "ロゼワイン"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】キュービックシルバーリング（TA-5679)　8～20号・イエローメッキ・ホワイトメッキ・ピンクメッキ",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12298615/12298633/imgrc0096092156.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F110-004%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001289%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "指輪・リング"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【山梨の地酒】蔵元直送「笹一純米吟醸 甲州夢山水 720ml×2本セット」",
+   "price": 13000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088411287.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F001-048%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000949%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日本酒・焼酎",
+    "日本酒",
+    "純米吟醸酒"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】粉末秋うこん300g",
+   "price": 20000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09780084/imgrc0096240985.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1050-040%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001411%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ダイエット・健康",
+    "サプリメント",
+    "植物性エキス",
+    "ウコン"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】タロット・オラクル占い　チケット1回分(1名様)",
+   "price": 38000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09722835/imgrc0088150902.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F081-001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000900%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "その他"
+   ],
+   "cat": "stay",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】大月市で肥育した馬と放牧豚で作ったソフトサラミソーセージ　70gシート2枚　250gブロック1個",
+   "price": 15000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/10790420/022.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1087-031%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001181%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "加工品",
+    "ソーセージ",
+    "その他"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】富士山ソファー3人掛 ソファータイプ&#8545(紅富士)【完成品開梱設置】※北海道・沖縄県・離島への配送不可",
+   "price": 527000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10010104/043-014_1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16042-30042152%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000463%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "ソファ・ソファベッド",
+    "ソファ"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】スリープソフト・ピロ　単品　S?11　ホワイト",
+   "price": 31000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595212/09595218/imgrc0086437879.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F027-041%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000711%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "寝具",
+    "枕・抱き枕",
+    "枕"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】K18YGダイヤ クローバーモチーフ ネックレス MUN8282 レディース ファッション ギフト プレゼント 誕生日 記念日 お祝い おしゃれ 大人 ジュエリーケース付 アクセサリー ジュエリー CLOVER",
+   "price": 251000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12732526/12733313/imgrc0097373485.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F061-015%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000802%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ネックレス・ペンダント"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】手作り長座布団とカバー2点セット　ST-105　NO-07A",
+   "price": 25000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595212/imgrc0086437826.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F027-005%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000730%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "クッション・座布団",
+    "座布団"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】 富士山 麓 四季の 水 / 2 l× 12 本(2箱)・ ミネラルウォーター 水 保存 大容量 まとめ買い 飲料水 天然水 非常 備え 防災 地震 台風 津波 天災 災害 軟水 ペットボトル 備蓄 災害用 家庭備蓄",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09597347/2.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F032-005%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000899%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "水・炭酸水"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】生こうじで作る「手作り味噌セット」4kg 仕上がり",
+   "price": 12000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11083086/159-1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16004-30013102%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000064%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "調味料",
+    "みそ",
+    "セット・詰め合わせ"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【山梨の地酒】蔵元直送「笹一山廃純米大吟醸 甲州山田錦35」",
+   "price": 51000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088410512.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F001-052%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000945%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日本酒・焼酎",
+    "日本酒",
+    "純米大吟醸酒"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】桂川の冷凍ニジマス 約2.2kg 約20～22尾 山梨県産",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09538471/nijimasu_r.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F012-004%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000590%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "魚介類・水産加工品",
+    "その他水産物",
+    "その他"
+   ],
+   "cat": "seafood",
+   "review_count": 3
+  },
+  {
+   "name": "【ふるさと納税】真木温泉mシリーズ【最高級ミストウォーター】60g×3　ミスト　化粧水　温泉水",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09584401/imgrc0086438116.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F004-008%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000685%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "美容・コスメ・香水",
+    "スキンケア",
+    "保湿ミスト"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ルアー・フライフィッシング1日チケット（3名様）｜魚 さかな つり ニジマス ヤマメ イワナ 渓流 川",
+   "price": 61000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i2/16044-44047-01.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16044-30044047%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000499%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "金券",
+    "施設利用券",
+    "その他"
+   ],
+   "cat": "stay",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】真木ハマイバキャンプ場ご利用チケット（2名）",
+   "price": 15000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10005537/imgrc0087593555.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F078-002%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000870%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "スポーツ・アウトドア",
+    "アウトドア",
+    "その他"
+   ],
+   "cat": "stay",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ダイヤ　ハーフエタニティリング　K18【サイズ：8号～20号（1号刻み）】",
+   "price": 593000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11481496/11483458/imgrc0094045564.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1081-020-13%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001177%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "指輪・リング"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】大月市で肥育した馬と放牧豚で作ったソフトサラミソーセージ【馬肉80%：豚肉20%】　70gシート　4枚",
+   "price": 12000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/10790420/021.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1087-033%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001183%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "加工品",
+    "ソーセージ",
+    "その他"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】笹一アルコール77　500ml×12本　※着日指定送不可　※離島への発送不可",
+   "price": 60000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16009-30033183-01z.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16009-30033183%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000296%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "その他"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】木漏れ日 スタンドライト【TOKIWORKS トキワークス】",
+   "price": 367000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12678912/imgrc0097125550.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1072-013%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001467%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "ライト・照明器具",
+    "フロアスタンド・ランプ"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ソーセージ ウインナー 26本 おすすめ 豚 馬 BBQ ビール 国産 グルメ バーベキュー キャンプ パーティー おつまみ アウトドア 【馬肉70%：豚肉30%】",
+   "price": 16000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/10790420/r.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1087-025%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001034%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "加工品",
+    "ソーセージ",
+    "ウインナーソーセージ"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】山梨県大月市の対象施設で使える楽天トラベルクーポン 寄付額50,000円",
+   "price": 50000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/15000.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16043-30042527%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000473%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "金券",
+    "旅行・交通関連チケット",
+    "旅行券・ホテル券・航空券"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】K18 ゴールド シンプル ライン フープ ピアス 　（イエローゴールド/ピンクゴールド/ホワイトゴールド）/　k18 18k 金 地金 ゴールド ピアス フープピアス ジュエリー アクセサリー プレゼント",
+   "price": 65000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/wear/wear-0001/20260515155504532.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F110-0000000%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001545%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ピアス"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】富士山焼酎麦　益々繁盛ボトル(4.5L)",
+   "price": 56000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09596049/hanei1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F041-002%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000750%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日本酒・焼酎",
+    "焼酎",
+    "麦焼酎"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【6～12ヶ月定期便】奇跡の飲む温泉水「真木温泉 弥生の舞」　飲泉力1000ml 10本入り",
+   "price": 81000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595801/imgrc0086438837.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1004-011%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001233%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "水・炭酸水"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】山梨県大月市の対象施設で使える楽天トラベルクーポン 寄付額100,000円",
+   "price": 100000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/30000.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16043-30042528%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000474%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "金券",
+    "旅行・交通関連チケット",
+    "旅行券・ホテル券・航空券"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【山梨ワイン】蔵元直送「OLIFANT甲州シュール・リー750ml×2本セット」",
+   "price": 22000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088409195.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F001-054%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000943%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "白ワイン"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【2026年出荷分先行予約】富士山キャベツ　3kg 8kg 9kg",
+   "price": 3000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/veg/veg-0001/202605211358030264.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F108-005%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001194%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "野菜・きのこ",
+    "キャベツ"
+   ],
+   "cat": "farm",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【蔵元限定】笹一酒造　笹一　特選純米大吟醸　1.8L※着日指定送不可",
+   "price": 51000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16009-30033072-01z.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16009-30033072%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000285%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日本酒・焼酎",
+    "日本酒",
+    "純米大吟醸酒"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【先行予約】2026年冬発送　ゴールドキウイ/グリーンキウイ　セット　3kg　27～30個",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/fruit/fruit-0001/202606051427105366.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F223680%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001576%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "フルーツ・果物",
+    "その他"
+   ],
+   "cat": "fruit",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ブビンガの植台【TOKIWORKS トキワークス】",
+   "price": 27000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12678912/imgrc0097125810.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1072-010%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001472%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "インテリア小物・置物",
+    "花瓶"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】やーこん茶25包（3パック）",
+   "price": 22000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09780084/12399820/imgrc0096733905.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1050-041%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001412%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "お茶・紅茶",
+    "茶葉・ティーバッグ",
+    "ハーブティー"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】富士山ソファー3人掛 タイプ(紅富士)【完成品開梱設置】",
+   "price": 601000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10010104/043-012_1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F043-012%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000619%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "ソファ・ソファベッド",
+    "ソファ"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】 自然の中で飼育された 希少豚 大月のびのび放牧豚の切り落とし肉 1.5kg以上 300g×5パック",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/imgrc0088930926.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1087-015%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000977%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "豚肉",
+    "その他"
+   ],
+   "cat": "meat",
+   "review_count": 3
+  },
+  {
+   "name": "【ふるさと納税】【蔵元限定】笹一酒造　笹一　特選純米大吟醸　1.8L※着日指定送不可",
+   "price": 51000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16009-30033072-01z.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16009-30033072%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000285%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日本酒・焼酎",
+    "日本酒",
+    "純米大吟醸酒"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【先行予約】2026年冬発送　ゴールドキウイ/グリーンキウイ　セット　3kg　27～30個",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/fruit/fruit-0001/202606051427105366.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F223680%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001576%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "フルーツ・果物",
+    "その他"
+   ],
+   "cat": "fruit",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】一味　七味セット　激辛　キャロライナリーパー　唐辛子　世界一　辛い　調味料",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09578616/09581277/imgrc0086776662.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16022-30032266%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000266%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "調味料",
+    "スパイス",
+    "唐辛子",
+    "その他"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】大月市内で肥育【赤身馬刺し】ヒレ・ロース　300g以上（100g前後ブロック×2～3個）",
+   "price": 19000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/meat/meat-0001/202609081456032651.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F255586%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001603%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "馬肉",
+    "セット・詰め合わせ"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【山梨ワイン】蔵元直送「OLIFANTマスカット・ベーリーA樽熟成750ml×2本セット」",
+   "price": 22000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088409131.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F001-055%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000942%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "赤ワイン"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ルアー・フライフィッシング1日チケット（2名様）｜魚 さかな つり ニジマス ヤマメ イワナ 渓流 川",
+   "price": 41000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i2/16044-44046-01.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16044-30044046%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000498%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "金券",
+    "施設利用券",
+    "その他"
+   ],
+   "cat": "stay",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ピアス ダイヤモンド アクセサリー 0.30ct スクエア プラチナ シンプル おしゃれ プレゼント 女性 かわいい 上品 大人 スクエア ジュエリー 収納 ケース 付き レディース ファッション ギフト 誕生日 記念日 お祝い 結婚式 成人式 贈り物 MUP14926 PT900",
+   "price": 193000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12732526/12733313/imgrc0097622447.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F061-007%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000810%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ピアス"
+   ],
+   "cat": "craft",
+   "review_count": 1
+  },
+  {
+   "name": "【ふるさと納税】奇跡の飲む温泉水「真木温泉 弥生の舞」　飲泉力500ml 10本入り",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595801/imgrc0086438837.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1004-010%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001232%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "水・炭酸水"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】スティグ・リンドベリ　ポテリー　マルチカラー",
+   "price": 121000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16027-30035078-01z.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16027-30035078%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000321%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "バッグ・小物・ブランド雑貨",
+    "マフラー・スカーフ",
+    "レディースマフラー・ストール"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】キュービックシルバーリング（TA-4938)　8～20号・イエローメッキ・ホワイトメッキ・ピンクメッキ",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12298615/12298626/imgrc0096092146.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F110-003%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001288%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "指輪・リング"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【3～12ヶ月定期便】富士山麓 四季の水 / 2L×12本(2箱)×3～12ヶ月 計36～144本 ・ ミネラルウォーター 水 飲料水 天然水 軟水 ペットボトル 非常 備え 防災 地震 台風 津波 天災 災害 備蓄 災害用 防災 家庭備蓄 アウトドア キャンプ 定期便",
+   "price": 30000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09597347/1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1032-009%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001040%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "水・炭酸水"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】シンプルネックレス　K18（ダイヤ）",
+   "price": 339000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11481496/12910012/imgrc0098088881.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1081-015%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001161%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ネックレス・ペンダント"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】笹一酒造OLIFANT甲州シュール・リー2本&こすげ村源流工房ヤマメのアンチョビ1パックセット｜ 国産ワイン 白ワイン セット おつまみ ヤマメ※離島への配送不可※着日指定不可",
+   "price": 23000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16050-30044252-01a.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16050-30044252%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000506%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "飲み比べセット",
+    "白ワインセット"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】秋うこん600粒（2パック）+ミニボトル30粒入",
+   "price": 37000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09780084/imgrc0096735705.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1050-038%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001409%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ダイエット・健康",
+    "サプリメント",
+    "植物性エキス",
+    "ウコン"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】富士山 麓 四季の 水 / 500 ml× 48 本(2箱)・ ミネラルウォーター 水 保存 大容量 まとめ買い 飲料水 天然水 非常 備え 防災 地震 台風 津波 天災 災害 軟水 ペットボトル 備蓄 災害用 家庭備蓄",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09597347/3.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F032-004%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000898%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "水・炭酸水"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】スパークリングRシャワー（真木温泉ミストウォーターシリーズ）150g×2本",
+   "price": 15000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09584401/imgrc0086436202.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F004-019%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000686%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "美容・コスメ・香水",
+    "スキンケア",
+    "保湿ミスト"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】高級・総レースカバー付き長座布団ロングサイズ2点セット　ST120　NO-001",
+   "price": 51000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595212/imgrc0086437820.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F027-018%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000743%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "クッション・座布団",
+    "座布団"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【ピアス】プラチナ ダイヤモンド 0.50ct PT900 両耳 小粒 リング型 レディース シンプル おしゃれ カジュアル アクセサリー ジュエリー プレゼント 誕生日 記念日 お祝い かわいい ファッション 17784A Pt DIA PE",
+   "price": 427000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12732526/12733313/imgrc0097751290.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F061-026%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000913%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ピアス"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】BIG MOON Beer 6缶セット（エール350ml×3本・ラガー350ml×3本）",
+   "price": 19000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11857264/imgrc0094852598.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1109-001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001197%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ビール・発泡酒",
+    "ビール"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ネックレス レディース ゴールド 0.20ct K18 K18YG シンプル オシャレ ダイヤモンド プレゼント 結婚式 おしゃれ お祝い 大人 ギフト 誕生日 記念日 女性 20代 30代 40代 50代 ジュエリーケース付 アクセサリー ジュエリー 17369B",
+   "price": 359000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12732526/12733313/033.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F061-000%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000881%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ネックレス・ペンダント"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ブルージュの羽根ダイヤモンドリング　レディース【サイズ：8号～16号（1号刻み）】",
+   "price": 831000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11481496/11481710/imgrc0094044506.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1081-003%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001583%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "指輪・リング"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】郡内織物　スリムタイ　市松模様(シルク 100％)※着日指定不可",
+   "price": 18000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i2/16013-42055-01.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16013-30042055%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000459%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "バッグ・小物・ブランド雑貨",
+    "スーツ用ファッション小物",
+    "ネクタイ"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】大月のびのび放牧豚【お楽しみ4品セット】肩ロース150g×2モモ300g切落し300gひき肉500g",
+   "price": 14000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/imgrc0090974057.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1087-001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001020%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "豚肉",
+    "セット・詰め合わせ"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】K18YG　ラボグロウンダイヤモンド　ネックレス　0.20ct　LDN17368B　K18　DIA　PN レディース ファッション ギフト プレゼント 誕生日 記念日 お祝い おしゃれ 大人 ジュエリーケース付 アクセサリー ジュエリー",
+   "price": 332000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12644298/031rakuten.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F2161-031%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001490%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ネックレス・ペンダント"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】Feキューブmini (鉄製置物)",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10596011/10789712/mini-001.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1092-008%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001025%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "インテリア小物・置物",
+    "置物"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】*国際優秀品質賞受賞の凄い水* 奇跡の飲む温泉水「真木温泉 弥生の舞」飲泉の力 1000ml-10本",
+   "price": 18000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16002-30013093-01z.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16002-30013093%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000057%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "水・炭酸水"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】K18YG　ラボグロウンダイヤモンド　ネックレス　0.20ct　LDN17368B　K18　DIA　PN レディース ファッション ギフト プレゼント 誕生日 記念日 お祝い おしゃれ 大人 ジュエリーケース付 アクセサリー ジュエリー",
+   "price": 332000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12644298/031rakuten.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F2161-031%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001490%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ネックレス・ペンダント"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】敏感肌にぴったり＊温泉水100％の「mミストウォーター」280g 顔はもちろん日焼けや汗をかいたカラダや髪の毛にも使えます！",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16002-30013095-01z.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16002-30013095%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000059%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "美容・コスメ・香水",
+    "スキンケア",
+    "化粧水・ローション"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】富士山焼酎 米 720ml×2本",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09596049/kome.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F041-005%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000753%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日本酒・焼酎",
+    "焼酎",
+    "米焼酎"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】高級・総レースカバー付き長座布団2点セット　ST105　NO-001",
+   "price": 43000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595212/imgrc0086437816.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F027-020%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000745%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "クッション・座布団",
+    "座布団"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【蔵元直送】笹一酒造・OLIFANT(オリファン)ワイン 750ml×6本セット",
+   "price": 72000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088677752.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16009-30033063%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000275%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "飲み比べセット",
+    "ミックスセット"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ウォールナット エスプレッソカップ【TOKIWORKS トキワークス】",
+   "price": 27000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12678912/imgrc0097125835.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1072-007%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001475%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "キッチン用品・食器・調理器具",
+    "コーヒー・お茶用品",
+    "マグカップ・ティーカップ",
+    "コーヒーカップ"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】郡内織物　絹紡ストール(シルク100%) ブラウン",
+   "price": 18000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09774839/imgrc0086964208.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F005-009%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000828%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "バッグ・小物・ブランド雑貨",
+    "マフラー・スカーフ",
+    "レディースマフラー・ストール"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】スパークリングRシャワー（真木温泉ミストウォーターシリーズ）150g・60gセット",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09584401/imgrc0086420904.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F004-020%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000687%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "美容・コスメ・香水",
+    "スキンケア",
+    "化粧水・ローション"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】スパークリング・ローズ・シャワー150g　ミスト　化粧水　（真木温泉ミストウォーターシリーズ）敏感肌にぴったり　温泉水にローズエキス・コラーゲン配合",
+   "price": 8000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16002-30013096-01z.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16002-30013096%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000060%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "美容・コスメ・香水",
+    "スキンケア",
+    "化粧水・ローション"
+   ],
+   "cat": "craft",
+   "review_count": 1
+  },
+  {
+   "name": "【ふるさと納税】ピアス キュービック シルバー カラー：イエロー・ホワイト・ピンク/ レディース ジュエリー アクセサリー シ Wロックキャッチ スタッドピアス ギフト プレゼント 誕生日 ジュエリーケース付",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/wear/wear-0001/202609151517022949.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F110-005%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001290%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ピアス"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【赤身馬刺し】国産 馬刺し 赤身 350g 大月市内 肥育 高タンパク 低カロリー 肩・肩ロース他 ブロック2-5個 甲州伝統の逸品 感動ファーム",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/meat/meat-0001/202609081520022301.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F199085%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001604%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "馬肉",
+    "赤身"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】チーズ ケーキ お菓子 洋菓子 5/10/15/20個入",
+   "price": 5000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09631707/3.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16000-30013089%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000002%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "スイーツ・お菓子",
+    "ケーキ",
+    "チーズケーキ",
+    "その他"
+   ],
+   "cat": "sweets",
+   "review_count": 3
+  },
+  {
+   "name": "【ふるさと納税】郡内織物　絹紡ストール(シルク100%) えんじ色",
+   "price": 18000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09774839/imgrc0086964209.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F005-010%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000829%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "バッグ・小物・ブランド雑貨",
+    "マフラー・スカーフ",
+    "レディースマフラー・ストール"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】山梨県大月産鹿革使用　赤ちゃんの名入りファーストシューズキット 12cmホワイト",
+   "price": 28000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09578616/09581277/0625_hirune_0034_blt.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F014-002%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000691%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "寝具",
+    "枕・抱き枕",
+    "枕"
+   ],
+   "cat": "craft",
+   "review_count": 1
+  },
+  {
+   "name": "【ふるさと納税】【先行予約】ご家庭用 国産レッドキウイ(小玉) 2kg　2026年11月より順次発送",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11209425/imgrc0099611086.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1094-003%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001331%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "フルーツ・果物",
+    "キウイフルーツ"
+   ],
+   "cat": "fruit",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ソーセージ ウインナー 500g おすすめ 豚 馬 BBQ ビール 国産 グルメ バーベキュー キャンプ パーティー おつまみ アウトドア 【馬肉50%：豚肉50%】",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/10790420/03_r.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1087-026%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001027%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "加工品",
+    "ソーセージ",
+    "ウインナーソーセージ"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ピアス ダイヤモンド スター 0.30ct シンプル おしゃれ プレゼント 女性 かわいい 上品 大人 スクエア ジュエリー 収納 ケース 付き レディース ファッション ギフト プレゼント 誕生日 記念日 お祝い アクセサリー 星型 入学式 贈り物 国産 PT900 MUP16356",
+   "price": 244000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12732526/12733313/imgrc0097374441.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F061-08%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000809%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ピアス"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】猿橋遊覧～浮世絵の世界へ～　ペアチケット",
+   "price": 15000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09838053/imgrc0087140841.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F078-005%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000847%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "金券",
+    "施設利用券",
+    "その他"
+   ],
+   "cat": "stay",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】富士山ソファー3人掛 タイプ(富士)【完成品開梱設置】",
+   "price": 603000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10010104/043-011_1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F043-011%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000620%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "ソファ・ソファベッド",
+    "ソファ"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】K18YG ダイヤモンド ピアス 0.50ct 17784B K18 DIA PE レディース ファッション ギフト プレゼント 誕生日 記念日 お祝い シンプル おしゃれ かわいい 大人 アクセサリー ジュエリーケース付 ゴールド",
+   "price": 501000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/wear/wear-0001/202609142028054501.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F061-027%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000914%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ピアス"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【蔵元直送】笹一酒造のOLIFANT(オリファン)ワイン＜白＞甲州3本セット",
+   "price": 32000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088677759.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16009-30033179%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000292%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "その他"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【山梨ワイン】蔵元直送「OLIFANT甲州瓶内二次発酵スパークリング750ml×2本セット」",
+   "price": 30000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088409156.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F001-059%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000936%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "スパークリングワイン・シャンパン"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】創業1917年（大正6年) 博石堂の 黒水牛 印鑑＜護守印＞ 【印章 はんこ ハンコ 実印】",
+   "price": 41000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09734420/imgrc0095653235.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F063-002%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000835%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日用品雑貨・文房具・手芸",
+    "印鑑・ハンコ",
+    "実印・代表印"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】富士山焼酎 飲み比べ四種セット",
+   "price": 21000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09596049/kurabe.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F041-007%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000755%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日本酒・焼酎",
+    "焼酎",
+    "飲み比べセット"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】大月のびのび放牧羊【ステーキ＆焼肉用ラム肉】400g(肩ロース200g モモ200g)",
+   "price": 19000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/12120416/imgrc0097675756.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1087-005%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000990%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "羊肉",
+    "ラム"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】NAHARAオリジナル富士山オットマン(紅富士)【完成品開梱設置】※北海道・沖縄県・離島への配送不可",
+   "price": 127000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10010104/043-020_1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16042-30042154%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000465%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "ソファ・ソファベッド",
+    "オットマン"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】K18 ゴールドリング　幅・厚さ：1mm・1.5mm・2mm 　サイズ：8～20号　（イエロー／ピンク／ホワイト）",
+   "price": 107000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/wear/wear-0001/20260716142202532.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F110-007%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001385%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "指輪・リング"
+   ],
+   "cat": "craft",
+   "review_count": 21
+  },
+  {
+   "name": "【ふるさと納税】【山梨の地酒】蔵元直送「特選純米大吟醸 笹一720ml」",
+   "price": 26000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088410697.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F001-051%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000946%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日本酒・焼酎",
+    "日本酒",
+    "純米大吟醸酒"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】秀麗富嶽十二景珈琲【三景セット】｜珈琲豆 コーヒー 厳選 ギフト 贈答",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09587729/fujitocoffee1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16048-30044034%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000486%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "コーヒー",
+    "コーヒー豆"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】FAR YEAST BREWING 源流ビール 330ml 6本セット クラフトビール 飲み比べ",
+   "price": 15000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/13197586/01.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16037-30040240%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000427%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ビール・発泡酒",
+    "ビール"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】梅ZIREL",
+   "price": 122000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09578302/zirel-ume.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F026-010%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000680%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ホビー",
+    "パズル",
+    "立体パズル"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】FAR YEAST BREWING 源流ビール 330ml 6本セット クラフトビール 飲み比べ",
+   "price": 15000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/13197586/01.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16037-30040240%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000427%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ビール・発泡酒",
+    "ビール"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】リング 指輪 ハーフエタニティ キュービックシルバーリング 　8～20号 イエロー ホワイト ピンク/ ジュエリー ダイヤモンド ダイヤ アクセサリー シルバー プラチナ 宝石 プレゼント ギフト レディース シンプル",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12298615/12298619/1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F110-001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001285%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "指輪・リング"
+   ],
+   "cat": "craft",
+   "review_count": 4
+  },
+  {
+   "name": "【ふるさと納税】富士山焼酎 麦 720ml×2本",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09596049/mugi2.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F041-003%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000751%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日本酒・焼酎",
+    "焼酎",
+    "麦焼酎"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】PT900　ラボグロウンダイヤモンド　プラチナ　リング　0.50ct　LDR17778A　Pt　DIA　R【サイズ：10号～18号】レディース ファッション ギフト プレゼント 誕生日 記念日 お祝い おしゃれ 大人 アクセサリー ジュエリー",
+   "price": 445000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12644298/022rakuten.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F2161-022%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001508%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "指輪・リング"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】創業1917年（大正6年） 職人 手彫り 本象牙印鑑 博石堂 ケース付き 実印 銀行印選択可 希少素材・象牙 ＜護守印＞【大人ギフト/就職祝い/成人祝い】【印章 はんこ ハンコ】",
+   "price": 131000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09734420/imgrc0095187767.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F063-001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000834%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日用品雑貨・文房具・手芸",
+    "印鑑・ハンコ",
+    "実印・代表印"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【バトンラム(馬豚羊)】ソフトサラミソーセージ・ボロニアサラミソーセージ・ウインナーソーセージ食べ比べセット",
+   "price": 19000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/10790420/imgrc0096435804.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1087-042%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001325%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "羊肉",
+    "ラム"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【2026年収穫分先行予約】果実の楽園まきぱらの特選シャインマスカット(種なし)約1.8kg(3房)",
+   "price": 22000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09720848/imgrc0086835062.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F039-003%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000830%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "フルーツ・果物",
+    "ブドウ"
+   ],
+   "cat": "fruit",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【2026年収穫分先行予約】果実の楽園まきぱらの特選シャインマスカット(種なし)約1.3kg(2房)",
+   "price": 17000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09720848/imgrc0086835061.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F039-002%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000831%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "フルーツ・果物",
+    "ブドウ"
+   ],
+   "cat": "fruit",
+   "review_count": 1
+  },
+  {
+   "name": "【ふるさと納税】高級・総レースカバー付き長座布団ロングサイズ2点セット　ST120　NO-003",
+   "price": 51000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595212/imgrc0086437822.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F027-019%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000744%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "クッション・座布団",
+    "座布団"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】渓流釣り体験と炭火焼きバーベキューコース（2名様）｜魚 さかな つり ニジマス BBQ 手ぶら",
+   "price": 38000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i2/16044-44043-01.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16044-30044043%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000495%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "金券",
+    "施設利用券",
+    "その他"
+   ],
+   "cat": "stay",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】『大月市限定』ふんわりシルクカシミヤストール　パステルカラー",
+   "price": 61000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09597251/imgrc0086442385.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16027-30035974%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000342%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "バッグ・小物・ブランド雑貨",
+    "マフラー・スカーフ",
+    "レディースマフラー・ストール"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】スリープソフト・ピロx1点 抗菌ピロケースx1枚　2点セット SP-11 ホワイト※着日指定不可 ※離島への配送不可",
+   "price": 37000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i2/16058-30046998-01.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16058-30046998%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000541%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "寝具",
+    "枕・抱き枕",
+    "枕"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【山梨ワイン】蔵元直送「OLIFANTシャルドネ樽発酵750ml×2本セット」",
+   "price": 30000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088391014.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F001-057%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000938%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "白ワイン"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】純金ダイヤモンド型オブジェ　K24イエローゴールド　約5g",
+   "price": 639000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12732526/12732533/imgrc0097754961.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F110-009-2%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001401%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "指輪・リング"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【2026年収穫分先行予約】果実の楽園まきぱらの特選シャインマスカット(種なし)約700g(1房)",
+   "price": 12000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09720848/imgrc0086835058.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F039-001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000832%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "フルーツ・果物",
+    "ブドウ"
+   ],
+   "cat": "fruit",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】生そうめん（超極細麺）生麺240g（2人前）×3袋",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/13014322/imgrc0098440148.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1116-005%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001560%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "麺類",
+    "そうめん"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】0.5mmシンプルゴールドリング　K18YG/K18PG/K18WG【サイズ：8～20号】",
+   "price": 52000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/wear/wear-0001/202606041154023702.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F217009%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001578%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "指輪・リング"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】富士山焼酎 飲み比べ四種セット",
+   "price": 21000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09596049/kurabe.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F041-007%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000755%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日本酒・焼酎",
+    "焼酎",
+    "飲み比べセット"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】大月のびのび放牧羊【ステーキ＆焼肉用ラム肉】400g(肩ロース200g モモ200g)",
+   "price": 19000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/12120416/imgrc0097675756.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1087-005%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000990%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "羊肉",
+    "ラム"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】NAHARAオリジナル富士山オットマン(紅富士)【完成品開梱設置】※北海道・沖縄県・離島への配送不可",
+   "price": 127000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10010104/043-020_1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16042-30042154%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000465%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "ソファ・ソファベッド",
+    "オットマン"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】K18 ゴールドリング　幅・厚さ：1mm・1.5mm・2mm 　サイズ：8～20号　（イエロー／ピンク／ホワイト）",
+   "price": 107000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/wear/wear-0001/20260716142202532.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F110-007%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001385%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "指輪・リング"
+   ],
+   "cat": "craft",
+   "review_count": 21
+  },
+  {
+   "name": "【ふるさと納税】木漏れ日 ペンダントライト【TOKIWORKS トキワークス】",
+   "price": 200000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12678912/imgrc0097125566.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1072-011%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001471%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "ライト・照明器具",
+    "壁掛け照明・ブラケットライト"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ハーブティー5種セット×2（5種×各2パック）",
+   "price": 24000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09780084/12400279/imgrc0096736962.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1050-044%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001415%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "お茶・紅茶",
+    "茶葉・ティーバッグ",
+    "ハーブティー"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】K18YG ラボグロウンダイヤモンド ネックレス 0.20ct LDN17366B K18 DIA PN レディース ファッション ギフト プレゼント 誕生日 記念日 お祝い シンプル おしゃれ 大人 エレガント ジュエリーケース付 アクセサリー ジュエリー ゴールド",
+   "price": 305000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12644298/029rakuten.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F2161-029%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001492%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ネックレス・ペンダント"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】FeキューブMAX (鉄製置物)",
+   "price": 16000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10596011/10789712/max-01.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1092-009%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001026%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "インテリア小物・置物",
+    "置物"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】都心から90分 大月カントリークラブ 富士山 ゴルフ場 利用券 10,000円分 2,000円 × 5枚 山梨県 四季の花々 ビギナー 中級者 上級者 アクセス便利 丘陵 18ホール【006-034】 ※離島への配送不可",
+   "price": 36000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i2/16005-46555-01.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16005-30046555%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000533%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "金券",
+    "施設利用券",
+    "ゴルフ場"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【希少豚】大月のびのび放牧豚【カツ・ステーキ用ロース】600g以上 (約150g×4)",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/imgrc0088820582.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1087-008%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000969%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "豚肉",
+    "ロース"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】大月のびのび放牧豚【しゃぶしゃぶ食べ比べセット】ロース・肩ロース・バラ・モモ各300g",
+   "price": 17000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/imgrc0090673199.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1087-019%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000994%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "豚肉",
+    "セット・詰め合わせ"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【ピアス】プラチナ ラボグロウンダイヤモンド 0.50ct PT900 両耳 小粒 リング型 レディース シンプル おしゃれ カジュアル アクセサリー ジュエリー プレゼント 誕生日 記念日 お祝い かわいい ファッション LDP17784A Pt DIA PE",
+   "price": 352000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/wear/wear-0001/202606111357021101.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F2161-026%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001502%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ピアス"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】大月のびのび放牧豚【しゃぶしゃぶ食べ比べセット】ロース・肩ロース・バラ・モモ各300g",
+   "price": 17000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/imgrc0090673199.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1087-019%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000994%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "豚肉",
+    "セット・詰め合わせ"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】古民家「奥山の里 隠居」で味わう懐石料理 4名様お食事券",
+   "price": 53000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09562861/09581499/imgrc0086907512.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F006-037%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000760%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "金券",
+    "施設利用券",
+    "その他"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【6～12ヶ月定期便】奇跡の飲む温泉水「真木温泉 弥生の舞」　飲泉力500ml 24本入り",
+   "price": 116000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595801/imgrc0086438837.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1004-015%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001235%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "水・炭酸水"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】桑の実ジャム150g（3個）",
+   "price": 13000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09780084/12399750/imgrc0096734128.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1050-043%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001414%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "パン・ジャム・シリアル",
+    "ジャム・はちみつ",
+    "ジャム・コンフィチュール"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】2種のソース「お肉屋さんのふっくら大月玉ねぎハンバーグ」8個セット",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09538459/imgrc0089250228.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F031-012%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000980%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "加工品",
+    "その他"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【3～12ヶ月定期便】富士山麓 四季の水/ 500ml ×48本(2 箱 )×3～12ヵ月 計144～576本 ・ ミネラルウォーター 水 飲料水 天然水 非常 備え 防災 地震 台風 津波 天災 災害 軟水 ペットボトル 備蓄 災害用 防災 家庭備蓄 アウトドア キャンプ 定期便",
+   "price": 30000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09597347/4.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1032-006%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001039%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "水・炭酸水"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】生うどん太麺6袋セット　自家製激辛とうがらし付き",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11083086/imgrc0093154262.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F067-002%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000799%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "麺類",
+    "うどん"
+   ],
+   "cat": "food",
+   "review_count": 1
+  },
+  {
+   "name": "【ふるさと納税】郡内織物　迷彩マフラー(ウール100%)※着日指定不可",
+   "price": 18000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i2/16013-42054-01.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16013-30042054%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000458%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "バッグ・小物・ブランド雑貨",
+    "マフラー・スカーフ",
+    "レディースマフラー・ストール"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】 大月市産杉・檜のスウェーデントーチ　大サイズ",
+   "price": 9000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/imgrc0087041482.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F013-014%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000839%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "スポーツ・アウトドア",
+    "アウトドア",
+    "バーベキュー・クッキング用品",
+    "キャンプ用バーナー"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】 【24金】純金ダイヤモンド型オブジェ 0.3g以上　K24　24金　金　純金　黄金　山吹色　金色　ゴールド　gold　Au 地金　金無垢　金塊　純金小物　金の置物　金製品　金のオブジェ　金運　財運　幸運　運気上昇　　K24イエローゴールド",
+   "price": 50000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/home/home-0001/202609041528025061.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F2110-009-m%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001599%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ホビー",
+    "アート・美術品・骨董品・民芸品",
+    "その他"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】富士桜ポーク 味噌漬け・塩麹漬け（合計920g）セット",
+   "price": 12000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i2/16031-30042159-01a.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16031-30042159%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000470%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "豚肉",
+    "セット・詰め合わせ"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】郡内織物　麻ストール　イエロー(麻 100％)※着日指定不可",
+   "price": 18000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i2/16013-42053-01.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16013-30042053%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000457%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "バッグ・小物・ブランド雑貨",
+    "マフラー・スカーフ",
+    "レディースマフラー・ストール"
+   ],
+   "cat": "craft",
+   "review_count": 1
+  },
+  {
+   "name": "【ふるさと納税】スティグ・リンドベリ　ポテリー　グレー",
+   "price": 121000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16027-30035079-01z.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16027-30035079%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000322%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "バッグ・小物・ブランド雑貨",
+    "マフラー・スカーフ",
+    "レディースマフラー・ストール"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】大月市の浅利与一 オリジナルTシャツ 大蛇堂画 /S・M・L・XL 22色から選べます/",
+   "price": 25000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09581933/imgrc0093157948.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1076-004%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001044%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インナー・下着・ナイトウェア",
+    "ユニセックス",
+    "その他"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】大月のびのび放牧羊【ステーキ＆焼肉用ラム肉】400g(肩ロース200g バラ200g)",
+   "price": 21000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09679932/12120416/imgrc0097675755.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1087-016%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000982%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "羊肉",
+    "ラム"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【蔵元直送】笹一酒造のOLIFANT(オリファン)ワイン赤白4本セット",
+   "price": 43000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088677755.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16009-30033065%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000277%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "飲み比べセット",
+    "ミックスセット"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】秀麗富嶽十二景珈琲【百蔵山】×3袋｜珈琲豆 コーヒー 厳選 ギフト 贈答",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09587729/fujitocoffee1-2.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16048-30044037%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000489%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "コーヒー",
+    "コーヒー豆"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】奇跡の飲む温泉水「真木温泉 弥生の舞」　飲泉力1000ml 20本入り",
+   "price": 35000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595801/imgrc0086438837.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F004-002%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000608%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "水・炭酸水"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】天然醸造 米味噌 詰め合わせ 850g 4個入り 食品添加物無添加",
+   "price": 14000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11083086/imgrc0093154280.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16004-30026348%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000172%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "調味料",
+    "みそ",
+    "セット・詰め合わせ"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】高級・総レースカバー付き長座布団2点セット　ST105　NO-003",
+   "price": 43000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595212/imgrc0086437818.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F027-021%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000746%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "クッション・座布団",
+    "座布団"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】手作り長座布団ロングサイズ2点セット　NO12-07B",
+   "price": 31000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595212/imgrc0086437804.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F027-013%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000739%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "クッション・座布団",
+    "座布団"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【蔵元限定】笹一酒造　笹一　純米大吟醸　720ml※着日指定送不可",
+   "price": 17000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16009-30033075-01z.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16009-30033075%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000288%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日本酒・焼酎",
+    "日本酒",
+    "純米大吟醸酒"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【6～12ヶ月定期便】奇跡の飲む温泉水「真木温泉 弥生の舞」　飲泉力（BIBバック）10L入り",
+   "price": 65000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595801/imgrc0086438609.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1004-017%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001236%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "水・ソフトドリンク",
+    "水・炭酸水"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ソムリエ 長谷部賢氏セレクト OLIFANT 甲州シュール・リー 白 ワイン 辛口 750ml 2本セット",
+   "price": 22000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16037-40238-01.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16037-30040238%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000425%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "白ワイン"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】純金ダイヤモンド型オブジェ 50g以上　K24　24金　金　純金　黄金　山吹色　金色　ゴールド　gold　Au 地金　金無垢　金塊　純金小物　金の置物　金製品　金のオブジェ　金運　財運　幸運　運気上昇　　K24イエローゴールド",
+   "price": 5000000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/home/home-0001/202607091411053235.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F223915%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001588%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ホビー",
+    "アート・美術品・骨董品・民芸品",
+    "その他"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】 キュービックシルバー馬蹄ネックレス・イエローメッキ・ホワイトメッキ・ピンクメッキ/ ネックレス 馬蹄 ペンダント レディース シンプル ギフト プレゼント アクセサリー 誕生日 ジュエリー かわいい 大人",
+   "price": 14000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12732526/12732533/1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F110-00678%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001315%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ネックレス・ペンダント"
+   ],
+   "cat": "craft",
+   "review_count": 2
+  },
+  {
+   "name": "【ふるさと納税】【蔵元直送】笹一酒造のOLIFANT(オリファン)ワイン＜赤＞3本セット",
+   "price": 32000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088677756.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16009-30033178%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000291%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "赤ワイン"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【介護用】高級ラッセルメッシュクッション（車椅子固定ベルト付）MK1 レッド",
+   "price": 27000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09595212/11896895/imgrc0094947642.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1027-070%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001237%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "医薬品・コンタクト・介護",
+    "介護用品",
+    "移動・歩行支援用品",
+    "車椅子関連用品",
+    "クッション"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【蔵元直送】笹一酒造のOLIFANT(オリファン)ワイン＜赤・白・ロゼ＞3本セット",
+   "price": 32000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10245704/imgrc0088677761.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1001-067%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000958%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ビール・洋酒",
+    "ワイン",
+    "飲み比べセット",
+    "ミックスセット"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ピアス ラボグロウンダイヤモンド スター 0.30ct シンプル おしゃれ プレゼント 女性 かわいい 上品 大人 スクエア ジュエリー 収納ケース付き レディース ファッション ギフト プレゼント 誕生日 記念日 お祝い 星型 贈り物 国産 PT900 LDP16356A",
+   "price": 204000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12644298/008rakuten.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F2161-008%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001505%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ピアス"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】郡内織物　麻ストール　イエロー(麻 100％)※着日指定不可",
+   "price": 18000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i2/16013-42053-01.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16013-30042053%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000457%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "バッグ・小物・ブランド雑貨",
+    "マフラー・スカーフ",
+    "レディースマフラー・ストール"
+   ],
+   "cat": "craft",
+   "review_count": 1
+  },
+  {
+   "name": "【ふるさと納税】富士桜ポーク 味噌漬け・塩麹漬け（合計920g）セット",
+   "price": 12000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i2/16031-30042159-01a.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16031-30042159%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000470%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "精肉・肉加工品",
+    "豚肉",
+    "セット・詰め合わせ"
+   ],
+   "cat": "meat",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】山梨県大月市の対象施設で使える楽天トラベルクーポン 寄付額20,000円",
+   "price": 20000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/6000.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16043-30042526%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000472%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "金券",
+    "旅行・交通関連チケット",
+    "旅行券・ホテル券・航空券"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】日本製 パルスオキシメーター VM-SpO2【医療機器認証取得】血中酸素濃度計 山梨県 製造 大画面表示 アラーム機能付き ≪ 指先装着 血中酸素飽和度 脈拍計 ≫",
+   "price": 95000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09681105/spo2_1-1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16036-30039952%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000422%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "医薬品・コンタクト・介護",
+    "身体測定器・医療計測器",
+    "パルスオキシメーター"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】【24金】純金ダイヤモンド型オブジェ 10g以上　K24　24金　金　純金　黄金　山吹色　金色　ゴールド　gold　Au 地金　金無垢　金塊　純金小物　金の置物　金製品　金のオブジェ　金運　財運　幸運　運気上昇　　K24イエローゴールド",
+   "price": 990000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/home/home-0001/202609151328019039.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F230427%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001582%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ホビー",
+    "アート・美術品・骨董品・民芸品",
+    "その他"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】郡内織物　絹紡ストール(シルク100%) ペイズリー青",
+   "price": 18000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09774839/imgrc0086964207.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F005-008%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000827%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "バッグ・小物・ブランド雑貨",
+    "マフラー・スカーフ",
+    "レディースマフラー・ストール"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】三種類のお酒を集めました【よくばり富士山セット】　180ml×3本入",
+   "price": 7000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09596049/imgrc0086439136.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F041-000%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000756%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "日本酒・焼酎",
+    "日本酒",
+    "飲み比べセット"
+   ],
+   "cat": "sake",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】甲州名物ほうとう入り！大月のこだわり生麺5種 食べ比べセット計1.8kg（計14人前）",
+   "price": 10000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/13014322/unnamed.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1116-006%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001561%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "麺類",
+    "セット・詰め合わせ"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】K18YG　ダイヤモンド　ピアス　1.0ct　17783B　K18　D　PE レディース ファッション ギフト プレゼント 誕生日 記念日 お祝い おしゃれ 大人 ジュエリーケース付き アクセサリー ジュエリー",
+   "price": 874000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09558450/10220243/top.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F061-025%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000912%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ピアス"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】ラボグロウンダイヤモンド　ネックレス　0.38ct　LD0077　Pt900",
+   "price": 373000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/12644298/044rakuten.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1061-044%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001478%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ネックレス・ペンダント"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】生うどん太麺12袋セット　自家製激辛とうがらし付き",
+   "price": 16000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11083086/imgrc0093154271.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F067-007%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000800%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "麺類",
+    "うどん"
+   ],
+   "cat": "food",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】山梨県大月市 空き家・管理地の草刈り代行 春季（3-6月）夏季（7-11月） 4時間 2名 100坪まで 対象エリア大月市 地域密着 くさかり 草引き 除草 草刈",
+   "price": 48000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11901359/imgrc0094926603.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F102-001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001042%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "サービス・リフォーム",
+    "代行サービス",
+    "その他"
+   ],
+   "cat": "stay",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】シンプルネックレス　プラチナ（ダイヤ）",
+   "price": 339000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/11481496/12910012/imgrc0098088886.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F1081-016%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001160%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ネックレス・ペンダント"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】こだわりの 手作り 生米こうじ 1kg 3個",
+   "price": 14000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/i/16004-30031612-01z.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16004-30031612%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000259%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "食品",
+    "調味料",
+    "麹"
+   ],
+   "cat": "food",
+   "review_count": 3
+  },
+  {
+   "name": "【ふるさと納税】おしゃれでかわいい一人掛けソファー【?CUBE】bスタイル【完成品開梱設置】※離島への配送不可",
+   "price": 245000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/10010104/043-018_1.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F16042-30042158%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000469%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "インテリア・寝具・収納",
+    "ソファ・ソファベッド",
+    "ソファ"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】山梨県大月市の対象ゴルフ場で使える楽天GORAクーポン 寄付額 30,000 円",
+   "price": 30000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09597742/13699758/imgrc0101129660.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F099-007%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001598%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "カタログギフト・チケット",
+    "金券",
+    "旅行・交通関連チケット",
+    "旅行券・ホテル券・航空券"
+   ],
+   "cat": "other",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】真木温泉mシリーズ【最高級ミストウォーター】280g・60gセット",
+   "price": 15000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09584401/004-006b.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F004-006%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000684%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "美容・コスメ・香水",
+    "スキンケア",
+    "化粧水・ローション"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】スパークリングRシャワー（真木温泉ミストウォーターシリーズ）60g×3本セット",
+   "price": 11000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/09584401/imgrc0086420883.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F004-022%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10000688%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "美容・コスメ・香水",
+    "スキンケア",
+    "保湿ミスト"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  },
+  {
+   "name": "【ふるさと納税】K18YG　ラボグロウンダイヤモンド　ピアス　0.50ct　LDP17784B　K18　DIA　PE レディース ファッション ギフト プレゼント 誕生日 記念日 お祝い シンプル おしゃれ かわいい 大人 アクセサリー ジュエリーケース付 ゴールド",
+   "price": 440000,
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192066-otsuki/cabinet/portalpilot/wear/wear-0001/202606111416021332.jpg?_ex=400x400",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t541n.krtu4ee8.g00t541n.krtu5de0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192066-otsuki%2F2161-027%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192066-otsuki%2Fi%2F10001501%2F&rafcid=wsc_i_is_b6fc5d27-f754-48f8-bf11-5e55f3d0d1e9",
+   "genre": [
+    "ジュエリー・アクセサリー",
+    "レディースジュエリー・アクセサリー",
+    "ピアス"
+   ],
+   "cat": "craft",
+   "review_count": 0
+  }
+ ]
+}

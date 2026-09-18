@@ -51,6 +51,7 @@ def clean(nm):
 
 
 def load_producers():
+    """住所 → 造り手の詳細（説明・見学・最寄駅・公式・出典つき）"""
     out = {}
     for g in GENRES:
         for jf in glob.glob(os.path.join(ROOT, g["data"])):
@@ -62,9 +63,22 @@ def load_producers():
             for b in rows:
                 if not b.get("id") or not b.get("address"):
                     continue
+                vi = b.get("visit_info") or {}
+                station = b.get("nearest_station")
+                if not station and isinstance(b.get("nearest_station_calc"), dict):
+                    c = b["nearest_station_calc"]
+                    if c.get("station"):
+                        station = f'{c.get("line","")} {c["station"]}駅'.strip() + "（座標からの算出）"
+                brands = [(x.get("name") if isinstance(x, dict) else str(x)) for x in (b.get("brands") or [])]
                 out.setdefault(b["address"].replace(" ", "").replace("　", ""), []).append({
                     "name": b.get("name", ""), "genre": g["name"], "color": g["color"],
                     "url": f'{g["site"]}/{g["path"]}/{pref_slug}/{b["id"]}.html',
+                    "desc": (b.get("desc") or "").strip(),
+                    "visit": (b.get("visit") or vi.get("notes_ja") or "").strip(),
+                    "reservation": vi.get("reservation", ""), "station": station or "",
+                    "official": b.get("url", ""), "source": b.get("source", ""),
+                    "brands": [x for x in brands if x][:3],
+                    "founded": b.get("founded", ""),
                 })
     return out
 
@@ -119,6 +133,19 @@ h2 span{font-family:var(--fn);font-size:.74rem;font-weight:500;color:var(--muted
 .prod:hover{box-shadow:0 8px 20px rgba(40,30,20,.1)}
 .prod-g{font-family:var(--fn);font-size:.6rem;font-weight:600;letter-spacing:.1em}
 .prod-n{font-family:var(--fd);font-size:1rem;font-weight:600;margin-top:3px}
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
+@media(max-width:860px){.pgrid{grid-template-columns:1fr}}
+.pitem{background:#fff;border:1px solid var(--border);padding:1.2rem 1.3rem}
+.pgenre{font-family:var(--fn);font-size:.62rem;font-weight:600;letter-spacing:.1em}
+.pitem h3{font-family:var(--fd);font-size:1.08rem;margin:.25rem 0 .45rem}
+.pdesc{font-size:.86rem;color:var(--text);line-height:1.8}
+.ptable{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:.6rem}
+.ptable th{text-align:left;width:5.6em;color:var(--muted);font-weight:500;padding:.25rem 0;vertical-align:top}
+.ptable td{padding:.25rem 0}
+.plinks{margin-top:.6rem;font-size:.84rem}
+.plinks a{color:var(--gold);margin-right:.8rem;font-weight:500}
+.psrc{font-size:.72rem;color:var(--muted);margin-top:.3rem}
+.psrc a{color:var(--muted);text-decoration:underline}
 .cta{max-width:1120px;margin:clamp(2.4rem,5vw,3.4rem) auto 0;padding:0 clamp(1.4rem,5vw,5rem)}
 .cta-in{background:var(--surface);border:1px solid var(--border);padding:1.6rem 1.8rem}
 .cta-in h3{font-family:var(--fd);font-size:1.15rem;margin-bottom:.5rem}
@@ -138,6 +165,11 @@ h2 span{font-family:var(--fn);font-size:.74rem;font-weight:500;color:var(--muted
 .acard .pr{font-size:.76rem;color:var(--muted)}
 .acard .ct{font-family:var(--fn);font-size:.74rem;color:var(--gold);margin-top:.5rem}"""
 
+NAV_FULL = """<nav class="nav">
+  <a href="/" class="nav-logo">Terroir HUB</a>
+  <a href="/business/area/" class="nav-cta">地域ページについて</a>
+</nav>"""
+
 NAV = """<nav class="nav">
   <a href="/" class="nav-logo">Terroir HUB</a>
   <a href="/business/municipality/" class="nav-cta">導入のご相談</a>
@@ -145,7 +177,7 @@ NAV = """<nav class="nav">
 <div class="demo"><b>見本</b>この地域ページは、公開情報から自動で構成した見本です。本格導入では、事業者に確認した情報と写真で作り直します。</div>"""
 
 
-def head(title, desc, url):
+def head(title, desc, url, robots='<meta name="robots" content="noindex, follow">', extra="", nav=None):
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -154,19 +186,20 @@ def head(title, desc, url):
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{url}">
-<meta name="robots" content="noindex, follow">
+{robots}
 <meta property="og:type" content="website">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+{extra}
 <style>{CSS}</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NG35V7K1JH"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-NG35V7K1JH');</script>
 </head>
 <body>
-{NAV}"""
+{nav if nav else NAV}"""
 
 
 def card(it, city):
@@ -185,12 +218,11 @@ def load_text(d):
 
 def render_city(d, producers):
     tx = load_text(d)
-    full = d["pref"] + d["city"]
+    full_name = d["pref"] + d["city"]
+    full = False  # 本格版かどうか（造り手の情報量で決まる。下で判定）
     url = f'https://{DOMAIN}/area/{d["pref_slug"]}/{d["slug"]}/'
     present = [(k, n) for k, n in CATS if d["counts"].get(k)]
     chips = "".join(f'<span class="chip">{esc(n)}<b>{d["counts"][k]}</b></span>' for k, n in present)
-    title = f'{full}の風土 — 酒・食・工芸・体験 {d["total"]}件 | Terroir HUB（見本）'
-    desc = f'{full}のふるさと納税返礼品を、酒・果物・肉・魚介・米野菜・加工品・菓子・工芸・体験に分けて一覧にした見本ページです。'
 
     secs = ""
     for k, n in present:
@@ -218,17 +250,55 @@ def render_city(d, producers):
         for p in plist:
             if p["name"] not in seen:
                 seen.add(p["name"]); uniq.append(p)
-        rows = "".join(f'<a class="prod" href="{esc(p["url"])}"><div class="prod-g" style="color:{p["color"]}">'
-                       f'{esc(p["genre"])}</div><div class="prod-n">{esc(p["name"])}</div></a>' for p in uniq)
+        uniq.sort(key=lambda x: (0 if x.get("desc") else 1, x["name"]))
+        rich = [p for p in uniq if p.get("desc") and p.get("source")]
+        full = len(rich) >= 3 and bool(tx.get("intro_ja"))
+        rows = ""
+        for p in uniq:
+            meta = []
+            if p.get("founded"):
+                meta.append(("創業", esc(str(p["founded"])) + "年"))
+            if p.get("brands"):
+                meta.append(("代表銘柄", "、".join(esc(b) for b in p["brands"])))
+            if p.get("visit"):
+                meta.append(("見学", esc(p["visit"][:70])))
+            if p.get("station"):
+                meta.append(("最寄駅", esc(p["station"])))
+            mt = "".join(f'<tr><th>{k}</th><td>{v}</td></tr>' for k, v in meta)
+            links = f'<a href="{esc(p["url"])}">詳しく見る →</a>'
+            if p.get("official"):
+                links += f' <a href="{esc(p["official"])}" target="_blank" rel="noopener">公式サイト</a>'
+            src = (f'<p class="psrc">出典：<a href="{esc(p["source"])}" target="_blank" rel="noopener">公式情報</a></p>'
+                   if p.get("source") else "")
+            rows += (f'<article class="pitem"><div class="pgenre" style="color:{p["color"]}">{esc(p["genre"])}</div>'
+                     f'<h3>{esc(p["name"])}</h3>'
+                     + (f'<p class="pdesc">{esc(p["desc"][:140])}</p>' if p.get("desc") else "")
+                     + (f'<table class="ptable">{mt}</table>' if mt else "")
+                     + f'<p class="plinks">{links}</p>{src}</article>')
         prod_html = (f'<section><div class="inner"><h2>{esc(d["city"])}の造り手<span>{len(uniq)}者</span></h2>'
-                     f'<p class="sec-lead">Terroir HUB が収録している酒の造り手です。各ページに所在地・公式サイト・代表銘柄を出典つきで掲載しています。</p>'
-                     f'<div class="prods">{rows}</div></div></section>')
+                     f'<p class="sec-lead">公式情報にもとづいて収録しています。確認できない項目は掲載していません。</p>'
+                     f'<div class="pgrid">{rows}</div></div></section>')
 
-    return head(title, desc, url) + f"""
-<div class="crumb"><a href="/">ホーム</a> › <a href="/area/">地域</a> › {esc(full)}</div>
+    title = (f'{full_name}の風土 — 酒・食・工芸・体験 {d["total"]}件 | Terroir HUB'
+             if full else f'{full_name}の風土 — 酒・食・工芸・体験 {d["total"]}件 | Terroir HUB（見本）')
+    desc = (f'{full_name}の酒・果物・肉・魚介・米や野菜・加工品・菓子・工芸・体験を一覧にしました。市内の造り手も公式情報にもとづいて掲載しています。'
+            if full else
+            f'{full_name}のふるさと納税返礼品を、酒・果物・肉・魚介・米野菜・加工品・菓子・工芸・体験に分けて一覧にした見本ページです。')
+    ld = json.dumps({"@context": "https://schema.org", "@graph": [
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Terroir HUB", "item": f"https://{DOMAIN}/"},
+            {"@type": "ListItem", "position": 2, "name": "地域", "item": f"https://{DOMAIN}/area/"},
+            {"@type": "ListItem", "position": 3, "name": full_name, "item": url}]},
+        {"@type": "CollectionPage", "name": title, "description": desc, "url": url,
+         "about": {"@type": "AdministrativeArea", "name": full_name}}]}, ensure_ascii=False)
+    robots = ('<meta name="robots" content="index,follow,max-image-preview:large">' if full
+              else '<meta name="robots" content="noindex, follow">')
+    extra = f'<script type="application/ld+json">{ld}</script>' if full else ""
+    return head(title, desc, url, robots, extra, NAV_FULL if full else NAV) + f"""
+<div class="crumb"><a href="/">ホーム</a> › <a href="/area/">地域</a> › {esc(full_name)}</div>
 <header class="hero"><div class="inner">
   <div class="eyebrow">Terroir of {esc(d["city"])}</div>
-  <h1>{esc(full)}の風土</h1>
+  <h1>{esc(full_name)}の風土</h1>
   <p class="lead">{esc(tx.get("intro_ja")) or (esc(d["city"]) + "の返礼品 " + str(d["total"]) + "件を、酒・食・工芸・体験に分けて並べました。")}</p>
   {'<p class="lead en">' + esc(tx["intro_en"]) + '</p>' if tx.get("intro_en") else ''}
   <p class="lead sub">本格導入では、ここに事業者の物語・写真・英語ページ・見学や体験の案内が加わります。</p>

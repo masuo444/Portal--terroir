@@ -13,6 +13,7 @@
 <meta property="og:url" content="https://www.terroirhub.com/area/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+
 <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#FAFAF7;--surface:#F3F0EA;--border:rgba(0,0,0,.09);--text:#1a1816;--muted:rgba(26,24,22,.62);--gold:#996E1A;--fd:'Shippori Mincho',serif;--fb:'Noto Sans JP',sans-serif;--fn:'Inter',sans-serif}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
@@ -55,6 +56,19 @@ h2 span{font-family:var(--fn);font-size:.74rem;font-weight:500;color:var(--muted
 .prod:hover{box-shadow:0 8px 20px rgba(40,30,20,.1)}
 .prod-g{font-family:var(--fn);font-size:.6rem;font-weight:600;letter-spacing:.1em}
 .prod-n{font-family:var(--fd);font-size:1rem;font-weight:600;margin-top:3px}
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
+@media(max-width:860px){.pgrid{grid-template-columns:1fr}}
+.pitem{background:#fff;border:1px solid var(--border);padding:1.2rem 1.3rem}
+.pgenre{font-family:var(--fn);font-size:.62rem;font-weight:600;letter-spacing:.1em}
+.pitem h3{font-family:var(--fd);font-size:1.08rem;margin:.25rem 0 .45rem}
+.pdesc{font-size:.86rem;color:var(--text);line-height:1.8}
+.ptable{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:.6rem}
+.ptable th{text-align:left;width:5.6em;color:var(--muted);font-weight:500;padding:.25rem 0;vertical-align:top}
+.ptable td{padding:.25rem 0}
+.plinks{margin-top:.6rem;font-size:.84rem}
+.plinks a{color:var(--gold);margin-right:.8rem;font-weight:500}
+.psrc{font-size:.72rem;color:var(--muted);margin-top:.3rem}
+.psrc a{color:var(--muted);text-decoration:underline}
 .cta{max-width:1120px;margin:clamp(2.4rem,5vw,3.4rem) auto 0;padding:0 clamp(1.4rem,5vw,5rem)}
 .cta-in{background:var(--surface);border:1px solid var(--border);padding:1.6rem 1.8rem}
 .cta-in h3{font-family:var(--fd);font-size:1.15rem;margin-bottom:.5rem}
@@ -87,10 +101,10 @@ h2 span{font-family:var(--fn);font-size:.74rem;font-weight:500;color:var(--muted
   <div class="eyebrow">Area Pages</div>
   <h1>地域の風土を、1ページに。</h1>
   <p class="lead">その土地の酒・果物・肉・魚介・米や野菜・加工品・菓子・工芸・体験を、ひとつのページにまとめます。
-  下は10地域の見本です。実際の導入では、事業者に確認した情報と写真で作り直し、英語にも対応します。</p>
+  下は23地域の見本です。実際の導入では、事業者に確認した情報と写真で作り直し、英語にも対応します。</p>
 </div></header>
-<section><div class="inner"><h2>見本のある地域<span>10地域</span></h2>
-<div class="alist"><a class="acard" href="/area/gifu/takayama/"><h3>高山市</h3><div class="pr">岐阜県</div><div class="ct">2537件 ／ 酒・肉・米・野菜・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/nagasaki/iki/"><h3>壱岐市</h3><div class="pr">長崎県</div><div class="ct">2472件 ／ 酒・肉・魚介・米・野菜・加工品・調味料・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/hyogo/kobe/"><h3>神戸市</h3><div class="pr">兵庫県</div><div class="ct">2284件 ／ 酒・肉・魚介・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/miyazaki/miyakonojo/"><h3>都城市</h3><div class="pr">宮崎県</div><div class="ct">1588件 ／ 酒・肉・米・野菜・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/fukuoka/kurume/"><h3>久留米市</h3><div class="pr">福岡県</div><div class="ct">1335件 ／ 酒・果物・肉・魚介・米・野菜・加工品・調味料・菓子・工芸・ものづくり</div></a><a class="acard" href="/area/saga/kashima/"><h3>鹿島市</h3><div class="pr">佐賀県</div><div class="ct">879件 ／ 酒・果物・肉・米・野菜・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/niigata/niigata/"><h3>新潟市</h3><div class="pr">新潟県</div><div class="ct">814件 ／ 酒・肉・魚介・米・野菜・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/yamanashi/koshu/"><h3>甲州市</h3><div class="pr">山梨県</div><div class="ct">791件 ／ 酒・果物・加工品・調味料・工芸・ものづくり</div></a><a class="acard" href="/area/hokkaido/yoichi/"><h3>余市町</h3><div class="pr">北海道</div><div class="ct">550件 ／ 酒・果物・肉・魚介・米・野菜・加工品・調味料・菓子</div></a><a class="acard" href="/area/nagano/tomi/"><h3>東御市</h3><div class="pr">長野県</div><div class="ct">483件 ／ 酒・果物・肉・米・野菜・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a></div></div></section>
+<section><div class="inner"><h2>見本のある地域<span>23地域</span></h2>
+<div class="alist"><a class="acard" href="/area/gifu/takayama/"><h3>高山市</h3><div class="pr">岐阜県</div><div class="ct">2537件 ／ 酒・肉・米・野菜・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/nagasaki/iki/"><h3>壱岐市</h3><div class="pr">長崎県</div><div class="ct">2472件 ／ 酒・肉・魚介・米・野菜・加工品・調味料・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/hyogo/kobe/"><h3>神戸市</h3><div class="pr">兵庫県</div><div class="ct">2284件 ／ 酒・肉・魚介・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/yamanashi/kofu/"><h3>甲府市</h3><div class="pr">山梨県</div><div class="ct">1966件 ／ 酒・果物・肉・魚介・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/miyazaki/miyakonojo/"><h3>都城市</h3><div class="pr">宮崎県</div><div class="ct">1588件 ／ 酒・肉・米・野菜・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/fukuoka/kurume/"><h3>久留米市</h3><div class="pr">福岡県</div><div class="ct">1335件 ／ 酒・果物・肉・魚介・米・野菜・加工品・調味料・菓子・工芸・ものづくり</div></a><a class="acard" href="/area/yamanashi/fuefuki/"><h3>笛吹市</h3><div class="pr">山梨県</div><div class="ct">1230件 ／ 酒・果物・肉・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/yamanashi/fujiyoshida/"><h3>富士吉田市</h3><div class="pr">山梨県</div><div class="ct">1177件 ／ 酒・肉・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/yamanashi/yamanashi/"><h3>山梨市</h3><div class="pr">山梨県</div><div class="ct">1095件 ／ 酒・果物・魚介・米・野菜・加工品・調味料・菓子・工芸・ものづくり</div></a><a class="acard" href="/area/yamanashi/minamiarupusu/"><h3>南アルプス市</h3><div class="pr">山梨県</div><div class="ct">913件 ／ 果物・米・野菜・加工品・調味料・菓子・工芸・ものづくり</div></a><a class="acard" href="/area/saga/kashima/"><h3>鹿島市</h3><div class="pr">佐賀県</div><div class="ct">879件 ／ 酒・果物・肉・米・野菜・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/niigata/niigata/"><h3>新潟市</h3><div class="pr">新潟県</div><div class="ct">814件 ／ 酒・肉・魚介・米・野菜・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/yamanashi/nirasaki/"><h3>韮崎市</h3><div class="pr">山梨県</div><div class="ct">802件 ／ 酒・果物・米・野菜・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/yamanashi/hokuto/"><h3>北杜市</h3><div class="pr">山梨県</div><div class="ct">795件 ／ 酒・果物・肉・米・野菜・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/yamanashi/koshu/"><h3>甲州市</h3><div class="pr">山梨県</div><div class="ct">791件 ／ 酒・果物・加工品・調味料・工芸・ものづくり</div></a><a class="acard" href="/area/yamanashi/kai/"><h3>甲斐市</h3><div class="pr">山梨県</div><div class="ct">715件 ／ 酒・肉・加工品・調味料・菓子・工芸・ものづくり</div></a><a class="acard" href="/area/yamanashi/fujikawagutiko/"><h3>富士河口湖町</h3><div class="pr">山梨県</div><div class="ct">698件 ／ 酒・肉・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/hokkaido/yoichi/"><h3>余市町</h3><div class="pr">北海道</div><div class="ct">550件 ／ 酒・果物・肉・魚介・米・野菜・加工品・調味料・菓子</div></a><a class="acard" href="/area/nagano/tomi/"><h3>東御市</h3><div class="pr">長野県</div><div class="ct">483件 ／ 酒・果物・肉・米・野菜・加工品・調味料・菓子・工芸・ものづくり・体験・宿泊</div></a><a class="acard" href="/area/yamanashi/ichikawamisato/"><h3>市川三郷町</h3><div class="pr">山梨県</div><div class="ct">299件 ／ 加工品・調味料・工芸・ものづくり</div></a><a class="acard" href="/area/yamanashi/oshino/"><h3>忍野村</h3><div class="pr">山梨県</div><div class="ct">268件 ／ 肉・加工品・調味料・菓子・工芸・ものづくり</div></a><a class="acard" href="/area/yamanashi/otsuki/"><h3>大月市</h3><div class="pr">山梨県</div><div class="ct">259件 ／ 酒・肉・加工品・調味料・工芸・ものづくり</div></a><a class="acard" href="/area/yamanashi/minobu/"><h3>身延町</h3><div class="pr">山梨県</div><div class="ct">158件 ／ 加工品・調味料・工芸・ものづくり・体験・宿泊</div></a></div></div></section>
 <div class="cta"><div class="cta-in">
   <h3>御地域のページをご覧になりたい方へ</h3>
   <p>ご希望の市区町村があれば、見本をお作りしてお送りします。自治体・観光協会・DMO・地域商社・事業者のいずれからでも承ります。</p>
