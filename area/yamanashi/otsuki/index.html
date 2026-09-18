@@ -56,6 +56,30 @@ h2 span{font-family:var(--fn);font-size:.74rem;font-weight:500;color:var(--muted
 .prod:hover{box-shadow:0 8px 20px rgba(40,30,20,.1)}
 .prod-g{font-family:var(--fn);font-size:.6rem;font-weight:600;letter-spacing:.1em}
 .prod-n{font-family:var(--fd);font-size:1rem;font-weight:600;margin-top:3px}
+/* 本格版 */
+.enlink{margin-top:1rem;font-family:var(--fn);font-size:.8rem}
+.enlink a{color:var(--gold);font-weight:600}
+.vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
+@media(max-width:860px){.vgrid{grid-template-columns:1fr}}
+.vcard{background:#fff;border:1px solid var(--border);border-left:3px solid var(--gold);padding:1.2rem 1.3rem}
+.vcard h3{font-family:var(--fd);font-size:1.08rem;margin:.25rem 0 .55rem}
+.vcard h3 a{color:inherit}
+.vcard h3 a:hover{color:var(--gold)}
+.vchips{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:.6rem}
+.vchip{font-family:var(--fn);font-size:.72rem;background:var(--surface);border:1px solid var(--border);padding:.18rem .6rem}
+.vnote{font-size:.86rem;line-height:1.8;color:var(--text)}
+.vaccess{font-size:.8rem;color:var(--muted);margin-top:.4rem}
+.vbtn{display:inline-block;margin-top:.7rem;font-family:var(--fn);font-size:.74rem;font-weight:600;color:#fff;background:var(--gold);padding:.5rem 1.1rem}
+.atable{width:100%;border-collapse:collapse;font-size:.88rem;background:#fff;border:1px solid var(--border)}
+.atable th{text-align:left;padding:.6rem .9rem;border-bottom:1px solid var(--border);width:14em;font-weight:500;color:var(--muted);vertical-align:top}
+.atable td{padding:.6rem .9rem;border-bottom:1px solid var(--border)}
+.qa{background:#fff;border:1px solid var(--border);padding:1.1rem 1.3rem;margin-bottom:.6rem}
+.qa h3{font-family:var(--fd);font-size:1rem;margin-bottom:.3rem}
+.qa p{font-size:.88rem;color:var(--muted);line-height:1.85}
+.srclist{list-style:none;font-size:.78rem;line-height:1.9;color:var(--muted);background:#fff;border:1px solid var(--border);padding:1rem 1.2rem}
+.srclist a{color:var(--gold);word-break:break-all}
+.upd{font-size:.78rem;color:var(--muted);margin-top:.8rem;line-height:1.8}
+.upd a{color:var(--gold)}
 .pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
 @media(max-width:860px){.pgrid{grid-template-columns:1fr}}
 .pitem{background:#fff;border:1px solid var(--border);padding:1.2rem 1.3rem}

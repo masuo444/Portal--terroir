@@ -21,6 +21,7 @@ TODAY = datetime.date.today().isoformat()
 AREA_DIR = os.path.join(BASE, "data", "area")
 OUT = os.path.join(BASE, "area")
 
+EN_QUEUE = []
 CATS = [("sake", "酒"), ("fruit", "果物"), ("meat", "肉"), ("seafood", "魚介"),
         ("farm", "米・野菜"), ("food", "加工品・調味料"), ("sweets", "菓子"),
         ("craft", "工芸・ものづくり"), ("stay", "体験・宿泊")]
@@ -79,8 +80,54 @@ def load_producers():
                     "official": b.get("url", ""), "source": b.get("source", ""),
                     "brands": [x for x in brands if x][:3],
                     "founded": b.get("founded", ""),
+                    "founded_era": b.get("founded_era", ""),
+                    "name_en": b.get("name_en", ""), "address": b.get("address", ""),
+                    "tel": b.get("tel", ""), "vi": vi, "genre_key": g["key"],
                 })
     return out
+
+
+# ── 見学情報の表記（公式記載のある項目だけを出す）──
+V_STATUS = {"open": "見学を受け付けています", "paused": "見学を休止中", "closed": "一般見学は行っていません",
+            "inquire": "見学は要問い合わせ"}
+V_RESV = {"required": "予約が必要", "recommended": "予約をおすすめします", "not_required": "予約不要"}
+V_TASTE = {"paid": "有料試飲あり", "free": "無料試飲あり", "available": "試飲あり", "none": "試飲なし"}
+V_EN = {"tour": "英語での案内あり", "materials": "英語の資料あり"}
+V_STATUS_EN = {"open": "Open to visitors", "paused": "Visits suspended", "closed": "Not open to visitors",
+               "inquire": "Enquire in advance"}
+V_RESV_EN = {"required": "Reservation required", "recommended": "Reservation recommended",
+             "not_required": "No reservation needed"}
+V_TASTE_EN = {"paid": "Paid tasting", "free": "Free tasting", "available": "Tasting available", "none": "No tasting"}
+V_EN_EN = {"tour": "English-guided tour", "materials": "English materials"}
+
+
+def visit_facts(p, en=False):
+    """公式に記載のある見学情報だけを並べる。無い項目は出さない。"""
+    vi = p.get("vi") or {}
+    out = []
+    S, R, T, E = (V_STATUS_EN, V_RESV_EN, V_TASTE_EN, V_EN_EN) if en else (V_STATUS, V_RESV, V_TASTE, V_EN)
+    if vi.get("status") and S.get(vi["status"]):
+        out.append(S[vi["status"]])
+    if vi.get("reservation") and R.get(vi["reservation"]):
+        out.append(R[vi["reservation"]])
+    if vi.get("tasting") and T.get(vi["tasting"]):
+        out.append(T[vi["tasting"]])
+    if vi.get("english") and E.get(vi["english"]):
+        out.append(E[vi["english"]])
+    if vi.get("fee"):
+        out.append(("Fee: " if en else "料金：") + str(vi["fee"])[:40])
+    if vi.get("duration"):
+        out.append(("Duration: " if en else "所要：") + str(vi["duration"])[:30])
+    if vi.get("shop"):
+        out.append("Shop on site" if en else "売店あり")
+    if vi.get("facility"):
+        out.append(("Facility: " if en else "施設：") + str(vi["facility"])[:36])
+    return out
+
+
+def has_visit(p):
+    vi = p.get("vi") or {}
+    return bool(vi.get("status") or vi.get("notes_ja") or p.get("visit"))
 
 
 def addr_matches(addr, pref, city):
@@ -133,6 +180,30 @@ h2 span{font-family:var(--fn);font-size:.74rem;font-weight:500;color:var(--muted
 .prod:hover{box-shadow:0 8px 20px rgba(40,30,20,.1)}
 .prod-g{font-family:var(--fn);font-size:.6rem;font-weight:600;letter-spacing:.1em}
 .prod-n{font-family:var(--fd);font-size:1rem;font-weight:600;margin-top:3px}
+/* 本格版 */
+.enlink{margin-top:1rem;font-family:var(--fn);font-size:.8rem}
+.enlink a{color:var(--gold);font-weight:600}
+.vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
+@media(max-width:860px){.vgrid{grid-template-columns:1fr}}
+.vcard{background:#fff;border:1px solid var(--border);border-left:3px solid var(--gold);padding:1.2rem 1.3rem}
+.vcard h3{font-family:var(--fd);font-size:1.08rem;margin:.25rem 0 .55rem}
+.vcard h3 a{color:inherit}
+.vcard h3 a:hover{color:var(--gold)}
+.vchips{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:.6rem}
+.vchip{font-family:var(--fn);font-size:.72rem;background:var(--surface);border:1px solid var(--border);padding:.18rem .6rem}
+.vnote{font-size:.86rem;line-height:1.8;color:var(--text)}
+.vaccess{font-size:.8rem;color:var(--muted);margin-top:.4rem}
+.vbtn{display:inline-block;margin-top:.7rem;font-family:var(--fn);font-size:.74rem;font-weight:600;color:#fff;background:var(--gold);padding:.5rem 1.1rem}
+.atable{width:100%;border-collapse:collapse;font-size:.88rem;background:#fff;border:1px solid var(--border)}
+.atable th{text-align:left;padding:.6rem .9rem;border-bottom:1px solid var(--border);width:14em;font-weight:500;color:var(--muted);vertical-align:top}
+.atable td{padding:.6rem .9rem;border-bottom:1px solid var(--border)}
+.qa{background:#fff;border:1px solid var(--border);padding:1.1rem 1.3rem;margin-bottom:.6rem}
+.qa h3{font-family:var(--fd);font-size:1rem;margin-bottom:.3rem}
+.qa p{font-size:.88rem;color:var(--muted);line-height:1.85}
+.srclist{list-style:none;font-size:.78rem;line-height:1.9;color:var(--muted);background:#fff;border:1px solid var(--border);padding:1rem 1.2rem}
+.srclist a{color:var(--gold);word-break:break-all}
+.upd{font-size:.78rem;color:var(--muted);margin-top:.8rem;line-height:1.8}
+.upd a{color:var(--gold)}
 .pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
 @media(max-width:860px){.pgrid{grid-template-columns:1fr}}
 .pitem{background:#fff;border:1px solid var(--border);padding:1.2rem 1.3rem}
@@ -216,6 +287,95 @@ def load_text(d):
     return json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
 
 
+def sec_visit(d, uniq):
+    """見学できる造り手（一次情報の中心。出典と最終確認日を必ず添える）"""
+    vs = [p for p in uniq if has_visit(p)]
+    if not vs:
+        return "", 0
+    cards = ""
+    for p in vs:
+        vi = p.get("vi") or {}
+        facts = visit_facts(p)
+        chips = "".join(f'<span class="vchip">{esc(f)}</span>' for f in facts)
+        note = esc((vi.get("notes_ja") or p.get("visit") or "")[:150])
+        src = vi.get("source") or p.get("source") or ""
+        lc = vi.get("last_checked") or ""
+        meta = []
+        if src:
+            meta.append(f'<a href="{esc(src)}" target="_blank" rel="noopener">出典</a>')
+        if lc:
+            meta.append(f'最終確認 {esc(lc)}')
+        btn = (f'<a class="vbtn" href="{esc(vi["reservation_url"])}" target="_blank" rel="noopener">公式で予約する →</a>'
+               if vi.get("reservation_url") else "")
+        cards += (f'<article class="vcard"><div class="pgenre" style="color:{p["color"]}">{esc(p["genre"])}</div>'
+                  f'<h3><a href="{esc(p["url"])}">{esc(p["name"])}</a></h3>'
+                  + (f'<div class="vchips">{chips}</div>' if chips else "")
+                  + (f'<p class="vnote">{note}</p>' if note else "")
+                  + (f'<p class="vaccess">{esc(p["station"])}</p>' if p.get("station") else "")
+                  + btn
+                  + (f'<p class="psrc">{" ／ ".join(meta)}</p>' if meta else "")
+                  + '</article>')
+    html_ = (f'<section id="visit"><div class="inner"><h2>見学・直売のある造り手<span>{len(vs)}者</span></h2>'
+             f'<p class="sec-lead">各社の公式情報から、見学の受付状況・予約の要否・試飲や売店の有無をまとめています。'
+             f'出典と最終確認日を添えていますが、受付状況は変わることがあるため、訪問前に公式サイトでご確認ください。</p>'
+             f'<div class="vgrid">{cards}</div></div></section>')
+    return html_, len(vs)
+
+
+def sec_access(d, uniq):
+    """最寄駅ごとの造り手（旅の計画に直接使える形）"""
+    by = {}
+    for p in uniq:
+        st = (p.get("station") or "").replace("（座標からの算出）", "").strip()
+        if st:
+            by.setdefault(st, []).append(p["name"])
+    if len(by) < 2:
+        return ""
+    rows = "".join(f'<tr><th>{esc(k)}</th><td>{esc("、".join(v))}</td></tr>'
+                   for k, v in sorted(by.items(), key=lambda x: -len(x[1]))[:10])
+    return (f'<section><div class="inner"><h2>最寄駅から探す</h2>'
+            f'<p class="sec-lead">公式に記載のある最寄駅、記載がない場合は所在地の座標から算出した最寄駅です（算出したものはその旨を明記しています）。</p>'
+            f'<table class="atable">{rows}</table></div></section>')
+
+
+def sec_faq(d, uniq, nvisit, en=False):
+    city = d["city"]
+    names = "、".join(p["name"] for p in uniq[:8])
+    qa = [(f'{city}にはどのような酒の造り手がありますか？',
+           f'Terroir HUB では{city}の造り手を{len(uniq)}者収録しています。' + (f'（{names} ほか）' if names else '')
+           + '各ページに所在地・公式サイト・代表銘柄を、出典を明記して掲載しています。')]
+    if nvisit:
+        qa.append((f'{city}で見学できる造り手はありますか？',
+                   f'公式情報で見学や直売に関する案内が確認できるのは{nvisit}者です。予約の要否や試飲の有無も'
+                   f'あわせて掲載しています。受付状況は変わることがあるため、訪問前に各公式サイトでご確認ください。'))
+    if d["total"]:
+        qa.append((f'{city}の返礼品にはどんなものがありますか？',
+                   '掲載している' + str(d["total"]) + '件の内訳は、'
+                   + "、".join(f'{n}{d["counts"][k]}件' for k, n in CATS if d["counts"].get(k)) + 'です。'))
+    faq = "".join(f'<div class="qa"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q, a in qa)
+    ld = json.dumps({"@context": "https://schema.org", "@type": "FAQPage",
+                     "mainEntity": [{"@type": "Question", "name": q,
+                                     "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]},
+                    ensure_ascii=False)
+    return f'<section><div class="inner"><h2>よくある質問</h2>{faq}</div></section>', ld
+
+
+def sec_sources(d, uniq):
+    srcs = []
+    for p in uniq:
+        vi = p.get("vi") or {}
+        u = vi.get("source") or p.get("source")
+        if u and u not in [x[1] for x in srcs]:
+            srcs.append((p["name"], u))
+    rows = "".join(f'<li>{esc(n)}：<a href="{esc(u)}" target="_blank" rel="noopener">{esc(u[:68])}</a></li>'
+                   for n, u in srcs[:30])
+    return (f'<section><div class="inner"><h2>出典</h2>'
+            f'<p class="sec-lead">造り手の情報は、各社の公式サイトおよび業界団体の公表情報にもとづいています。'
+            f'確認できない項目は掲載していません。</p><ul class="srclist">{rows}</ul>'
+            f'<p class="upd">最終更新：{d["collected_at"]}　／　運営：合同会社FOMUS（<a href="https://www.terroirhub.com/">Terroir HUB</a>）　'
+            f'／　掲載内容の修正は<a href="https://www.terroirhub.com/listing-update/">こちら</a>から承ります。</p></div></section>')
+
+
 def render_city(d, producers):
     tx = load_text(d)
     full_name = d["pref"] + d["city"]
@@ -294,7 +454,52 @@ def render_city(d, producers):
     robots = ('<meta name="robots" content="index,follow,max-image-preview:large">' if full
               else '<meta name="robots" content="noindex, follow">')
     extra = f'<script type="application/ld+json">{ld}</script>' if full else ""
-    return head(title, desc, url, robots, extra, NAV_FULL if full else NAV) + f"""
+    if full:
+        visit_html, nvisit = sec_visit(d, uniq)
+        faq_html, faq_ld = sec_faq(d, uniq, nvisit)
+        access_html = sec_access(d, uniq)
+        src_html = sec_sources(d, uniq)
+        en_url = f'https://{DOMAIN}/area/en/{d["pref_slug"]}/{d["slug"]}/'
+        extra += (f'<script type="application/ld+json">{faq_ld}</script>'
+                  f'<link rel="alternate" hreflang="ja" href="{url}">'
+                  f'<link rel="alternate" hreflang="en" href="{en_url}">'
+                  f'<link rel="alternate" hreflang="x-default" href="{url}">')
+        chips2 = (f'<span class="chip">収録している造り手<b>{len(uniq)}</b></span>'
+                  + (f'<span class="chip">見学・直売あり<b>{nvisit}</b></span>' if nvisit else "")
+                  + f'<span class="chip">ふるさと納税返礼品<b>{d["total"]}</b></span>')
+        EN_QUEUE.append((d, tx, uniq, nvisit))
+        return head(title, desc, url, robots, extra, NAV_FULL) + f"""
+<div class="crumb"><a href="/">ホーム</a> › <a href="/area/">地域</a> › {esc(full_name)}</div>
+<header class="hero"><div class="inner">
+  <div class="eyebrow">Terroir of {esc(d["city"])}</div>
+  <h1>{esc(full_name)}の風土</h1>
+  <p class="lead">{esc(tx.get("intro_ja",""))}</p>
+  <div class="chips">{chips2}</div>
+  <p class="enlink"><a href="{en_url}">English page →</a></p>
+</div></header>
+{visit_html}
+{prod_html}
+{access_html}
+<section><div class="inner"><h2>ふるさと納税の返礼品<span>{d["total"]}件</span></h2>
+  <p class="sec-lead">{esc(full_name)}が提供する返礼品です。寄付金額・在庫・提供事業者は変動しますので、
+  寄付前に各返礼品ページでご確認ください。以下のリンクは楽天アフィリエイトのリンクを含みます（PR）。</p>
+  {secs}
+</div></section>
+{faq_html}
+{src_html}
+<div class="cta"><div class="cta-in">
+  <h3>この地域の発信を、一緒に。</h3>
+  <p>掲載内容の追加・修正は無料で承ります。地域全体のページとして運用する場合のご案内もございます。</p>
+  <div class="btnrow">
+    <a href="/business/area/">地域ページについて</a>
+    <a href="/business/municipality/#contact">自治体の方はこちら</a>
+  </div>
+</div></div>
+<footer class="foot"><div class="foot-logo">Terroir HUB</div>
+  <p>日本の風土と造り手を、正確な一次情報で。｜運営：合同会社FOMUS</p></footer>
+</body></html>"""
+
+    return head(title, desc, url, robots, extra, NAV) + f"""
 <div class="crumb"><a href="/">ホーム</a> › <a href="/area/">地域</a> › {esc(full_name)}</div>
 <header class="hero"><div class="inner">
   <div class="eyebrow">Terroir of {esc(d["city"])}</div>
@@ -323,6 +528,73 @@ def render_city(d, producers):
 </div></div>
 <footer class="foot"><div class="foot-logo">Terroir HUB</div>
   <p>日本の風土と造り手を、正確な一次情報で。｜運営：合同会社FOMUS</p></footer>
+</body></html>"""
+
+
+def render_city_en(d, tx, uniq, nvisit):
+    """英語ページ。翻訳が確かなもの（名称・見学の事実）だけを英語にし、日本語の説明文は訳さない。"""
+    full_name = d["pref"] + d["city"]
+    city_en = d["slug"].replace("-", " ").title()
+    pref_en = d["pref_slug"].replace("-", " ").title()
+    url = f'https://{DOMAIN}/area/en/{d["pref_slug"]}/{d["slug"]}/'
+    ja_url = f'https://{DOMAIN}/area/{d["pref_slug"]}/{d["slug"]}/'
+    title = f'{city_en}, {pref_en} — Sake, Wine and Local Makers | Terroir HUB'
+    desc = (f'Producers in {city_en} ({d["city"]}): {len(uniq)} listed from official sources'
+            + (f', {nvisit} open to visitors' if nvisit else '') + '. Visiting details with sources and last-checked dates.')
+    cards = ""
+    for p in uniq:
+        facts = visit_facts(p, en=True)
+        chips = "".join(f'<span class="vchip">{esc(f)}</span>' for f in facts)
+        vi = p.get("vi") or {}
+        src, lc = vi.get("source") or p.get("source") or "", vi.get("last_checked") or ""
+        meta = []
+        if src:
+            meta.append(f'<a href="{esc(src)}" target="_blank" rel="noopener">Source</a>')
+        if lc:
+            meta.append(f'Last checked {esc(lc)}')
+        nm = p.get("name_en") or p["name"]
+        official = (f' <a href="{esc(p["official"])}" target="_blank" rel="noopener">Official site</a>'
+                    if p.get("official") else "")
+        cards += (f'<article class="vcard"><div class="pgenre" style="color:{p["color"]}">{esc(p["genre_key"].upper())}</div>'
+                  f'<h3><a href="{esc(p["url"])}">{esc(nm)}</a></h3>'
+                  + (f'<p class="vnote">{esc(p["name"])}</p>' if p.get("name_en") else "")
+                  + (f'<div class="vchips">{chips}</div>' if chips else "")
+                  + (f'<p class="vaccess">{esc(p["station"].replace("（座標からの算出）", " (estimated from coordinates)"))}</p>'
+                     if p.get("station") else "")
+                  + f'<p class="plinks">{official}</p>'
+                  + (f'<p class="psrc">{" / ".join(meta)}</p>' if meta else "") + '</article>')
+    ld = json.dumps({"@context": "https://schema.org", "@type": "CollectionPage", "name": title,
+                     "description": desc, "url": url,
+                     "about": {"@type": "AdministrativeArea", "name": full_name}}, ensure_ascii=False)
+    extra = (f'<script type="application/ld+json">{ld}</script>'
+             f'<link rel="alternate" hreflang="ja" href="{ja_url}">'
+             f'<link rel="alternate" hreflang="en" href="{url}">'
+             f'<link rel="alternate" hreflang="x-default" href="{ja_url}">')
+    nav = """<nav class="nav">
+  <a href="/" class="nav-logo">Terroir HUB</a>
+  <a href="/business/area/" class="nav-cta">For regions</a>
+</nav>"""
+    return head(title, desc, url, '<meta name="robots" content="index,follow,max-image-preview:large">',
+                extra, nav) + f"""
+<div class="crumb"><a href="/">Home</a> › <a href="/area/">Areas</a> › {esc(city_en)}</div>
+<header class="hero"><div class="inner">
+  <div class="eyebrow">Terroir of {esc(city_en)}</div>
+  <h1>{esc(city_en)}, {esc(pref_en)}</h1>
+  <p class="lead sub">{esc(full_name)}</p>
+  <p class="lead">{esc(tx.get("intro_en",""))}</p>
+  <p class="enlink"><a href="{ja_url}">日本語ページ →</a></p>
+</div></header>
+<section><div class="inner"><h2>Local makers<span>{len(uniq)} listed</span></h2>
+  <p class="sec-lead">Compiled from each producer's official information. Fields we could not verify are left out.
+  Visiting conditions change, so please check the official site before you go.</p>
+  <div class="vgrid">{cards}</div></div></section>
+<div class="note"><div class="note-in">
+  <p>Listings are based on official sources, with the source and last-checked date shown for each producer.
+  Terroir HUB does not sell alcohol and does not accept furusato tax donations.</p>
+  <p>Corrections are welcome at <a href="https://www.terroirhub.com/listing-update/">this form</a>.</p>
+</div></div>
+<footer class="foot"><div class="foot-logo">Terroir HUB</div>
+  <p>Japanese terroir and its makers, from verified primary sources. Operated by FOMUS LLC.</p></footer>
 </body></html>"""
 
 
@@ -364,6 +636,12 @@ def main():
         os.makedirs(outdir, exist_ok=True)
         open(os.path.join(outdir, "index.html"), "w", encoding="utf-8").write(render_city(d, producers))
         areas.append(d)
+        for (ed, etx, euniq, envisit) in EN_QUEUE:
+            ed_dir = os.path.join(OUT, "en", ed["pref_slug"], ed["slug"])
+            os.makedirs(ed_dir, exist_ok=True)
+            open(os.path.join(ed_dir, "index.html"), "w", encoding="utf-8").write(
+                render_city_en(ed, etx, euniq, envisit))
+        EN_QUEUE.clear()
         print(f'  {d["pref"]}{d["city"]}: {d["total"]}件 → /area/{d["pref_slug"]}/{d["slug"]}/')
     if areas:
         os.makedirs(OUT, exist_ok=True)
