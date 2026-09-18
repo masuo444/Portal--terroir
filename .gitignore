@@ -3,3 +3,4 @@ reports/
 proposals/
 __pycache__/
 *.pyc
+data/outreach/
