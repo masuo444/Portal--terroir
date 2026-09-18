@@ -29,6 +29,17 @@ ROOT = os.path.dirname(BASE)
 SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly",
           "https://www.googleapis.com/auth/analytics.readonly"]
 
+# GA4のプロパティID（数値）。測定ID(G-...)とは別物。2026-09-15にAdmin APIで確認。
+# 環境変数 THUB_GA4_PROPERTY_<GENRE> があればそちらを優先する。
+GA4_PROPERTY = {
+    "sake": "529921642",
+    "wine": "534564535",
+    "shochu": "529923851",
+    "whisky": "531246960",
+    "liqueur": "531285585",
+    "portal": "531278763",
+}
+
 
 # ── 生産者インデックス ────────────────────────────────────────────
 def load_producers():
@@ -84,13 +95,24 @@ def month_range(ym=None):
 
 
 # ── Search Console ───────────────────────────────────────────────
-def fetch_gsc(creds, domain, start, end):
+GSC_PROPERTY = os.environ.get("THUB_GSC_PROPERTY", "sc-domain:terroirhub.com")
+
+
+def fetch_gsc(creds, domain, start, end, _cache={}):
+    """ドメインプロパティから1回だけ取得し、以降はキャッシュを返す（domainは互換のため残す）"""
+    key = (start, end)
+    if key not in _cache:
+        _cache[key] = _fetch_gsc_domain(creds, start, end)
+    return _cache[key]
+
+
+def _fetch_gsc_domain(creds, start, end):
     """{page_path: {impressions, clicks, position, queries:[(q, imp)], countries:{}}}"""
     if not creds:
         return {}
     from googleapiclient.discovery import build
     svc = build("searchconsole", "v1", credentials=creds, cache_discovery=False)
-    site = f"https://{domain}/"
+    site = GSC_PROPERTY
     out = collections.defaultdict(lambda: {"impressions": 0, "clicks": 0, "pos_sum": 0.0,
                                            "rows": 0, "queries": [], "countries": {}})
 
@@ -100,7 +122,7 @@ def fetch_gsc(creds, domain, start, end):
         try:
             return svc.searchanalytics().query(siteUrl=site, body=body).execute().get("rows", [])
         except Exception as e:
-            print(f"  GSC {domain} {dims}: {e}")
+            print(f"  GSC {site} {dims}: {e}")
             return []
 
     for r in run(["page"]):
@@ -235,7 +257,8 @@ def collect(ym=None):
     result = {}
     for g in GENRES:
         gsc = fetch_gsc(creds, g["domain"], start, end)
-        prop = os.environ.get(f'THUB_GA4_PROPERTY_{g["key"].upper()}')
+        prop = (os.environ.get(f'THUB_GA4_PROPERTY_{g["key"].upper()}')
+                or GA4_PROPERTY.get(g["key"]))
         ga4 = fetch_ga4(creds, prop, start, end)
         rows = {}
         for path, prod in producers[g["key"]].items():

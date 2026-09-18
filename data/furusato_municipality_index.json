@@ -32,7 +32,7 @@
   "city": "仁木町",
   "slug": "niki",
   "items": 21,
-  "producers": 0,
+  "producers": 12,
   "url": "/furusato/hokkaido/niki/"
  },
  {
@@ -104,7 +104,7 @@
   "city": "余市町",
   "slug": "yoichi",
   "items": 14,
-  "producers": 0,
+  "producers": 21,
   "url": "/furusato/hokkaido/yoichi/"
  },
  {
@@ -122,7 +122,7 @@
   "city": "紫波町",
   "slug": "shiwa",
   "items": 13,
-  "producers": 0,
+  "producers": 6,
   "url": "/furusato/iwate/shiwa/"
  },
  {
@@ -257,7 +257,7 @@
   "city": "池田町",
   "slug": "ikeda",
   "items": 11,
-  "producers": 0,
+  "producers": 3,
   "url": "/furusato/nagano/ikeda/"
  },
  {
@@ -311,7 +311,7 @@
   "city": "上富良野町",
   "slug": "kamifurano",
   "items": 10,
-  "producers": 0,
+  "producers": 3,
   "url": "/furusato/hokkaido/kamifurano/"
  },
  {
@@ -365,7 +365,7 @@
   "city": "磐梯町",
   "slug": "bandai",
   "items": 9,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/fukushima/bandai/"
  },
  {
@@ -374,7 +374,7 @@
   "city": "揖斐川町",
   "slug": "ibigawa",
   "items": 9,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/gifu/ibigawa/"
  },
  {
@@ -446,7 +446,7 @@
   "city": "加美町",
   "slug": "kami",
   "items": 8,
-  "producers": 0,
+  "producers": 4,
   "url": "/furusato/miyagi/kami/"
  },
  {
@@ -491,7 +491,7 @@
   "city": "和泊町",
   "slug": "wadomari",
   "items": 8,
-  "producers": 0,
+  "producers": 6,
   "url": "/furusato/kagoshima/wadomari/"
  },
  {
@@ -536,7 +536,7 @@
   "city": "邑南町",
   "slug": "ohnan",
   "items": 7,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/shimane/ohnan/"
  },
  {
@@ -554,7 +554,7 @@
   "city": "野沢温泉村",
   "slug": "nozawaonsen",
   "items": 7,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/nagano/nozawaonsen/"
  },
  {
@@ -581,7 +581,7 @@
   "city": "小川町",
   "slug": "ogawa",
   "items": 7,
-  "producers": 0,
+  "producers": 4,
   "url": "/furusato/saitama/ogawa/"
  },
  {
@@ -590,7 +590,7 @@
   "city": "竜王町",
   "slug": "ryuo",
   "items": 7,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/shiga/ryuo/"
  },
  {
@@ -662,7 +662,7 @@
   "city": "みやこ町",
   "slug": "miyako",
   "items": 6,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/fukuoka/miyako/"
  },
  {
@@ -725,7 +725,7 @@
   "city": "有田町",
   "slug": "arita",
   "items": 6,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/saga/arita/"
  },
  {
@@ -788,7 +788,7 @@
   "city": "大和町",
   "slug": "taiwa",
   "items": 6,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/miyagi/taiwa/"
  },
  {
@@ -833,7 +833,7 @@
   "city": "高畠町",
   "slug": "takahata",
   "items": 6,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/yamagata/takahata/"
  },
  {
@@ -842,7 +842,7 @@
   "city": "小坂町",
   "slug": "kosaka",
   "items": 6,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/akita/kosaka/"
  },
  {
@@ -851,7 +851,7 @@
   "city": "蘭越町",
   "slug": "rankoshi",
   "items": 6,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/hokkaido/rankoshi/"
  },
  {
@@ -1175,7 +1175,7 @@
   "city": "美郷町",
   "slug": "misato",
   "items": 4,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/akita/misato/"
  },
  {
@@ -1328,7 +1328,7 @@
   "city": "木曽町",
   "slug": "kiso",
   "items": 4,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/nagano/kiso/"
  },
  {
@@ -1364,7 +1364,7 @@
   "city": "弥彦村",
   "slug": "yahiko",
   "items": 4,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/niigata/yahiko/"
  },
  {
@@ -1454,7 +1454,7 @@
   "city": "多古町",
   "slug": "tako",
   "items": 4,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/chiba/tako/"
  },
  {
@@ -1463,7 +1463,7 @@
   "city": "榛東村",
   "slug": "shinto",
   "items": 4,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/gunma/shinto/"
  },
  {
@@ -1616,7 +1616,7 @@
   "city": "北広島町",
   "slug": "kitahiroshima",
   "items": 3,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/hiroshima/kitahiroshima/"
  },
  {
@@ -1625,7 +1625,7 @@
   "city": "綾町",
   "slug": "aya",
   "items": 3,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/miyazaki/aya/"
  },
  {
@@ -1679,7 +1679,7 @@
   "city": "佐川町",
   "slug": "sakawa",
   "items": 3,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/kochi/sakawa/"
  },
  {
@@ -1697,7 +1697,7 @@
   "city": "京丹波町",
   "slug": "kyotamba",
   "items": 3,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/kyoto/kyotamba/"
  },
  {
@@ -1868,7 +1868,7 @@
   "city": "本部町",
   "slug": "motobu",
   "items": 3,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/okinawa/motobu/"
  },
  {
@@ -1877,7 +1877,7 @@
   "city": "長野原町",
   "slug": "naganohara",
   "items": 3,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/gunma/naganohara/"
  },
  {
@@ -1895,7 +1895,7 @@
   "city": "浦臼町",
   "slug": "urausu",
   "items": 3,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/hokkaido/urausu/"
  },
  {
@@ -1904,7 +1904,7 @@
   "city": "穴水町",
   "slug": "anamizu",
   "items": 3,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/ishikawa/anamizu/"
  },
  {
@@ -1940,7 +1940,7 @@
   "city": "高山村",
   "slug": "takayama",
   "items": 3,
-  "producers": 0,
+  "producers": 6,
   "url": "/furusato/nagano/takayama/"
  },
  {
@@ -1958,7 +1958,7 @@
   "city": "西川町",
   "slug": "nishikawa",
   "items": 3,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/yamagata/nishikawa/"
  },
  {
@@ -2021,7 +2021,7 @@
   "city": "砥部町",
   "slug": "tobe",
   "items": 2,
-  "producers": 0,
+  "producers": 3,
   "url": "/furusato/ehime/tobe/"
  },
  {
@@ -2102,7 +2102,7 @@
   "city": "熊野町",
   "slug": "kumano",
   "items": 2,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/hiroshima/kumano/"
  },
  {
@@ -2111,7 +2111,7 @@
   "city": "東川町",
   "slug": "higashikawa",
   "items": 2,
-  "producers": 0,
+  "producers": 3,
   "url": "/furusato/hokkaido/higashikawa/"
  },
  {
@@ -2120,7 +2120,7 @@
   "city": "増毛町",
   "slug": "mashike",
   "items": 2,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/hokkaido/mashike/"
  },
  {
@@ -2183,7 +2183,7 @@
   "city": "綾川町",
   "slug": "ayagawa",
   "items": 2,
-  "producers": 0,
+  "producers": 3,
   "url": "/furusato/kagawa/ayagawa/"
  },
  {
@@ -2228,7 +2228,7 @@
   "city": "田野町",
   "slug": "tano",
   "items": 2,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/kochi/tano/"
  },
  {
@@ -2264,7 +2264,7 @@
   "city": "与謝野町",
   "slug": "yosano",
   "items": 2,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/kyoto/yosano/"
  },
  {
@@ -2291,7 +2291,7 @@
   "city": "川崎町",
   "slug": "kawasaki",
   "items": 2,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/miyagi/kawasaki/"
  },
  {
@@ -2309,7 +2309,7 @@
   "city": "新上五島町",
   "slug": "shinkamigoto",
   "items": 2,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/nagasaki/shinkamigoto/"
  },
  {
@@ -2363,7 +2363,7 @@
   "city": "玖珠町",
   "slug": "kusu",
   "items": 2,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/oita/kusu/"
  },
  {
@@ -2399,7 +2399,7 @@
   "city": "金武町",
   "slug": "kin",
   "items": 2,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/okinawa/kin/"
  },
  {
@@ -2426,7 +2426,7 @@
   "city": "岩泉町",
   "slug": "iwaizumi",
   "items": 2,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/iwate/iwaizumi/"
  },
  {
@@ -2471,7 +2471,7 @@
   "city": "豊郷町",
   "slug": "toyosato",
   "items": 2,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/shiga/toyosato/"
  },
  {
@@ -2588,7 +2588,7 @@
   "city": "富士河口湖町",
   "slug": "fujikawagutiko",
   "items": 2,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/yamanashi/fujikawagutiko/"
  },
  {
@@ -2606,7 +2606,7 @@
   "city": "宇美町",
   "slug": "umi",
   "items": 2,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/fukuoka/umi/"
  },
  {
@@ -2633,7 +2633,7 @@
   "city": "世羅町",
   "slug": "sera",
   "items": 2,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/hiroshima/sera/"
  },
  {
@@ -2651,7 +2651,7 @@
   "city": "五ヶ瀬町",
   "slug": "gokase",
   "items": 2,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/miyazaki/gokase/"
  },
  {
@@ -2660,7 +2660,7 @@
   "city": "上ノ国町",
   "slug": "kaminokuni",
   "items": 2,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/hokkaido/kaminokuni/"
  },
  {
@@ -2669,7 +2669,7 @@
   "city": "長沼町",
   "slug": "naganuma",
   "items": 2,
-  "producers": 0,
+  "producers": 3,
   "url": "/furusato/hokkaido/naganuma/"
  },
  {
@@ -2696,7 +2696,7 @@
   "city": "都農町",
   "slug": "tsuno",
   "items": 2,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/miyazaki/tsuno/"
  },
  {
@@ -2732,7 +2732,7 @@
   "city": "市川三郷町",
   "slug": "ichikawamisato",
   "items": 2,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/yamanashi/ichikawamisato/"
  },
  {
@@ -2741,7 +2741,7 @@
   "city": "六ヶ所村",
   "slug": "rokkasho",
   "items": 2,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/aomori/rokkasho/"
  },
  {
@@ -2822,7 +2822,7 @@
   "city": "設楽町",
   "slug": "shitara",
   "items": 1,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/aichi/shitara/"
  },
  {
@@ -2948,7 +2948,7 @@
   "city": "西会津町",
   "slug": "nishiaizu",
   "items": 1,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/fukushima/nishiaizu/"
  },
  {
@@ -2957,7 +2957,7 @@
   "city": "矢吹町",
   "slug": "yabuki",
   "items": 1,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/fukushima/yabuki/"
  },
  {
@@ -3092,7 +3092,7 @@
   "city": "香美町",
   "slug": "kami",
   "items": 1,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/hyogo/kami/"
  },
  {
@@ -3272,7 +3272,7 @@
   "city": "村田町",
   "slug": "murata",
   "items": 1,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/miyagi/murata/"
  },
  {
@@ -3299,7 +3299,7 @@
   "city": "下諏訪町",
   "slug": "shimosuwa",
   "items": 1,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/nagano/shimosuwa/"
  },
  {
@@ -3308,7 +3308,7 @@
   "city": "辰野町",
   "slug": "tatsuno",
   "items": 1,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/nagano/tatsuno/"
  },
  {
@@ -3317,7 +3317,7 @@
   "city": "波佐見町",
   "slug": "hasami",
   "items": 1,
-  "producers": 0,
+  "producers": 3,
   "url": "/furusato/nagasaki/hasami/"
  },
  {
@@ -3344,7 +3344,7 @@
   "city": "湯沢町",
   "slug": "yuzawa",
   "items": 1,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/niigata/yuzawa/"
  },
  {
@@ -3389,7 +3389,7 @@
   "city": "阿賀町",
   "slug": "aga",
   "items": 1,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/niigata/aga/"
  },
  {
@@ -3488,7 +3488,7 @@
   "city": "基山町",
   "slug": "kiyama",
   "items": 1,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/saga/kiyama/"
  },
  {
@@ -3524,7 +3524,7 @@
   "city": "毛呂山町",
   "slug": "moroyama",
   "items": 1,
-  "producers": 0,
+  "producers": 3,
   "url": "/furusato/saitama/moroyama/"
  },
  {
@@ -3551,7 +3551,7 @@
   "city": "奥出雲町",
   "slug": "okuizumo",
   "items": 1,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/shimane/okuizumo/"
  },
  {
@@ -3686,7 +3686,7 @@
   "city": "千代田町",
   "slug": "chiyoda",
   "items": 1,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/gunma/chiyoda/"
  },
  {
@@ -3722,7 +3722,7 @@
   "city": "内子町",
   "slug": "uchiko",
   "items": 1,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/ehime/uchiko/"
  },
  {
@@ -3749,7 +3749,7 @@
   "city": "池田町",
   "slug": "ikeda",
   "items": 1,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/hokkaido/ikeda/"
  },
  {
@@ -3758,7 +3758,7 @@
   "city": "奥尻町",
   "slug": "okushiri",
   "items": 1,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/hokkaido/okushiri/"
  },
  {
@@ -3767,7 +3767,7 @@
   "city": "中富良野町",
   "slug": "nakafurano",
   "items": 1,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/hokkaido/nakafurano/"
  },
  {
@@ -3785,7 +3785,7 @@
   "city": "芽室町",
   "slug": "memuro",
   "items": 1,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/hokkaido/memuro/"
  },
  {
@@ -3821,7 +3821,7 @@
   "city": "飯綱町",
   "slug": "iizuna",
   "items": 1,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/nagano/iizuna/"
  },
  {
@@ -3830,7 +3830,7 @@
   "city": "松川町",
   "slug": "matsukawa",
   "items": 1,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/nagano/matsukawa/"
  },
  {
@@ -3848,7 +3848,7 @@
   "city": "ニセコ町",
   "slug": "niseko",
   "items": 1,
-  "producers": 0,
+  "producers": 2,
   "url": "/furusato/hokkaido/niseko/"
  },
  {
@@ -3866,7 +3866,7 @@
   "city": "利尻町",
   "slug": "rishiri",
   "items": 1,
-  "producers": 0,
+  "producers": 1,
   "url": "/furusato/hokkaido/rishiri/"
  },
  {

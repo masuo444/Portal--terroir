@@ -69,6 +69,14 @@ def load_producers():
     return out
 
 
+def addr_matches(addr, pref, city):
+    """住所が「県＋市区町村」に一致するか。町村は「県＋◯◯郡＋町村」の形も拾う。"""
+    import re as _re
+    if not addr.startswith(pref):
+        return False
+    rest = addr[len(pref):]
+    return rest.startswith(city) or bool(_re.match(r'[^\s]{1,6}郡' + _re.escape(city), rest))
+
 CSS = """*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#FAFAF7;--surface:#F3F0EA;--border:rgba(0,0,0,.09);--text:#1a1816;--muted:rgba(26,24,22,.62);--gold:#996E1A;--fd:'Shippori Mincho',serif;--fb:'Noto Sans JP',sans-serif;--fn:'Inter',sans-serif}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
@@ -86,6 +94,8 @@ img{display:block;max-width:100%}
 .eyebrow{font-family:var(--fn);font-size:.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
 h1{font-family:var(--fd);font-size:clamp(1.7rem,4.2vw,2.7rem);font-weight:700;line-height:1.4;margin-bottom:1rem}
 .lead{font-size:clamp(.92rem,1.3vw,1.02rem);max-width:760px;line-height:2}
+.lead.en{font-size:.86rem;color:var(--muted);margin-top:.7rem;font-family:var(--fn);line-height:1.85}
+.lead.sub{font-size:.84rem;color:var(--muted);margin-top:.9rem;padding-top:.8rem;border-top:1px dashed var(--border)}
 .chips{display:flex;gap:.45rem;flex-wrap:wrap;margin-top:1.4rem}
 .chip{font-family:var(--fn);font-size:.74rem;border:1px solid var(--border);background:var(--bg);padding:.35rem .8rem;color:var(--muted)}
 .chip b{color:var(--text);font-weight:600;margin-left:.25rem}
@@ -168,7 +178,13 @@ def card(it, city):
             + '<div class="card-buy">楽天ふるさと納税で見る →</div></a>')
 
 
+def load_text(d):
+    p = os.path.join(BASE, "data", "area_text", d["pref_slug"], f'{d["slug"]}.json')
+    return json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
+
+
 def render_city(d, producers):
+    tx = load_text(d)
     full = d["pref"] + d["city"]
     url = f'https://{DOMAIN}/area/{d["pref_slug"]}/{d["slug"]}/'
     present = [(k, n) for k, n in CATS if d["counts"].get(k)]
@@ -192,10 +208,9 @@ def render_city(d, producers):
         secs += (f'<section><div class="inner"><h2>{esc(n)}<span>{len(items)}件</span></h2>'
                  f'<div class="grid">{cards}</div></div></section>')
 
-    key = (d["pref"] + d["city"]).replace(" ", "")
     plist = []
     for addr, rows in producers.items():
-        if addr.startswith(key):
+        if addr_matches(addr, d["pref"], d["city"]):
             plist.extend(rows)
     prod_html = ""
     if plist:
@@ -214,8 +229,9 @@ def render_city(d, producers):
 <header class="hero"><div class="inner">
   <div class="eyebrow">Terroir of {esc(d["city"])}</div>
   <h1>{esc(full)}の風土</h1>
-  <p class="lead">{esc(d["city"])}の返礼品 {d["total"]}件を、酒・食・工芸・体験に分けて並べました。
-  本格導入では、ここに事業者の物語・写真・英語ページ・見学や体験の案内が加わります。</p>
+  <p class="lead">{esc(tx.get("intro_ja")) or (esc(d["city"]) + "の返礼品 " + str(d["total"]) + "件を、酒・食・工芸・体験に分けて並べました。")}</p>
+  {'<p class="lead en">' + esc(tx["intro_en"]) + '</p>' if tx.get("intro_en") else ''}
+  <p class="lead sub">本格導入では、ここに事業者の物語・写真・英語ページ・見学や体験の案内が加わります。</p>
   <div class="chips">{chips}</div>
 </div></header>
 {secs}

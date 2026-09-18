@@ -125,11 +125,14 @@ def load_producers():
 
 def producers_in(all_producers, pref, city):
     """住所が『県名＋市区町村名』で始まる生産者（推測しない・完全な前方一致のみ）"""
-    key = pref + city
     hits = []
     for addr, rows in all_producers.items():
         norm = addr.replace(" ", "").replace("　", "")
-        if norm.startswith(key):
+        if not norm.startswith(pref):
+            continue
+        rest = norm[len(pref):]
+        # 町村は「県＋◯◯郡＋町村」の形で登録されていることがある
+        if rest.startswith(city) or re.match(r'[^\s]{1,6}郡' + re.escape(city), rest):
             hits.extend(rows)
     hits.sort(key=lambda r: (r["genre"], r["name"]))
     return hits
