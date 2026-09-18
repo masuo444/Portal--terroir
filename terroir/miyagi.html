@@ -20,7 +20,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;600&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "name": "宮城県のテロワール — 日本酒・ワイン・焼酎・ウイスキー・リキュール", "url": "https://www.terroirhub.com/terroir/miyagi.html", "description": "宮城県の酒の造り手35件を全ジャンル横断で紹介。", "dateModified": "2026-07-27", "isPartOf": {"@type": "WebSite", "name": "Terroir HUB", "url": "https://www.terroirhub.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Terroir HUB", "item": "https://www.terroirhub.com/"}, {"@type": "ListItem", "position": 2, "name": "テロワール", "item": "https://www.terroirhub.com/terroir/"}, {"@type": "ListItem", "position": 3, "name": "宮城県", "item": "https://www.terroirhub.com/terroir/miyagi.html"}]}, {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "宮城県の日本酒", "url": "https://sake.terroirhub.com/sake/miyagi/"}, {"@type": "ListItem", "position": 2, "name": "宮城県のワイン", "url": "https://wine.terroirhub.com/wine/miyagi/"}, {"@type": "ListItem", "position": 3, "name": "宮城県のウイスキー", "url": "https://whisky.terroirhub.com/whisky/miyagi/"}, {"@type": "ListItem", "position": 4, "name": "宮城県のリキュール・果実酒", "url": "https://liqueur.terroirhub.com/liqueur/miyagi/"}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "name": "宮城県のテロワール — 日本酒・ワイン・焼酎・ウイスキー・リキュール", "url": "https://www.terroirhub.com/terroir/miyagi.html", "description": "宮城県の酒の造り手35件を全ジャンル横断で紹介。", "dateModified": "2026-09-18", "isPartOf": {"@type": "WebSite", "name": "Terroir HUB", "url": "https://www.terroirhub.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Terroir HUB", "item": "https://www.terroirhub.com/"}, {"@type": "ListItem", "position": 2, "name": "テロワール", "item": "https://www.terroirhub.com/terroir/"}, {"@type": "ListItem", "position": 3, "name": "宮城県", "item": "https://www.terroirhub.com/terroir/miyagi.html"}]}, {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "宮城県の日本酒", "url": "https://sake.terroirhub.com/sake/miyagi/"}, {"@type": "ListItem", "position": 2, "name": "宮城県のワイン", "url": "https://wine.terroirhub.com/wine/miyagi/"}, {"@type": "ListItem", "position": 3, "name": "宮城県のウイスキー", "url": "https://whisky.terroirhub.com/whisky/miyagi/"}, {"@type": "ListItem", "position": 4, "name": "宮城県のリキュール・果実酒", "url": "https://liqueur.terroirhub.com/liqueur/miyagi/"}]}]}</script>
 <style>
 :root{--bg:#FAFAF7;--surface:#F3F0EA;--text:#1a1816;--muted:#7A7268;--gold:#996E1A;--border:#E5E0D5;}
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -36,6 +36,16 @@ header{border-bottom:1px solid var(--border);}
 .hero .crumb a{color:var(--muted);text-decoration:none;}
 .hero h1{font-family:'Zen Old Mincho',serif;font-size:30px;font-weight:600;letter-spacing:.12em;}
 .hero .total{margin-top:12px;font-size:14px;color:var(--muted);}
+.visit{margin:8px 0 30px;padding:22px 24px;background:#fff;border:1px solid var(--line);border-radius:12px;}
+.visit h2{font-family:'Zen Old Mincho',serif;font-size:17px;letter-spacing:.08em;margin-bottom:8px;}
+.visit h2 b{color:var(--gold);font-size:20px;}
+.vlead{font-size:12.5px;color:var(--muted);line-height:1.9;margin-bottom:14px;}
+.vgrid{display:flex;flex-wrap:wrap;gap:10px;}
+.vlink{display:flex;align-items:baseline;gap:8px;text-decoration:none;border:1px solid var(--line);border-left:3px solid var(--vc);border-radius:8px;padding:9px 14px;background:#fff;}
+.vlink:hover{border-color:var(--vc);}
+.vg{font-size:13px;color:var(--vc);}
+.vn{font-size:17px;font-family:'Zen Old Mincho',serif;}
+.vn em{font-style:normal;font-size:11px;color:var(--muted);margin-left:2px;}
 .hero .total b{color:var(--gold);font-size:20px;font-family:'Zen Old Mincho',serif;}
 .gi-row{margin-top:16px;}
 .gi{display:inline-block;font-size:11.5px;letter-spacing:.08em;border:1px solid var(--gold);color:var(--gold);border-radius:3px;padding:3px 10px;margin:3px;}
@@ -69,6 +79,12 @@ footer a{color:var(--muted);}
     <p class="total">日本酒・ワイン・焼酎・ウイスキー・リキュールの造り手 <b>35</b> 件</p>
     
   </div>
+  <section class="visit">
+    <h2>宮城県で見学できる造り手 <b>6</b>件</h2>
+    <p class="vlead">公式サイトで見学を受け付けていることを確認できた造り手です。予約の要否・料金・所要時間と、出典・確認日は、ジャンルごとの見学ガイドに掲載しています。</p>
+    <div class="vgrid"><a class="vlink" href="https://sake.terroirhub.com/sake/visit/miyagi/" style="--vc:#B8452A"><span class="vg">日本酒</span><span class="vn">3<em>酒蔵</em></span></a><a class="vlink" href="https://wine.terroirhub.com/wine/visit/" style="--vc:#722F37"><span class="vg">ワイン</span><span class="vn">2<em>ワイナリー</em></span></a><a class="vlink" href="https://whisky.terroirhub.com/whisky/visit/" style="--vc:#2D5F3F"><span class="vg">ウイスキー</span><span class="vn">1<em>蒸留所</em></span></a></div>
+  </section>
+
 
   <section class="genre" style="--gc:#B8452A">
     <div class="g-head">
@@ -129,7 +145,7 @@ footer a{color:var(--muted);}
   </section>
   <div class="cross">
     Terroir HUB は日本全国の酒蔵・ワイナリー・蒸留所を5ジャンル横断で収録する総合データベースです。
-    各造り手の詳細ページでは銘柄・見学情報・購入リンクを掲載しています。データは公式情報に基づき、最終更新は 2026-07-27 です。
+    各造り手の詳細ページでは銘柄・見学情報・購入リンクを掲載しています。データは公式情報に基づき、最終更新は 2026-09-18 です。
   </div>
 </div>
 

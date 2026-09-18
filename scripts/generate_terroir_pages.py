@@ -46,6 +46,47 @@ GENRES = [
 esc = html.escape
 
 
+# ── 見学できる造り手（2026-09-18追加）────────────────────────────
+# 各ジャンルの visit_info（公式サイト由来・出典と確認日つき）から、
+# その県で見学を受け付けている造り手の件数を数え、ジャンル別の見学ガイドへ送る。
+# 件数はデータを数えたもの。0件のジャンルは出さない。内容は各ジャンル側に置き、ここでは重複させない。
+VISIT_PAGE = {
+    'sake': (os.path.join(ROOT, 'TerriorHUB　sake', 'sake', 'visit'),
+             'https://sake.terroirhub.com/sake/visit'),
+    'wine': (os.path.join(ROOT, 'terroirHUB wine', 'wine', 'visit'),
+             'https://wine.terroirhub.com/wine/visit'),
+    'shochu': (os.path.join(ROOT, 'terroirHUB 焼酎', 'shochu', 'visit'),
+               'https://shochu.terroirhub.com/shochu/visit'),
+    'whisky': (os.path.join(ROOT, 'terroirHUB whisky', 'whisky', 'visit'),
+               'https://whisky.terroirhub.com/whisky/visit'),
+}
+
+
+def visit_block(pref, pref_name, per_genre):
+    """per_genre: [(gkey, gname, 生産者呼称, 色, 見学可の件数)] からHTMLを作る"""
+    items = []
+    total = 0
+    for gkey, gname, unit, color, n in per_genre:
+        if not n or gkey not in VISIT_PAGE:
+            continue
+        total += n
+        local, base = VISIT_PAGE[gkey]
+        href = f'{base}/{pref}/' if os.path.exists(os.path.join(local, pref, 'index.html')) else f'{base}/'
+        items.append(f'<a class="vlink" href="{href}" style="--vc:{color}">'
+                     f'<span class="vg">{esc(gname)}</span>'
+                     f'<span class="vn">{n}<em>{esc(unit)}</em></span></a>')
+    if not items:
+        return ''
+    lead = ('公式サイトで見学を受け付けていることを確認できた造り手です。'
+            '予約の要否・料金・所要時間と、出典・確認日は、ジャンルごとの見学ガイドに掲載しています。')
+    return ('  <section class="visit">\n'
+            f'    <h2>{esc(pref_name)}で見学できる造り手 <b>{total}</b>件</h2>\n'
+            f'    <p class="vlead">{lead}</p>\n'
+            f'    <div class="vgrid">{"".join(items)}</div>\n'
+            '  </section>\n')
+
+
+
 def load(path_tmpl, pref):
     path = path_tmpl.format(pref=pref)
     if not os.path.exists(path):
@@ -70,6 +111,11 @@ def producer_li(domain, gkey, pref, p):
 
 
 def page_html(pref, pref_name, sections, total, gi_list):
+    # 見学を受け付けている造り手の件数（visit_info.status == "open" を数える）
+    per_genre = [(gkey, gname, unit, color,
+                  sum(1 for p in items if (p.get('visit_info') or {}).get('status') == 'open'))
+                 for gkey, gname, unit, color, domain, items in sections]
+    visit_html = visit_block(pref, pref_name, per_genre)
     genre_secs = []
     itemlist = []
     pos = 1
@@ -171,6 +217,16 @@ header{{border-bottom:1px solid var(--border);}}
 .hero .crumb a{{color:var(--muted);text-decoration:none;}}
 .hero h1{{font-family:'Zen Old Mincho',serif;font-size:30px;font-weight:600;letter-spacing:.12em;}}
 .hero .total{{margin-top:12px;font-size:14px;color:var(--muted);}}
+.visit{{margin:8px 0 30px;padding:22px 24px;background:#fff;border:1px solid var(--line);border-radius:12px;}}
+.visit h2{{font-family:'Zen Old Mincho',serif;font-size:17px;letter-spacing:.08em;margin-bottom:8px;}}
+.visit h2 b{{color:var(--gold);font-size:20px;}}
+.vlead{{font-size:12.5px;color:var(--muted);line-height:1.9;margin-bottom:14px;}}
+.vgrid{{display:flex;flex-wrap:wrap;gap:10px;}}
+.vlink{{display:flex;align-items:baseline;gap:8px;text-decoration:none;border:1px solid var(--line);border-left:3px solid var(--vc);border-radius:8px;padding:9px 14px;background:#fff;}}
+.vlink:hover{{border-color:var(--vc);}}
+.vg{{font-size:13px;color:var(--vc);}}
+.vn{{font-size:17px;font-family:'Zen Old Mincho',serif;}}
+.vn em{{font-style:normal;font-size:11px;color:var(--muted);margin-left:2px;}}
 .hero .total b{{color:var(--gold);font-size:20px;font-family:'Zen Old Mincho',serif;}}
 .gi-row{{margin-top:16px;}}
 .gi{{display:inline-block;font-size:11.5px;letter-spacing:.08em;border:1px solid var(--gold);color:var(--gold);border-radius:3px;padding:3px 10px;margin:3px;}}
@@ -204,6 +260,7 @@ footer a{{color:var(--muted);}}
     <p class="total">日本酒・ワイン・焼酎・ウイスキー・リキュールの造り手 <b>{total}</b> 件</p>
     {gi_html}
   </div>
+{visit_html}
 {''.join(genre_secs)}
   <div class="cross">
     Terroir HUB は日本全国の酒蔵・ワイナリー・蒸留所を5ジャンル横断で収録する総合データベースです。
