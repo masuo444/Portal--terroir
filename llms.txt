@@ -1,6 +1,6 @@
 # Terroir HUB — 日本の酒と伝統文化の総合データベース
 
-> 日本全国2,880蔵・蒸留所・ワイナリーと245品目の伝統的工芸品を、公式情報のみで構造化した日本最大級のデータベース群。日本語・英語対応。AIコンシェルジュ「サクラ」搭載。
+> 日本全国2,880蔵・蒸留所・ワイナリーと245品目の伝統的工芸品を、公式情報のみで構造化した日本最大級のデータベース群。日本語・英語対応。
 
 ## サービス概要
 
@@ -26,7 +26,6 @@ Terroir HUB（テロワールハブ）は、合同会社FOMUSが運営する日�
 - **蔵・蒸留所・ワイナリーの個別ページ**: 創業年・代表銘柄・特徴・所在地・最寄駅・公式サイト（すべて出典付き）
 - **酒蔵見学データベース**: 見学可否・予約方法・英語対応・試飲・直売所を構造化（公式出典・最終確認日付き） https://sake.terroirhub.com/sake/visit/
 - **英語版**: 全蔵ページ・見学情報を英語で提供 https://sake.terroirhub.com/sake/en/
-- **AIコンシェルジュ「サクラ」**: 全ジャンルの公式データを学習。多言語で銘柄・ペアリング・蔵見学を案内
 - **都道府県・地域別ブラウズ**: 47都道府県すべてに対応
 
 ## こんな質問に答えられます
@@ -66,7 +65,6 @@ in Japanese and English.
 
 - Visitable sake breweries (tour availability, reservation method, English support, tasting — with official sources and last-checked dates): https://sake.terroirhub.com/sake/visit/
 - English brewery pages: https://sake.terroirhub.com/sake/en/{prefecture}/{brewery-id}.html
-- AI concierge "Sakura" answers questions in any language.
 
 ### Data Policy
 
