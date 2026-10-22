@@ -82,6 +82,13 @@
     [/travel\.yahoo\.co\.jp$/, 'yahoo_travel']
   ];
   function partnerOf(host, href) {
+    // バリューコマース経由は、遷移先（vc_url）で送客先を見分ける（Klook / Expedia / Yahoo!トラベル 等）
+    if (/valuecommerce\.com$/.test(host)) {
+      try {
+        var dest = new URL(decodeURIComponent((href.match(/vc_url=([^&]+)/) || [])[1] || '')).hostname;
+        for (var j = 0; j < PARTNERS.length; j++) if (PARTNERS[j][1] !== 'valuecommerce' && PARTNERS[j][0].test(dest)) return PARTNERS[j][1];
+      } catch (e) {}
+    }
     for (var i = 0; i < PARTNERS.length; i++) if (PARTNERS[i][0].test(host)) return PARTNERS[i][1];
     // バリューコマースのMyLink経由（例: Klook/Expediaの遷移URLがvcのクエリに埋め込まれる）
     if (/vc_url=|vc_pid=/.test(href)) return 'valuecommerce';
