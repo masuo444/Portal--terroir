@@ -65,7 +65,7 @@ body{-webkit-font-smoothing:antialiased}
           Terroir HUBの蔵元専用管理画面。自蔵のページを自分で更新し、AIコンシェルジュ「サクラ」を通じて、日本酒を探しているお客様に直接情報を届けます。
         </p>
         <div class="flex flex-wrap gap-4 items-center">
-          <a href="#plans" class="inline-flex items-center h-12 px-8 text-base font-medium bg-ink text-surface-primary rounded-lg hover:opacity-80 transition-opacity">プランを見る</a>
+          
           <a href="mailto:info@terroirhub.com?subject=蔵元管理画面について" class="inline-flex items-center h-12 px-8 text-base font-medium bg-white text-ink border border-black/10 rounded-lg hover:bg-surface-secondary transition-colors">お問い合わせ</a>
         </div>
       </div>
@@ -158,92 +158,6 @@ body{-webkit-font-smoothing:antialiased}
 </section>
 
 <!-- ===== 料金プラン ===== -->
-<section id="plans" class="bg-white border-y border-black/5">
-  <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28">
-    <p class="text-xs tracking-[0.25em] text-primary-500 uppercase mb-4">Plans</p>
-    <h2 class="font-display text-3xl md:text-4xl font-bold mb-6 leading-snug">料金プラン</h2>
-    <p class="text-lg text-ink-light leading-loose mb-14 max-w-2xl">蔵の規模やニーズに合わせて、3つのプランをご用意しています。年間プランなら2ヶ月分お得です。</p>
-
-    <!-- Toggle -->
-    <div class="flex items-center justify-center gap-4 mb-12">
-      <span id="label-monthly" class="text-base font-medium text-ink">月額</span>
-      <button id="toggle" onclick="togglePlan()" class="relative w-14 h-8 rounded-full bg-surface-tertiary transition-colors cursor-pointer">
-        <span id="toggle-dot" class="absolute top-1 left-1 w-6 h-6 rounded-full bg-ink transition-transform"></span>
-      </button>
-      <span id="label-annual" class="text-base text-ink-faint">年額<span class="text-sakura text-sm ml-1">2ヶ月分お得</span></span>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- ライト -->
-      <div class="bg-surface-primary rounded-2xl p-8 md:p-10 border border-black/5">
-        <h3 class="text-lg font-bold mb-2">ライト</h3>
-        <p class="text-sm text-ink-faint mb-6">まずは自蔵の情報を正しく管理したい蔵元向け</p>
-        <div class="mb-8">
-          <span class="plan-price text-4xl font-bold" data-monthly="5,000" data-annual="50,000">5,000</span>
-          <span class="text-base text-ink-light plan-unit" data-monthly="円/月" data-annual="円/年">円/月</span>
-          <span class="text-sm text-ink-faint">(税別)</span>
-          <p class="plan-sub text-sm text-ink-faint mt-1 hidden" data-annual="月あたり約4,167円"></p>
-        </div>
-        <a href="mailto:info@terroirhub.com?subject=ライトプランの申込" class="block text-center h-12 leading-[48px] text-base font-medium bg-white text-ink border border-black/10 rounded-lg hover:bg-surface-secondary transition-colors mb-8">申し込む</a>
-        <ul class="space-y-3 text-sm text-ink-light">
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>基本情報の編集</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>銘柄・商品情報の編集</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>見学情報の編集</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>写真 3枚まで</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>お知らせ投稿 月1回</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>アクセスデータ（PV数）</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>メールサポート</li>
-        </ul>
-      </div>
-
-      <!-- スタンダード -->
-      <div class="bg-ink text-white rounded-2xl p-8 md:p-10 relative">
-        <span class="absolute top-5 right-5 inline-flex items-center bg-primary-400 text-white text-xs font-semibold px-3 py-1 rounded-full">人気</span>
-        <h3 class="text-lg font-bold mb-2">スタンダード</h3>
-        <p class="text-sm text-white/50 mb-6">AIサクラの推薦強化で、集客につなげたい蔵元向け</p>
-        <div class="mb-8">
-          <span class="plan-price text-4xl font-bold" data-monthly="15,000" data-annual="150,000">15,000</span>
-          <span class="text-base text-white/60 plan-unit" data-monthly="円/月" data-annual="円/年">円/月</span>
-          <span class="text-sm text-white/40">(税別)</span>
-          <p class="plan-sub text-sm text-white/40 mt-1 hidden" data-annual="月あたり12,500円"></p>
-        </div>
-        <a href="mailto:info@terroirhub.com?subject=スタンダードプランの申込" class="block text-center h-12 leading-[48px] text-base font-medium bg-white text-ink rounded-lg hover:bg-white/90 transition-colors mb-8">申し込む</a>
-        <ul class="space-y-3 text-sm text-white/70">
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>ライトの全機能</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>写真 10枚まで</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>お知らせ投稿 無制限</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>詳細アクセスデータ（地域・流入元）</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-sakura flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><strong class="text-white">AIサクラの推薦強化</strong></li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>メールサポート</li>
-        </ul>
-      </div>
-
-      <!-- プレミアム -->
-      <div class="bg-surface-primary rounded-2xl p-8 md:p-10 border border-black/5">
-        <h3 class="text-lg font-bold mb-2">プレミアム</h3>
-        <p class="text-sm text-ink-faint mb-6">インバウンド対応・優先露出で最大限の効果を得たい蔵元向け</p>
-        <div class="mb-8">
-          <span class="plan-price text-4xl font-bold" data-monthly="30,000" data-annual="300,000">30,000</span>
-          <span class="text-base text-ink-light plan-unit" data-monthly="円/月" data-annual="円/年">円/月</span>
-          <span class="text-sm text-ink-faint">(税別)</span>
-          <p class="plan-sub text-sm text-ink-faint mt-1 hidden" data-annual="月あたり25,000円"></p>
-        </div>
-        <a href="mailto:info@terroirhub.com?subject=プレミアムプランの申込" class="block text-center h-12 leading-[48px] text-base font-medium bg-ink text-surface-primary rounded-lg hover:opacity-80 transition-opacity mb-8">申し込む</a>
-        <ul class="space-y-3 text-sm text-ink-light">
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>スタンダードの全機能</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>写真 無制限</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><strong>AIサクラ重点レコメンド</strong></li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>英語ページ自動生成</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>地域ページでの優先表示</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>季節特集への優先掲載</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>AIサクラ推薦レポート</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>専任担当サポート</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== オプション ===== -->
 <section class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28">
   <p class="text-xs tracking-[0.25em] text-primary-500 uppercase mb-4">Options</p>
