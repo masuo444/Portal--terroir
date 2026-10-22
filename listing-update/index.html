@@ -132,6 +132,12 @@ h1{font-family:var(--display);font-size:clamp(36px,5.1vw,64px);font-weight:800;l
   const status = document.getElementById('form-status');
   const endpoint = 'https://sake.terroirhub.com/api/listing-update';
   function setStatus(type, text){ status.className = 'status ' + type; status.textContent = text; }
+  // 蔵ページの「〇〇の方へ」から来たときは、蔵名・ジャンル・ページURLを入れておく
+  const q = new URLSearchParams(location.search);
+  const GENRE = {sake:'日本酒', shochu:'焼酎', wine:'ワイン', whisky:'ウイスキー', liqueur:'リキュール・梅酒', craft:'クラフト'};
+  if(q.get('producer')) form.producer_name.value = q.get('producer').slice(0, 180);
+  if(GENRE[q.get('genre')]) form.category.value = GENRE[q.get('genre')];
+  if(/^https:\/\/[a-z]+\.terroirhub\.com\//.test(q.get('page') || '')) form.page_url.value = q.get('page').slice(0, 400);
   form.addEventListener('submit', async function(e){
     e.preventDefault();
     setStatus('', '');

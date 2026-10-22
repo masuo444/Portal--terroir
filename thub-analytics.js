@@ -114,7 +114,7 @@
 
     if (/(^|\.)terroirhub\.com$/.test(host)) {
       if (host !== location.hostname) ev('cross_site_click', common);
-      if (/\/(contact|business|for-breweries|pricing|lp)/.test(u.pathname)) ev('contact_click', { method: 'page', link_url: common.link_url });
+      if (/\/(contact|business|for-breweries|pricing|lp|listing-update)/.test(u.pathname)) ev('contact_click', { method: /listing-update/.test(u.pathname) ? 'listing_update' : 'business', link_url: common.link_url, placement: common.placement });
       return;
     }
     // 外部サイト：生産者ページからの外部リンクは「公式サイト等への送客」
