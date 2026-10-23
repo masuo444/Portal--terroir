@@ -590,7 +590,7 @@ a{color:inherit;text-decoration:none}
     </div>
     <div class="footer-col">
       <p class="footer-col-title" data-i18n="footer_platform">プラットフォーム</p>
-      <a href="/advertise.html" data-i18n="nav_advertise">広告掲載</a>
+      <a href="/advertise/" data-i18n="nav_advertise" data-href-ja="/advertise/" data-href-en="/en/advertise/" data-href-fr="/en/advertise/">広告掲載</a>
       <a href="mailto:info@terroirhub.com?subject=Terroir%20HUB%20Partnership%20Inquiry" data-i18n="footer_producers">導入・提携相談</a>
       <a href="/listing-update/">掲載情報の修正・公式写真提供</a>
     </div>
@@ -884,6 +884,7 @@ function setLang(lang){
     var key=el.getAttribute('data-i18n-placeholder');
     if(I18N[lang][key]!==undefined){el.placeholder=I18N[lang][key]}
   });
+  document.querySelectorAll('[data-href-'+lang+']').forEach(function(el){el.href=el.getAttribute('data-href-'+lang)});
   document.querySelectorAll('[data-lang-btn]').forEach(function(btn){
     btn.classList.toggle('active',btn.getAttribute('data-lang-btn')===lang);
   });
