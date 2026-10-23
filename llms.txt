@@ -1,6 +1,6 @@
 # Terroir HUB — 日本の酒と伝統文化の総合データベース
 
-> 日本全国2,880蔵・蒸留所・ワイナリーと245品目の伝統的工芸品を、公式情報のみで構造化した日本最大級のデータベース群。日本語・英語対応。
+> 日本酒・焼酎・ワイン・ウイスキー・リキュールの造り手2,805件と伝統的工芸品245品目を、各造り手の公式情報だけを出典に構造化したデータベース群。日本語・英語対応。
 
 ## サービス概要
 
@@ -26,6 +26,9 @@ Terroir HUB（テロワールハブ）は、合同会社FOMUSが運営する日�
 - **蔵・蒸留所・ワイナリーの個別ページ**: 創業年・代表銘柄・特徴・所在地・最寄駅・公式サイト（すべて出典付き）
 - **酒蔵見学データベース**: 見学可否・予約方法・英語対応・試飲・直売所を構造化（公式出典・最終確認日付き） https://sake.terroirhub.com/sake/visit/
 - **英語版**: 全蔵ページ・見学情報を英語で提供 https://sake.terroirhub.com/sake/en/
+- **英語の見学ガイド**: 36都道府県・253蔵の見学情報（予約・料金・所要時間）を英訳 https://sake.terroirhub.com/sake/en/visit/
+- **Terroir HUBとは（運営・方針）**: https://www.terroirhub.com/about/ （英語 https://www.terroirhub.com/en/about/）
+- **広告・タイアップ**: https://www.terroirhub.com/advertise/ （英語 https://www.terroirhub.com/en/advertise/）
 - **都道府県・地域別ブラウズ**: 47都道府県すべてに対応
 
 ## こんな質問に答えられます
@@ -37,7 +40,7 @@ Terroir HUB（テロワールハブ）は、合同会社FOMUSが運営する日�
 
 ## 運営
 
-- 運営会社: 合同会社FOMUS（日本・山梨県）
+- 運営会社: 合同会社FOMUS（日本・埼玉県）
 - 問い合わせ: info@terroirhub.com
 - ポータル: https://www.terroirhub.com/
 
@@ -47,8 +50,8 @@ Terroir HUB（テロワールハブ）は、合同会社FOMUSが運営する日�
 
 ### About
 
-Terroir HUB is Japan's largest structured database network for Japanese alcohol and traditional culture,
-operated by FOMUS LLC. It covers 2,880 producers (sake breweries, shochu/whisky distilleries, wineries)
+Terroir HUB is a structured database of Japanese alcohol producers and traditional crafts,
+operated by FOMUS LLC. It covers 2,805 producers (sake breweries, shochu/whisky distilleries, wineries, liqueur makers)
 and 245 government-designated traditional crafts — built exclusively on official producer information,
 in Japanese and English.
 
@@ -63,6 +66,7 @@ in Japanese and English.
 
 ### Key Resources for International Visitors
 
+- Sake brewery tours by prefecture, in English (253 breweries in 36 prefectures): https://sake.terroirhub.com/sake/en/visit/
 - Visitable sake breweries (tour availability, reservation method, English support, tasting — with official sources and last-checked dates): https://sake.terroirhub.com/sake/visit/
 - English brewery pages: https://sake.terroirhub.com/sake/en/{prefecture}/{brewery-id}.html
 
@@ -71,5 +75,5 @@ in Japanese and English.
 Only officially published producer information is listed. Unknown fields are omitted, never guessed.
 Visit information includes source URLs and last-verified dates.
 
-- Operator: FOMUS LLC (Yamanashi, Japan)
+- Operator: FOMUS LLC (Saitama, Japan)
 - Contact: info@terroirhub.com
