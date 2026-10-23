@@ -62,6 +62,17 @@
   ],
   "redirects": [
     {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "portal-terroir.vercel.app"
+        }
+      ],
+      "destination": "https://www.terroirhub.com/$1",
+      "permanent": true
+    },
+    {
       "source": "/community.html",
       "destination": "/",
       "permanent": true
