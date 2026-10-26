@@ -49,6 +49,7 @@
     var k = rest[0].replace(/\.html$/, '');
     pageType = map[k] || 'other';
   }
+  if (/見つかりません|not found|^404/i.test(document.title)) pageType = 'not_found';
   var contentGroup = pageType + (lang === 'en' ? '_en' : '');
 
   var s = document.createElement('script');
@@ -121,6 +122,8 @@
 
     if (/(^|\.)terroirhub\.com$/.test(host)) {
       if (host !== location.hostname) ev('cross_site_click', common);
+      // 同じサイト内で次に何を見に行ったか（どのリンクが押されたか）
+      else if (u.pathname !== location.pathname) ev('internal_click', { link_url: u.pathname.slice(0, 200), link_text: common.link_text, placement: common.placement });
       if (/\/(contact|business|for-breweries|pricing|lp|listing-update)/.test(u.pathname)) ev('contact_click', { method: /listing-update/.test(u.pathname) ? 'listing_update' : 'business', link_url: common.link_url, placement: common.placement });
       return;
     }
@@ -132,6 +135,34 @@
     var f = e.target;
     ev('form_submit', { form_id: (f && (f.id || f.getAttribute('name') || f.getAttribute('action'))) || '' });
   }, true);
+
+  // ── サイト内検索（入力が1.5秒止まったら1回。GA4の searchTerm で集計できる推奨イベント名）──
+  var searchTimer = null, lastTerm = '';
+  document.addEventListener('input', function (e) {
+    var t = e.target;
+    if (!t || t.tagName !== 'INPUT') return;
+    if (!(t.type === 'search' || t.id === 'q' || t.name === 'q' || /search|検索/i.test(t.placeholder || ''))) return;
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(function () {
+      var term = (t.value || '').trim().slice(0, 60);
+      if (term.length < 2 || term === lastTerm) return;
+      lastTerm = term;
+      ev('view_search_results', { search_term: term });
+    }, 1500);
+  }, true);
+
+  // ── Microsoft Clarity（ヒートマップ・行動の録画。プロジェクトIDを入れたサイトだけ読み込む）──
+  var CLARITY = {
+    // 'sake.terroirhub.com': 'xxxxxxxxxx'
+  };
+  if (CLARITY[location.hostname]) {
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+      t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, 'clarity', 'script', CLARITY[location.hostname]);
+    try { window.clarity('set', 'page_type', contentGroup); } catch (e) {}
+  }
 
   // ── AIサクラ（/api/sakura への送信を1メッセージとして数える）────
   if (window.fetch) {
