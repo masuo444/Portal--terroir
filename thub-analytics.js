@@ -152,17 +152,17 @@
   }, true);
 
   // ── Microsoft Clarity（ヒートマップ・行動の録画。プロジェクトIDを入れたサイトだけ読み込む）──
-  var CLARITY = {
-    // 'sake.terroirhub.com': 'xxxxxxxxxx'
-  };
-  if (CLARITY[location.hostname]) {
+  // 7サイト共通のプロジェクト「テロワールハブsake」。サイトの区別は Clarity 側でURLで絞る。
+  // 日本酒・ウイスキー・リキュール・クラフトは旧 track.js でも読み込むので、既にあれば二重に読まない
+  var CLARITY_ID = 'w00ia7v4xp';
+  if (!window.clarity) {
     (function (c, l, a, r, i, t, y) {
       c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
       t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
       y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-    })(window, document, 'clarity', 'script', CLARITY[location.hostname]);
-    try { window.clarity('set', 'page_type', contentGroup); } catch (e) {}
+    })(window, document, 'clarity', 'script', CLARITY_ID);
   }
+  try { window.clarity('set', 'page_type', contentGroup); window.clarity('set', 'site', location.hostname); } catch (e) {}
 
   // ── AIサクラ（/api/sakura への送信を1メッセージとして数える）────
   if (window.fetch) {

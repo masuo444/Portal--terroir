@@ -33,7 +33,7 @@ const BOTS: [RegExp, string, string][] = [
 // 検索エンジンは件数が多いので10件に1件だけ送る（集計時に weight=10 を掛ける）
 const SAMPLE = { search: 10 } as Record<string, number>;
 
-export default function middleware(request: Request, context: { waitUntil?: (p: Promise<unknown>) => void }) {
+export default async function middleware(request: Request, context: { waitUntil?: (p: Promise<unknown>) => void }) {
   try {
     const ua = request.headers.get('user-agent') || '';
     if (!/bot|crawl|spider|-User|agent/i.test(ua)) return;
@@ -42,16 +42,18 @@ export default function middleware(request: Request, context: { waitUntil?: (p: 
     const rate = SAMPLE[hit[2]] || 1;
     if (rate > 1 && Math.random() * rate >= 1) return;
     const token = process.env.BOT_LOG_TOKEN;
-    if (!token || !context || !context.waitUntil) return;
+    if (!token) return;
     const url = new URL(request.url);
     const body = JSON.stringify({
       host: url.hostname, path: url.pathname, bot: hit[1], kind: hit[2], weight: rate,
       country: request.headers.get('x-vercel-ip-country') || '', ua: ua.slice(0, 200),
     });
-    context.waitUntil(
-      fetch('https://www.terroirhub.com/api/bot-log', {
-        method: 'POST', headers: { 'Content-Type': 'application/json', 'x-bot-token': token }, body,
-      }).catch(() => {})
-    );
+    const send = fetch('https://www.terroirhub.com/api/bot-log', {
+      method: 'POST', headers: { 'Content-Type': 'application/json', 'x-bot-token': token }, body,
+      signal: AbortSignal.timeout(1500),
+    }).catch(() => {});
+    // waitUntil が無い設定のプロジェクト（焼酎）では、クローラーのときだけ送信を待つ（最大1.5秒）
+    if (context && context.waitUntil) context.waitUntil(send);
+    else await send;
   } catch (e) {}
 }
