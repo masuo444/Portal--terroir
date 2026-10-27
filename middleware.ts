@@ -3,6 +3,7 @@
 // 人の訪問では何もしない。クローラーのときだけ、応答を返した後に www の /api/bot-log へ1件送る。
 // 応答は一切変えない（何も return しない＝そのまま静的ページを返す）。失敗しても握りつぶす。
 export const config = {
+  runtime: 'nodejs',  // 焼酎プロジェクトは指定しないと edge で動き、記録が送られなかった
   matcher: ['/((?!.*\\.(?:js|css|png|jpe?g|webp|gif|svg|ico|woff2?|json|map|mp4|webm|pdf|avif)$).*)'],
 };
 
@@ -30,8 +31,8 @@ const BOTS: [RegExp, string, string][] = [
   [/Baiduspider/i, 'Baiduspider', 'search'],
   [/DuckDuckBot/i, 'DuckDuckBot', 'search'],
 ];
-// 検索エンジンは件数が多いので10件に1件だけ送る（集計時に weight=10 を掛ける）
-const SAMPLE = { search: 10 } as Record<string, number>;
+// 検索エンジンとAIの学習用は件数が多いので10件に1件だけ送る（集計時に weight=10 を掛ける）。Supabase無料枠(500MB)を守るため
+const SAMPLE = { search: 10, ai_train: 10 } as Record<string, number>;
 
 export default async function middleware(request: Request, context: { waitUntil?: (p: Promise<unknown>) => void }) {
   try {
