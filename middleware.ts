@@ -3,7 +3,6 @@
 // 人の訪問では何もしない。クローラーのときだけ、応答を返した後に www の /api/bot-log へ1件送る。
 // 応答は一切変えない（何も return しない＝そのまま静的ページを返す）。失敗しても握りつぶす。
 export const config = {
-  runtime: 'nodejs',  // 焼酎プロジェクトは指定しないと edge で動き、記録が送られなかった
   matcher: ['/((?!.*\\.(?:js|css|png|jpe?g|webp|gif|svg|ico|woff2?|json|map|mp4|webm|pdf|avif)$).*)'],
 };
 
