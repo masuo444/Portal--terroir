@@ -11,11 +11,11 @@ async function summary(req, res, key) {
   const old = new Date(Date.now() - 120 * 864e5).toISOString();
   fetch(`${SUPABASE_URL}/rest/v1/analytics?event=eq.bot_crawl&timestamp=lt.${old}`, { method: 'DELETE', headers: h }).catch(() => {});
   const byBot = {}, byHostKind = {}, aiPages = {}, daily = {};
-  for (let from = 0; from < 200000; from += 1000) {
-    const r = await fetch(`${SUPABASE_URL}/rest/v1/analytics?event=eq.bot_crawl&timestamp=gte.${since}&select=timestamp,page,properties&order=id.asc`,
-      { headers: { ...h, Range: `${from}-${from + 999}` } });
-    if (!r.ok) return res.status(502).end();
-    const rows = await r.json();
+  // 件数を先に取り、1,000件ずつを並列で取る（順番に取ると10秒の制限に当たった）
+  const base = `${SUPABASE_URL}/rest/v1/analytics?event=eq.bot_crawl&timestamp=gte.${since}`;
+  const head = await fetch(`${base}&select=id`, { method: 'HEAD', headers: { ...h, Prefer: 'count=exact', Range: '0-0' } });
+  const total = Math.min(Number((head.headers.get('content-range') || '').split('/')[1]) || 0, 300000);
+  const add = (rows) => {
     for (const x of rows) {
       const p = x.properties || {}, w = Number(p.weight) || 1;
       const bk = `${p.kind}|${p.bot}`; byBot[bk] = (byBot[bk] || 0) + w;
@@ -23,10 +23,17 @@ async function summary(req, res, key) {
       const d = String(x.timestamp).slice(0, 10), dk = `${d}|${String(p.kind).startsWith('ai') ? 'ai' : 'search'}`; daily[dk] = (daily[dk] || 0) + w;
       if (String(p.kind).startsWith('ai')) { const pk = `${p.host}${x.page}|${p.kind}`; aiPages[pk] = (aiPages[pk] || 0) + w; }
     }
-    if (rows.length < 1000) break;
+  };
+  const offsets = [];
+  for (let from = 0; from < total; from += 1000) offsets.push(from);
+  for (let i = 0; i < offsets.length; i += 8) {
+    const pages = await Promise.all(offsets.slice(i, i + 8).map((from) =>
+      fetch(`${base}&select=timestamp,page,properties&order=id.asc`, { headers: { ...h, Range: `${from}-${from + 999}` } })
+        .then((r) => (r.ok ? r.json() : []))));
+    pages.forEach(add);
   }
   const top = (o, n) => Object.entries(o).sort((a, b) => b[1] - a[1]).slice(0, n).map(([k, v]) => [...k.split('|'), v]);
-  return res.status(200).json({ days, by_bot: top(byBot, 40), by_host_kind: top(byHostKind, 60), ai_pages: top(aiPages, 40),
+  return res.status(200).json({ days, rows: total, by_bot: top(byBot, 40), by_host_kind: top(byHostKind, 60), ai_pages: top(aiPages, 40),
     daily: Object.entries(daily).sort().map(([k, v]) => [...k.split('|'), v]) });
 }
 

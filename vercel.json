@@ -3,6 +3,9 @@
     "api/*.js": {
       "memory": 128,
       "maxDuration": 10
+    },
+    "api/bot-log.js": {
+      "maxDuration": 60
     }
   },
   "headers": [
